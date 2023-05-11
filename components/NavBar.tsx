@@ -7,11 +7,29 @@ const NavBar = (): React.JSX.Element => {
   return (
     <nav className={styles.navbar}>
       <div className={styles.icon_nav_container}>
-        <Image className={styles.app_icon} src={appIcon} alt="app-icon"></Image>
+        <button
+          style={{
+            backgroundColor: "transparent",
+            borderWidth: "0px",
+            padding: "0px",
+          }}
+        >
+          <Image
+            className={styles.app_icon}
+            src={appIcon}
+            alt="app-icon"
+          ></Image>
+        </button>
         <ul className={styles.nav_list}>
-          <li>How it works</li>
-          <li>About</li>
-          <li>Contact</li>
+          <li>
+            <button>How it works</button>
+          </li>
+          <li>
+            <button>About</button>
+          </li>
+          <li>
+            <button>Contact</button>
+          </li>
         </ul>
       </div>
       <div className={styles.buttons}>

@@ -34,8 +34,20 @@
         padding: 7px 20px;
         border-radius: 7px;
         border: 0px solid transparent;
-        font-size: 0.9rem;
+        font-size: 1.1rem;
         background-color: get-color("primary");
+        cursor: pointer;
+        transition-duration: 200ms;
+        &:hover {
+          transform: scale(1.01);
+          background-color: darken(
+            $color: get-color-value("secondary"),
+            $amount: 5
+          );
+        }
+        &:active {
+          transform: scale(0.99);
+        }
       }
     }
   }
@@ -46,7 +58,16 @@
     transform: rotate(30deg);
     overflow: hidden;
     right: -40%;
-    // top: -60%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    &__interview {
+      width: 75vh;
+      height: 75vh;
+      transform: rotate(-30deg);
+      margin-left: 8vw;
+      margin-bottom: 30vh;
+    }
     &__image {
       width: 150vw;
       height: 200vh;

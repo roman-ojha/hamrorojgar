@@ -4,6 +4,7 @@ import Image from "next/image";
 import constants from "@/constants/index";
 import NavBar from "@/components/NavBar";
 import styles from "@/styles/pages/index.module.scss";
+import interviewImg from "@/assets/svg/interview.svg";
 
 const Home: NextPage = () => {
   return (
@@ -19,6 +20,11 @@ const Home: NextPage = () => {
       <NavBar />
       <div className={styles.home__background}>
         <div className={styles.home__background__image}></div>
+        <Image
+          className={styles.home__background__interview}
+          src={interviewImg}
+          alt="interview"
+        ></Image>
       </div>
       <main className={styles.main}>
         <div className={styles.main__content}>
