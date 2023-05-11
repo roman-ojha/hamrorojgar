@@ -1,0 +1,60 @@
+@use "../utils/" as *;
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  .icon_nav_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10vw;
+    margin-left: 30px;
+    .app_icon {
+      height: 50px;
+      width: 50px;
+    }
+  }
+  .nav_list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style-type: none;
+    gap: 5vw;
+    margin: 0px;
+    padding: 0px;
+    li {
+    }
+  }
+  .buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    &__button {
+      padding: 5px 20px;
+      border-radius: 10px;
+      margin-right: 30px;
+      cursor: pointer;
+      &__register {
+        border-width: 0px;
+        background-color: get-color("background");
+        &:hover {
+          background-color: lighten(
+            $color: get-color-value("background"),
+            $amount: 5
+          );
+        }
+      }
+      &__sign_in {
+        background-color: transparent;
+        border: 1px solid #ffffff;
+        transition-duration: 100ms;
+        &:hover {
+          background-color: transparentize($color: white, $amount: 0.9);
+        }
+      }
+    }
+  }
+}

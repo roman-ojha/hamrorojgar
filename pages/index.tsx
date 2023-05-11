@@ -2,10 +2,11 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
 import constants from "@/constants/index";
+import NavBar from "@/components/NavBar";
 
 const Home: NextPage = () => {
   return (
-    <div className="">
+    <div>
       <Head>
         <title>{constants.appName}</title>
         <meta
@@ -14,6 +15,7 @@ const Home: NextPage = () => {
         />
         {/* <link rel="icon" href="/favicon.ico" /> */}
       </Head>
+      <NavBar />
     </div>
   );
 };

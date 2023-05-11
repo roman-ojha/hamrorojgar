@@ -13,6 +13,7 @@ body {
   padding: 0;
   margin: 0;
   font-family: get-font-family(), sans-serif;
+  background-color: white;
 }
 
 a {
@@ -20,9 +21,10 @@ a {
   text-decoration: none;
 }
 
-// * {
-//   box-sizing: border-box;
-// }
+* {
+  // box-sizing: border-box;
+  font-size: 20px;
+}
 
 @media (prefers-color-scheme: dark) {
   html {
