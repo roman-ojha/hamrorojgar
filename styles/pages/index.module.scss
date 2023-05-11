@@ -5,11 +5,39 @@
   height: 100vh;
   overflow: hidden;
   position: relative;
-  main {
+  .main {
     width: 80vw;
     height: 100vh;
     background-color: get-color("background");
-    z-index: 1;
+    border: 1px solid transparent;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    &__content {
+      margin-left: 10%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
+      &__heading {
+        font-size: 2.2rem;
+        line-height: 1rem;
+        font-style: italic;
+      }
+      &__description {
+        font-size: 0.9rem;
+        font-weight: 300;
+        line-height: 0.4rem;
+      }
+      &__button {
+        width: fit-content;
+        padding: 7px 20px;
+        border-radius: 7px;
+        border: 0px solid transparent;
+        font-size: 0.9rem;
+        background-color: get-color("primary");
+      }
+    }
   }
   &__background {
     width: 100vw;
@@ -31,7 +59,6 @@
       right: 25%;
       top: -15%;
       background-size: 100% 100%;
-      //   z-index: 2;
     }
   }
 }

@@ -20,7 +20,26 @@ const Home: NextPage = () => {
       <div className={styles.home__background}>
         <div className={styles.home__background__image}></div>
       </div>
-      <main></main>
+      <main className={styles.main}>
+        <div className={styles.main__content}>
+          <div>
+            <h1 className={styles.main__content__heading}>Online</h1>
+            <h1 className={styles.main__content__heading}>Government</h1>
+            <h1 className={styles.main__content__heading}>Job Portal</h1>
+          </div>
+          <div>
+            <h3 className={styles.main__content__description}>
+              Where you can find, apply for
+            </h3>
+            <h3 className={styles.main__content__description}>
+              the Government Job
+            </h3>
+          </div>
+          <button className={styles.main__content__button}>
+            Search new job
+          </button>
+        </div>
+      </main>
     </div>
   );
 };
