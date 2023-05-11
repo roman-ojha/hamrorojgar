@@ -1,17 +1,19 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
+import constants from "@/constants/index";
+
 const Home: NextPage = () => {
   return (
     <div className="">
       <Head>
-        <title>Hamro Rojgar</title>
-        <meta name="description" content="" />
+        <title>{constants.appName}</title>
+        <meta
+          name="description"
+          content="Place where you can find and apply for the government jobs online"
+        />
         {/* <link rel="icon" href="/favicon.ico" /> */}
       </Head>
-      <main>
-        <h1>Hamro Rojgar</h1>
-      </main>
     </div>
   );
 };
