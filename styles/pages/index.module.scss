@@ -1,17 +1,37 @@
+@use "../utils" as *;
+
 .home {
   width: 100vw;
   height: 100vh;
   overflow: hidden;
-  &__background {
-    width: 150vw;
-    height: 150vh;
-    background-image: url("../../assets/images/background.png");
-    background-repeat: no-repeat;
-    transform: rotate(20deg);
-    position: relative;
-    top: -100px;
-    background-size: 150vw 150vh;
-    background-origin: padding-box;
+  position: relative;
+  main {
+    width: 80vw;
+    height: 100vh;
+    background-color: get-color("background");
     z-index: 1;
+  }
+  &__background {
+    width: 100vw;
+    height: 200vh;
+    position: absolute;
+    transform: rotate(30deg);
+    overflow: hidden;
+    right: -40%;
+    // top: -60%;
+    &__image {
+      width: 150vw;
+      height: 200vh;
+      //   width: 100%;
+      //   height: 100%;
+      background-image: url("../../assets/images/background.png");
+      background-repeat: no-repeat;
+      position: absolute;
+      // right: -230px;
+      right: 25%;
+      top: -15%;
+      background-size: 100% 100%;
+      //   z-index: 2;
+    }
   }
 }

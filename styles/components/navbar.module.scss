@@ -8,7 +8,7 @@
   box-sizing: border-box;
   width: 100%;
   position: absolute;
-  z-index: 2;
+  z-index: 3;
   .icon_nav_container {
     display: flex;
     justify-content: center;
@@ -47,6 +47,7 @@
             $color: get-color-value("background"),
             $amount: 5
           );
+          transform: scale(1.01);
         }
       }
       &__sign_in {
@@ -55,6 +56,7 @@
         transition-duration: 100ms;
         &:hover {
           background-color: transparentize($color: white, $amount: 0.9);
+          transform: scale(1.01);
         }
       }
     }
