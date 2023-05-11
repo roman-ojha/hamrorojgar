@@ -1,0 +1,21 @@
+$colors: (
+  primary: #7b11bd,
+  background: #161d34,
+  foreground: #ffffff,
+);
+
+$fonts: (
+  font-sizes: (
+    small: 0.75rem,
+    medium: 1rem,
+    large: 1.25rem,
+  ),
+  font-weights: (
+    light: 300,
+    regular: 400,
+    bold: 700,
+  ),
+  font-families: (
+    primary: "Inter, sans-serif",
+  ),
+);
