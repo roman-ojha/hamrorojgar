@@ -1,40 +1,22 @@
 $breakpoints: (
   // small-device
-  "sm":
-    (
-      "min-width": 0px,
-      "max-width": 320px,
-    ),
+  "sm": 0px,
   // mobile device
-  "md":
-    (
-      "min-width": 321px,
-      "max-width": 480px,
-    ),
+  "md": 320px,
   // tablet devices
-  "td":
-    (
-      "min-width": 481px,
-      "max-width": 768px,
-    ),
+  "td": 480px,
   // small screen
-  "ss":
-    (
-      "min-width": 769px,
-      "max-width": 1024px,
-    ),
+  "ss": 768px,
   // large screen
-  "ls":
-    (
-      "min-width": 1025px,
-      "max-width": 1200px,
-    ),
-  "els": (
-    "min-width": 1201px,
-    "max-width": 1360px,
-  ),
-  "eels": (
-    "min-width": 1360px,
-    "max-width": 1920px,
-  )
+  "lg": 992px,
+  // extra large
+  "xl": 1200px,
+  "2xl": 1440px,
+  "hd": 1920px
 );
+
+@mixin media($screen) {
+  @media (min-width: map-get($map:$breakpoints, $key:$screen)) {
+    @content;
+  }
+}

@@ -1,7 +1,8 @@
 @use "./variables" as *;
 
-@function get-color($color) {
-  @return map-get($map: $colors, $key: $color);
+@function get-color($type) {
+  // @return map-get($map: $colors, $key: $color);
+  @return var(--clr-#{$type});
 }
 
 @function get-font-family($type: primary) {
