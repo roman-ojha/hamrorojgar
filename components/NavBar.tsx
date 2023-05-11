@@ -7,7 +7,7 @@ const NavBar = (): React.JSX.Element => {
   return (
     <nav className={styles.navbar}>
       <div className={styles.icon_nav_container}>
-        <Image className={styles.app_icon} src={appIcon} alt="appIcon"></Image>
+        <Image className={styles.app_icon} src={appIcon} alt="app-icon"></Image>
         <ul className={styles.nav_list}>
           <li>How it works</li>
           <li>About</li>

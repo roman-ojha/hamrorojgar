@@ -3,6 +3,7 @@ import Head from "next/head";
 import Image from "next/image";
 import constants from "@/constants/index";
 import NavBar from "@/components/NavBar";
+import backgroundImg from "@/assets/images/background.png";
 
 const Home: NextPage = () => {
   return (
@@ -16,6 +17,7 @@ const Home: NextPage = () => {
         {/* <link rel="icon" href="/favicon.ico" /> */}
       </Head>
       <NavBar />
+      <Image src={backgroundImg} alt="background-image"></Image>
     </div>
   );
 };
