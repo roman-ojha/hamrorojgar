@@ -4,10 +4,11 @@ import Image from "next/image";
 import constants from "@/constants/index";
 import NavBar from "@/components/NavBar";
 import backgroundImg from "@/assets/images/background.png";
+import styles from "@/styles/pages/index.module.scss";
 
 const Home: NextPage = () => {
   return (
-    <div>
+    <div className={styles.home}>
       <Head>
         <title>{constants.appName}</title>
         <meta
@@ -17,7 +18,12 @@ const Home: NextPage = () => {
         {/* <link rel="icon" href="/favicon.ico" /> */}
       </Head>
       <NavBar />
-      <Image src={backgroundImg} alt="background-image"></Image>
+      <div className={styles.home__background}></div>
+      {/* <Image
+        className={styles.home__background}
+        src={backgroundImg}
+        alt="background-image"
+      ></Image> */}
     </div>
   );
 };

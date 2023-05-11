@@ -1,0 +1,17 @@
+.home {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  &__background {
+    width: 150vw;
+    height: 150vh;
+    background-image: url("../../assets/images/background.png");
+    background-repeat: no-repeat;
+    transform: rotate(20deg);
+    position: relative;
+    top: -100px;
+    background-size: 150vw 150vh;
+    background-origin: padding-box;
+    z-index: 1;
+  }
+}
