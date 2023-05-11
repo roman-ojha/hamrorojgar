@@ -1,0 +1,12 @@
+@use "./variables" as *;
+
+@function get-color($color) {
+  @return map-get($map: $colors, $key: $color);
+}
+
+@function get-font-family($type: primary) {
+  @return map-get(
+    $map: map-get($map: $fonts, $key: font-families),
+    $key: $type
+  );
+}
