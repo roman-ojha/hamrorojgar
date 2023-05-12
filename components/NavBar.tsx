@@ -1,7 +1,9 @@
 import React from "react";
+import Link from "next/link";
 import appIcon from "@/assets/images/appIcon.png";
 import Image from "next/image";
 import styles from "@/styles/components/navbar.module.scss";
+import type { SetStateAction, Dispatch } from "react";
 
 const NavBar = (): React.JSX.Element => {
   return (
@@ -33,19 +35,19 @@ const NavBar = (): React.JSX.Element => {
         </ul>
       </div>
       <div className={styles.buttons}>
-        <button
+        <Link
+          href="/register"
           type="button"
           className={`${styles.buttons__button__register} ${styles.buttons__button}`}
         >
           Register
-        </button>
-        <button
-          type="button"
-          id="sign_in_button"
+        </Link>
+        <Link
+          href="/signin"
           className={`${styles.buttons__button__sign_in} ${styles.buttons__button}`}
         >
           Sign in
-        </button>
+        </Link>
       </div>
     </nav>
   );

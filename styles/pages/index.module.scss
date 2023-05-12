@@ -11,7 +11,7 @@
     background-color: get-color("background");
     border: 1px solid transparent;
     display: flex;
-    justify-content: start;
+    justify-content: flex-start;
     align-items: center;
     &__content {
       margin-left: 10%;
@@ -59,7 +59,7 @@
     overflow: hidden;
     right: -40%;
     display: flex;
-    justify-content: start;
+    justify-content: flex-start;
     align-items: center;
     &__interview {
       width: 75vh;
