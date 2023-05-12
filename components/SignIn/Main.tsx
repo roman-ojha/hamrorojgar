@@ -12,7 +12,8 @@ const Main = (): React.JSX.Element => {
     <>
       <main className={styles.signin__main}>
         <div className={styles.signin__main__navigate_home}>
-          <span
+          <Link
+            href="/"
             onMouseEnter={() => {
               const backIconStyle: CSSStyleDeclaration | undefined =
                 document.getElementById("back_icon")?.style;
@@ -42,10 +43,8 @@ const Main = (): React.JSX.Element => {
               className={styles.signin__main__navigate_home__button__icon}
               icon="material-symbols:arrow-back-ios-new-rounded"
             />
-            <Link id="home_navigation" href="/">
-              Home
-            </Link>
-          </span>
+            <h3 id="home_navigation">Home</h3>
+          </Link>
         </div>
         <h2>Sign In</h2>
         <form
