@@ -1,0 +1,35 @@
+@use "../utils" as *;
+
+.signin {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  &__background {
+    width: 150vw;
+    height: 200vh;
+    position: absolute;
+    right: -10%;
+    bottom: -35%;
+    transform: rotate(30deg);
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    &__image {
+      width: 100%;
+      height: 100%;
+      background-image: url("../../assets/images/background.png");
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+      position: absolute;
+    }
+    &__welcome {
+      width: 75vh;
+      height: 75vh;
+      position: relative;
+      transform: rotate(-30deg);
+      right: 12%;
+      top: 18%;
+    }
+  }
+}
