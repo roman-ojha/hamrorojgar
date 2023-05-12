@@ -60,10 +60,21 @@ const SingIn: NextPage = () => {
               </Link>
             </span>
           </div>
-          <h1>Sign In</h1>
-          <form className={styles.signin__main__form}>
-            <input type="text" placeholder="Email or mobile no." />
-            <input type="password" placeholder="Password" />
+          <h2>Sign In</h2>
+          <form
+            onSubmit={(e) => {
+              e.preventDefault();
+            }}
+            className={styles.signin__main__form}
+          >
+            <div className={styles.signin__main__form__inputs}>
+              <div className={styles.signin__main__form__inputs__fields}>
+                <input type="text" placeholder="Email or mobile no." />
+              </div>
+              <div className={styles.signin__main__form__inputs__fields}>
+                <input type="password" placeholder="Password" />
+              </div>
+            </div>
             <input type="submit" value="Sign In" />
           </form>
         </main>

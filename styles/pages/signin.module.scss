@@ -12,9 +12,12 @@
     border-radius: 0px 20px 20px 0px;
     position: relative;
     top: 2.5vh;
+    @include media("2xl") {
+      width: 700px;
+    }
     &__navigate_home {
       width: 100%;
-      padding: 20px 0px;
+      padding: 20px 0px 10px 0px;
       &__button {
         width: fit-content;
         display: flex;
@@ -35,6 +38,76 @@
           font-weight: bold;
           font-style: italic;
           transition-duration: 200ms;
+          font-size: 1rem;
+        }
+      }
+    }
+    h2 {
+      margin: 0px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-transform: uppercase;
+      font-style: italic;
+      font-size: 1.5rem;
+    }
+    &__form {
+      height: 80%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      gap: 10%;
+      &__inputs {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 5vh;
+        &__fields {
+          width: 60%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          input[type="text"],
+          input[type="password"] {
+            width: 100%;
+            background-color: transparent;
+            outline: none;
+            border-width: 0px 0px 2px 0px;
+            border-color: white;
+            &::placeholder {
+              color: white;
+              font-size: 0.8rem;
+            }
+            &:read-write {
+              font-size: 0.8rem;
+            }
+          }
+          span {
+            align-self: flex-start;
+            p {
+              font-size: 0.6rem;
+              margin: 0px;
+            }
+          }
+        }
+      }
+      input[type="submit"] {
+        background-color: get-color("primary");
+        padding: 8px 30px;
+        border-width: 0px;
+        border-radius: 10px;
+        margin-top: 8%;
+        cursor: pointer;
+        transition-duration: 200ms;
+        &:hover {
+          background-color: lighten(
+            $color: get-color-value("primary"),
+            $amount: 5
+          );
         }
       }
     }

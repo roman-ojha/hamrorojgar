@@ -24,6 +24,9 @@ a {
 * {
   // box-sizing: border-box;
   font-size: 20px;
+  @include media("2xl") {
+    font-size: 25px;
+  }
 }
 
 @media (prefers-color-scheme: dark) {
