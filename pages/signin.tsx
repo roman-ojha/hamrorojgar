@@ -1,14 +1,17 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import styles from "@/styles/pages/signin.module.scss";
 import welcomeImage from "@/assets/svg/welcome.svg";
 import { Icon } from "@iconify/react";
 import Link from "next/link";
 
 const SingIn: NextPage = () => {
-  useEffect(() => {}, []);
+  const [isValidated, setIsValidated] = useState({
+    emailOrNo: false,
+    password: false,
+  });
   return (
     <>
       <Head>
@@ -70,9 +73,31 @@ const SingIn: NextPage = () => {
             <div className={styles.signin__main__form__inputs}>
               <div className={styles.signin__main__form__inputs__fields}>
                 <input type="text" placeholder="Email or mobile no." />
+                {isValidated.emailOrNo ? (
+                  ""
+                ) : (
+                  <span data-type="validation-error">
+                    <Icon
+                      className={styles.validation_icon}
+                      icon="ic:round-warning"
+                    />
+                    <p>Required field</p>
+                  </span>
+                )}
               </div>
               <div className={styles.signin__main__form__inputs__fields}>
                 <input type="password" placeholder="Password" />
+                {isValidated.password ? (
+                  ""
+                ) : (
+                  <span data-type="validation-error">
+                    <Icon
+                      className={styles.validation_icon}
+                      icon="ic:round-warning"
+                    />
+                    <p>Required field</p>
+                  </span>
+                )}
               </div>
             </div>
             <input type="submit" value="Sign In" />

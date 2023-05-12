@@ -86,11 +86,23 @@
               font-size: 0.8rem;
             }
           }
-          span {
+          span[data-type="validation-error"] {
             align-self: flex-start;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 5px;
+            gap: 10px;
+            $validation_error_color: #f1599f;
+            .validation_icon {
+              width: 15px;
+              height: 15px;
+              color: $validation_error_color;
+            }
             p {
               font-size: 0.6rem;
               margin: 0px;
+              color: $validation_error_color;
             }
           }
         }
