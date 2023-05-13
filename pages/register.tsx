@@ -153,11 +153,66 @@ const Register: NextPage = () => {
             </div>
           </div>
           <div className={styles.register__form__second_row}>
-            <div
-              className={styles.register__form__second_row__field_container}
-            ></div>
+            <div className={styles.register__form__second_row__column}>
+              <div className={styles.register__form__second_row__column__field}>
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  placeholder="Email"
+                  data-field="input"
+                />
+              </div>
+              <div className={styles.register__form__second_row__column__field}>
+                <input
+                  type="number"
+                  name="mobile_no"
+                  id="mobile_no"
+                  placeholder="Mobile no."
+                  data-field="input"
+                />
+              </div>
+              <div className={styles.register__form__second_row__column__field}>
+                <input
+                  type="text"
+                  name="nationality"
+                  id="nationality"
+                  placeholder="Nationality"
+                  data-field="input"
+                />
+              </div>
+            </div>
+            <div className={styles.register__form__second_row__column}>
+              <div className={styles.register__form__second_row__column__field}>
+                <input
+                  type="text"
+                  name="citizenship_no"
+                  id="citizenship_no"
+                  placeholder="Citizenship no."
+                  data-field="input"
+                />
+              </div>
+              <div className={styles.register__form__second_row__column__field}>
+                <input
+                  type="password"
+                  name="password"
+                  id="password"
+                  placeholder="Password"
+                  data-field="input"
+                />
+              </div>
+              <div className={styles.register__form__second_row__column__field}>
+                <input
+                  type="password"
+                  name="c_password"
+                  id="c_password"
+                  placeholder="Confirm password"
+                  data-field="input"
+                />
+              </div>
+            </div>
           </div>
-          <div className={styles.register__form__button_container}></div>
+          <input type="submit" value="Register" />
         </form>
       </div>
     </>

@@ -46,10 +46,11 @@
     border-radius: 1vw;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: center;
+    $column-width: 22%;
     @mixin group_form_field_container {
-      width: 22%;
+      width: $column-width;
       display: flex;
       flex-direction: column;
       align-items: flex-start;
@@ -62,15 +63,13 @@
     }
     &__first_row {
       width: 100%;
-      // border: 1px solid green;
       display: flex;
       justify-content: center;
       align-items: flex-start;
       gap: 2%;
       &__upload_picture {
-        width: 22%;
+        width: $column-width;
         height: 100%;
-        // border: 1px solid red;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -112,6 +111,46 @@
             @include input_field;
           }
         }
+      }
+    }
+    &__second_row {
+      // border: 1px solid red;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 2%;
+      &__column {
+        // border: 1px solid green;
+        width: $column-width;
+        display: flex;
+        flex-direction: column;
+        gap: 1.5vh;
+        &__field {
+          padding: 0.3vw 1.5vw;
+          border: 2px solid
+            lighten($color: get-color-value("background3"), $amount: 10);
+          border-radius: 0.6vw;
+          background-color: get-color("background3");
+          input[data-field="input"] {
+            @include input_field;
+          }
+        }
+      }
+    }
+    input[type="submit"] {
+      background-color: get-color("primary");
+      padding: 8px 30px;
+      border-width: 0px;
+      border-radius: 10px;
+      margin-bottom: 3vh;
+      cursor: pointer;
+      transition-duration: 200ms;
+      &:hover {
+        background-color: lighten(
+          $color: get-color-value("primary"),
+          $amount: 5
+        );
       }
     }
   }
