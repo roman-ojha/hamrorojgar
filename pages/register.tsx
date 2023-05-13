@@ -3,6 +3,8 @@ import Head from "next/head";
 import styles from "@/styles/pages/register.module.scss";
 import Link from "next/link";
 import { Icon } from "@iconify/react";
+import avatar from "@/assets/svg/avatar.svg";
+import Image from "next/image";
 
 const Register = (): React.JSX.Element => {
   return (
@@ -54,13 +56,34 @@ const Register = (): React.JSX.Element => {
         >
           <h1 className={styles.register__form__title}>Registration</h1>
           <div className={styles.register__form__first_row}>
-            <div className={styles.register__form__first_row__name}>
+            <div className={styles.register__form__first_row__upload_picture}>
+              <div
+                className={
+                  styles.register__form__first_row__upload_picture__avatar_container
+                }
+              >
+                <Image
+                  className={
+                    styles.register__form__first_row__upload_picture__avatar_container__icon
+                  }
+                  src={avatar}
+                  alt="avatar"
+                />
+              </div>
+              <label htmlFor="picture-file">Upload photo</label>
+              <input type="file" name="picture" id="picture-file" hidden />
+            </div>
+            <div className={styles.register__form__first_row__field_group}>
               <label htmlFor="first-name">Name</label>
-              <div className={styles.register__form__first_row__name__fields}>
+              <div
+                className={
+                  styles.register__form__first_row__field_group__fields
+                }
+              >
                 <input
                   type="text"
                   placeholder="First name"
-                  name="first-name"
+                  id="first-name"
                   data-field="input"
                 />
                 <input
@@ -71,10 +94,21 @@ const Register = (): React.JSX.Element => {
                 <input type="text" placeholder="Last name" data-field="input" />
               </div>
             </div>
-            <div className={styles.register__form__first_row__name}>
-              <label htmlFor="first-name">Permanent address</label>
-              <div className={styles.register__form__first_row__name__fields}>
-                <input type="text" placeholder="Province" data-field="input" />
+            <div className={styles.register__form__first_row__field_group}>
+              <label htmlFor="permanent-address-province">
+                Permanent address
+              </label>
+              <div
+                className={
+                  styles.register__form__first_row__field_group__fields
+                }
+              >
+                <input
+                  type="text"
+                  placeholder="Province"
+                  id="permanent-address-province"
+                  data-field="input"
+                />
                 <input type="text" placeholder="District" data-field="input" />
                 <input
                   type="text"
@@ -88,10 +122,21 @@ const Register = (): React.JSX.Element => {
                 />
               </div>
             </div>
-            <div className={styles.register__form__first_row__name}>
-              <label htmlFor="first-name">Secondary address (optional)</label>
-              <div className={styles.register__form__first_row__name__fields}>
-                <input type="text" placeholder="Province" data-field="input" />
+            <div className={styles.register__form__first_row__field_group}>
+              <label htmlFor="temporary-address-province">
+                Temporary address (optional)
+              </label>
+              <div
+                className={
+                  styles.register__form__first_row__field_group__fields
+                }
+              >
+                <input
+                  type="text"
+                  placeholder="Province"
+                  id="temporary-address-province"
+                  data-field="input"
+                />
                 <input type="text" placeholder="District" data-field="input" />
                 <input
                   type="text"
