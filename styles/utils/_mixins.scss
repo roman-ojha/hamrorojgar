@@ -5,9 +5,9 @@
   background-color: transparent;
   outline: none;
   border-width: 0px 0px 2px 0px;
-  border-color: white;
+  border-color: darken($color: #ffffff, $amount: 20);
   &::placeholder {
-    color: white;
+    color: darken($color: #ffffff, $amount: 20);
     font-size: 0.7rem;
   }
   &:read-write {
@@ -19,7 +19,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 0.6rem;
+  gap: 2.5vh;
   border: 2px solid lighten($color: get-color-value("background3"), $amount: 10);
   border-radius: 0.6vw;
   width: 100%;

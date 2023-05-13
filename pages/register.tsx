@@ -54,13 +54,13 @@ const Register = (): React.JSX.Element => {
         >
           <h1 className={styles.register__form__title}>Registration</h1>
           <div className={styles.register__form__first_row}>
-            <div></div>
             <div className={styles.register__form__first_row__name}>
               <label htmlFor="first-name">Name</label>
               <div className={styles.register__form__first_row__name__fields}>
                 <input
                   type="text"
                   placeholder="First name"
+                  name="first-name"
                   data-field="input"
                 />
                 <input
@@ -68,9 +68,39 @@ const Register = (): React.JSX.Element => {
                   placeholder="Middle name(optional)"
                   data-field="input"
                 />
+                <input type="text" placeholder="Last name" data-field="input" />
+              </div>
+            </div>
+            <div className={styles.register__form__first_row__name}>
+              <label htmlFor="first-name">Permanent address</label>
+              <div className={styles.register__form__first_row__name__fields}>
+                <input type="text" placeholder="Province" data-field="input" />
+                <input type="text" placeholder="District" data-field="input" />
                 <input
                   type="text"
-                  placeholder="Last name(optional)"
+                  placeholder="Municipality"
+                  data-field="input"
+                />
+                <input
+                  type="number"
+                  placeholder="Ward no."
+                  data-field="input"
+                />
+              </div>
+            </div>
+            <div className={styles.register__form__first_row__name}>
+              <label htmlFor="first-name">Secondary address (optional)</label>
+              <div className={styles.register__form__first_row__name__fields}>
+                <input type="text" placeholder="Province" data-field="input" />
+                <input type="text" placeholder="District" data-field="input" />
+                <input
+                  type="text"
+                  placeholder="Municipality"
+                  data-field="input"
+                />
+                <input
+                  type="number"
+                  placeholder="Ward no."
                   data-field="input"
                 />
               </div>

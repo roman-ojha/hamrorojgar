@@ -49,7 +49,7 @@
     justify-content: flex-start;
     align-items: center;
     @mixin group_form_field_container {
-      width: 25%;
+      width: 22%;
       display: flex;
       flex-direction: column;
       align-items: flex-start;
@@ -62,11 +62,16 @@
     }
     &__first_row {
       width: 100%;
-      border: 1px solid green;
+      // border: 1px solid green;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 2%;
       &__name {
         @include group_form_field_container;
         label {
           font-size: 0.7rem;
+          color: darken($color: #ffffff, $amount: 20);
         }
         &__fields {
           @include input_fields_container;
