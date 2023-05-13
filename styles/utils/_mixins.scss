@@ -1,0 +1,29 @@
+@use "./functions" as *;
+
+@mixin input_field {
+  width: 100%;
+  background-color: transparent;
+  outline: none;
+  border-width: 0px 0px 2px 0px;
+  border-color: white;
+  &::placeholder {
+    color: white;
+    font-size: 0.7rem;
+  }
+  &:read-write {
+    font-size: 0.7rem;
+  }
+}
+@mixin input_fields_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.6rem;
+  border: 2px solid lighten($color: get-color-value("background3"), $amount: 10);
+  border-radius: 0.6vw;
+  width: 100%;
+  padding: 1.5vw;
+  box-sizing: border-box;
+  background-color: get-color("background3");
+}

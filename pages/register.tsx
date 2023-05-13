@@ -46,6 +46,39 @@ const Register = (): React.JSX.Element => {
             <h3 id="home_navigation">Home</h3>
           </Link>
         </div>
+        <form
+          onSubmit={(e) => {
+            e.preventDefault();
+          }}
+          className={styles.register__form}
+        >
+          <h1 className={styles.register__form__title}>Registration</h1>
+          <div className={styles.register__form__first_row}>
+            <div></div>
+            <div className={styles.register__form__first_row__name}>
+              <label htmlFor="first-name">Name</label>
+              <div className={styles.register__form__first_row__name__fields}>
+                <input
+                  type="text"
+                  placeholder="First name"
+                  data-field="input"
+                />
+                <input
+                  type="text"
+                  placeholder="Middle name(optional)"
+                  data-field="input"
+                />
+                <input
+                  type="text"
+                  placeholder="Last name(optional)"
+                  data-field="input"
+                />
+              </div>
+            </div>
+          </div>
+          <div className={styles.register__form__second_row}></div>
+          <div className={styles.register__form__button_container}></div>
+        </form>
       </div>
     </>
   );

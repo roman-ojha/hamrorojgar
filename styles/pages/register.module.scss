@@ -1,6 +1,13 @@
 @use "../utils" as *;
 
 .register {
+  width: 100vw;
+  height: 100vh;
+  background-color: get-color("background");
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
   &__navigate_home {
     width: 100%;
     padding: 20px 0px 10px 0px;
@@ -26,6 +33,47 @@
         transition-duration: 200ms;
         font-size: 1rem;
         margin: 0px;
+      }
+    }
+  }
+  &__form {
+    width: 95vw;
+    margin-top: 1vh;
+    height: calc(90vh - 30px);
+    border: 2px solid
+      lighten($color: get-color-value("background3"), $amount: 10);
+    background-color: get-color("background2");
+    border-radius: 1vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    @mixin group_form_field_container {
+      width: 25%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      gap: 0.5vw;
+    }
+    &__title {
+      font-size: 1.2rem;
+      font-style: italic;
+    }
+    &__first_row {
+      width: 100%;
+      border: 1px solid green;
+      &__name {
+        @include group_form_field_container;
+        label {
+          font-size: 0.7rem;
+        }
+        &__fields {
+          @include input_fields_container;
+          input[data-field="input"] {
+            @include input_field;
+          }
+        }
       }
     }
   }
