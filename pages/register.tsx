@@ -5,8 +5,9 @@ import Link from "next/link";
 import { Icon } from "@iconify/react";
 import avatar from "@/assets/svg/avatar.svg";
 import Image from "next/image";
+import type { NextPage } from "next";
 
-const Register = (): React.JSX.Element => {
+const Register: NextPage = () => {
   return (
     <>
       <Head>
@@ -151,7 +152,11 @@ const Register = (): React.JSX.Element => {
               </div>
             </div>
           </div>
-          <div className={styles.register__form__second_row}></div>
+          <div className={styles.register__form__second_row}>
+            <div
+              className={styles.register__form__second_row__field_container}
+            ></div>
+          </div>
           <div className={styles.register__form__button_container}></div>
         </form>
       </div>

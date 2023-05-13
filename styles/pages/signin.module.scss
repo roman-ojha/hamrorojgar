@@ -78,13 +78,29 @@
             background-color: transparent;
             outline: none;
             border-width: 0px 0px 2px 0px;
-            border-color: white;
+            border-color: darken($color: #ffffff, $amount: 20);
+            transition-duration: 200ms;
+            // &::placeholder {
+            //   color: white;
+            //   font-size: 0.8rem;
+            // }
+            // &:read-write {
+            //   font-size: 0.8rem;
+            // }
             &::placeholder {
-              color: white;
+              color: darken($color: #ffffff, $amount: 20);
               font-size: 0.8rem;
             }
             &:read-write {
               font-size: 0.8rem;
+            }
+            &:focus {
+              &::placeholder {
+                color: lighten($color: get-color-value("primary"), $amount: 60);
+              }
+              border-width: 0px 0px 3px 0px;
+              transform: scale(1.02);
+              border-color: get-color("primary");
             }
           }
           span[data-type="validation-error"] {
