@@ -3,7 +3,7 @@
 .card {
   margin: 3% 8%;
   border: 1px solid green;
-  padding: 10px 20px;
+  padding: 0.8vw 1.5vw;
   border-radius: 0.8vw;
   background-color: get-color("background3");
   border: 2px solid lighten($color: get-color-value("background3"), $amount: 10);

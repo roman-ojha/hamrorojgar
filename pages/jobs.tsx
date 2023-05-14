@@ -4,6 +4,7 @@ import NavBar from "@/components/NavBar";
 import styles from "@/styles/pages/jobs.module.scss";
 import { Icon } from "@iconify/react";
 import JobCard from "@/components/JobCard";
+import JobDesc from "@/components/JobDesc";
 
 const Jobs = (): React.JSX.Element => {
   return (
@@ -36,9 +37,11 @@ const Jobs = (): React.JSX.Element => {
           <div className={styles.jobs__search__where}>
             <label htmlFor="district">Where</label>
             <select name="district" id="district">
+              <option value="">District</option>
               <option value="">jhapa</option>
             </select>
             <select name="municipality" id="municipality">
+              <option value="">Municipality</option>
               <option value="">kamal</option>
             </select>
             <Icon
@@ -49,12 +52,14 @@ const Jobs = (): React.JSX.Element => {
           <div className={styles.jobs__search__where}></div>
         </form>
         <main className={styles.jobs__main}>
-          <section className={styles.jobs__main__first_column}>
+          <section className={styles.jobs__main__job_card_column}>
             <JobCard />
             <JobCard />
             <JobCard />
           </section>
-          <section className={styles.jobs__main__second_column}></section>
+          <section className={styles.jobs__main__job_desc_column}>
+            <JobDesc />
+          </section>
         </main>
       </div>
     </>

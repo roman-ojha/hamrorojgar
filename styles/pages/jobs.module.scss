@@ -98,11 +98,11 @@
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    &__first_column {
+    &__job_card_column {
       width: 50vw;
       // border: 1px solid red;
     }
-    &__second_column {
+    &__job_desc_column {
       width: 50vw;
       //   height: 30px;
       //   border: 1px solid red;
