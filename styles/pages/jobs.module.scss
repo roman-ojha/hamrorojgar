@@ -8,9 +8,85 @@
   background-color: get-color("background");
   &__search {
     width: 100vw;
-    height: 300px;
-    border: 1px solid red;
     position: relative;
+    background-color: get-color("background");
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4vw;
+    padding: 1.3vw 0px;
+    &__what {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 1vw;
+      label {
+        font-size: 0.9rem;
+        font-weight: bold;
+      }
+      &__input_field {
+        border: 1px solid
+          darken($color: get-color-value("foreground"), $amount: 25);
+        padding: 0.3vw 1vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 0.6vw;
+        input {
+          border-width: 0px;
+          background-color: transparent;
+          width: 25vw;
+          outline: none;
+          &::placeholder {
+            color: darken($color: get-color-value("foreground"), $amount: 25);
+            font-size: 0.8rem;
+          }
+          &:read-write {
+            color: darken($color: get-color-value("foreground"), $amount: 25);
+            font-size: 0.8rem;
+          }
+        }
+        &__icon {
+          width: 1.2rem;
+          height: 1.2rem;
+          color: darken($color: get-color-value("foreground"), $amount: 25);
+          cursor: pointer;
+        }
+      }
+    }
+    &__where {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      label {
+        font-size: 0.9rem;
+        font-weight: bold;
+      }
+      select {
+        border: 1px solid
+          darken($color: get-color-value("foreground"), $amount: 25);
+        color: darken($color: get-color-value("foreground"), $amount: 15);
+        font-size: 0.8rem;
+        padding: 0.3vw 1vw;
+        border-radius: 0.4vw;
+        margin-left: 1vw;
+        background-color: transparent;
+      }
+      &__icon {
+        margin-left: 1vw;
+        width: 1.2rem;
+        height: 1.2rem;
+        color: darken($color: get-color-value("foreground"), $amount: 25);
+        cursor: pointer;
+        padding: 0.1vw;
+        border-radius: 0.3vw;
+        transition-duration: 200ms;
+        &:hover {
+          background-color: white;
+          color: black;
+        }
+      }
+    }
   }
   &__background {
     width: 100vw;
