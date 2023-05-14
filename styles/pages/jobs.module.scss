@@ -5,6 +5,13 @@
   min-height: 100vh;
   overflow-x: hidden;
   position: relative;
+  background-color: get-color("background");
+  &__search {
+    width: 100vw;
+    height: 300px;
+    border: 1px solid red;
+    position: relative;
+  }
   &__background {
     width: 100vw;
     height: 200vh;

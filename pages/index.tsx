@@ -18,7 +18,6 @@ const Home: NextPage = () => {
         />
         {/* <link rel="icon" href="/favicon.ico" /> */}
       </Head>
-      <NavBar />
       <div className={styles.home__background}>
         <div className={styles.home__background__image}></div>
         <Image
@@ -27,6 +26,7 @@ const Home: NextPage = () => {
           alt="interview"
         ></Image>
       </div>
+      <NavBar />
       <main className={styles.main}>
         <div className={styles.main__content}>
           <div>

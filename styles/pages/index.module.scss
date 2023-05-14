@@ -5,10 +5,10 @@
   height: 100vh;
   overflow: hidden;
   position: relative;
+  background-color: get-color("background");
   .main {
     width: 80vw;
     height: 100vh;
-    background-color: get-color("background");
     border: 1px solid transparent;
     display: flex;
     justify-content: flex-start;

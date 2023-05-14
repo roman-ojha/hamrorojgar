@@ -11,10 +11,27 @@ const Jobs = (): React.JSX.Element => {
         <title>Search new jobs</title>
       </Head>
       <div className={styles.jobs}>
-        <NavBar />
         <div className={styles.jobs__background}>
+          <div className={styles.jobs__background__color}></div>
           <div className={styles.jobs__background__image}></div>
         </div>
+        <NavBar />
+        {/* <div className={styles.jobs__search}>
+          <div className={styles.jobs__search__what}>
+            <label htmlFor="search_what">What</label>
+            <input type="search" name="search_what" id="search_what" />
+          </div>
+          <div className={styles.jobs__search__where}>
+            <label htmlFor="district">What</label>
+            <select name="district" id="district">
+              <option value="">jhapa</option>
+            </select>
+            <select name="municipality" id="municipality">
+              <option value="">kamal</option>
+            </select>
+          </div>
+          <div className={styles.jobs__search__where}></div>
+        </div> */}
       </div>
     </>
   );
