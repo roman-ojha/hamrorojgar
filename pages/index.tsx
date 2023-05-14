@@ -5,6 +5,7 @@ import constants from "@/constants/index";
 import NavBar from "@/components/NavBar";
 import styles from "@/styles/pages/index.module.scss";
 import interviewImg from "@/assets/svg/interview.svg";
+import Link from "next/link";
 
 const Home: NextPage = () => {
   return (
@@ -41,9 +42,9 @@ const Home: NextPage = () => {
               the Government Job
             </h3>
           </div>
-          <button className={styles.main__content__button}>
+          <Link href="/jobs" className={styles.main__content__button}>
             Search new job
-          </button>
+          </Link>
         </div>
       </main>
     </div>

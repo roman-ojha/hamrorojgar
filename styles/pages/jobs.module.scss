@@ -1,0 +1,29 @@
+@use "../utils" as *;
+
+.jobs {
+  width: 100vw;
+  min-height: 100vh;
+  overflow-x: hidden;
+  position: relative;
+  &__background {
+    width: 100vw;
+    height: 200vh;
+    position: absolute;
+    transform: rotate(30deg);
+    overflow: hidden;
+    right: -40%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    &__image {
+      width: 150vw;
+      height: 200vh;
+      background-image: url("../../assets/images/background.png");
+      background-repeat: no-repeat;
+      position: absolute;
+      right: 25%;
+      top: -15%;
+      background-size: 100% 100%;
+    }
+  }
+}
