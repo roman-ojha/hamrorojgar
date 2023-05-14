@@ -1,9 +1,9 @@
 import React from "react";
 import Head from "next/head";
-import Image from "next/image";
 import NavBar from "@/components/NavBar";
 import styles from "@/styles/pages/jobs.module.scss";
 import { Icon } from "@iconify/react";
+import JobCard from "@/components/JobCard";
 
 const Jobs = (): React.JSX.Element => {
   return (
@@ -48,6 +48,12 @@ const Jobs = (): React.JSX.Element => {
           </div>
           <div className={styles.jobs__search__where}></div>
         </form>
+        <main className={styles.jobs__main}>
+          <section className={styles.jobs__main__first_column}>
+            <JobCard />
+          </section>
+          <section className={styles.jobs__main__second_column}></section>
+        </main>
       </div>
     </>
   );

@@ -9,7 +9,8 @@ const NavBar = (): React.JSX.Element => {
   return (
     <nav className={styles.navbar}>
       <div className={styles.icon_nav_container}>
-        <button
+        <Link
+          href="/"
           style={{
             backgroundColor: "transparent",
             borderWidth: "0px",
@@ -21,7 +22,7 @@ const NavBar = (): React.JSX.Element => {
             src={appIcon}
             alt="app-icon"
           ></Image>
-        </button>
+        </Link>
         <ul className={styles.nav_list}>
           <li>
             <button>How it works</button>

@@ -4,6 +4,7 @@
   width: 100vw;
   min-height: 100vh;
   overflow-x: hidden;
+  overflow-y: hidden;
   position: relative;
   background-color: get-color("background");
   &__search {
@@ -86,6 +87,26 @@
           color: black;
         }
       }
+    }
+  }
+  &__main {
+    min-height: 100vh;
+    position: relative;
+    width: 100vw;
+    background-color: get-color("background");
+    margin-top: 2.5vw;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    &__first_column {
+      width: 50vw;
+      height: 30px;
+      border: 1px solid red;
+    }
+    &__second_column {
+      width: 50vw;
+      height: 30px;
+      border: 1px solid red;
     }
   }
   &__background {
