@@ -51,6 +51,8 @@ const Jobs = (): React.JSX.Element => {
         <main className={styles.jobs__main}>
           <section className={styles.jobs__main__first_column}>
             <JobCard />
+            <JobCard />
+            <JobCard />
           </section>
           <section className={styles.jobs__main__second_column}></section>
         </main>

@@ -1,0 +1,73 @@
+@use "../utils" as *;
+
+.card {
+  margin: 3% 8%;
+  border: 1px solid green;
+  padding: 10px 20px;
+  border-radius: 0.8vw;
+  background-color: get-color("background3");
+  border: 2px solid lighten($color: get-color-value("background3"), $amount: 10);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 8px;
+  cursor: pointer;
+  transition-duration: 150ms;
+  &:hover {
+    border-color: transparentize(
+      $color: lighten($color: get-color-value("secondary"), $amount: 15),
+      $amount: 0.6
+    );
+    transform: scale(1.005);
+  }
+  &:active {
+    transform: scale(1);
+    border-color: lighten($color: get-color-value("background3"), $amount: 10);
+  }
+  h1 {
+    font-size: 1rem;
+    margin: 0px;
+  }
+  h2 {
+    font-size: 0.8rem;
+    font-weight: 300;
+    margin: 0px;
+    color: darken($color: get-color-value("foreground"), $amount: 10);
+  }
+  &__salary,
+  &__time {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    border: 1px solid darken($color: #ffffff, $amount: 25);
+    padding: 0.4vw 0.4vw;
+    border-radius: 0.5vw;
+    gap: 8px;
+    p {
+      font-size: 0.65rem;
+      margin: 0px;
+      color: darken($color: get-color-value("foreground"), $amount: 10);
+    }
+    &__icon {
+      width: 0.9rem;
+      height: 0.9rem;
+    }
+  }
+  &__description {
+    width: 90%;
+    ul {
+      margin: 0px;
+      list-style-position: outside;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      li {
+        font-size: 0.7rem;
+        font-weight: 300;
+        margin: 0px;
+      }
+    }
+  }
+}
