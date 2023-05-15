@@ -20,7 +20,7 @@ class GovernmentUser(User):
 
 
 class Government(models.Model):
-    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    user = models.OneToOneField(GovernmentUser, on_delete=models.CASCADE)
 
     class GovernmentType(models.TextChoices):
         FEDERAL = 'F', "Federal"

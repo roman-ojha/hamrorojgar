@@ -1,5 +1,7 @@
 from django.db import models
 from django.contrib.auth.base_user import BaseUserManager
+from django.db.models.query import QuerySet
+from django.utils.translation import gettext_lazy as _
 from . import User
 
 
@@ -19,10 +21,10 @@ class CitizenUser(User):
 
 
 class Citizen(models.Model):
-    user = models.OneToOneField(User, on_delete=models.CASCADE)
-    f_name = models.CharField(max_length=30)
-    m_name = models.CharField(max_length=30, null=True)
-    l_name = models.CharField(max_length=30)
+    user = models.OneToOneField(CitizenUser, on_delete=models.CASCADE)
+    f_name = models.CharField(_("First name"), max_length=30)
+    m_name = models.CharField(_("Middle name"), max_length=30, null=True)
+    l_name = models.CharField(_("Last name"), max_length=30)
     mobile = models.IntegerField()
     date_of_birth = models.DateField()
 
