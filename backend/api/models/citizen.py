@@ -16,12 +16,14 @@ class CitizenUser(User):
 
     class Meta:
         proxy = True
+        verbose_name = "Citizen"  # Human readable name for admin site
 
     citizen = CitizenUserManager()
 
 
 class Citizen(models.Model):
     user = models.OneToOneField(CitizenUser, on_delete=models.CASCADE)
+    # _("<human_readable_name>")
     f_name = models.CharField(_("First name"), max_length=30)
     m_name = models.CharField(_("Middle name"), max_length=30, null=True)
     l_name = models.CharField(_("Last name"), max_length=30)

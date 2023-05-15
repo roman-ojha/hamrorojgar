@@ -1,3 +1,4 @@
+from typing import Any
 from django.db import models
 from django.contrib.auth.base_user import BaseUserManager
 from django.db.models.query import QuerySet
@@ -15,6 +16,7 @@ class GovernmentUser(User):
 
     class Meta:
         proxy = True
+        verbose_name = "Government"  # Human readable name for admin site
 
     government = GovernmentUserManager()
 
