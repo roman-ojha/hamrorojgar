@@ -17,3 +17,14 @@ class GovernmentUser(User):
         proxy = True
 
     government = GovernmentUserManager()
+
+
+class Government(models.Model):
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
+
+    class GovernmentType(models.TextChoices):
+        FEDERAL = 'F', "Federal"
+        PROVINCE = 'P', "Province"
+        LOCAL = 'L', "Local"
+    gov_type = models.CharField(max_length=3, choices=GovernmentType.choices)
+    # location
