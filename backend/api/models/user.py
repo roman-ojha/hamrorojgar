@@ -40,9 +40,14 @@ class User(AbstractUser, PermissionsMixin):
     first_name = None
     last_name = None
     USERNAME_FIELD = "email"
-    REQUIRED_FIELDS = ['role']
+    REQUIRED_FIELDS = []
 
     objects = UserManager()
+
+    def save(self, *args, **kwargs):
+        if not self.pk:
+            self.role = self.base_role
+            return super().save(*args, **kwargs)
 
     def __str__(self) -> str:
         return self.email
