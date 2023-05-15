@@ -3,11 +3,13 @@ from django.contrib.auth.base_user import BaseUserManager
 from . import User
 
 
+class CitizenUserManager(BaseUserManager):
+    def get_queryset(self, *args, **kwargs):
+        results = super().get_queryset(*args, **kwargs)
+        return results.filter(role=User.Role.CITIZEN)
+
+
 class CitizenUser(User):
-    class CitizenUserManager(BaseUserManager):
-        def get_queryset(self, *args, **kwargs):
-            results = super().get_queryset(*args, **kwargs)
-            return results.filter(role=User.Role.CITIZEN)
     base_role = User.Role.CITIZEN
 
     class Meta:

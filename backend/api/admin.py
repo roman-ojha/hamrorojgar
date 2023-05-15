@@ -1,5 +1,5 @@
 from django.contrib import admin
-from api.models import User, CitizenUser, Citizen
+from api.models import User, CitizenUser, Citizen, GovernmentUser
 
 
 # @admin.register(User)
@@ -15,3 +15,8 @@ class CitizenUserAdmin(admin.ModelAdmin):
 @admin.register(Citizen)
 class CitizenAdmin(admin.ModelAdmin):
     list_display = ('id', 'f_name')
+
+
+@admin.register(GovernmentUser)
+class GovernmentUserAdmin(admin.ModelAdmin):
+    list_display = ('id', 'email')
