@@ -1,14 +1,14 @@
 from django.db import models
 from django.contrib.auth.base_user import BaseUserManager
-from django.contrib.auth.models import AbstractUser
+from django.contrib.auth.models import AbstractUser, PermissionsMixin
 
 
 class UserManager(BaseUserManager):
     def create_user(self, email, password, **extra_fields):
         email = self.normalize_email(email=email)
         user = self.model(
-            email=email
-            ** extra_fields
+            email=email,
+            **extra_fields
         )
         user.set_password(password)
         user.save()
@@ -27,17 +27,22 @@ class UserManager(BaseUserManager):
         return self.create_user(email=email, password=password, **extra_fields)
 
 
-class User(AbstractUser):
+class User(AbstractUser, PermissionsMixin):
     class Role(models.TextChoices):
         GOVERNMENT = "GOV", "Government"
         CITIZEN = "CITIZEN", "Citizen"
 
     base_role = Role.GOVERNMENT
     email = models.CharField(max_length=80, unique=True)
-    role = models.CharField(max_length=15, choices=Role.choices)
-    objects = UserManager()
+    role = models.CharField(
+        max_length=15, choices=Role.choices)
+    username = None
+    first_name = None
+    last_name = None
     USERNAME_FIELD = "email"
-    REQUIRED_FIELDS = ['username']
+    REQUIRED_FIELDS = ['role']
+
+    objects = UserManager()
 
     def __str__(self) -> str:
         return self.email
