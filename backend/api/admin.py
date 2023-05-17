@@ -6,11 +6,6 @@ from django.forms.models import BaseInlineFormSet
 from django import forms
 
 
-# @admin.register(User)
-# class UserAdmin(admin.ModelAdmin):
-#     list_display = ('id', 'email')
-
-
 @admin.register(CitizenUser)
 class CitizenUserAdmin(admin.ModelAdmin):
     # To show the 'Citizen' data & Insert new data for Citizen on the same 'CitizenUser' Model Admin
@@ -20,7 +15,11 @@ class CitizenUserAdmin(admin.ModelAdmin):
         model = Citizen
         can_delete = False
         formset = InlineFormSet
-    list_display = ('id', 'email')
+
+    def first_name(self, obj):
+        return obj.citizen.f_name
+    first_name.short_description = "First Name"
+    list_display = ('id', 'email', 'first_name')
     inlines = [Inline]
 
     class Form(forms.ModelForm):
@@ -29,11 +28,6 @@ class CitizenUserAdmin(admin.ModelAdmin):
             # selecting 'Citizen' by default on 'role' select option field
             self.fields['role'].initial = User.Role.CITIZEN
     form = Form
-
-
-# @admin.register(Citizen)
-# class CitizenAdmin(admin.ModelAdmin):
-#     list_display = ('id', 'f_name')
 
 
 @admin.register(GovernmentUser)
