@@ -18,11 +18,12 @@ class GovernmentUser(User):
         proxy = True
         verbose_name = "Government"  # Human readable name for admin site
 
-    government = GovernmentUserManager()
+    governmentuser = GovernmentUserManager()
 
 
 class Government(models.Model):
-    user = models.OneToOneField(GovernmentUser, on_delete=models.CASCADE)
+    user = models.OneToOneField(
+        GovernmentUser, on_delete=models.CASCADE, related_name='government')
 
     class GovernmentType(models.TextChoices):
         FEDERAL = 'F', "Federal"
