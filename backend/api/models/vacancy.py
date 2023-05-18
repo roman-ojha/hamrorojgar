@@ -18,6 +18,7 @@ class Vacancy(models.Model):
         INTERNSHIP = "INTERN", 'Internship',
     opened_on = models.DateField(default=timezone.now)
     job_type = models.CharField(max_length=15, choices=JobTypeChoices.choices)
-    opened_by = models.ForeignKey(Government, on_delete=models.CASCADE)
+    government = models.ForeignKey(
+        Government, on_delete=models.CASCADE, related_name='opened_by')
     # job_location_desc
     # position

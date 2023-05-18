@@ -1,9 +1,11 @@
 from typing import Optional, Type
 from django.contrib import admin
 from django.contrib.admin.sites import AdminSite
-from api.models import User, CitizenUser, Citizen, GovernmentUser, Government, Vacancy
+from api.models import User, CitizenUser, Citizen, GovernmentUser, Government, Vacancy, Qualification
 from django.forms.models import BaseInlineFormSet
 from django import forms
+from django.utils.safestring import mark_safe
+from itertools import islice
 
 
 @admin.register(CitizenUser)
@@ -89,8 +91,31 @@ class GovernmentUserAdmin(admin.ModelAdmin):
 
 @admin.register(Vacancy)
 class VacancyAdmin(admin.ModelAdmin):
-    list_display = ('id', 'title', 'description',
-                    'is_opened', 'opened_on', 'job_type')
-
     def salary(self, obj):
-        return f"{obj.salary_from} - {obj.salary_to}"
+        return f"{obj.salary_from}K - {obj.salary_to}K"
+
+    def desc(self, obj):
+        if (len(obj.description) > 40):
+            return f"{obj.description[0:40]}..."
+        else:
+            return obj.description
+    desc.short_description = "Description"
+
+    def qualifications(self, obj):
+        descriptions = [
+            "-> " + q.description for q in islice(obj.of_vacancy.all(), 3)]
+        return mark_safe('<br>'.join(descriptions))
+
+    def opened_by(self, obj):
+        return obj.government
+
+    list_display = ('id', 'title', 'desc', 'salary',
+                    'is_opened', 'opened_on', 'job_type', 'opened_by', 'qualifications')
+
+    class Inline(admin.StackedInline):
+        class InlineFormSet(BaseInlineFormSet):
+            model = Qualification
+        model = Qualification
+        can_delete = False
+        formset = InlineFormSet
+    inlines = [Inline]
