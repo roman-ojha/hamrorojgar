@@ -1,7 +1,5 @@
-from typing import Optional, Type
 from django.contrib import admin
-from django.contrib.admin.sites import AdminSite
-from api.models import User, CitizenUser, Citizen, GovernmentUser, Government, Vacancy, Qualification
+from api.models import User, CitizenUser, Citizen, GovernmentUser, Government, Vacancy, Qualification, JobApplication
 from django.forms.models import BaseInlineFormSet
 from django import forms
 from django.utils.safestring import mark_safe
@@ -107,7 +105,7 @@ class VacancyAdmin(admin.ModelAdmin):
         return mark_safe('<br>'.join(descriptions))
 
     def opened_by(self, obj):
-        return obj.government
+        return mark_safe(f'<a href="/admin/api/governmentuser/{obj.government.pk}/change">{obj.government}</a>')
 
     list_display = ('id', 'title', 'desc', 'salary',
                     'is_opened', 'opened_on', 'job_type', 'opened_by', 'qualifications')
@@ -119,3 +117,8 @@ class VacancyAdmin(admin.ModelAdmin):
         can_delete = False
         formset = InlineFormSet
     inlines = [Inline]
+
+
+@admin.register(JobApplication)
+class JobApplicationAdmin(admin.ModelAdmin):
+    list_display = ('cv_url', 'is_approved', 'citizen')

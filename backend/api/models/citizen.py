@@ -40,6 +40,6 @@ class Citizen(models.Model):
     nationality = models.CharField(max_length=80)
     citizenship_no = models.CharField(max_length=200)
     # Use url shortener package for photo url link
-    photo_url = models.CharField(max_length=100, null=True)
+    photo_url = models.TextField(max_length=100, null=True)
     # permanent_address
     # temporary_address
