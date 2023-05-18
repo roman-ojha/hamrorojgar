@@ -22,3 +22,6 @@ class Vacancy(models.Model):
         Government, on_delete=models.CASCADE, related_name='opened_by')
     # job_location_desc
     # position
+
+    def __str__(self) -> str:
+        return f"{self.pk}"
