@@ -1,7 +1,7 @@
 from typing import Optional, Type
 from django.contrib import admin
 from django.contrib.admin.sites import AdminSite
-from api.models import User, CitizenUser, Citizen, GovernmentUser, Government
+from api.models import User, CitizenUser, Citizen, GovernmentUser, Government, Vacancy
 from django.forms.models import BaseInlineFormSet
 from django import forms
 
@@ -87,6 +87,10 @@ class GovernmentUserAdmin(admin.ModelAdmin):
     form = Form
 
 
-# @admin.register(Government)
-# class GovernmentUserAdmin(admin.ModelAdmin):
-#     list_display = ('id', 'gov_type')
+@admin.register(Vacancy)
+class VacancyAdmin(admin.ModelAdmin):
+    list_display = ('id', 'title', 'description',
+                    'is_opened', 'opened_on', 'job_type')
+
+    def salary(self, obj):
+        return f"{obj.salary_from} - {obj.salary_to}"

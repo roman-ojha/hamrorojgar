@@ -31,3 +31,6 @@ class Government(models.Model):
         LOCAL = 'L', "Local"
     gov_type = models.CharField(max_length=3, choices=GovernmentType.choices)
     # location
+
+    def __str__(self) -> str:
+        return self.user.email
