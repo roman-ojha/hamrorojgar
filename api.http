@@ -1,5 +1,5 @@
-### Create Citizen
-POST http://127.0.0.1:8000/api/citizens/
+### Reigster Citizen
+POST http://127.0.0.1:8000/api/citizens/register
 Content-Type: application/json
 
 {
@@ -16,4 +16,15 @@ Content-Type: application/json
         "nationality": "nepali",
         "citizenship_no": "453211234432",
         "photo_url": "https://stackoverflow.com/questions"
+}
+
+### Login Citizen
+
+POST http://127.0.0.1:8000/api/citizens/login
+Content-Type: application/json
+
+{
+        
+    "email": "rrr@gmail.com",
+    "password": "rrr@123"
 }

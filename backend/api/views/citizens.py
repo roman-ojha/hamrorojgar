@@ -9,6 +9,8 @@ from rest_framework.request import Request
 from rest_framework import status
 from rest_framework.views import APIView
 from utils.responseObj import ResponseObj
+from rest_framework.authentication import SessionAuthentication
+from rest_framework.permissions import IsAuthenticated
 
 
 # # Function Based
@@ -35,6 +37,9 @@ from utils.responseObj import ResponseObj
 #             return Response(serialized_data.errors, status=status.HTTP_406_NOT_ACCEPTABLE)
 
 class CitizenView(APIView):
+    authentication_classes = [SessionAuthentication]
+    permission_classes = [IsAuthenticated]
+
     def get(self, request: Request, pk=None, format=None):
         citizen = Citizen.objects.all()
         serialized = CitizenSerializer(citizen, many=True)
@@ -50,3 +55,20 @@ class CitizenView(APIView):
             return Response(ResponseObj(msg="Registered Citizen User").get(), status=status.HTTP_201_CREATED)
         else:
             return Response(serialized_data.errors, status=status.HTTP_406_NOT_ACCEPTABLE)
+
+
+class Registration(APIView):
+    def post(self, request: Request, format=None):
+        json_data = request.body
+        stream = io.BytesIO(json_data)
+        py_data = JSONParser().parse(stream=stream)
+        serialized_data = CitizenSerializer(data=py_data)
+        if serialized_data.is_valid():
+            serialized_data.save()
+            return Response(ResponseObj(msg="Registered Citizen User").get(), status=status.HTTP_201_CREATED)
+        else:
+            return Response(serialized_data.errors, status=status.HTTP_406_NOT_ACCEPTABLE)
+
+
+class Login(APIView):
+    pass
