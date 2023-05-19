@@ -74,6 +74,10 @@ TEMPLATES = [
 WSGI_APPLICATION = 'core.wsgi.application'
 
 
+# AUTHENTICATION_BACKENDS = [
+#     'api.authentication.CustomModelBackend',
+# ]
+
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 

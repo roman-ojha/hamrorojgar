@@ -10,7 +10,7 @@ class CitizenUserManager(BaseUserManager):
         results = super().get_queryset(*args, **kwargs)
         return results.filter(role=User.Role.CITIZEN)
 
-    # overriding the 'create_user' method to so that password will get properly hashed
+    # # overriding the 'create_user' method to so that password will get properly hashed
 
     def create_user(self, email, password=None, **extra_fields):
         print("hello =========================")
@@ -24,12 +24,9 @@ class CitizenUserManager(BaseUserManager):
         email = self.normalize_email(email=email)
         user = self.model(email=email, **extra_fields)
         user.set_password(password)
-        # user.save()
         print(user.password)
+        user.save()
         return user
-
-    def create_superuser(self, email, password=None, **extra_fields):
-        return self.create_user(email=email, password=password, **extra_fields)
 
 
 class CitizenUser(User):

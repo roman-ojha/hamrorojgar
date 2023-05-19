@@ -23,7 +23,7 @@ class CitizenSerializer(serializers.ModelSerializer):
 
     def create(self, validated_data):
         user_data = validated_data.pop('user')
-        user = CitizenUser.objects.create(**user_data)
+        user = CitizenUser.objects.create_user(**user_data)
         validated_data['user'] = user
         return Citizen.objects.create(**validated_data)
 
@@ -35,8 +35,6 @@ class LoginAuthTokenSerializer(AuthTokenSerializer):
     def validate(self, attrs):
         email = attrs.get('email')
         password = attrs.get('password')
-        # print(email)
-        # print(password)
 
         if email and password:
             user = authenticate(request=self.context.get('request'),

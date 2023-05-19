@@ -74,7 +74,6 @@ class Login(ObtainAuthToken):
     serializer_class = LoginAuthTokenSerializer
 
     def post(self, request: Request, *args, **kwargs):
-        # data = request.data
         serializer = self.serializer_class(
             data=request.data, context={'request': request})
         serializer.is_valid(raise_exception=True)

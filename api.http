@@ -24,7 +24,6 @@ POST http://127.0.0.1:8000/api/citizens/login
 Content-Type: application/json
 
 {
-        
     "email": "rrr@gmail.com",
     "password": "rrr@123"
 }
