@@ -18,7 +18,7 @@ class GovernmentUser(User):
         proxy = True
         verbose_name = "Government"  # Human readable name for admin site
 
-    governmentuser = GovernmentUserManager()
+    user = GovernmentUserManager()
 
 
 class Government(models.Model):

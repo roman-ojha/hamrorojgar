@@ -18,7 +18,7 @@ class CitizenUser(User):
         proxy = True
         verbose_name = "Citizen"  # Human readable name for admin site
 
-    citizenuser = CitizenUserManager()
+    user = CitizenUserManager()
 
 
 class Citizen(models.Model):

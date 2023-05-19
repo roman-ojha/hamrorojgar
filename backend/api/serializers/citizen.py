@@ -16,3 +16,9 @@ class CitizenSerializer(serializers.ModelSerializer):
         model = Citizen
         fields = ['user', 'f_name', 'm_name', 'l_name', 'mobile', 'date_of_birth',
                   'gender', 'nationality', 'citizenship_no', 'photo_url']
+
+    def create(self, validated_data):
+        user_data = validated_data.pop('user')
+        user = CitizenUser.user.create(**user_data)
+        validated_data['user'] = user
+        return Citizen.objects.create(**validated_data)

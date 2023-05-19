@@ -1,0 +1,19 @@
+### Create Citizen
+POST http://127.0.0.1:8000/api/citizens/
+Content-Type: application/json
+
+{
+        "user": {
+            "email": "rrr@gmail.com",
+            "password": "rrr@123"
+        },
+        "f_name": "rise",
+        "m_name": "rore",
+        "l_name": "revolte",
+        "mobile": 12343212,
+        "date_of_birth": "2023-05-17",
+        "gender": "M",
+        "nationality": "nepali",
+        "citizenship_no": "453211234432",
+        "photo_url": "https://stackoverflow.com/questions"
+}
