@@ -1,1 +1,1 @@
-from .citizens import citizen
+from .citizens import CitizenView as Citizen
