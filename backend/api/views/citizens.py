@@ -2,7 +2,7 @@ from django.http import HttpRequest, JsonResponse, HttpResponse
 from rest_framework.renderers import JSONRenderer
 from rest_framework.parsers import JSONParser
 from api.models import Citizen
-from api.serializers import CitizenSerializer
+from api.serializers import CitizenSerializer, LoginAuthTokenSerializer
 import io
 from rest_framework.response import Response
 from rest_framework.request import Request
@@ -11,6 +11,8 @@ from rest_framework.views import APIView
 from utils.responseObj import ResponseObj
 from rest_framework.authentication import SessionAuthentication
 from rest_framework.permissions import IsAuthenticated
+from rest_framework.authtoken.views import ObtainAuthToken
+from rest_framework.authtoken.models import Token
 
 
 # # Function Based
@@ -59,10 +61,8 @@ class CitizenView(APIView):
 
 class Registration(APIView):
     def post(self, request: Request, format=None):
-        json_data = request.body
-        stream = io.BytesIO(json_data)
-        py_data = JSONParser().parse(stream=stream)
-        serialized_data = CitizenSerializer(data=py_data)
+        data = request.data
+        serialized_data = CitizenSerializer(data=data)
         if serialized_data.is_valid():
             serialized_data.save()
             return Response(ResponseObj(msg="Registered Citizen User").get(), status=status.HTTP_201_CREATED)
@@ -70,5 +70,20 @@ class Registration(APIView):
             return Response(serialized_data.errors, status=status.HTTP_406_NOT_ACCEPTABLE)
 
 
-class Login(APIView):
-    pass
+class Login(ObtainAuthToken):
+    serializer_class = LoginAuthTokenSerializer
+
+    def post(self, request: Request, *args, **kwargs):
+        # data = request.data
+        serializer = self.serializer_class(
+            data=request.data, context={'request': request})
+        serializer.is_valid(raise_exception=True)
+        user = serializer.validated_data['user']
+        print(serializer.validated_data)
+        print(user)
+        token, created = Token.objects.get_or_create(user=user)
+        return Response({
+            'token': token.key,
+            'user_id': user.pk,
+            'email': user.email
+        })
