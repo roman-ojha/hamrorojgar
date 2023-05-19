@@ -8,10 +8,13 @@ from django import forms
 from django.utils.safestring import mark_safe
 from itertools import islice
 from django.utils.html import format_html
+import functools
+from django.contrib.auth.admin import UserAdmin
 
 
 @admin.register(CitizenUser)
-class CitizenUserAdmin(admin.ModelAdmin):
+class CitizenUserAdmin(UserAdmin):
+
     # To show the 'Citizen' data & Insert new data for Citizen on the same 'CitizenUser' Model Admin
     class Inline(admin.StackedInline):
         class InlineFormSet(BaseInlineFormSet):
@@ -56,16 +59,39 @@ class CitizenUserAdmin(admin.ModelAdmin):
     citizenship_no.short_description = "CitizenShip No."
     photo_url.short_description = "Photo URL"
 
+    inlines = [Inline]
+
+    # class Form(forms.ModelForm):
+    #     class Meta:
+    #         model = CitizenUser
+    #         fields = '__all__'
+
+    #     def __init__(self, *args, **kwargs) -> None:
+    #         super().__init__(*args, **kwargs)
+    #         # selecting 'Citizen' by default on 'role' select option field
+    #         self.fields['role'].initial = User.Role.CITIZEN
+    # form = Form
+
     list_display = ('id', 'email', 'first_name', 'middle_name', 'last_name', 'mobile',
                     'date_of_birth', 'gender', 'nationality', 'citizenship_no', 'photo_url', 'last_login', 'is_superuser', 'is_staff', 'is_active')
-    # inlines = [Inline]
-
-    class Form(forms.ModelForm):
-        def __init__(self, *args, **kwargs) -> None:
-            super().__init__(*args, **kwargs)
-            # selecting 'Citizen' by default on 'role' select option field
-            self.fields['role'].initial = User.Role.CITIZEN
-    form = Form
+    ordering = ('email',)
+    exclude = ('username', )  # we are not using 'username' file rather 'email'
+    add_fieldsets = (
+        ("User", {
+            'fields': ('email', 'password1', 'password2', 'role'),
+        }),
+    )
+    fieldsets = (
+        ("User:", {
+            'fields': ('email', 'password', 'role'),
+        }),
+        ('Permissions:', {
+            'fields': ('is_active', 'is_staff', 'is_superuser', 'groups', 'user_permissions'),
+        }),
+        ('Important Dates:', {
+            'fields': ('last_login', 'date_joined'),
+        }),
+    )
 
 
 @admin.register(GovernmentUser)

@@ -23,7 +23,7 @@ class CitizenSerializer(serializers.ModelSerializer):
 
     def create(self, validated_data):
         user_data = validated_data.pop('user')
-        user = CitizenUser.user.create(**user_data)
+        user = CitizenUser.objects.create(**user_data)
         validated_data['user'] = user
         return Citizen.objects.create(**validated_data)
 
