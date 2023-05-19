@@ -1,5 +1,6 @@
 from rest_framework import serializers
 from django.db import models
+from rest_framework.fields import empty
 from api.models import Citizen, CitizenUser
 from rest_framework.authtoken.serializers import AuthTokenSerializer
 from django.utils.translation import gettext_lazy as _
@@ -28,18 +29,19 @@ class CitizenSerializer(serializers.ModelSerializer):
 
 
 class LoginAuthTokenSerializer(AuthTokenSerializer):
-    email = serializers.CharField(label=_("Email"), write_only=True)
+    username = None
+    email = serializers.EmailField(label=_("Email"), write_only=True)
 
     def validate(self, attrs):
         email = attrs.get('email')
         password = attrs.get('password')
-        print(email)
-        print(password)
+        # print(email)
+        # print(password)
 
         if email and password:
             user = authenticate(request=self.context.get('request'),
-                                email=email, password=password)
-
+                                username=email, password=password)
+            print(user)
             # The authenticate call simply returns None for is_active=False
             # users. (Assuming the default ModelBackend authentication
             # backend.)

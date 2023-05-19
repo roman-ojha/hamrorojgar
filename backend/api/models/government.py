@@ -10,6 +10,21 @@ class GovernmentUserManager(BaseUserManager):
         result = super().get_queryset(*args, **kwargs)
         return result.filter(role=User.Role.GOVERNMENT)
 
+    # overriding the 'create_user' method to so that password will get properly hashed
+    def create_user(self, email, password=None, **extra_fields):
+        extra_fields.setdefault("is_staff", True)
+        extra_fields.setdefault("is_superuser", False)
+        extra_fields.setdefault("is_active", True)
+
+        if not email:
+            raise ValueError("The Email field must be set")
+
+        email = self.normalize_email(email=email)
+        user = self.model(email=email, **extra_fields)
+        user.set_password(password)
+        user.save()
+        return user
+
 
 class GovernmentUser(User):
     base_role = User.Role.GOVERNMENT

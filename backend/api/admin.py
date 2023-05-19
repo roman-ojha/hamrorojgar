@@ -58,7 +58,7 @@ class CitizenUserAdmin(admin.ModelAdmin):
 
     list_display = ('id', 'email', 'first_name', 'middle_name', 'last_name', 'mobile',
                     'date_of_birth', 'gender', 'nationality', 'citizenship_no', 'photo_url', 'last_login', 'is_superuser', 'is_staff', 'is_active')
-    inlines = [Inline]
+    # inlines = [Inline]
 
     class Form(forms.ModelForm):
         def __init__(self, *args, **kwargs) -> None:

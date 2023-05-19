@@ -33,7 +33,7 @@ class User(AbstractUser, PermissionsMixin):
         CITIZEN = "CITIZEN", "Citizen"
 
     base_role = Role.GOVERNMENT
-    email = models.CharField(max_length=80, unique=True)
+    email = models.EmailField(max_length=80, unique=True)
     role = models.CharField(
         max_length=15, choices=Role.choices)
     username = None
