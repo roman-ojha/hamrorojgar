@@ -1,1 +1,1 @@
-from .citizens import CitizenView as Citizen, Registration, Login
+from .citizens_view import CitizenView as Citizen, Registration, Login

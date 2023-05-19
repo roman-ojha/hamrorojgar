@@ -1,1 +1,1 @@
-from .citizen import CitizenSerializer, LoginAuthTokenSerializer
+from .citizen_serializer import CitizenSerializer, LoginAuthTokenSerializer
