@@ -1,5 +1,6 @@
 asgiref==3.6.0
 Django==4.2.1
+django-admin-argon-dashboard==1.0.16
 djangorestframework==3.14.0
 psycopg2==2.9.6
 python-decouple==3.8
