@@ -5,7 +5,7 @@ from api.models import GovernmentUser, Government
 class GovernmentUserSerializer(ModelSerializer):
     class Meta:
         model = GovernmentUser
-        fields = ['id', 'email', 'password']
+        fields = ['id', 'email',]
 
 
 class GovernmentSerializer(ModelSerializer):
@@ -13,4 +13,4 @@ class GovernmentSerializer(ModelSerializer):
 
     class Meta:
         model = Government
-        fields = ['gov_type']
+        fields = ['gov_type', 'user']
