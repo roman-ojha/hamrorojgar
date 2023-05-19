@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
+    'rest_framework.authtoken',
     'api',
 ]
 
@@ -73,10 +74,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'core.wsgi.application'
 
-
-# AUTHENTICATION_BACKENDS = [
-#     'api.authentication.CustomModelBackend',
-# ]
 
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases

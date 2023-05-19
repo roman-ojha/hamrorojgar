@@ -39,7 +39,6 @@ class LoginAuthTokenSerializer(AuthTokenSerializer):
         if email and password:
             user = authenticate(request=self.context.get('request'),
                                 username=email, password=password)
-            print(user)
             # The authenticate call simply returns None for is_active=False
             # users. (Assuming the default ModelBackend authentication
             # backend.)
