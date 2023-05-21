@@ -27,3 +27,7 @@ Content-Type: application/json
     "email": "rrr@gmail.com",
     "password": "rrr@123"
 }
+
+### Get Vacancies
+GET http://127.0.0.1:8000/api/vacancy
+Authorization: Token a91dac9d903b02fe856966f83d525423feb3c251

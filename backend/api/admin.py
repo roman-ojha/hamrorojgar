@@ -1,4 +1,3 @@
-from typing import Dict
 from django.contrib import admin
 from django.http.request import HttpRequest
 from django.http.response import HttpResponse
@@ -151,7 +150,7 @@ class JobApplicationAdmin(admin.ModelAdmin):
         return format_html('<img src="{}" width="100" height="100" />', obj.cv_url)
     cv_image.short_description = 'CV Image'
 
-    def change_view(self, request: HttpRequest, object_id: str, form_url='', extra_context: Dict[str, bool] | None = None) -> HttpResponse:
+    def change_view(self, request: HttpRequest, object_id: str, form_url='', extra_context=None):
         # Add the cv_image to the extra_context
         extra_context = extra_context or {}
         job_application = self.get_object(request, object_id)
