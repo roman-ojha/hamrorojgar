@@ -106,3 +106,21 @@ h3 {
   border-width: 1px;
   border-color: white;
 }
+
+.filter_button {
+  background-color: #5e72e4;
+  color: white;
+  border: 0px;
+  font-family: var(--bs-font-sans-serif);
+  font-size: 15px;
+  padding: 8px 20px;
+  border-radius: 10px;
+}
+
+.filter_numeric_form input[type=number] {
+  width: 100%;
+}
+
+.filter_title {
+  font-size: 20px;
+}

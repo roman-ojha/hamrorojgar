@@ -9,6 +9,8 @@ from itertools import islice
 from django.utils.html import format_html
 from django.contrib.auth.admin import UserAdmin
 from django.contrib.auth.forms import UserCreationForm
+from admin_numeric_filter.admin import SingleNumericFilter
+from django.db.models import Q
 
 
 @admin.register(CitizenUser)
@@ -170,3 +172,17 @@ class JobApplicationAdmin(admin.ModelAdmin):
     #   {{ cv_image | safe }}
     # </div>
     list_display = ('id', 'is_approved', 'applied_by', 'of_vacancy')
+
+    class VacancyFilter(SingleNumericFilter):
+        title = "Vacancy"
+        parameter_name = 'vacancy_id'
+
+        def queryset(self, request, queryset):
+            if not self.value():
+                return queryset
+            if self.value():
+                # Assuming 'self.value()' contains the ID of the desired vacancy
+                vacancy_id = int(self.value())
+                return queryset.filter(vacancy_id=vacancy_id)
+
+    list_filter = (('vacancy__id', VacancyFilter),)
