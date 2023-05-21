@@ -1,0 +1,22 @@
+{
+  "name": "hamrorojgar",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "sass --no-source-map --watch static/scss:static/css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/roman-ojha/hamrorojgar.git"
+  },
+  "author": "roman-ojha",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/roman-ojha/hamrorojgar/issues"
+  },
+  "homepage": "https://github.com/roman-ojha/hamrorojgar#readme",
+  "devDependencies": {
+    "sass": "^1.62.1"
+  }
+}
