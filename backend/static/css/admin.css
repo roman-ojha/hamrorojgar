@@ -10,6 +10,10 @@
   background-color: #111c44 !important;
 }
 
+.custom-bg-dark {
+  background-color: #051139 !important;
+}
+
 input[type=text],
 input[type=email],
 input[type=password],

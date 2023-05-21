@@ -1,6 +1,20 @@
 {% extends 'layouts/base-fullscreen.html' %}
 {% load i18n static admin_argon %}
 
+{% block extrastyle %}
+  <style>
+    h1, h2, h3, h4, h5, p{
+      color: white;
+    }
+    input:read-write {
+      color: #495057 !important;
+    }
+    main{
+      background-color: #051139;
+    }
+  </style>
+{% endblock extrastyle %}
+
 {% block content %}
 
   {% comment %} {% include 'includes/navigation-fullscreen.html' %} {% endcomment %}
@@ -75,14 +89,14 @@
         {% include 'includes/footer-fullscreen.html' %}
     </div>
   </main> {% endcomment %}
-  <main class="main-content  mt-0">
+  <main class="main-content  mt-0 custom-dark">
     <section>
       <div class="page-header min-vh-100">
         <div class="container">
           <div class="row">
             <div class="col-xl-4 col-lg-5 col-md-7 d-flex flex-column mx-lg-0 mx-auto">
               <div class="card card-plain">
-                <div class="card-header pb-0 text-start">
+                <div class="card-header pb-0 text-start custom-dark">
                   <h4 class="font-weight-bolder">Sign In</h4>
                   <p class="mb-0">Enter your username and password to sign in</p>
                 </div>
@@ -124,8 +138,8 @@
               <div class="position-relative bg-gradient-primary h-100 m-3 px-7 border-radius-lg d-flex flex-column justify-content-center overflow-hidden" style="background-image: url('https://raw.githubusercontent.com/creativetimofficial/public-assets/master/argon-dashboard-pro/assets/img/signin-ill.jpg');
           background-size: cover;">
                 <span class="mask bg-gradient-primary opacity-6"></span>
-                <h4 class="mt-5 text-white font-weight-bolder position-relative">"Attention is the new currency"</h4>
-                <p class="text-white position-relative">The more effortless the writing looks, the more effort the writer actually put into the process.</p>
+                <h4 class="mt-5 text-white font-weight-bolder position-relative">"Hamro Rojgar Admin Site Login"</h4>
+                <p class="text-white position-relative">The place where you can find, apply for the new government job as per you qualification.</p>
               </div>
             </div>
           </div>
