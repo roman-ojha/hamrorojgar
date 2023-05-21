@@ -2,7 +2,6 @@ $dark-version-bg-color: #051139 !default;
 $dark-version-sidenav-bg-color: #111c44 !default;
 $dark-version-card-bg-color: #111c44 !default;
 
-// to add dark mode functionality
 .custom-base {
   visibility: hidden;
 }
@@ -10,18 +9,3 @@ $dark-version-card-bg-color: #111c44 !default;
 .custom-dark {
   background-color: $dark-version-sidenav-bg-color !important;
 }
-
-// .dark-version {
-//   background-color: $dark-version-sidenav-bg-color !important;
-// }
-// .text-dark {
-//   color: white !important;
-// }
-
-// .dark {
-//   background-color: green !important;
-// }
-
-// .bg-gray-100 {
-//   background-color: $dark-version-bg-color !important;
-// }
