@@ -1,9 +1,12 @@
 from django.db import models
 from . import CitizenUser, Vacancy
+import os
+from rest_framework.settings import settings
 
 
 class JobApplication(models.Model):
-    cv_url = models.TextField(max_length=100)
+    cv = models.ImageField(upload_to=os.path.join(
+        settings.BASE_DIR, "static", "upload"))
     is_approved = models.BooleanField(default=False)
     citizen = models.ForeignKey(
         CitizenUser, on_delete=models.CASCADE, related_name='applied_by')

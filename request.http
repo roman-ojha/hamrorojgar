@@ -41,12 +41,12 @@ Content-Disposition: form-data; name="data"
 Content-Type: application/json
 
 {
-  "key1": "value1",
-  "key2": "value2"
+    "citizen": 51,
+    "vacancy": 2
 }
 
 --boundary_value
-Content-Disposition: form-data; name="file"; filename="appIcon.png"
+Content-Disposition: form-data; name="cv"; filename="appIcon.png"
 Content-Type: image/png
 
 < ./assets/images/appIcon.png

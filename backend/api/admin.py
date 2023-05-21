@@ -154,16 +154,16 @@ class JobApplicationAdmin(admin.ModelAdmin):
     def applied_by(self, obj):
         return mark_safe(f'<a href="/admin/api/citizenuser/{obj.citizen.id}/change">{obj.citizen}</a>')
 
-    def cv_image(self, obj):
-        return format_html('<img src="{}" width="100" height="100" />', obj.cv_url)
-    cv_image.short_description = 'CV Image'
+    # def cv_image(self, obj):
+    #     return format_html('<img src="{}" width="100" height="100" />', obj.cv_url)
+    # cv_image.short_description = 'CV Image'
 
-    def change_view(self, request: HttpRequest, object_id: str, form_url='', extra_context=None):
-        # Add the cv_image to the extra_context
-        extra_context = extra_context or {}
-        job_application = self.get_object(request, object_id)
-        extra_context['cv_image'] = self.cv_image(job_application)
-        return super().change_view(request, object_id, form_url, extra_context=extra_context)
+    # def change_view(self, request: HttpRequest, object_id: str, form_url='', extra_context=None):
+    #     # Add the cv_image to the extra_context
+    #     extra_context = extra_context or {}
+    #     job_application = self.get_object(request, object_id)
+    #     extra_context['cv_image'] = self.cv_image(job_application)
+    #     return super().change_view(request, object_id, form_url, extra_context=extra_context)
     # Todo: add 'change_view' inside the admin template file to render image
     # EX:
     # <div class="cv-image-container">
