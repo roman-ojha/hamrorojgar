@@ -30,20 +30,19 @@ Content-Type: application/json
 
 ### Get Vacancies
 GET http://127.0.0.1:8000/api/vacancy
-Authorization: Token a91dac9d903b02fe856966f83d525423feb3c251
 
 ### Apply for opened vacancy
-POST http://127.0.0.1:8000/api/apply/
+POST http://127.0.0.1:8000/api/apply/?vacancy_id=2
 Content-Type: multipart/form-data; boundary=boundary_value
+Authorization: Token a91dac9d903b02fe856966f83d525423feb3c251
 
---boundary_value
-Content-Disposition: form-data; name="data"
-Content-Type: application/json
+# --boundary_value
+# Content-Disposition: form-data; name="data"
+# Content-Type: application/json
 
-{
-    "citizen": 51,
-    "vacancy": 2
-}
+# {
+#     "vacancy": 2
+# }
 
 --boundary_value
 Content-Disposition: form-data; name="cv"; filename="appIcon.png"
