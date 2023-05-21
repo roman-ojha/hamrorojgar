@@ -11,6 +11,7 @@ from django.contrib.auth.admin import UserAdmin
 from django.contrib.auth.forms import UserCreationForm
 from admin_numeric_filter.admin import SingleNumericFilter
 from django.db.models import Q
+from utils.get_table_field_button import get_table_field_button
 
 
 @admin.register(CitizenUser)
@@ -136,8 +137,12 @@ class VacancyAdmin(admin.ModelAdmin):
     def opened_by(self, obj):
         return mark_safe(f'<a href="/admin/api/governmentuser/{obj.government.pk}/change">{obj.government}</a>')
 
-    list_display = ('id', 'title', 'desc', 'salary',
+    def job_applications(self, obj):
+        return mark_safe(f'{get_table_field_button(f"/admin/api/jobapplication/?vacancy_id={obj.id}")}')
+
+    list_display = ('id', 'title', 'desc', 'job_applications', 'salary',
                     'is_opened', 'opened_on', 'job_type', 'opened_by', 'qualifications')
+    ordering = ('id',)
 
     class Inline(admin.StackedInline):
         class InlineFormSet(BaseInlineFormSet):
@@ -156,22 +161,24 @@ class JobApplicationAdmin(admin.ModelAdmin):
     def applied_by(self, obj):
         return mark_safe(f'<a href="/admin/api/citizenuser/{obj.citizen.id}/change">{obj.citizen}</a>')
 
-    # def cv_image(self, obj):
-    #     return format_html('<img src="{}" width="100" height="100" />', obj.cv_url)
-    # cv_image.short_description = 'CV Image'
+    def cv_image(self, obj):
+        return format_html(f'<img src="/{obj.cv}" />', obj.cv)
+    cv_image.short_description = 'CV Image'
 
-    # def change_view(self, request: HttpRequest, object_id: str, form_url='', extra_context=None):
-    #     # Add the cv_image to the extra_context
-    #     extra_context = extra_context or {}
-    #     job_application = self.get_object(request, object_id)
-    #     extra_context['cv_image'] = self.cv_image(job_application)
-    #     return super().change_view(request, object_id, form_url, extra_context=extra_context)
-    # Todo: add 'change_view' inside the admin template file to render image
-    # EX:
-    # <div class="cv-image-container">
-    #   {{ cv_image | safe }}
-    # </div>
+    def cv_url(self, obj):
+        return obj.cv
+
+    def change_view(self, request: HttpRequest, object_id: str, form_url='', extra_context=None):
+        # Add the cv_image to the extra_context
+        extra_context = extra_context or {}
+        job_application = self.get_object(request, object_id)
+        extra_context['cv_image'] = self.cv_image(job_application)
+        extra_context['cv_url'] = self.cv_url(job_application)
+        return super().change_view(request, object_id, form_url, extra_context=extra_context)
     list_display = ('id', 'is_approved', 'applied_by', 'of_vacancy')
+    ordering = ('id',)
+
+    fields = ('citizen', 'vacancy',)
 
     class VacancyFilter(SingleNumericFilter):
         title = "Vacancy"

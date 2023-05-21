@@ -1,0 +1,15 @@
+.table-field-button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.table-field-button {
+  background-color: $button-background-color;
+  color: white;
+  border: 0px;
+  font-family: var(--bs-font-sans-serif);
+  font-size: 15px;
+  padding: 8px 20px;
+  border-radius: 10px;
+}

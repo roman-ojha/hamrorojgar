@@ -124,3 +124,31 @@ h3 {
 .filter_title {
   font-size: 20px;
 }
+
+.table-field-button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.table-field-button {
+  background-color: #5e72e4;
+  color: white;
+  border: 0px;
+  font-family: var(--bs-font-sans-serif);
+  font-size: 15px;
+  padding: 8px 20px;
+  border-radius: 10px;
+}
+
+.cv-image-container {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cv-image-container img {
+  height: 100%;
+  cursor: pointer;
+}
