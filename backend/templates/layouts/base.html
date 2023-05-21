@@ -49,7 +49,7 @@
 
 </head>
 
-<body class="g-sidenav-show bg-gray-100">
+<body class="g-sidenav-show bg-gray-100 custom-base">
     {% block overlay %}{% endblock overlay %}
     {% block sidebar %} 
       {% include "includes/sidebar.html" %}
@@ -84,7 +84,8 @@
   <script async defer src="https://buttons.github.io/buttons.js"></script>
   <!-- Control Center for Material Dashboard: parallax effects, scripts for the example pages etc -->
   <script src="{% static 'js/argon-dashboard.min.js' %}"></script>
-
+  <!-- Custom Admin Dashboard Script -->
+  <script src="{% static 'js/admin.js' %}" rel="stylesheet" ></script>
 </body>
 
 </html>

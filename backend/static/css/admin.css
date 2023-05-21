@@ -1,3 +1,11 @@
 #sidenav-collapse-main {
   height: 80%;
 }
+
+.custom-base {
+  visibility: hidden;
+}
+
+.custom-dark {
+  background-color: #111c44 !important;
+}
