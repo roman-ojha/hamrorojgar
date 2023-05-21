@@ -21,6 +21,14 @@ class CitizenUserAdmin(UserAdmin):
         model = Citizen
         can_delete = False
         formset = InlineFormSet
+        fieldsets = (
+            ("Name:", {
+                'fields': (('f_name', 'm_name', 'l_name',),),
+            }),
+            ("Other Info:", {
+                'fields': (('nationality', 'citizenship_no', 'gender', 'date_of_birth', 'mobile',),)
+            })
+        )
 
     def first_name(self, obj):
         return obj.citizen.f_name

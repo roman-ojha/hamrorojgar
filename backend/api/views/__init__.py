@@ -1,2 +1,3 @@
-from .citizens_view import CitizenView as Citizen, Registration, Login
-from .vacancy_view import VacancyView
+from .citizens_view import CitizenView as Citizen
+from .citizens_view import *
+from .vacancy_view import *

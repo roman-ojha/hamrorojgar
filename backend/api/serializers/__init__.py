@@ -1,4 +1,4 @@
-from .citizen_serializer import CitizenSerializer, LoginAuthTokenSerializer
-from .government_serializer import GovernmentUserSerializer, GovernmentSerializer
-from .qualification_serializer import QualificationSerializer
-from .vacancy_serializer import VacancySerializer
+from .citizen_serializer import *
+from .government_serializer import *
+from .qualification_serializer import *
+from .vacancy_serializer import *

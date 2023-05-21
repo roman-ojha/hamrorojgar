@@ -1,6 +1,7 @@
 # Custom
 /user.txt
 /node_modules
+/static/upload
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

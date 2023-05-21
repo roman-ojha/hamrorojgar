@@ -2,6 +2,10 @@
   height: 80%;
 }
 
+#sidenav-main {
+  background-color: #111c44 !important;
+}
+
 .custom-base {
   visibility: hidden;
 }
