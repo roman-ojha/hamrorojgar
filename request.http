@@ -1,5 +1,9 @@
 ### Reigster Citizen
 POST http://127.0.0.1:8000/api/citizens/register
+Content-Type: multipart/form-data; boundary=boundary_value
+
+--boundary_value
+Content-Disposition: form-data; name="data"
 Content-Type: application/json
 
 {
@@ -24,13 +28,21 @@ Content-Type: application/json
         "t_address":null
 }
 
+--boundary_value
+Content-Disposition: form-data; name="photo"; filename="appIcon.png"
+Content-Type: image/png
+
+< ./assets/images/appIcon.png
+
+--boundary_value--
+
 ### Login Citizen
 
 POST http://127.0.0.1:8000/api/citizens/login
 Content-Type: application/json
 
 {
-    "email": "rrr@gmail.com",
+    "email": "rr@gmail.com",
     "password": "rrr@123"
 }
 
@@ -40,7 +52,7 @@ GET http://127.0.0.1:8000/api/vacancy
 ### Apply for opened vacancy
 POST http://127.0.0.1:8000/api/apply/?vacancy_id=2
 Content-Type: multipart/form-data; boundary=boundary_value
-Authorization: Token a91dac9d903b02fe856966f83d525423feb3c251
+Authorization: Token fccd63f5beea00a880d759c9637360a584fd030b
 
 # --boundary_value
 # Content-Disposition: form-data; name="data"

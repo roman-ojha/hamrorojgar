@@ -13,6 +13,7 @@ from rest_framework.authentication import SessionAuthentication
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.authtoken.views import ObtainAuthToken
 from rest_framework.authtoken.models import Token
+import json
 
 
 # # Function Based
@@ -62,7 +63,12 @@ class CitizenView(APIView):
 class Registration(APIView):
     def post(self, request: Request, format=None):
         data = request.data
-        serialized_data = CitizenSerializer(data=data)
+        data_str = request.data.get('data')
+        data_dict = json.loads(data_str)
+        serialized_data = CitizenSerializer(data={
+            **data_dict,
+            'photo': request.FILES.get('photo')
+        })
         if serialized_data.is_valid():
             serialized_data.save()
             return Response(ResponseObj(msg="Registered Citizen User").get(), status=status.HTTP_201_CREATED)

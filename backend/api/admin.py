@@ -49,15 +49,15 @@ class CitizenUserAdmin(UserAdmin):
         return obj.citizen.citizenship_no
     citizenship_no.short_description = "CitizenShip No."
 
-    def photo_url(self, obj):
-        return obj.citizen.photo_url
-    photo_url.short_description = "Photo URL"
+    def photo(self, obj):
+        return mark_safe(f'<img width="30px" height="30px" src="/{obj.citizen.photo}"></img>')
+    photo.short_description = "Profile Picture"
 
     def p_address(self, obj):
         return obj.citizen.p_address
     p_address.short_description = "Permanent Address"
-    list_display = ('id', 'email', 'first_name', 'middle_name', 'last_name', 'mobile',
-                    'date_of_birth', 'gender', 'nationality', 'p_address', 'citizenship_no', 'photo_url', 'last_login', 'is_superuser', 'is_staff', 'is_active')
+    list_display = ('id', 'photo', 'email', 'first_name', 'middle_name', 'last_name', 'mobile',
+                    'date_of_birth', 'gender', 'nationality', 'p_address', 'citizenship_no', 'last_login', 'is_superuser', 'is_staff', 'is_active')
 
     # To show the 'Citizen' data & Insert new data for Citizen on the same 'CitizenUser' Model Admin
     class CitizenInline(admin.StackedInline):

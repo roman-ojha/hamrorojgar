@@ -6,7 +6,7 @@ from rest_framework.settings import settings
 
 class JobApplication(models.Model):
     cv = models.ImageField(upload_to=os.path.join(
-        settings.BASE_DIR, "static", "upload"))
+        settings.BASE_DIR, "static", "upload", "job_application"))
     is_approved = models.BooleanField(default=False)
     citizen = models.ForeignKey(
         CitizenUser, on_delete=models.CASCADE, related_name='applied_by')

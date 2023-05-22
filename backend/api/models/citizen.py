@@ -1,9 +1,10 @@
 from django.db import models
 from django.contrib.auth.base_user import BaseUserManager
-from django.db.models.query import QuerySet
 from django.utils.translation import gettext_lazy as _
 from . import User
 from .address import Address
+from rest_framework.settings import settings
+import os
 
 
 class CitizenUserManager(BaseUserManager):
@@ -58,7 +59,8 @@ class Citizen(models.Model):
     nationality = models.CharField(max_length=80)
     citizenship_no = models.CharField(max_length=200)
     # Use url shortener package for photo url link
-    photo_url = models.TextField(max_length=100, null=True)
+    photo = models.ImageField(upload_to=os.path.join(
+        settings.BASE_DIR, "static", "upload", "citizen"), null=True)
     p_address = models.OneToOneField(
         Address, on_delete=models.CASCADE, related_name='p_address')
     t_address = models.OneToOneField(
