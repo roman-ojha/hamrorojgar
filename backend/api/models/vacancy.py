@@ -16,7 +16,7 @@ class Vacancy(models.Model):
         CONTRACT = "CONTRACT", 'Contract',
         TEMPORARY = "TEMPO", 'Temporary',
         INTERNSHIP = "INTERN", 'Internship',
-    opened_on = models.DateField(default=timezone.now)
+    opened_at = models.DateField(default=timezone.now)
     job_type = models.CharField(max_length=15, choices=JobTypeChoices.choices)
     government = models.ForeignKey(
         Government, on_delete=models.CASCADE, related_name='opened_by')

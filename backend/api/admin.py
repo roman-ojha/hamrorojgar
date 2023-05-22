@@ -150,7 +150,7 @@ class VacancyAdmin(admin.ModelAdmin):
         return mark_safe(f'{get_table_field_button(f"/admin/api/jobapplication/?vacancy_id={obj.id}")}')
 
     list_display = ('id', 'title', 'desc', 'job_applications', 'salary',
-                    'is_opened', 'opened_on', 'job_type', 'opened_by', 'qualifications')
+                    'is_opened', 'opened_at', 'job_type', 'opened_by', 'qualifications')
     ordering = ('id',)
 
     class Inline(admin.StackedInline):
