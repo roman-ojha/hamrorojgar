@@ -1,0 +1,181 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{0152baee-143b-4115-b469-e770b492636b}</ProjectGuid>
+    <ProjectHome />
+    <StartupFile>manage.py</StartupFile>
+    <SearchPath />
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <ProjectTypeGuids>{5F0BE9CA-D677-4A4D-8806-6076C0FAAD37};{349c5851-65df-11da-9384-00065b846f21};{888888a0-9f3d-457c-b088-3a5042f75d52}</ProjectTypeGuids>
+    <LaunchProvider>Django launcher</LaunchProvider>
+    <InterpreterId>MSBuild|venv|$(MSBuildProjectFullPath)</InterpreterId>
+    <WebBrowserUrl>http://localhost</WebBrowserUrl>
+    <DjangoSettingsModule>core.settings</DjangoSettingsModule>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'" />
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'" />
+  <PropertyGroup>
+    <VisualStudioVersion Condition=" '$(VisualStudioVersion)' == '' ">10.0</VisualStudioVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include=".env" />
+    <Content Include="package.json" />
+    <Content Include="requirements.txt" />
+    <Content Include="static\css\admin.css" />
+    <Content Include="static\img\appIcon.png" />
+    <Content Include="static\js\admin.js" />
+    <Content Include="static\scss\admin.scss" />
+    <Content Include="static\scss\admin\_dark_mode.scss" />
+    <Content Include="static\scss\admin\_input_fields.scss" />
+    <Content Include="static\scss\admin\_job_application.scss" />
+    <Content Include="static\scss\admin\_sidebar.scss" />
+    <Content Include="static\scss\admin\_table_field_button.scss" />
+    <Content Include="static\scss\admin\_variable.scss" />
+    <Content Include="templates\admin\change_form.html" />
+    <Content Include="templates\admin\filter_numeric_single.html" />
+    <Content Include="templates\admin\login.html" />
+    <Content Include="templates\includes\fixed-plugin.html" />
+    <Content Include="templates\includes\navigation.html" />
+    <Content Include="templates\includes\sidebar.html" />
+    <Content Include="templates\layouts\base-fullscreen.html" />
+    <Content Include="templates\layouts\base.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="api\admin.py" />
+    <Compile Include="api\apps.py" />
+    <Compile Include="api\migrations\0001_initial.py" />
+    <Compile Include="api\migrations\0002_remove_user_first_name_remove_user_last_name_and_more.py" />
+    <Compile Include="api\migrations\0003_citizenuser.py" />
+    <Compile Include="api\migrations\0004_citizen.py" />
+    <Compile Include="api\migrations\0005_governmentuser.py" />
+    <Compile Include="api\migrations\0006_government.py" />
+    <Compile Include="api\migrations\0007_delete_government.py" />
+    <Compile Include="api\migrations\0008_government.py" />
+    <Compile Include="api\migrations\0009_alter_citizen_user.py" />
+    <Compile Include="api\migrations\0010_alter_government_user.py" />
+    <Compile Include="api\migrations\0011_alter_citizen_f_name_alter_citizen_l_name_and_more.py" />
+    <Compile Include="api\migrations\0012_alter_citizenuser_options_and_more.py" />
+    <Compile Include="api\migrations\0013_alter_citizen_user.py" />
+    <Compile Include="api\migrations\0014_alter_government_user.py" />
+    <Compile Include="api\migrations\0015_vacancy.py" />
+    <Compile Include="api\migrations\0016_alter_vacancy_opened_on.py" />
+    <Compile Include="api\migrations\0017_alter_vacancy_is_opened_alter_vacancy_opened_on.py" />
+    <Compile Include="api\migrations\0018_alter_vacancy_opened_on.py" />
+    <Compile Include="api\migrations\0019_qualification.py" />
+    <Compile Include="api\migrations\0020_remove_vacancy_opened_by_vacancy_government_and_more.py" />
+    <Compile Include="api\migrations\0021_alter_citizen_photo_url.py" />
+    <Compile Include="api\migrations\0022_jobapplication.py" />
+    <Compile Include="api\migrations\0023_jobapplication_is_approved.py" />
+    <Compile Include="api\migrations\0024_jobapplication_citizen.py" />
+    <Compile Include="api\migrations\0025_alter_jobapplication_citizen.py" />
+    <Compile Include="api\migrations\0026_alter_jobapplication_citizen.py" />
+    <Compile Include="api\migrations\0027_jobapplication_vacancy.py" />
+    <Compile Include="api\migrations\0028_alter_user_email.py" />
+    <Compile Include="api\migrations\0029_remove_jobapplication_cv_url_jobapplication_cv.py" />
+    <Compile Include="api\migrations\0030_alter_jobapplication_cv.py" />
+    <Compile Include="api\migrations\0031_citizen_p_address_district_and_more.py" />
+    <Compile Include="api\migrations\0032_address_remove_citizen_p_address_district_and_more.py" />
+    <Compile Include="api\migrations\0033_citizen_p_address_citizen_t_address.py" />
+    <Compile Include="api\migrations\0034_remove_citizen_photo_url_citizen_photo_and_more.py" />
+    <Compile Include="api\migrations\0035_rename_opened_on_vacancy_opened_at.py" />
+    <Compile Include="api\migrations\0036_government_location.py" />
+    <Compile Include="api\migrations\__init__.py" />
+    <Compile Include="api\models\address.py" />
+    <Compile Include="api\models\citizen.py" />
+    <Compile Include="api\models\government.py" />
+    <Compile Include="api\models\job_application.py" />
+    <Compile Include="api\models\qualification.py" />
+    <Compile Include="api\models\user.py" />
+    <Compile Include="api\models\vacancy.py" />
+    <Compile Include="api\models\__init__.py" />
+    <Compile Include="api\serializers\address_serializer.py" />
+    <Compile Include="api\serializers\citizen_serializer.py" />
+    <Compile Include="api\serializers\government_serializer.py" />
+    <Compile Include="api\serializers\job_application_serializer.py" />
+    <Compile Include="api\serializers\qualification_serializer.py" />
+    <Compile Include="api\serializers\vacancy_serializer.py" />
+    <Compile Include="api\serializers\__init__.py" />
+    <Compile Include="api\tests.py" />
+    <Compile Include="api\urls.py" />
+    <Compile Include="api\views\citizens_view.py" />
+    <Compile Include="api\views\job_application.py" />
+    <Compile Include="api\views\vacancy_view.py" />
+    <Compile Include="api\views\__init__.py" />
+    <Compile Include="api\__init__.py" />
+    <Compile Include="core\asgi.py" />
+    <Compile Include="core\settings.py" />
+    <Compile Include="core\urls.py" />
+    <Compile Include="core\wsgi.py" />
+    <Compile Include="core\__init__.py" />
+    <Compile Include="manage.py" />
+    <Compile Include="utils\get_table_field_button.py" />
+    <Compile Include="utils\responseObj.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="api" />
+    <Folder Include="api\migrations" />
+    <Folder Include="api\models" />
+    <Folder Include="api\serializers" />
+    <Folder Include="api\views" />
+    <Folder Include="core" />
+    <Folder Include="static\" />
+    <Folder Include="static\css" />
+    <Folder Include="static\img" />
+    <Folder Include="static\js" />
+    <Folder Include="static\scss" />
+    <Folder Include="static\scss\admin" />
+    <Folder Include="templates\" />
+    <Folder Include="templates\admin" />
+    <Folder Include="templates\includes" />
+    <Folder Include="templates\layouts" />
+    <Folder Include="utils" />
+  </ItemGroup>
+  <ItemGroup>
+    <Interpreter Include="venv\">
+      <Id>venv</Id>
+      <Description>venv (Python 3.10 (64-bit))</Description>
+      <InterpreterPath>Scripts\python.exe</InterpreterPath>
+      <WindowsInterpreterPath>Scripts\pythonw.exe</WindowsInterpreterPath>
+      <Version>3.10</Version>
+      <Architecture>X64</Architecture>
+      <PathEnvironmentVariable>PYTHONPATH</PathEnvironmentVariable>
+    </Interpreter>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.Django.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <AutoAssignPort>True</AutoAssignPort>
+          <UseCustomServer>True</UseCustomServer>
+          <CustomServerUrl>http://localhost</CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}" User="">
+        <WebProjectProperties>
+          <StartPageUrl>
+          </StartPageUrl>
+          <StartAction>CurrentPage</StartAction>
+          <AspNetDebugging>True</AspNetDebugging>
+          <SilverlightDebugging>False</SilverlightDebugging>
+          <NativeDebugging>False</NativeDebugging>
+          <SQLDebugging>False</SQLDebugging>
+          <ExternalProgram>
+          </ExternalProgram>
+          <StartExternalURL>
+          </StartExternalURL>
+          <StartCmdLineArguments>
+          </StartCmdLineArguments>
+          <StartWorkingDirectory>
+          </StartWorkingDirectory>
+          <EnableENC>False</EnableENC>
+          <AlwaysStartWebServerOnDebug>False</AlwaysStartWebServerOnDebug>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>
