@@ -45,7 +45,7 @@
     <Content Include="public\favicon.ico" />
     <Content Include="public\vercel.svg" />
     <None Include="services\api.ts" />
-    <None Include="store\index.ts" />
+    <None Include="store\store.ts" />
     <None Include="types\environment.d.ts" />
     <Content Include="assets\images\appIcon.png" />
     <Content Include="assets\images\background.png" />
@@ -820,7 +820,7 @@
     <Content Include="backend\venv\Lib\site-packages\setuptools\command\launcher manifest.xml" />
     <None Include="components\SignIn\Main.tsx" />
     <None Include="pages\api\hello.ts" />
-    <None Include="store\reducers\index.ts" />
+    <None Include="store\reducer.ts" />
     <Content Include="styles\base\reset.scss" />
     <Content Include="styles\components\jobcard.module.scss" />
     <Content Include="styles\components\jobdesc.module.scss" />
@@ -4029,9 +4029,6 @@
     <Folder Include="public" />
     <Folder Include="services" />
     <Folder Include="store" />
-    <Folder Include="store\actions" />
-    <Folder Include="store\middleware" />
-    <Folder Include="store\reducers" />
     <Folder Include="store\selectors" />
     <Folder Include="styles" />
     <Folder Include="styles\base" />
@@ -4040,6 +4037,17 @@
     <Folder Include="styles\utils" />
     <Folder Include="types" />
     <Folder Include="utils" />
+  </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="store\action.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="store\index.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="store\middleware.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.Common.targets" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <Import Project="$(VSToolsPath)\Node.js Tools\Microsoft.NodejsToolsV2.targets" />
