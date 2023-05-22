@@ -1,2 +1,1 @@
-// middleware
 export default [];

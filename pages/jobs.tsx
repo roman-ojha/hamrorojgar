@@ -1,12 +1,20 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Head from "next/head";
 import NavBar from "@/components/NavBar";
 import styles from "@/styles/pages/jobs.module.scss";
 import { Icon } from "@iconify/react";
 import JobCard from "@/components/JobCard";
 import JobDesc from "@/components/JobDesc";
+import { useDispatch, useSelector } from "react-redux";
+import { AppState, actionCreators } from "@/store";
+import { bindActionCreators } from "redux";
 
 const Jobs = (): React.JSX.Element => {
+  const { storeVacancy } = bindActionCreators(actionCreators, useDispatch());
+  useEffect(() => {
+    console.log(process.env.API_BASE_URL);
+    storeVacancy();
+  }, []);
   return (
     <>
       <Head>

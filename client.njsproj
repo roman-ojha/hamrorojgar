@@ -5,7 +5,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{3cbe17a5-7be8-49e3-b4a5-47c44a7dbfa7}</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <ProjectView>ProjectFiles</ProjectView>
+    <ProjectView>ShowAllFiles</ProjectView>
     <StartupFile>next-env.d.ts</StartupFile>
     <WorkingDirectory>.</WorkingDirectory>
     <OutputPath>.</OutputPath>
@@ -4029,7 +4029,8 @@
     <Folder Include="public" />
     <Folder Include="services" />
     <Folder Include="store" />
-    <Folder Include="store\selectors" />
+    <Folder Include="store\component\" />
+    <Folder Include="store\component\job\" />
     <Folder Include="styles" />
     <Folder Include="styles\base" />
     <Folder Include="styles\components" />
@@ -4040,6 +4041,15 @@
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="store\action.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="store\component\job\action.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="store\component\job\reducer.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="store\component\job\types.ts">
       <SubType>Code</SubType>
     </TypeScriptCompile>
     <TypeScriptCompile Include="store\index.ts">

@@ -1,12 +1,14 @@
-import axios from "axios";
+import axios, { AxiosResponse } from "axios";
+import { Vacancy } from "@/models/vacancy";
 
 const instance = axios.create({
-  baseURL: process.env.API_BASE_URL,
+  // baseURL: process.env.API_BASE_URL,
+  baseURL: "http://127.0.0.1:8000/api",
 });
 
 const api = {
   vacancy: {
-    get: async () => {
+    get: async (): Promise<AxiosResponse<Vacancy>> => {
       return await instance({
         method: "GET",
         url: "/vacancy",

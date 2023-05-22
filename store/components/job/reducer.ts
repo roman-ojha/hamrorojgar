@@ -10,3 +10,5 @@ const storeVacancyReducer = (state: typeof initialState = initialState, action: 
             return state;
     }
 }
+
+export { storeVacancyReducer };

@@ -1,4 +1,5 @@
 import { Vacancy } from "@/models/vacancy";
+import { AxiosResponse } from 'axios';
 
 export interface VacancyState extends Vacancy { }
 
@@ -8,7 +9,7 @@ export enum JobActiontype {
 
 export interface StoreVacancies {
     type: JobActiontype.STORE_VACANCIES;
-    payload: VacancyState;
+    payload: AxiosResponse<Vacancy>;
 }
 
 export type JobAction = StoreVacancies;
