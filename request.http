@@ -1,5 +1,5 @@
 ### Reigster Citizen
-POST http://127.0.0.1:8000/api/citizens/register/
+POST http://127.0.0.1:8000/api/citizens/register
 Content-Type: multipart/form-data; boundary=boundary_value
 
 --boundary_value
@@ -38,7 +38,7 @@ Content-Type: image/png
 
 ### Login Citizen
 
-POST http://127.0.0.1:8000/api/citizens/login/
+POST http://127.0.0.1:8000/api/citizens/login
 Content-Type: application/json
 
 {
@@ -47,10 +47,10 @@ Content-Type: application/json
 }
 
 ### Get Vacancies
-GET http://127.0.0.1:8000/api/job/vacancies/
+GET http://127.0.0.1:8000/api/vacancy
 
 ### Apply for opened vacancy
-POST http://127.0.0.1:8000/api/job/apply/?vacancy_id=2
+POST http://127.0.0.1:8000/api/job-application?vacancy_id=2
 Content-Type: multipart/form-data; boundary=boundary_value
 Authorization: Token 14028032abe82899318d080a899a7d82dc9a06a0
 
