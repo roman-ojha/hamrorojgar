@@ -1,14 +1,17 @@
-import { VacancyState, JobActiontype, JobAction } from './types';
+import { VacancyState, JobActiontype, JobAction } from "./types";
 
 const initialState: VacancyState[] = [];
 
-const storeVacancyReducer = (state: typeof initialState = initialState, action: JobAction) => {
-    switch (action.type) {
-        case JobActiontype.STORE_VACANCIES:
-            return action.payload;
-        default:
-            return state;
-    }
-}
+const storeVacancyReducer = (
+  state: VacancyState[] = initialState,
+  action: JobAction
+): VacancyState[] => {
+  switch (action.type) {
+    case JobActiontype.STORE_VACANCIES:
+      return action.payload;
+    default:
+      return state;
+  }
+};
 
 export { storeVacancyReducer };
