@@ -104,12 +104,12 @@ const Register: NextPage = () => {
                   styles.register__form__first_row__field_group__fields
                 }
               >
-                <input
+                {/* <input
                   type="text"
                   placeholder="Province"
                   id="permanent-address-province"
                   data-field="input"
-                />
+                /> */}
                 <input type="text" placeholder="District" data-field="input" />
                 <input
                   type="text"
@@ -132,12 +132,12 @@ const Register: NextPage = () => {
                   styles.register__form__first_row__field_group__fields
                 }
               >
-                <input
+                {/* <input
                   type="text"
                   placeholder="Province"
                   id="temporary-address-province"
                   data-field="input"
-                />
+                /> */}
                 <input type="text" placeholder="District" data-field="input" />
                 <input
                   type="text"
