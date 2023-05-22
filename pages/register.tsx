@@ -211,6 +211,63 @@ const Register: NextPage = () => {
                 />
               </div>
             </div>
+            <div className={styles.register__form__second_row__column}>
+              <div
+                className={styles.register__form__second_row__column__gender}
+              >
+                <label htmlFor="gender" data-field="gender">
+                  Gender
+                </label>
+                <div
+                  className={
+                    styles.register__form__second_row__column__gender__fields
+                  }
+                >
+                  <div
+                    className={
+                      styles.register__form__second_row__column__gender__fields__radio
+                    }
+                  >
+                    <input
+                      type="radio"
+                      id="gender-male"
+                      name="gender"
+                      value="male"
+                    />
+                    <label htmlFor="gender-male">Male</label>
+                  </div>
+                  <div
+                    className={
+                      styles.register__form__second_row__column__gender__fields__radio
+                    }
+                  >
+                    <input
+                      type="radio"
+                      id="gender-female"
+                      name="gender"
+                      value="female"
+                    />
+                    <label htmlFor="gender-female">Female</label>
+                  </div>
+                  <div
+                    className={
+                      styles.register__form__second_row__column__gender__fields__radio
+                    }
+                  >
+                    <input
+                      type="radio"
+                      id="gender-other"
+                      name="gender"
+                      value="male"
+                    />
+                    <label htmlFor="gender-other">Other</label>
+                  </div>
+                </div>
+              </div>
+              <div className={styles.register__form__second_row__column__dob}>
+                {/* <label htmlFor="">Date of birth</label> */}
+              </div>
+            </div>
           </div>
           <input type="submit" value="Register" />
         </form>

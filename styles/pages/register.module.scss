@@ -136,6 +136,52 @@
             @include input_field;
           }
         }
+        &__gender {
+          position: relative;
+          @mixin label {
+            font-size: 0.7rem;
+            color: darken($color: #ffffff, $amount: 20);
+          }
+          label[data-field="gender"] {
+            @include label;
+            position: absolute;
+            top: -1rem;
+          }
+          @mixin field_container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 1vw;
+            border: 2px solid
+              lighten($color: get-color-value("background3"), $amount: 10);
+            border-radius: 0.6vw;
+            width: 50%;
+            padding: 0.7vw 1.5vw;
+            box-sizing: border-box;
+            background-color: get-color("background3");
+          }
+          &__fields {
+            @include field_container();
+            &__radio {
+              width: 100%;
+              border: 1px solid white;
+              padding: 0.2rem 0.3rem;
+              border-radius: 7px;
+              display: flex;
+              justify-content: flex-start;
+              align-items: center;
+              gap: 0.1rem;
+              input {
+                width: 0.5rem;
+                height: 0.5rem;
+              }
+              label {
+                @include label;
+              }
+            }
+          }
+        }
       }
     }
     input[type="submit"] {

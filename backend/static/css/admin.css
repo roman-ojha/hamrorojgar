@@ -149,6 +149,6 @@ h3 {
 }
 
 .cv-image-container img {
-  height: 100%;
+  width: 70vw;
   cursor: pointer;
 }
