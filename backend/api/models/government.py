@@ -3,6 +3,7 @@ from django.db import models
 from django.contrib.auth.base_user import BaseUserManager
 from django.db.models.query import QuerySet
 from . import User
+from api.models.address import Address
 
 
 class GovernmentUserManager(BaseUserManager):
@@ -45,7 +46,8 @@ class Government(models.Model):
         PROVINCE = 'P', "Province"
         LOCAL = 'L', "Local"
     gov_type = models.CharField(max_length=3, choices=GovernmentType.choices)
-    # location
+    location = models.OneToOneField(
+        Address, on_delete=models.CASCADE, related_name='government')
 
     def __str__(self) -> str:
         return self.user.email
