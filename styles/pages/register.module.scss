@@ -136,13 +136,22 @@
             @include input_field;
           }
         }
-        &__gender {
+        &__gender_dob {
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        }
+        &__gender,
+        &__dob {
           position: relative;
+          width: 48%;
           @mixin label {
             font-size: 0.7rem;
             color: darken($color: #ffffff, $amount: 20);
           }
-          label[data-field="gender"] {
+          label[data-field="gender"],
+          label[data-field="date-of-birth"] {
             @include label;
             position: absolute;
             top: -1rem;
@@ -156,10 +165,10 @@
             border: 2px solid
               lighten($color: get-color-value("background3"), $amount: 10);
             border-radius: 0.6vw;
-            width: 50%;
             padding: 0.7vw 1.5vw;
             box-sizing: border-box;
             background-color: get-color("background3");
+            width: 100%;
           }
           &__fields {
             @include field_container();
@@ -179,6 +188,14 @@
               label {
                 @include label;
               }
+            }
+            &__select {
+              width: 115%;
+              border: 1px solid white;
+              @include label;
+              padding: 0.2rem 0.8rem;
+              border-radius: 7px;
+              background-color: transparent;
             }
           }
         }

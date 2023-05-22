@@ -153,6 +153,7 @@ const Register: NextPage = () => {
             </div>
           </div>
           <div className={styles.register__form__second_row}>
+            <div className={styles.register__form__second_row__column}></div>
             <div className={styles.register__form__second_row__column}>
               <div className={styles.register__form__second_row__column__field}>
                 <input
@@ -213,59 +214,100 @@ const Register: NextPage = () => {
             </div>
             <div className={styles.register__form__second_row__column}>
               <div
-                className={styles.register__form__second_row__column__gender}
+                className={
+                  styles.register__form__second_row__column__gender_dob
+                }
               >
-                <label htmlFor="gender" data-field="gender">
-                  Gender
-                </label>
                 <div
-                  className={
-                    styles.register__form__second_row__column__gender__fields
-                  }
+                  className={styles.register__form__second_row__column__gender}
                 >
+                  <label htmlFor="gender" data-field="gender">
+                    Gender
+                  </label>
                   <div
                     className={
-                      styles.register__form__second_row__column__gender__fields__radio
+                      styles.register__form__second_row__column__gender__fields
                     }
                   >
-                    <input
-                      type="radio"
-                      id="gender-male"
-                      name="gender"
-                      value="male"
-                    />
-                    <label htmlFor="gender-male">Male</label>
-                  </div>
-                  <div
-                    className={
-                      styles.register__form__second_row__column__gender__fields__radio
-                    }
-                  >
-                    <input
-                      type="radio"
-                      id="gender-female"
-                      name="gender"
-                      value="female"
-                    />
-                    <label htmlFor="gender-female">Female</label>
-                  </div>
-                  <div
-                    className={
-                      styles.register__form__second_row__column__gender__fields__radio
-                    }
-                  >
-                    <input
-                      type="radio"
-                      id="gender-other"
-                      name="gender"
-                      value="male"
-                    />
-                    <label htmlFor="gender-other">Other</label>
+                    <div
+                      className={
+                        styles.register__form__second_row__column__gender__fields__radio
+                      }
+                    >
+                      <input
+                        type="radio"
+                        id="gender-male"
+                        name="gender"
+                        value="male"
+                      />
+                      <label htmlFor="gender-male">Male</label>
+                    </div>
+                    <div
+                      className={
+                        styles.register__form__second_row__column__gender__fields__radio
+                      }
+                    >
+                      <input
+                        type="radio"
+                        id="gender-female"
+                        name="gender"
+                        value="female"
+                      />
+                      <label htmlFor="gender-female">Female</label>
+                    </div>
+                    <div
+                      className={
+                        styles.register__form__second_row__column__gender__fields__radio
+                      }
+                    >
+                      <input
+                        type="radio"
+                        id="gender-other"
+                        name="gender"
+                        value="male"
+                      />
+                      <label htmlFor="gender-other">Other</label>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div className={styles.register__form__second_row__column__dob}>
-                {/* <label htmlFor="">Date of birth</label> */}
+                <div className={styles.register__form__second_row__column__dob}>
+                  <label htmlFor="date-of-birth" data-field="date-of-birth">
+                    Date of birth
+                  </label>
+                  <div
+                    className={
+                      styles.register__form__second_row__column__dob__fields
+                    }
+                  >
+                    <select
+                      className={
+                        styles.register__form__second_row__column__dob__fields__select
+                      }
+                      name="dob_year"
+                      id="dob-year"
+                    >
+                      <option value="">Year</option>
+                    </select>
+                    <select
+                      className={
+                        styles.register__form__second_row__column__dob__fields__select
+                      }
+                      name="dob_month"
+                      id="dob-month"
+                    >
+                      <option value="">Month</option>
+                    </select>
+                    <select
+                      className={
+                        styles.register__form__second_row__column__dob__fields__select
+                      }
+                      name="dob_day"
+                      id="dob-month"
+                    >
+                      <option value="">Day</option>
+                    </select>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
