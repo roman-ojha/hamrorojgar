@@ -1,3 +1,4 @@
+from typing import Any, Dict, List, Optional, Tuple
 from django.contrib import admin
 from django.http.request import HttpRequest
 from django.http.response import HttpResponse
@@ -16,63 +17,71 @@ from utils.get_table_field_button import get_table_field_button
 
 @admin.register(CitizenUser)
 class CitizenUserAdmin(UserAdmin):
+    def first_name(self, obj):
+        return obj.citizen.f_name
+    first_name.short_description = "First Name"
+
+    def middle_name(self, obj):
+        return obj.citizen.m_name
+    middle_name.short_description = "Middle Name"
+
+    def last_name(self, obj):
+        return obj.citizen.l_name
+    last_name.short_description = "Last Name"
+
+    def mobile(self, obj):
+        return obj.citizen.mobile
+    mobile.short_description = "Mobile No."
+
+    def date_of_birth(self, obj):
+        return obj.citizen.date_of_birth
+    date_of_birth.short_description = "DOB"
+
+    def gender(self, obj):
+        return obj.citizen.get_gender_display()
+    gender.short_description = "Gender"
+
+    def nationality(self, obj):
+        return obj.citizen.nationality
+    nationality.short_description = "Nationality"
+
+    def citizenship_no(self, obj):
+        return obj.citizen.citizenship_no
+    citizenship_no.short_description = "CitizenShip No."
+
+    def photo_url(self, obj):
+        return obj.citizen.photo_url
+    photo_url.short_description = "Photo URL"
+
+    def p_address(self, obj):
+        return obj.citizen.p_address
+    p_address.short_description = "Permanent Address"
+    list_display = ('id', 'email', 'first_name', 'middle_name', 'last_name', 'mobile',
+                    'date_of_birth', 'gender', 'nationality', 'p_address', 'citizenship_no', 'photo_url', 'last_login', 'is_superuser', 'is_staff', 'is_active')
 
     # To show the 'Citizen' data & Insert new data for Citizen on the same 'CitizenUser' Model Admin
-    class Inline(admin.StackedInline):
-        class InlineFormSet(BaseInlineFormSet):
+    class CitizenInline(admin.StackedInline):
+        class CitizenInlineFormSet(BaseInlineFormSet):
             model = Citizen
         model = Citizen
         can_delete = False
-        formset = InlineFormSet
+        # formset = CitizenInlineFormSet
         fieldsets = (
             ("Name:", {
                 'fields': (('f_name', 'm_name', 'l_name',),),
             }),
             ("Other Info:", {
-                'fields': (('nationality', 'citizenship_no', 'gender', 'date_of_birth', 'mobile',),)
-            })
+                'fields': (('nationality', 'citizenship_no', 'gender', 'date_of_birth', 'mobile'),)
+            }),
+            ("Permanent Address:", {
+                'fields': ('p_address',)
+            }),
+            ("Temporary Address:", {
+                'fields': ('t_address',)
+            }),
         )
+    inlines = [CitizenInline]
 
-    def first_name(self, obj):
-        return obj.citizen.f_name
-
-    def middle_name(self, obj):
-        return obj.citizen.m_name
-
-    def last_name(self, obj):
-        return obj.citizen.l_name
-
-    def mobile(self, obj):
-        return obj.citizen.mobile
-
-    def date_of_birth(self, obj):
-        return obj.citizen.date_of_birth
-
-    def gender(self, obj):
-        return obj.citizen.get_gender_display()
-
-    def nationality(self, obj):
-        return obj.citizen.nationality
-
-    def citizenship_no(self, obj):
-        return obj.citizen.citizenship_no
-
-    def photo_url(self, obj):
-        return obj.citizen.photo_url
-    first_name.short_description = "First Name"
-    middle_name.short_description = "Middle Name"
-    last_name.short_description = "Last Name"
-    mobile.short_description = "Mobile No."
-    date_of_birth.short_description = "DOB"
-    gender.short_description = "Gender"
-    nationality.short_description = "Nationality"
-    citizenship_no.short_description = "CitizenShip No."
-    photo_url.short_description = "Photo URL"
-
-    inlines = [Inline]
-
-    list_display = ('id', 'email', 'first_name', 'middle_name', 'last_name', 'mobile',
-                    'date_of_birth', 'gender', 'nationality', 'citizenship_no', 'photo_url', 'last_login', 'is_superuser', 'is_staff', 'is_active')
     ordering = ('email',)
     exclude = ('username', )  # we are not using 'username' file rather 'email'
     add_fieldsets = (
