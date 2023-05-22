@@ -1,5 +1,5 @@
 ### Reigster Citizen
-POST http://127.0.0.1:8000/api/citizens/register
+POST http://127.0.0.1:8000/api/citizens/register/
 Content-Type: multipart/form-data; boundary=boundary_value
 
 --boundary_value
@@ -38,7 +38,7 @@ Content-Type: image/png
 
 ### Login Citizen
 
-POST http://127.0.0.1:8000/api/citizens/login
+POST http://127.0.0.1:8000/api/citizens/login/
 Content-Type: application/json
 
 {
@@ -47,12 +47,12 @@ Content-Type: application/json
 }
 
 ### Get Vacancies
-GET http://127.0.0.1:8000/api/vacancy
+GET http://127.0.0.1:8000/api/job/vacancies/
 
 ### Apply for opened vacancy
-POST http://127.0.0.1:8000/api/apply/?vacancy_id=2
+POST http://127.0.0.1:8000/api/job/apply/?vacancy_id=2
 Content-Type: multipart/form-data; boundary=boundary_value
-Authorization: Token fccd63f5beea00a880d759c9637360a584fd030b
+Authorization: Token 14028032abe82899318d080a899a7d82dc9a06a0
 
 # --boundary_value
 # Content-Disposition: form-data; name="data"
@@ -63,9 +63,9 @@ Authorization: Token fccd63f5beea00a880d759c9637360a584fd030b
 # }
 
 --boundary_value
-Content-Disposition: form-data; name="cv"; filename="appIcon.png"
-Content-Type: image/png
+Content-Disposition: form-data; name="cv"; filename="cv_example.jpg"
+Content-Type: image/jpeg
 
-< ./assets/images/appIcon.png
+< ./assets/images/cv_example.jpg
 
 --boundary_value--
