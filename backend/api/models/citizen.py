@@ -14,7 +14,6 @@ class CitizenUserManager(BaseUserManager):
     # # overriding the 'create_user' method to so that password will get properly hashed
 
     def create_user(self, email, password=None, **extra_fields):
-        print("hello =========================")
         extra_fields.setdefault("is_staff", False)
         extra_fields.setdefault("is_superuser", False)
         extra_fields.setdefault("is_active", True)

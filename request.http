@@ -4,7 +4,7 @@ Content-Type: application/json
 
 {
         "user": {
-            "email": "rrr@gmail.com",
+            "email": "rr@gmail.com",
             "password": "rrr@123"
         },
         "f_name": "rise",
@@ -15,7 +15,13 @@ Content-Type: application/json
         "gender": "M",
         "nationality": "nepali",
         "citizenship_no": "453211234432",
-        "photo_url": "https://stackoverflow.com/questions"
+        "photo_url": "https://stackoverflow.com/questions",
+        "p_address":{
+            "district":"jhapa",
+            "municipality":"kamal",
+            "ward_no":3
+        },
+        "t_address":null
 }
 
 ### Login Citizen

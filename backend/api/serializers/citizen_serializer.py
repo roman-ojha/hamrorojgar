@@ -5,6 +5,8 @@ from api.models import Citizen, CitizenUser
 from rest_framework.authtoken.serializers import AuthTokenSerializer
 from django.utils.translation import gettext_lazy as _
 from django.contrib.auth import authenticate
+from .address_serializer import AddressSerializer
+from api.models.address import Address
 
 
 class CitizenUserSerializer(serializers.ModelSerializer):
@@ -15,16 +17,25 @@ class CitizenUserSerializer(serializers.ModelSerializer):
 
 class CitizenSerializer(serializers.ModelSerializer):
     user = CitizenUserSerializer()
+    p_address = AddressSerializer()
+    t_address = AddressSerializer(allow_null=True)
 
     class Meta:
         model = Citizen
         fields = ['user', 'f_name', 'm_name', 'l_name', 'mobile', 'date_of_birth',
-                  'gender', 'nationality', 'citizenship_no', 'photo_url']
+                  'gender', 'nationality', 'citizenship_no', 'photo_url', 'p_address', 't_address']
 
     def create(self, validated_data):
         user_data = validated_data.pop('user')
         user = CitizenUser.objects.create_user(**user_data)
         validated_data['user'] = user
+        p_address_data = validated_data.pop('p_address')
+        t_address_data = validated_data.pop('t_address')
+        p_address = Address.objects.create(**p_address_data)
+        if t_address_data is not None:
+            t_address = Address.objects.create(**t_address_data)
+            validated_data['t_address'] = t_address
+        validated_data['p_address'] = p_address
         return Citizen.objects.create(**validated_data)
 
 
