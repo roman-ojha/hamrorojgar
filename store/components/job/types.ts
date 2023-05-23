@@ -16,4 +16,11 @@ export interface FetchJobs {
   payload: JobState[];
 }
 
-export type JobAction = FetchJobs;
+export interface FetchJob {
+  type: JobActionType.FETCH_JOB;
+  payload: JobState;
+}
+
+export type JobsAction = FetchJobs;
+
+export type JobAction = FetchJob;

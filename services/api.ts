@@ -10,8 +10,8 @@ const api = {
   jobs: {
     get: async (
       id: number | null = null
-    ): Promise<AxiosResponse<JobState[]>> => {
-      if (!id) {
+    ): Promise<AxiosResponse<JobState[] | JobState>> => {
+      if (id === null) {
         return await instance({
           method: "GET",
           url: "/jobs",

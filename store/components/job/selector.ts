@@ -1,4 +1,5 @@
 import { AppState } from "@/store";
 export type { JobState } from "./types";
 const jobsSelector = (state: AppState) => state.jobsReducer;
-export { jobsSelector };
+const jobSelector = (state: AppState) => state.jobReducer;
+export { jobsSelector, jobSelector };
