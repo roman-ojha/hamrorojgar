@@ -70,7 +70,7 @@ class Registration(APIView):
         })
         if serialized_data.is_valid():
             print(serialized_data.validated_data)
-            # serialized_data.save()
+            serialized_data.save()
             return Response(ResponseObj(msg="Registered Citizen User").get(), status=status.HTTP_201_CREATED)
         else:
             return Response(serialized_data.errors, status=status.HTTP_406_NOT_ACCEPTABLE)

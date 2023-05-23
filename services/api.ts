@@ -1,6 +1,7 @@
 import axios, { AxiosResponse } from "axios";
 import { JobState } from "@/store/components/job/types";
 import { Citizen } from "@/models/citizen";
+import { CitizenForm } from "@/pages/register";
 
 const instance = axios.create({
   // baseURL: process.env.API_BASE_URL,
@@ -33,15 +34,23 @@ const api = {
     },
   },
   citizen: {
-    register: async (citizen: Citizen) => {
-      const formData = new FormData();
-      const jsonData = {
-        ...citizen,
+    register: async (data: CitizenForm) => {
+      const isWhiteSpace = (str: string) => /^\s*$/.test(str);
+      const jsonData: Citizen = {
+        ...data,
+        date_of_birth: `${data.date_of_birth.year}-${data.date_of_birth.month}-${data.date_of_birth.day}`,
+        t_address:
+          data.t_address &&
+          isWhiteSpace(data.t_address.district) &&
+          isWhiteSpace(data.t_address.municipality) &&
+          isWhiteSpace(data.t_address.ward_no)
+            ? null
+            : data.t_address,
         photo: "",
       };
+      const formData = new FormData();
       formData.append("json", JSON.stringify(jsonData));
-
-      const photo = citizen.photo[0];
+      const photo = data.photo[0];
       formData.append("photo", photo);
       return await instance({
         method: "POST",

@@ -60,7 +60,7 @@ class Citizen(models.Model):
     citizenship_no = models.CharField(max_length=200)
     # Use url shortener package for photo url link
     photo = models.ImageField(upload_to=os.path.join(
-        settings.BASE_DIR, "static", "upload", "citizen"), null=True)
+        settings.BASE_DIR, "static", "upload", "citizen"))
     p_address = models.OneToOneField(
         Address, on_delete=models.CASCADE, related_name='p_address')
     t_address = models.OneToOneField(

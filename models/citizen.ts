@@ -16,5 +16,5 @@ export interface Citizen {
   citizenship_no: string;
   photo: string;
   p_address: Address;
-  t_address?: Address;
+  t_address: Address | null;
 }

@@ -27,9 +27,9 @@ const Register: NextPage = () => {
     formState: { errors },
   } = useForm<CitizenForm>();
 
-  const isWhiteSpace = (str: string) => /^\s*$/.test(str);
-
-  const onSubmit = async (data: CitizenForm) => {};
+  const onSubmit = async (data: CitizenForm) => {
+    const res = (await api.citizen.register(data)).data;
+  };
 
   return (
     <>
