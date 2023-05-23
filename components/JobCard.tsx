@@ -1,9 +1,11 @@
 import React from "react";
 import styles from "@/styles/components/jobcard.module.scss";
 import { Icon } from "@iconify/react";
-import { JobState } from "@/store/selector";
+import { useAppState } from "@/hooks/useAppState";
+import { jobSelector, JobState } from "@/store/selector";
 
 interface JobCardProps {
+  id: JobState["id"];
   title: JobState["title"];
   salary_from: JobState["salary_from"];
   salary_to: JobState["salary_to"];
@@ -12,14 +14,29 @@ interface JobCardProps {
 }
 
 const JobCard: React.FC<JobCardProps> = ({
+  id,
   title,
   salary_from,
   salary_to,
   job_type,
   qualifications,
 }): React.JSX.Element => {
+  const [{ fetchJob }, [job]] = useAppState<[JobState]>([jobSelector]);
   return (
-    <div className={styles.card}>
+    <div
+      className={styles.card}
+      onClick={() => {
+        fetchJob(id);
+      }}
+      data-component="job-card"
+      style={
+        job != null && id == job.id
+          ? {
+              borderColor: "rgba(244, 19, 219, 0.4)",
+            }
+          : {}
+      }
+    >
       <h1>{title}</h1>
       <h2>Kathmandu Mahanagar office</h2>
       <div className={styles.card__salary}>

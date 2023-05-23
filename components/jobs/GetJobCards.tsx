@@ -23,6 +23,7 @@ const GetJobCards = (): React.JSX.Element => {
     <>
       {jobs.map((job) => (
         <JobCard
+          id={job.id}
           key={job.id}
           title={job.title}
           salary_from={job.salary_from}

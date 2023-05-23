@@ -2,7 +2,6 @@
 
 .card {
   margin: 3% 8%;
-  border: 1px solid green;
   padding: 0.8vw 1.5vw;
   border-radius: 0.8vw;
   background-color: get-color("background3");
@@ -16,6 +15,8 @@
   max-height: 65vh;
   overflow-y: auto;
   overflow-x: hidden;
+  // position: fixed;
+  // bottom: 0px;
   &__title_and_button {
     width: 100%;
     display: flex;
