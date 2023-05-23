@@ -10,6 +10,11 @@ from rest_framework.permissions import IsAuthenticated
 
 class VacancyView(APIView):
     def get(self, request: Request):
-        vacancies = Vacancy.objects.all()
-        serialized = VacancySerializer(vacancies, many=True)
+        id = request.query_params.get('id')
+        if (id is None):
+            jobs = Vacancy.objects.all()
+            serialized = VacancySerializer(jobs, many=True)
+            return Response(serialized.data, status=status.HTTP_200_OK)
+        jobs = Vacancy.objects.get(id=id)
+        serialized = VacancySerializer(jobs)
         return Response(serialized.data, status=status.HTTP_200_OK)

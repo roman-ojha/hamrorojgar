@@ -3,7 +3,6 @@ import Head from "next/head";
 import NavBar from "@/components/NavBar";
 import styles from "@/styles/pages/jobs.module.scss";
 import { Icon } from "@iconify/react";
-import JobCard from "@/components/JobCard";
 import JobDesc from "@/components/JobDesc";
 import GetJobCards from "@/components/jobs/GetJobCards";
 

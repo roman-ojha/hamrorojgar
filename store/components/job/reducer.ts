@@ -1,11 +1,12 @@
 import { JobState, JobActionType, JobAction } from "./types";
 
-const initialState: JobState[] = [];
+const jobsState: JobState[] = [];
+const jobState: JobState | null = null;
 
-const jobReducer = (
-  state: typeof initialState = initialState,
+const jobsReducer = (
+  state: typeof jobsState = jobsState,
   action: JobAction
-): typeof initialState => {
+): typeof jobsState => {
   switch (action.type) {
     case JobActionType.FETCH_JOBS:
       return action.payload;
@@ -14,4 +15,4 @@ const jobReducer = (
   }
 };
 
-export { jobReducer };
+export { jobsReducer };

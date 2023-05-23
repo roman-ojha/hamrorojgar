@@ -8,10 +8,18 @@ const instance = axios.create({
 
 const api = {
   jobs: {
-    get: async (): Promise<AxiosResponse<JobState[]>> => {
+    get: async (
+      id: number | null = null
+    ): Promise<AxiosResponse<JobState[]>> => {
+      if (!id) {
+        return await instance({
+          method: "GET",
+          url: "/jobs",
+        });
+      }
       return await instance({
         method: "GET",
-        url: "/jobs",
+        url: `/jobs?id=${id}`,
       });
     },
   },

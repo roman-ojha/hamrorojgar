@@ -1,13 +1,13 @@
 import React, { useEffect } from "react";
 import JobCard from "../JobCard";
 import { useAppState } from "@/hooks/useAppState";
-import { jobSelector, JobState } from "@/store/selector";
+import { jobsSelector, JobState } from "@/store/selector";
 
 const GetJobCards = (): React.JSX.Element => {
-  const [{ storeVacancy }, [jobs]] = useAppState<[JobState[]]>([jobSelector]);
+  const [{ fetchJobs }, [jobs]] = useAppState<[JobState[]]>([jobsSelector]);
 
   useEffect(() => {
-    storeVacancy();
+    fetchJobs();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   return (
