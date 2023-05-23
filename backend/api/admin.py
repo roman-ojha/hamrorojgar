@@ -140,7 +140,7 @@ class VacancyAdmin(admin.ModelAdmin):
 
     def qualifications(self, obj):
         descriptions = [
-            "* " + q.description[0:30] + " ..."if len(q.description) > 30 else "* " + q.description for q in islice(obj.of_vacancy.all(), 3)]
+            "* " + q.description[0:30] + " ..."if len(q.description) > 30 else "* " + q.description for q in islice(obj.qualifications.all(), 3)]
         return mark_safe('<br>'.join(descriptions))
 
     def opened_by(self, obj):

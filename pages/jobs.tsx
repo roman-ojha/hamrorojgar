@@ -1,26 +1,13 @@
-import React, { useEffect } from "react";
+import React from "react";
 import Head from "next/head";
 import NavBar from "@/components/NavBar";
 import styles from "@/styles/pages/jobs.module.scss";
 import { Icon } from "@iconify/react";
 import JobCard from "@/components/JobCard";
 import JobDesc from "@/components/JobDesc";
-import { useDispatch, useSelector } from "react-redux";
-import { actionCreators } from "@/store";
-import { jobSelector, JobState } from "@/store/selector";
-import { bindActionCreators } from "redux";
-import { useAppState } from "@/hooks/useAppState";
+import GetJobCards from "@/components/jobs/GetJobCards";
 
 const Jobs = (): React.JSX.Element => {
-  const [{ storeVacancy }, [jobs]] = useAppState<[JobState[]]>([jobSelector]);
-  useEffect(() => {
-    storeVacancy();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
-
-  useEffect(() => {
-    console.log(jobs[0]);
-  }, [jobs]);
   return (
     <>
       <Head>
@@ -67,9 +54,7 @@ const Jobs = (): React.JSX.Element => {
         </form>
         <main className={styles.jobs__main}>
           <section className={styles.jobs__main__job_card_column}>
-            <JobCard />
-            <JobCard />
-            <JobCard />
+            <GetJobCards />
           </section>
           <section className={styles.jobs__main__job_desc_column}>
             <JobDesc />

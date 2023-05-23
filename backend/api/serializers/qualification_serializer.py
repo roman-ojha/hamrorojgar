@@ -5,4 +5,4 @@ from api.models import Qualification
 class QualificationSerializer(ModelSerializer):
     class Meta:
         model = Qualification
-        fields = ['description']
+        fields = ['id', 'description']

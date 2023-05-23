@@ -1,5 +1,5 @@
 import axios, { AxiosResponse } from "axios";
-import { Vacancy } from "@/models/vacancy";
+import { JobState } from "@/store/components/job/types";
 
 const instance = axios.create({
   // baseURL: process.env.API_BASE_URL,
@@ -8,7 +8,7 @@ const instance = axios.create({
 
 const api = {
   jobs: {
-    get: async (): Promise<AxiosResponse<Vacancy[]>> => {
+    get: async (): Promise<AxiosResponse<JobState[]>> => {
       return await instance({
         method: "GET",
         url: "/jobs",
