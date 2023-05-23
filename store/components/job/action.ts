@@ -1,13 +1,13 @@
-import { JobAction, JobActiontype, VacancyState } from "./types";
+import { JobAction, JobActionType, JobState } from "./types";
 import { Dispatch } from "redux";
-import { createAsyncThunk } from "@reduxjs/toolkit";
 import { api } from "@/services/api";
 
 export const storeVacancy = () => {
   return async (dispatch: Dispatch<JobAction>) => {
+    const data = (await api.jobs.get()).data;
     dispatch({
-      type: JobActiontype.STORE_VACANCIES,
-      payload: (await api.vacancy.get()).data,
+      type: JobActionType.FETCH_JOBS,
+      payload: data,
     });
   };
 };

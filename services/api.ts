@@ -7,11 +7,11 @@ const instance = axios.create({
 });
 
 const api = {
-  vacancy: {
+  jobs: {
     get: async (): Promise<AxiosResponse<Vacancy[]>> => {
       return await instance({
         method: "GET",
-        url: "/vacancy",
+        url: "/jobs",
       });
     },
   },

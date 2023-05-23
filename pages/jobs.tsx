@@ -5,21 +5,16 @@ import styles from "@/styles/pages/jobs.module.scss";
 import { Icon } from "@iconify/react";
 import JobCard from "@/components/JobCard";
 import JobDesc from "@/components/JobDesc";
-import {
-  useDispatch,
-  useSelector,
-  MapStateToProps,
-  connect,
-} from "react-redux";
-import { AppState, actionCreators } from "@/store";
+import { useDispatch, useSelector } from "react-redux";
+import { actionCreators } from "@/store";
+import { jobSelector } from "@/store/selector";
 import { bindActionCreators } from "redux";
 
 const Jobs = (): React.JSX.Element => {
-  const jobs = useSelector((state: AppState) => state.storeVacancyReducer);
+  const jobs = useSelector(jobSelector);
   const { storeVacancy } = bindActionCreators(actionCreators, useDispatch());
   useEffect(() => {
     storeVacancy();
-    console.log("hello");
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 

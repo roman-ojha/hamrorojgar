@@ -1,5 +1,5 @@
 import { combineReducers } from "redux";
-import { storeVacancyReducer } from "./components/job/reducer";
+import { jobReducer } from "./components/job/reducer";
 
-const reducer = combineReducers({ storeVacancyReducer });
+const reducer = combineReducers({ jobReducer });
 export default reducer;

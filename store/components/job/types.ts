@@ -1,15 +1,18 @@
 import { Vacancy } from "@/models/vacancy";
 import { AxiosResponse } from "axios";
+import { Qualification } from "@/models/qualification";
 
-export interface VacancyState extends Vacancy {}
-
-export enum JobActiontype {
-  STORE_VACANCIES = "STORE_VACANCIES",
+export interface JobState extends Vacancy {
+  qualifications: Qualification[];
 }
 
-export interface StoreVacancies {
-  type: JobActiontype.STORE_VACANCIES;
-  payload: Vacancy[];
+export enum JobActionType {
+  FETCH_JOBS = "FETCH_JOBS",
 }
 
-export type JobAction = StoreVacancies;
+export interface FetchJobs {
+  type: JobActionType.FETCH_JOBS;
+  payload: JobState[];
+}
+
+export type JobAction = FetchJobs;

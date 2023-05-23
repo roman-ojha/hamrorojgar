@@ -46,8 +46,8 @@ Content-Type: application/json
     "password": "rrr@123"
 }
 
-### Get Vacancies
-GET http://127.0.0.1:8000/api/vacancy
+### Get Vacanciel
+GET http://127.0.0.1:8000/api/jobs
 
 ### Apply for opened vacancy
 POST http://127.0.0.1:8000/api/job-application?vacancy_id=2

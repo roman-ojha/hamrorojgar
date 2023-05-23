@@ -6,9 +6,9 @@ from .qualification_serializer import QualificationSerializer
 
 class VacancySerializer(serializers.ModelSerializer):
     government = GovernmentSerializer()
-    of_vacancy = QualificationSerializer(many=True)
+    qualifications = QualificationSerializer(many=True)
 
     class Meta:
         model = Vacancy
         fields = ['title', 'description', 'is_opened', 'salary_from',
-                  'salary_to', 'opened_at', 'job_type', 'government', 'of_vacancy']
+                  'salary_to', 'opened_at', 'job_type', 'government', 'qualifications']
