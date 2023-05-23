@@ -7,12 +7,12 @@ import JobCard from "@/components/JobCard";
 import JobDesc from "@/components/JobDesc";
 import { useDispatch, useSelector } from "react-redux";
 import { actionCreators } from "@/store";
-import { jobSelector } from "@/store/selector";
+import { jobSelector, JobState } from "@/store/selector";
 import { bindActionCreators } from "redux";
+import { useAppState } from "@/hooks/useAppState";
 
 const Jobs = (): React.JSX.Element => {
-  const jobs = useSelector(jobSelector);
-  const { storeVacancy } = bindActionCreators(actionCreators, useDispatch());
+  const [{ storeVacancy }, [jobs]] = useAppState<[JobState[]]>([jobSelector]);
   useEffect(() => {
     storeVacancy();
     // eslint-disable-next-line react-hooks/exhaustive-deps
