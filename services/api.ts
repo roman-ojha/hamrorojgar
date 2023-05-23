@@ -1,5 +1,6 @@
 import axios, { AxiosResponse } from "axios";
 import { JobState } from "@/store/components/job/types";
+import { Citizen } from "@/models/citizen";
 
 const instance = axios.create({
   // baseURL: process.env.API_BASE_URL,
@@ -32,10 +33,23 @@ const api = {
     },
   },
   citizen: {
-    register: async () => {
+    register: async (citizen: Citizen) => {
+      const formData = new FormData();
+      const jsonData = {
+        ...citizen,
+        photo: "",
+      };
+      formData.append("json", JSON.stringify(jsonData));
+
+      const photo = citizen.photo[0];
+      formData.append("photo", photo);
       return await instance({
         method: "POST",
         url: "/citizens/register",
+        headers: {
+          "Content-Type": "multipart/form-data",
+        },
+        data: formData,
       });
     },
     login: async () => {

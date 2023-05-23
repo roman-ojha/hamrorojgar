@@ -62,15 +62,15 @@ class CitizenView(APIView):
 
 class Registration(APIView):
     def post(self, request: Request, format=None):
-        data = request.data
-        data_str = request.data.get('data')
+        data_str = request.data.get('json')
         data_dict = json.loads(data_str)
         serialized_data = CitizenSerializer(data={
             **data_dict,
             'photo': request.FILES.get('photo')
         })
         if serialized_data.is_valid():
-            serialized_data.save()
+            print(serialized_data.validated_data)
+            # serialized_data.save()
             return Response(ResponseObj(msg="Registered Citizen User").get(), status=status.HTTP_201_CREATED)
         else:
             return Response(serialized_data.errors, status=status.HTTP_406_NOT_ACCEPTABLE)

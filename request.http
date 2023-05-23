@@ -3,12 +3,12 @@ POST http://127.0.0.1:8000/api/citizens/register
 Content-Type: multipart/form-data; boundary=boundary_value
 
 --boundary_value
-Content-Disposition: form-data; name="data"
+Content-Disposition: form-data; name="json"
 Content-Type: application/json
 
 {
         "user": {
-            "email": "rr@gmail.com",
+            "email": "rrr@gmail.com",
             "password": "rrr@123"
         },
         "f_name": "rise",
@@ -19,7 +19,6 @@ Content-Type: application/json
         "gender": "M",
         "nationality": "nepali",
         "citizenship_no": "453211234432",
-        "photo_url": "https://stackoverflow.com/questions",
         "p_address":{
             "district":"jhapa",
             "municipality":"kamal",
