@@ -50,8 +50,10 @@ const api = {
       };
       const formData = new FormData();
       formData.append("json", JSON.stringify(jsonData));
-      const photo = data.photo[0];
-      formData.append("photo", photo);
+      if (data.photo) {
+        const photo = data.photo[0];
+        formData.append("photo", photo);
+      }
       return await instance({
         method: "POST",
         url: "/citizens/register",

@@ -84,7 +84,12 @@
           &__icon {
             width: 6vw;
             height: 6vw;
+            object-fit: cover;
             padding: 0.8vw;
+          }
+          &__image {
+            width: 8vw;
+            height: 8vw;
           }
         }
         label {

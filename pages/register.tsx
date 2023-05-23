@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import Head from "next/head";
 import styles from "@/styles/pages/register.module.scss";
 import Link from "next/link";
@@ -30,6 +30,34 @@ const Register: NextPage = () => {
   const onSubmit = async (data: CitizenForm) => {
     const res = (await api.citizen.register(data)).data;
   };
+
+  const fileInput = useRef<HTMLInputElement>(null);
+  useEffect(() => {
+    // showing citizen image on change
+    fileInput.current?.addEventListener("change", (e) => {
+      const target = e.target as HTMLInputElement;
+      let file: File | undefined;
+      if (target.files && target.files?.length > 0) {
+        file = target.files?.[0];
+      }
+      if (file) {
+        const reader = new FileReader();
+        reader.onload = (event) => {
+          const imageSrc = event.target?.result;
+          document
+            .getElementById("avatar-picture")
+            ?.setAttribute("src", imageSrc as string);
+          document
+            .getElementById("avatar-picture")
+            ?.setAttribute("style", "border-radius:50%");
+          document
+            .getElementById("avatar-picture-outline")
+            ?.setAttribute("style", "border-width:0px");
+        };
+        reader.readAsDataURL(file);
+      }
+    });
+  }, [fileInput]);
 
   return (
     <>
@@ -83,6 +111,7 @@ const Register: NextPage = () => {
                 className={
                   styles.register__form__first_row__upload_picture__avatar_container
                 }
+                id="avatar-picture-outline"
               >
                 <Image
                   className={
@@ -90,6 +119,7 @@ const Register: NextPage = () => {
                   }
                   src={avatar}
                   alt="avatar"
+                  id="avatar-picture"
                 />
               </div>
               <label htmlFor="picture-file">Upload photo</label>
@@ -98,6 +128,8 @@ const Register: NextPage = () => {
                 id="picture-file"
                 hidden
                 {...register("photo")}
+                ref={fileInput}
+                accept=".jpg, .png, .jpeg, .gif, .bmp, .tif, .tiff|image/*"
               />
             </div>
             <div className={styles.register__form__first_row__field_group}>
