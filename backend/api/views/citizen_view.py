@@ -9,13 +9,13 @@ from rest_framework.request import Request
 from rest_framework import status
 from rest_framework.views import APIView
 from utils.responseObj import ResponseObj
-from rest_framework.authentication import SessionAuthentication
+from rest_framework.authentication import TokenAuthentication
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.authtoken.views import ObtainAuthToken
 from rest_framework.authtoken.models import Token
 import json
 from datetime import datetime, timedelta
-from decouple import config
+from api.authentication import CustomTokenAuthentication
 
 
 # # Function Based
@@ -42,20 +42,25 @@ from decouple import config
 #             return Response(serialized_data.errors, status=status.HTTP_406_NOT_ACCEPTABLE)
 
 class CitizenView(APIView):
-    authentication_classes = [SessionAuthentication]
+    authentication_classes = [CustomTokenAuthentication]
     permission_classes = [IsAuthenticated]
 
     def get(self, request: Request, pk=None, format=None):
-        citizen = Citizen.objects.all()
-        serialized = CitizenSerializer(citizen, many=True)
-        return Response(serialized.data, status=status.HTTP_200_OK)
+        print(request.user)
+        user = CitizenUser.objects.get(pk=request.user.id)
+        citizen = Citizen.objects.get(user=user)
+        citizen_serialized = GetCitizenSerializer(citizen)
+        return Response(citizen_serialized.data, status=status.HTTP_200_OK)
 
     def post(self, request: Request, format=None):
-        json_data = request.body
-        stream = io.BytesIO(json_data)
-        py_data = JSONParser().parse(stream=stream)
-        serialized_data = CitizenSerializer(data=py_data)
+        data_str = request.data.get('json')
+        data_dict = json.loads(data_str)
+        serialized_data = CitizenSerializer(data={
+            **data_dict,
+            'photo': request.FILES.get('photo')
+        })
         if serialized_data.is_valid():
+            print(serialized_data.validated_data)
             serialized_data.save()
             return Response(ResponseObj(msg="Registered Citizen User").get(), status=status.HTTP_201_CREATED)
         else:

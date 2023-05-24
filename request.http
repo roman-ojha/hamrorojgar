@@ -36,7 +36,6 @@ Content-Type: image/png
 --boundary_value--
 
 ### Login Citizen
-
 POST http://127.0.0.1:8000/api/citizen/login
 Content-Type: application/json
 
@@ -44,6 +43,12 @@ Content-Type: application/json
     "email": "rrr@gmail.com",
     "password": "rrr@123"
 }
+
+
+### Get Citizen Data
+GET http://127.0.0.1:8000/api/citizen
+Content-Type: application/json
+Authorization: Token 9ae59b9dbcf9834775c4e15f5b8f0a20c0c69026
 
 
 ### Get Jobs

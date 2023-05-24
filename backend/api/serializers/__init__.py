@@ -1,4 +1,4 @@
-from .citizen_serializer import CitizenSerializer, LoginAuthTokenSerializer, GetCitizenSerializer
+from .citizen_serializer import CitizenSerializer, LoginAuthTokenSerializer, GetCitizenSerializer, CitizenUserSerializer
 from .government_serializer import GovernmentSerializer
 from .qualification_serializer import QualificationSerializer
 from .vacancy_serializer import VacancySerializer

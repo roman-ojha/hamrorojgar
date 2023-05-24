@@ -1,4 +1,4 @@
-import axios, { AxiosError } from "axios";
+import axios, { AxiosError, AxiosPromise } from "axios";
 import { Citizen } from "@/models/citizen";
 import { CitizenForm } from "@/pages/register";
 import { getAPIError } from "@/utils/getApiError";
@@ -94,6 +94,17 @@ const api = {
             "Content-Type": "application/json",
           },
           data: JSON.stringify(data),
+          withCredentials: true,
+        });
+      } catch (error) {
+        return getAPIError(error as AxiosError);
+      }
+    },
+    get: async () => {
+      try {
+        return await instance({
+          method: "GET",
+          url: "citizen",
           withCredentials: true,
         });
       } catch (error) {

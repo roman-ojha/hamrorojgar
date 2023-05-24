@@ -165,6 +165,7 @@ STATICFILES_DIRS = [
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': [
         # Token based authentication
-        'rest_framework.authentication.TokenAuthentication',
+        # 'rest_framework.authentication.TokenAuthentication',
+        # 'api.authentication.CustomTokenAuthentication',
     ],
 }
