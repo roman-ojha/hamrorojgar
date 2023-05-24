@@ -1,8 +1,7 @@
-import axios, { AxiosResponse, AxiosError } from "axios";
-import { JobState } from "@/store/components/job/types";
+import axios, { AxiosError } from "axios";
 import { Citizen } from "@/models/citizen";
 import { CitizenForm } from "@/pages/register";
-import { HandleError } from "@/utils/handleApiError";
+import { getAPIError } from "@/utils/getApiError";
 
 const instance = axios.create({
   // baseURL: process.env.API_BASE_URL,
@@ -19,30 +18,34 @@ const api = {
     get: async (id: number | null = null): Promise<ApiReturnType | null> => {
       if (id === null) {
         try {
-          const res = await instance({
+          return await instance({
             method: "GET",
             url: "/jobs",
           });
-          return {
-            data: await res.data,
-            status: res.status,
-          };
         } catch (error) {
-          return HandleError(error as AxiosError);
+          return getAPIError(error as AxiosError);
         }
       }
-      return await instance({
-        method: "GET",
-        url: `/jobs?id=${id}`,
-      });
+      try {
+        return await instance({
+          method: "GET",
+          url: `/jobs?id=${id}`,
+        });
+      } catch (error) {
+        return getAPIError(error as AxiosError);
+      }
     },
   },
   job_application: {
     post: async () => {
-      return await instance({
-        method: "POST",
-        url: "/job-application",
-      });
+      try {
+        return await instance({
+          method: "POST",
+          url: "/job-application",
+        });
+      } catch (error) {
+        return getAPIError(error as AxiosError);
+      }
     },
   },
   citizen: {
@@ -66,20 +69,28 @@ const api = {
         const photo = data.photo[0];
         formData.append("photo", photo);
       }
-      return await instance({
-        method: "POST",
-        url: "/citizens/register",
-        headers: {
-          "Content-Type": "multipart/form-data",
-        },
-        data: formData,
-      });
+      try {
+        return await instance({
+          method: "POST",
+          url: "/citizens/register",
+          headers: {
+            "Content-Type": "multipart/form-data",
+          },
+          data: formData,
+        });
+      } catch (error) {
+        return getAPIError(error as AxiosError);
+      }
     },
     login: async () => {
-      return await instance({
-        method: "POST",
-        url: "citizens/login",
-      });
+      try {
+        return await instance({
+          method: "POST",
+          url: "citizens/login",
+        });
+      } catch (error) {
+        return getAPIError(error as AxiosError);
+      }
     },
   },
 };

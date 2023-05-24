@@ -28,7 +28,10 @@ const Register: NextPage = () => {
   } = useForm<CitizenForm>();
 
   const onSubmit = async (data: CitizenForm) => {
-    const res = (await api.citizen.register(data)).data;
+    // const res = (await api.citizen.register(data)).data;
+    const res = await api.citizen.register(data);
+    console.log(res?.data);
+    console.log(res?.status);
   };
 
   const fileInput = useRef<HTMLInputElement>(null);

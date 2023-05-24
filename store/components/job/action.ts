@@ -1,7 +1,7 @@
 import { JobsAction, JobActionType, JobState, JobAction } from "./types";
 import { Dispatch } from "redux";
 import { api } from "@/services/api";
-import { isOkResponse } from "@/utils/checkStatus";
+import { isOkResponse } from "@/utils/checkApiStatus";
 
 export const fetchJobs = () => {
   return async (dispatch: Dispatch<JobsAction>) => {

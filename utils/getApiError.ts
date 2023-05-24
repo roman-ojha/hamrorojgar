@@ -1,5 +1,5 @@
 import { AxiosError } from "axios";
-export const HandleError = (error: AxiosError) => {
+export const getAPIError = (error: AxiosError) => {
   if (error.response) {
     // Request was made and the server responded with a status code
     // console.log(error.response?.headers);
