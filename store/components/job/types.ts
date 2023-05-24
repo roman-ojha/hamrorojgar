@@ -1,5 +1,4 @@
 import { Vacancy } from "@/models/vacancy";
-import { AxiosResponse } from "axios";
 import { Qualification } from "@/models/qualification";
 
 export interface JobState extends Vacancy {

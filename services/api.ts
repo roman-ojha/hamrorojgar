@@ -2,6 +2,7 @@ import axios, { AxiosError } from "axios";
 import { Citizen } from "@/models/citizen";
 import { CitizenForm } from "@/pages/register";
 import { getAPIError } from "@/utils/getApiError";
+import { CitizenSignInFormType } from "@/store/components/citizen/types";
 
 const instance = axios.create({
   // baseURL: process.env.API_BASE_URL,
@@ -82,11 +83,15 @@ const api = {
         return getAPIError(error as AxiosError);
       }
     },
-    login: async () => {
+    login: async (data: CitizenSignInFormType) => {
       try {
         return await instance({
           method: "POST",
           url: "citizens/login",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          data: JSON.stringify(data),
         });
       } catch (error) {
         return getAPIError(error as AxiosError);

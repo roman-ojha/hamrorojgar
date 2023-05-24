@@ -9,6 +9,7 @@ import type { NextPage } from "next";
 import { useForm } from "react-hook-form";
 import { Citizen } from "@/models/citizen";
 import { api } from "@/services/api";
+import { useRouter } from "next/router";
 
 interface CitizenFormExtension {
   date_of_birth: {
@@ -21,6 +22,7 @@ interface CitizenFormExtension {
 export interface CitizenForm extends Override<Citizen, CitizenFormExtension> {}
 
 const Register: NextPage = () => {
+  const router = useRouter();
   const {
     register,
     handleSubmit,
@@ -32,6 +34,7 @@ const Register: NextPage = () => {
     const res = await api.citizen.register(data);
     console.log(res?.data);
     console.log(res?.status);
+    router.push("/signin"); // for testing purposes
   };
 
   const fileInput = useRef<HTMLInputElement>(null);

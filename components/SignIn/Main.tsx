@@ -2,12 +2,24 @@ import React, { useState } from "react";
 import styles from "@/styles/pages/signin.module.scss";
 import { Icon } from "@iconify/react";
 import Link from "next/link";
+import { useForm } from "react-hook-form";
+import { CitizenSignInFormType } from "@/store/components/citizen/types";
 
 const Main = (): React.JSX.Element => {
   const [isValidated, setIsValidated] = useState({
     emailOrNo: true,
     password: true,
   });
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm<CitizenSignInFormType>();
+
+  const signIn = (data: CitizenSignInFormType) => {
+    console.log(data);
+  };
+
   return (
     <>
       <main className={styles.signin__main}>
@@ -48,14 +60,16 @@ const Main = (): React.JSX.Element => {
         </div>
         <h2>Sign In</h2>
         <form
-          onSubmit={(e) => {
-            e.preventDefault();
-          }}
+          onSubmit={handleSubmit(signIn)}
           className={styles.signin__main__form}
         >
           <div className={styles.signin__main__form__inputs}>
             <div className={styles.signin__main__form__inputs__fields}>
-              <input type="text" placeholder="Email or mobile no." />
+              <input
+                type="text"
+                placeholder="Enter your email"
+                {...register("email")}
+              />
               {isValidated.emailOrNo ? (
                 ""
               ) : (
@@ -69,7 +83,12 @@ const Main = (): React.JSX.Element => {
               )}
             </div>
             <div className={styles.signin__main__form__inputs__fields}>
-              <input type="password" placeholder="Password" />
+              <input
+                type="password"
+                placeholder="Enter your password"
+                id="password"
+                {...register("password")}
+              />
               {isValidated.password ? (
                 ""
               ) : (
