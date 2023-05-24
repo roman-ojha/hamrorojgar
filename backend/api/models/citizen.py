@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.base_user import BaseUserManager
+from django.db.models.query import QuerySet
 from django.utils.translation import gettext_lazy as _
 from . import User
 from .address import Address

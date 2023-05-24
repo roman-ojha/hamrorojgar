@@ -39,6 +39,21 @@ class CitizenSerializer(serializers.ModelSerializer):
         return Citizen.objects.create(**validated_data)
 
 
+class GetCitizenSerializer(serializers.ModelSerializer):
+    class GetCitizenUserSerializer(serializers.ModelSerializer):
+        class Meta:
+            model = CitizenUser
+            fields = ['id', 'email']
+    user = GetCitizenUserSerializer()
+    p_address = AddressSerializer()
+    t_address = AddressSerializer(allow_null=True)
+
+    class Meta:
+        model = Citizen
+        fields = ['user', 'f_name', 'm_name', 'l_name', 'mobile', 'date_of_birth',
+                  'gender', 'nationality', 'citizenship_no', 'photo', 'p_address', 't_address']
+
+
 class LoginAuthTokenSerializer(AuthTokenSerializer):
     username = None
     email = serializers.EmailField(label=_("Email"), write_only=True)
@@ -54,7 +69,7 @@ class LoginAuthTokenSerializer(AuthTokenSerializer):
             # users. (Assuming the default ModelBackend authentication
             # backend.)
             if not user:
-                msg = _('Unable to log in with provided credentials.')
+                msg = _('Unable to login with provided credentials.')
                 raise serializers.ValidationError(msg, code='authorization')
         else:
             msg = _('Must include "email" and "password".')

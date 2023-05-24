@@ -1,8 +1,8 @@
 from django.http import HttpRequest, JsonResponse, HttpResponse
 from rest_framework.renderers import JSONRenderer
 from rest_framework.parsers import JSONParser
-from api.models import Citizen
-from api.serializers import CitizenSerializer, LoginAuthTokenSerializer
+from api.models import CitizenUser, Citizen
+from api.serializers import CitizenSerializer, LoginAuthTokenSerializer, GetCitizenSerializer
 import io
 from rest_framework.response import Response
 from rest_framework.request import Request
@@ -80,14 +80,18 @@ class Login(ObtainAuthToken):
     serializer_class = LoginAuthTokenSerializer
 
     def post(self, request: Request, *args, **kwargs):
-        serializer = self.serializer_class(
+        print(request.data)
+        serialized_data = self.serializer_class(
             data=request.data, context={'request': request})
-        serializer.is_valid(raise_exception=True)
-        user = serializer.validated_data['user']
-        token, created = Token.objects.get_or_create(user=user)
-        return Response({
-            'token': token.key,
-            'citizen_id': user.pk,
-            'email': user.email,
-            'citizen': user,
-        })
+        if serialized_data.is_valid(raise_exception=True):
+            user = serialized_data.validated_data['user']
+            token, created = Token.objects.get_or_create(user=user)
+            user = CitizenUser.objects.get(pk=user.pk)
+            citizen = Citizen.objects.get(user=user)
+            citizen_serialized = GetCitizenSerializer(citizen)
+            return Response({
+                'token': token.key,
+                'citizen': citizen_serialized.data,
+            })
+        else:
+            return Response(serialized_data.errors, status=status.HTTP_406_NOT_ACCEPTABLE)

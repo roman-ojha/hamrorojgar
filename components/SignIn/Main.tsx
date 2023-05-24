@@ -1,15 +1,23 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import styles from "@/styles/pages/signin.module.scss";
 import { Icon } from "@iconify/react";
 import Link from "next/link";
 import { useForm } from "react-hook-form";
 import { CitizenSignInFormType } from "@/store/components/citizen/types";
+import { useAppState } from "@/hooks/useAppState";
+import {
+  citizenSelector,
+  CitizenState,
+} from "@/store/components/citizen/selector";
 
 const Main = (): React.JSX.Element => {
   const [isValidated, setIsValidated] = useState({
     emailOrNo: true,
     password: true,
   });
+  const [{ loginCitizen }, [citizen]] = useAppState<[CitizenState]>([
+    citizenSelector,
+  ]);
   const {
     register,
     handleSubmit,
@@ -19,6 +27,10 @@ const Main = (): React.JSX.Element => {
   const signIn = (data: CitizenSignInFormType) => {
     console.log(data);
   };
+
+  useEffect(() => {
+    console.log(citizen);
+  }, [citizen]);
 
   return (
     <>
@@ -60,7 +72,7 @@ const Main = (): React.JSX.Element => {
         </div>
         <h2>Sign In</h2>
         <form
-          onSubmit={handleSubmit(signIn)}
+          onSubmit={handleSubmit(loginCitizen)}
           className={styles.signin__main__form}
         >
           <div className={styles.signin__main__form__inputs}>
