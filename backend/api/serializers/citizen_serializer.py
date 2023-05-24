@@ -7,6 +7,7 @@ from django.utils.translation import gettext_lazy as _
 from django.contrib.auth import authenticate
 from .address_serializer import AddressSerializer
 from api.models.address import Address
+from decouple import config
 
 
 class CitizenUserSerializer(serializers.ModelSerializer):
@@ -47,11 +48,17 @@ class GetCitizenSerializer(serializers.ModelSerializer):
     user = GetCitizenUserSerializer()
     p_address = AddressSerializer()
     t_address = AddressSerializer(allow_null=True)
+    photo = serializers.SerializerMethodField()
 
     class Meta:
         model = Citizen
         fields = ['user', 'f_name', 'm_name', 'l_name', 'mobile', 'date_of_birth',
                   'gender', 'nationality', 'citizenship_no', 'photo', 'p_address', 't_address']
+
+    def get_photo(self, obj):
+        if obj.photo:
+            return config("API_BASE_URL") + obj.photo.url
+        return None
 
 
 class LoginAuthTokenSerializer(AuthTokenSerializer):

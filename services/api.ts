@@ -92,6 +92,7 @@ const api = {
             "Content-Type": "application/json",
           },
           data: JSON.stringify(data),
+          withCredentials: true,
         });
       } catch (error) {
         return getAPIError(error as AxiosError);

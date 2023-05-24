@@ -45,6 +45,7 @@ Content-Type: application/json
     "password": "rrr@123"
 }
 
+
 ### Get Jobs
 GET http://127.0.0.1:8000/api/jobs
 
@@ -54,7 +55,7 @@ GET http://127.0.0.1:8000/api/jobs?id=1
 ### Apply for opened vacancy
 POST http://127.0.0.1:8000/api/job-application?vacancy_id=2
 Content-Type: multipart/form-data; boundary=boundary_value
-Authorization: Token 14028032abe82899318d080a899a7d82dc9a06a0
+Authorization: Token 9ae59b9dbcf9834775c4e15f5b8f0a20c0c69026
 
 # --boundary_value
 # Content-Disposition: form-data; name="data"

@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 
 from pathlib import Path
 from decouple import config
+from corsheaders.defaults import default_headers
 import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -59,9 +60,21 @@ MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
 ]
 
+CORS_ALLOW_ALL_ORIGINS = False
+CORS_ALLOW_CREDENTIALS = True
 CORS_ALLOWED_ORIGINS = [
-    'http://localhost:3000',  # Add your frontend's URL here
+    config("CLIENT_BASE_URL"),  # Add your frontend's URL here
 ]
+CORS_ALLOWED_HEADERS = [
+    'Authorization',  # Allow the Authorization header
+    'Set-Cookie',
+]
+# CORS_ALLOW_HEADERS = list(default_headers) + ['Set-Cookie']
+# CSRF_USE_SESSIONS = False
+# SESSION_COOKIE_SECURE = False
+# SESSION_COOKIE_SAMESITE = 'None'
+CSRF_COOKIE_SECURE = True
+CSRF_COOKIE_SAMESITE = 'None'
 
 ROOT_URLCONF = 'core.urls'
 
@@ -148,3 +161,10 @@ AUTH_USER_MODEL = "api.User"
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static/')
 ]
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        # Token based authentication
+        'rest_framework.authentication.TokenAuthentication',
+    ],
+}

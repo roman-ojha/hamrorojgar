@@ -9,28 +9,22 @@ import {
   citizenSelector,
   CitizenState,
 } from "@/store/components/citizen/selector";
+import axios from "axios";
+import { api } from "@/services/api";
+import { getCookie } from "@/utils/handleCookie";
 
 const Main = (): React.JSX.Element => {
   const [isValidated, setIsValidated] = useState({
     emailOrNo: true,
     password: true,
   });
-  const [{ loginCitizen }, [citizen]] = useAppState<[CitizenState]>([
-    citizenSelector,
-  ]);
+
+  const [{ loginCitizen }] = useAppState([]);
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm<CitizenSignInFormType>();
-
-  const signIn = (data: CitizenSignInFormType) => {
-    console.log(data);
-  };
-
-  useEffect(() => {
-    console.log(citizen);
-  }, [citizen]);
 
   return (
     <>

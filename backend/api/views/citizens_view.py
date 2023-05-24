@@ -14,6 +14,8 @@ from rest_framework.permissions import IsAuthenticated
 from rest_framework.authtoken.views import ObtainAuthToken
 from rest_framework.authtoken.models import Token
 import json
+from datetime import datetime, timedelta
+from decouple import config
 
 
 # # Function Based
@@ -80,7 +82,6 @@ class Login(ObtainAuthToken):
     serializer_class = LoginAuthTokenSerializer
 
     def post(self, request: Request, *args, **kwargs):
-        print(request.data)
         serialized_data = self.serializer_class(
             data=request.data, context={'request': request})
         if serialized_data.is_valid(raise_exception=True):
@@ -89,9 +90,14 @@ class Login(ObtainAuthToken):
             user = CitizenUser.objects.get(pk=user.pk)
             citizen = Citizen.objects.get(user=user)
             citizen_serialized = GetCitizenSerializer(citizen)
-            return Response({
-                'token': token.key,
-                'citizen': citizen_serialized.data,
-            })
+            cookie_expire_date = 10
+            expiration_date = datetime.utcnow() + timedelta(days=cookie_expire_date)
+            formatted_expiration_date = expiration_date.strftime(
+                "%a, %d %b %Y %H:%M:%S GMT")
+            response = Response(citizen_serialized.data,
+                                status=status.HTTP_202_ACCEPTED)
+            response.set_cookie(
+                key='auth', value=f"Token {token.key}", path='/', expires=formatted_expiration_date, secure=True, samesite='None', httponly=True)
+            return response
         else:
             return Response(serialized_data.errors, status=status.HTTP_406_NOT_ACCEPTABLE)
