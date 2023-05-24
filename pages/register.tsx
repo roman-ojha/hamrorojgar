@@ -10,6 +10,7 @@ import { useForm } from "react-hook-form";
 import { Citizen } from "@/models/citizen";
 import { api } from "@/services/api";
 import { useRouter } from "next/router";
+import { isOkResponse } from "@/utils/checkApiStatus";
 
 interface CitizenFormExtension {
   date_of_birth: {
@@ -30,17 +31,17 @@ const Register: NextPage = () => {
   } = useForm<CitizenForm>();
 
   const onSubmit = async (data: CitizenForm) => {
-    // const res = (await api.citizen.register(data)).data;
     const res = await api.citizen.register(data);
-    console.log(res?.data);
-    console.log(res?.status);
-    router.push("/signin"); // for testing purposes
+    if (res && isOkResponse(res.status)) {
+      console.log(res.data);
+      console.log(res.status);
+      router.push("/signin"); // for testing purposes
+    }
   };
 
-  const fileInput = useRef<HTMLInputElement>(null);
   useEffect(() => {
     // showing citizen image on change
-    fileInput.current?.addEventListener("change", (e) => {
+    document.getElementById("picture-file")?.addEventListener("change", (e) => {
       const target = e.target as HTMLInputElement;
       let file: File | undefined;
       if (target.files && target.files?.length > 0) {
@@ -63,7 +64,7 @@ const Register: NextPage = () => {
         reader.readAsDataURL(file);
       }
     });
-  }, [fileInput]);
+  }, []);
 
   return (
     <>
@@ -134,7 +135,7 @@ const Register: NextPage = () => {
                 id="picture-file"
                 hidden
                 {...register("photo")}
-                ref={fileInput}
+                // ref={fileInput}
                 accept=".jpg, .png, .jpeg, .gif, .bmp, .tif, .tiff|image/*"
               />
             </div>

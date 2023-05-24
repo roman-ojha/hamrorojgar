@@ -7,7 +7,7 @@ export interface Citizen {
   id: number;
   user: User;
   f_name: string;
-  m_name: string;
+  m_name: string | null;
   l_name: string;
   mobile: number;
   date_of_birth: string;

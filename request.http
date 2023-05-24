@@ -1,5 +1,5 @@
 ### Reigster Citizen
-POST http://127.0.0.1:8000/api/citizens/register
+POST http://127.0.0.1:8000/api/citizen/register
 Content-Type: multipart/form-data; boundary=boundary_value
 
 --boundary_value
@@ -37,7 +37,7 @@ Content-Type: image/png
 
 ### Login Citizen
 
-POST http://127.0.0.1:8000/api/citizens/login
+POST http://127.0.0.1:8000/api/citizen/login
 Content-Type: application/json
 
 {

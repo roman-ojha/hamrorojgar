@@ -63,6 +63,8 @@ const api = {
             ? null
             : data.t_address,
         photo: "",
+        m_name:
+          data.m_name != null && isWhiteSpace(data.m_name) ? null : data.m_name,
       };
       const formData = new FormData();
       formData.append("json", JSON.stringify(jsonData));
@@ -73,7 +75,7 @@ const api = {
       try {
         return await instance({
           method: "POST",
-          url: "/citizens/register",
+          url: "/citizen/register",
           headers: {
             "Content-Type": "multipart/form-data",
           },
@@ -87,7 +89,7 @@ const api = {
       try {
         return await instance({
           method: "POST",
-          url: "citizens/login",
+          url: "citizen/login",
           headers: {
             "Content-Type": "application/json",
           },

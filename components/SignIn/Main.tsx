@@ -5,13 +5,6 @@ import Link from "next/link";
 import { useForm } from "react-hook-form";
 import { CitizenSignInFormType } from "@/store/components/citizen/types";
 import { useAppState } from "@/hooks/useAppState";
-import {
-  citizenSelector,
-  CitizenState,
-} from "@/store/components/citizen/selector";
-import axios from "axios";
-import { api } from "@/services/api";
-import { getCookie } from "@/utils/handleCookie";
 
 const Main = (): React.JSX.Element => {
   const [isValidated, setIsValidated] = useState({
