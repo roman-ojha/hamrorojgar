@@ -1,23 +1,35 @@
-import axios, { AxiosResponse } from "axios";
+import axios, { AxiosResponse, AxiosError } from "axios";
 import { JobState } from "@/store/components/job/types";
 import { Citizen } from "@/models/citizen";
 import { CitizenForm } from "@/pages/register";
+import { HandleError } from "@/utils/handleApiError";
 
 const instance = axios.create({
   // baseURL: process.env.API_BASE_URL,
   baseURL: "http://127.0.0.1:8000/api",
 });
 
+interface ApiReturnType {
+  data: any;
+  status: number;
+}
+
 const api = {
   jobs: {
-    get: async (
-      id: number | null = null
-    ): Promise<AxiosResponse<JobState[] | JobState>> => {
+    get: async (id: number | null = null): Promise<ApiReturnType | null> => {
       if (id === null) {
-        return await instance({
-          method: "GET",
-          url: "/jobs",
-        });
+        try {
+          const res = await instance({
+            method: "GET",
+            url: "/jobs",
+          });
+          return {
+            data: await res.data,
+            status: res.status,
+          };
+        } catch (error) {
+          return HandleError(error as AxiosError);
+        }
       }
       return await instance({
         method: "GET",
