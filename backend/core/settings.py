@@ -93,6 +93,10 @@ DATABASES = {
         'PASSWORD': config('DATABASEPASSWORD'),
         'HOST': config('DATABASEHOST'),
         'PORT': config('DATABASEPORT'),
+    },
+    'sqlite': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
 

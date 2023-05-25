@@ -2,7 +2,7 @@ from rest_framework.views import APIView
 from rest_framework.request import Request
 from rest_framework.response import Response
 from rest_framework import status
-from rest_framework.authentication import TokenAuthentication
+from api.authentication import CustomTokenAuthentication
 from rest_framework.permissions import IsAuthenticated
 from utils.responseObj import ResponseObj
 from rest_framework.parsers import MultiPartParser
@@ -29,7 +29,7 @@ from api.models import User
 
 class ApplyView(APIView):
     parser_classes = [MultiPartParser]
-    authentication_classes = [TokenAuthentication]
+    authentication_classes = [CustomTokenAuthentication]
     permission_classes = [IsAuthenticated]
 
     def post(self, request: Request, format=None):
@@ -40,6 +40,6 @@ class ApplyView(APIView):
             'vacancy': vacancy_id
         })
         if serializer.is_valid():
-            # serializer.save()
+            serializer.save()
             return Response(ResponseObj(msg="Application form submitted successfully").get(), status=status.HTTP_201_CREATED)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)

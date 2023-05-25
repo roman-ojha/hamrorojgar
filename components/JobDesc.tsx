@@ -3,10 +3,28 @@ import { Icon } from "@iconify/react";
 import styles from "@/styles/components/jobdesc.module.scss";
 import Link from "next/link";
 import { useAppState } from "@/hooks/useAppState";
-import { jobSelector, JobState } from "@/store/selector";
+import {
+  jobSelector,
+  JobState,
+  citizenSelector,
+  CitizenState,
+} from "@/store/selector";
+import { useRouter } from "next/router";
 
 const JobDesc = (): React.JSX.Element => {
-  const [{}, [job]] = useAppState<[JobState]>([jobSelector]);
+  const router = useRouter();
+  const [{}, [job, citizen]] = useAppState<[JobState, CitizenState]>([
+    jobSelector,
+    citizenSelector,
+  ]);
+
+  const apply = () => {
+    if (citizen && citizen.is_authenticated) {
+      router.push(`/apply/?vacancy_id=${job.id}`);
+    } else {
+      router.push("/signin");
+    }
+  };
 
   return (
     <>
@@ -16,12 +34,12 @@ const JobDesc = (): React.JSX.Element => {
         <div className={styles.card}>
           <div className={styles.card__title_and_button}>
             <h1>{job.title}</h1>
-            <Link
+            <button
+              onClick={apply}
               className={styles.card__title_and_button__apply_button}
-              href="/"
             >
               Apply
-            </Link>
+            </button>
           </div>
           <h2>Kathmandu Mahanagar office</h2>
           <div className={styles.card__salary}>

@@ -3,6 +3,7 @@ import {
   CitizenAction,
   CitizenSignInFormType,
   CitizenLoginStatusAction,
+  CitizenState,
 } from "./types";
 import { Dispatch } from "redux";
 import { api } from "@/services/api";
@@ -27,6 +28,12 @@ export const loginCitizen = (data: CitizenSignInFormType) => {
         payload: { is_logged_in: true },
       });
     } else if (res) {
+      dispatch({
+        type: CitizenActionType.STORE_AUTH_CITIZEN,
+        payload: <CitizenState>{
+          is_authenticated: false,
+        },
+      });
       dispatch({
         type: CitizenActionType.CITIZEN_LOGIN_FAIL,
         payload: {
@@ -56,6 +63,13 @@ export const getCitizen = () => {
         payload: {
           is_authenticated: true,
           ...res.data,
+        },
+      });
+    } else {
+      dispatch({
+        type: CitizenActionType.STORE_AUTH_CITIZEN,
+        payload: <CitizenState>{
+          is_authenticated: false,
         },
       });
     }

@@ -17,47 +17,54 @@ const NavBarRightPart = (): React.JSX.Element => {
       router.push("/signin");
     }
   };
+
   return (
-    <div className={styles.buttons}>
-      {citizen && citizen.is_authenticated ? (
-        <>
-          <p className={styles.buttons__button__email}>
-            {citizen && citizen.is_authenticated
-              ? `${citizen.f_name} ${citizen.l_name}`
-              : ""}
-          </p>
-          <button
-            onClick={logout}
-            className={`${styles.buttons__button__sign_in_out} ${styles.buttons__button}`}
-          >
-            Log Out
-          </button>
-          <Image
-            className={styles.buttons__button__avatar}
-            src={citizen.photo}
-            width="20"
-            height="20"
-            alt="citizen"
-          ></Image>
-        </>
+    <>
+      {citizen ? (
+        <div className={styles.buttons}>
+          {citizen && citizen.is_authenticated ? (
+            <>
+              <p className={styles.buttons__button__email}>
+                {citizen && citizen.is_authenticated
+                  ? `${citizen.f_name} ${citizen.l_name}`
+                  : ""}
+              </p>
+              <button
+                onClick={logout}
+                className={`${styles.buttons__button__sign_in_out} ${styles.buttons__button}`}
+              >
+                Log Out
+              </button>
+              <Image
+                className={styles.buttons__button__avatar}
+                src={citizen.photo}
+                width="20"
+                height="20"
+                alt="citizen"
+              ></Image>
+            </>
+          ) : (
+            <>
+              <Link
+                href="/register"
+                type="button"
+                className={`${styles.buttons__button__register} ${styles.buttons__button}`}
+              >
+                Register
+              </Link>
+              <Link
+                href="/signin"
+                className={`${styles.buttons__button__sign_in_out} ${styles.buttons__button}`}
+              >
+                Sign in
+              </Link>
+            </>
+          )}
+        </div>
       ) : (
-        <>
-          <Link
-            href="/register"
-            type="button"
-            className={`${styles.buttons__button__register} ${styles.buttons__button}`}
-          >
-            Register
-          </Link>
-          <Link
-            href="/signin"
-            className={`${styles.buttons__button__sign_in_out} ${styles.buttons__button}`}
-          >
-            Sign in
-          </Link>
-        </>
+        ""
       )}
-    </div>
+    </>
   );
 };
 
