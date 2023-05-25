@@ -1,23 +1,32 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import styles from "@/styles/pages/signin.module.scss";
 import { Icon } from "@iconify/react";
 import Link from "next/link";
 import { useForm } from "react-hook-form";
 import { CitizenSignInFormType } from "@/store/components/citizen/types";
 import { useAppState } from "@/hooks/useAppState";
+import { useRouter } from "next/router";
+import {
+  citizenLoginStatusSelector,
+  CitizenLoginStatusState,
+} from "@/store/components/citizen/selector";
 
 const Main = (): React.JSX.Element => {
-  const [isValidated, setIsValidated] = useState({
-    emailOrNo: true,
-    password: true,
-  });
+  const [{ loginCitizen, resetLoginStatus }, [citizenLoginStatus]] =
+    useAppState<[CitizenLoginStatusState]>([citizenLoginStatusSelector]);
+  const router = useRouter();
 
-  const [{ loginCitizen }] = useAppState([]);
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm<CitizenSignInFormType>();
+
+  useEffect(() => {
+    resetLoginStatus();
+    if (citizenLoginStatus.is_logged_in) router.push("/jobs");
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [citizenLoginStatus]);
 
   return (
     <>
@@ -69,16 +78,17 @@ const Main = (): React.JSX.Element => {
                 placeholder="Enter your email"
                 {...register("email")}
               />
-              {isValidated.emailOrNo ? (
-                ""
-              ) : (
+              {citizenLoginStatus.email &&
+              citizenLoginStatus.email?.length > 0 ? (
                 <span data-type="validation-error">
                   <Icon
                     className={styles.validation_icon}
                     icon="ic:round-warning"
                   />
-                  <p>Required field</p>
+                  <p>{citizenLoginStatus.email[0]}</p>
                 </span>
+              ) : (
+                ""
               )}
             </div>
             <div className={styles.signin__main__form__inputs__fields}>
@@ -88,16 +98,17 @@ const Main = (): React.JSX.Element => {
                 id="password"
                 {...register("password")}
               />
-              {isValidated.password ? (
-                ""
-              ) : (
+              {citizenLoginStatus.password &&
+              citizenLoginStatus.password.length > 0 ? (
                 <span data-type="validation-error">
                   <Icon
                     className={styles.validation_icon}
                     icon="ic:round-warning"
                   />
-                  <p>Required field</p>
+                  <p>{citizenLoginStatus.password[0]}</p>
                 </span>
+              ) : (
+                ""
               )}
             </div>
           </div>

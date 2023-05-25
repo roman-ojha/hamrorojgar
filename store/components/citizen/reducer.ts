@@ -3,6 +3,7 @@ import {
   CitizenActionType,
   CitizenState,
   CitizenLoginStatusAction,
+  CitizenLoginStatusState,
 } from "./types";
 
 const citizenState: CitizenState | null = null;
@@ -19,7 +20,12 @@ export const citizenReducer = (
   }
 };
 
-const citizenLoginStatus: any = null;
+export const citizenLoginStatus: CitizenLoginStatusState = {
+  email: [],
+  password: [],
+  non_field_errors: [],
+  is_logged_in: false,
+};
 
 export const citizenLoginStatusReducer = (
   state: typeof citizenLoginStatus = citizenLoginStatus,
@@ -27,6 +33,8 @@ export const citizenLoginStatusReducer = (
 ): typeof citizenLoginStatus => {
   switch (action.type) {
     case CitizenActionType.CITIZEN_LOGIN_FAIL:
+      return action.payload;
+    case CitizenActionType.CITIZEN_LOGIN_SUCCESS:
       return action.payload;
     default:
       return state;

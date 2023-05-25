@@ -6,6 +6,7 @@ export interface CitizenState extends Citizen {
   user: User;
   p_address: Address;
   t_address: Address;
+  is_authenticated: boolean;
 }
 
 export interface CitizenSignInFormType {
@@ -24,13 +25,21 @@ export interface StoreAuthCitizen {
   payload: CitizenState;
 }
 
+export interface CitizenLoginStatusState {
+  email?: string[];
+  password?: string[];
+  non_field_errors?: string[];
+  is_logged_in: boolean;
+}
+
 export interface CitizenLoginSuccess {
   type: CitizenActionType.CITIZEN_LOGIN_SUCCESS;
+  payload: CitizenLoginStatusState;
 }
 
 export interface CitizenLoginFail {
   type: CitizenActionType.CITIZEN_LOGIN_FAIL;
-  payload: any;
+  payload: CitizenLoginStatusState;
 }
 
 export type CitizenAction = StoreAuthCitizen;
