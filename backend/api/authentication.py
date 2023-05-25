@@ -3,6 +3,7 @@ from django.utils.translation import gettext_lazy as _
 from rest_framework.authtoken.models import Token
 from rest_framework.request import Request
 from rest_framework import exceptions
+from rest_framework.settings import settings
 
 
 class CustomTokenAuthentication(TokenAuthentication):
@@ -10,7 +11,7 @@ class CustomTokenAuthentication(TokenAuthentication):
 
     def get_token_from_cookie(self, request):
         # Retrieve the token from the cookie
-        token = request.COOKIES.get('auth')
+        token = request.COOKIES.get(settings.AUTH_COOKIE_NAME)
         if token:
             return token.encode('utf-8').split()
         return None

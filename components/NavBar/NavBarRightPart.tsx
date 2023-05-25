@@ -4,9 +4,19 @@ import Link from "next/link";
 import { useAppState } from "@/hooks/useAppState";
 import { CitizenState, citizenSelector } from "@/store/selector";
 import Image from "next/image";
+import { api } from "@/services/api";
+import { isOkResponse } from "@/utils/checkApiStatus";
+import { useRouter } from "next/router";
 
 const NavBarRightPart = (): React.JSX.Element => {
+  const router = useRouter();
   const [{}, [citizen]] = useAppState<[CitizenState]>([citizenSelector]);
+  const logout = async () => {
+    const res = await api.citizen.logout();
+    if (res && isOkResponse(res.status)) {
+      router.push("/signin");
+    }
+  };
   return (
     <div className={styles.buttons}>
       {citizen && citizen.is_authenticated ? (
@@ -16,12 +26,12 @@ const NavBarRightPart = (): React.JSX.Element => {
               ? `${citizen.f_name} ${citizen.l_name}`
               : ""}
           </p>
-          <Link
-            href="/signin"
+          <button
+            onClick={logout}
             className={`${styles.buttons__button__sign_in_out} ${styles.buttons__button}`}
           >
             Log Out
-          </Link>
+          </button>
           <Image
             className={styles.buttons__button__avatar}
             src={citizen.photo}

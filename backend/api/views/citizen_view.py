@@ -9,13 +9,13 @@ from rest_framework.request import Request
 from rest_framework import status
 from rest_framework.views import APIView
 from utils.responseObj import ResponseObj
-from rest_framework.authentication import TokenAuthentication
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.authtoken.views import ObtainAuthToken
 from rest_framework.authtoken.models import Token
 import json
 from datetime import datetime, timedelta
 from api.authentication import CustomTokenAuthentication
+from rest_framework.settings import settings
 
 
 # # Function Based
@@ -102,7 +102,17 @@ class Login(ObtainAuthToken):
             response = Response(citizen_serialized.data,
                                 status=status.HTTP_202_ACCEPTED)
             response.set_cookie(
-                key='auth', value=f"Token {token.key}", path='/', expires=formatted_expiration_date, secure=True, samesite='None', httponly=True)
+                key=settings.AUTH_COOKIE_NAME, value=f"Token {token.key}", path='/', expires=formatted_expiration_date, secure=True, samesite='None', httponly=True)
             return response
         else:
             return Response(serialized_data.errors, status=status.HTTP_406_NOT_ACCEPTABLE)
+
+
+class CitizenLogout(APIView):
+    authentication_classes = [CustomTokenAuthentication]
+    permission_classes = [IsAuthenticated]
+
+    def get(self, request: Request, pk=None, format=None):
+        response = Response(request.user.email)
+        response.delete_cookie(settings.AUTH_COOKIE_NAME)
+        return response

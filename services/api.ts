@@ -100,6 +100,17 @@ const api = {
         return getAPIError(error as AxiosError);
       }
     },
+    logout: async () => {
+      try {
+        return await instance({
+          method: "GET",
+          url: "citizen/logout",
+          withCredentials: true,
+        });
+      } catch (error) {
+        return getAPIError(error as AxiosError);
+      }
+    },
     get: async () => {
       try {
         return await instance({

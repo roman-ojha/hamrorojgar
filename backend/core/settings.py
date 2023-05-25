@@ -60,21 +60,6 @@ MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
 ]
 
-CORS_ALLOW_ALL_ORIGINS = False
-CORS_ALLOW_CREDENTIALS = True
-CORS_ALLOWED_ORIGINS = [
-    config("CLIENT_BASE_URL"),  # Add your frontend's URL here
-]
-CORS_ALLOWED_HEADERS = [
-    'Authorization',  # Allow the Authorization header
-    'Set-Cookie',
-]
-# CORS_ALLOW_HEADERS = list(default_headers) + ['Set-Cookie']
-# CSRF_USE_SESSIONS = False
-# SESSION_COOKIE_SECURE = False
-# SESSION_COOKIE_SAMESITE = 'None'
-CSRF_COOKIE_SECURE = True
-CSRF_COOKIE_SAMESITE = 'None'
 
 ROOT_URLCONF = 'core.urls'
 
@@ -169,3 +154,21 @@ REST_FRAMEWORK = {
         # 'api.authentication.CustomTokenAuthentication',
     ],
 }
+
+CORS_ALLOW_ALL_ORIGINS = False
+CORS_ALLOW_CREDENTIALS = True
+CORS_ALLOWED_ORIGINS = [
+    config("CLIENT_BASE_URL"),  # Add your frontend's URL here
+]
+CORS_ALLOWED_HEADERS = [
+    'Authorization',  # Allow the Authorization header
+    'Set-Cookie',
+]
+# CORS_ALLOW_HEADERS = list(default_headers) + ['Set-Cookie']
+# CSRF_USE_SESSIONS = False
+# SESSION_COOKIE_SECURE = False
+# SESSION_COOKIE_SAMESITE = 'None'
+CSRF_COOKIE_SECURE = True
+CSRF_COOKIE_SAMESITE = 'None'
+
+AUTH_COOKIE_NAME = 'auth'
