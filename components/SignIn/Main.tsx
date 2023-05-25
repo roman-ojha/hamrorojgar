@@ -9,7 +9,7 @@ import { useRouter } from "next/router";
 import {
   citizenLoginStatusSelector,
   CitizenLoginStatusState,
-} from "@/store/components/citizen/selector";
+} from "@/store/selector";
 
 const Main = (): React.JSX.Element => {
   const [{ loginCitizen, resetLoginStatus }, [citizenLoginStatus]] =

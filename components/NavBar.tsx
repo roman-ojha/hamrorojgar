@@ -3,7 +3,7 @@ import Link from "next/link";
 import appIcon from "@/assets/images/appIcon.png";
 import Image from "next/image";
 import styles from "@/styles/components/navbar.module.scss";
-import type { SetStateAction, Dispatch } from "react";
+import NavBarRightPart from "./NavBar/NavBarRightPart";
 
 const NavBar = (): React.JSX.Element => {
   return (
@@ -35,21 +35,7 @@ const NavBar = (): React.JSX.Element => {
           </li>
         </ul>
       </div>
-      <div className={styles.buttons}>
-        <Link
-          href="/register"
-          type="button"
-          className={`${styles.buttons__button__register} ${styles.buttons__button}`}
-        >
-          Register
-        </Link>
-        <Link
-          href="/signin"
-          className={`${styles.buttons__button__sign_in} ${styles.buttons__button}`}
-        >
-          Sign in
-        </Link>
-      </div>
+      <NavBarRightPart />
     </nav>
   );
 };

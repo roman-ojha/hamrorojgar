@@ -54,14 +54,15 @@
     justify-content: center;
     align-items: center;
     gap: 10px;
+    margin-right: 30px;
     &__button {
       padding: 5px 20px;
       border-radius: 10px;
-      margin-right: 30px;
       cursor: pointer;
       &__register {
         border-width: 0px;
         background-color: get-color("background");
+        margin-right: 30px;
         &:hover {
           background-color: lighten(
             $color: get-color-value("background"),
@@ -70,14 +71,28 @@
           transform: scale(1.01);
         }
       }
-      &__sign_in {
+      &__sign_in_out {
         background-color: transparent;
         border: 1px solid #ffffff;
         transition-duration: 100ms;
+        margin-right: 15px;
         &:hover {
           background-color: transparentize($color: white, $amount: 0.9);
           transform: scale(1.01);
         }
+      }
+      &__avatar {
+        width: 1.8rem;
+        height: 1.8rem;
+        border-radius: 50%;
+        cursor: pointer;
+        object-fit: cover;
+      }
+      &__email {
+        max-width: 10vw;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
       }
     }
   }
