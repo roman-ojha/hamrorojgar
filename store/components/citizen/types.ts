@@ -15,10 +15,24 @@ export interface CitizenSignInFormType {
 
 export enum CitizenActionType {
   STORE_AUTH_CITIZEN = "STORE_AUTH_CITIZEN",
+  CITIZEN_LOGIN_SUCCESS = "CITIZEN_LOGIN_SUCCESS",
+  CITIZEN_LOGIN_FAIL = "CITIZEN_LOGIN_FAIL",
 }
 
 export interface StoreAuthCitizen {
   type: CitizenActionType.STORE_AUTH_CITIZEN;
   payload: CitizenState;
 }
+
+export interface CitizenLoginSuccess {
+  type: CitizenActionType.CITIZEN_LOGIN_SUCCESS;
+}
+
+export interface CitizenLoginFail {
+  type: CitizenActionType.CITIZEN_LOGIN_FAIL;
+  payload: any;
+}
+
 export type CitizenAction = StoreAuthCitizen;
+
+export type CitizenLoginStatusAction = CitizenLoginSuccess | CitizenLoginFail;
