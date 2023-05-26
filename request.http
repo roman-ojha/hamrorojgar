@@ -68,6 +68,14 @@ Content-Type: multipart/form-data; boundary=boundary_value
 Authorization: Token 9ae59b9dbcf9834775c4e15f5b8f0a20c0c69026
 
 --boundary_value
+Content-Disposition: form-data; name="json"
+Content-Type: application/json;
+
+{
+    "description":"hello world"
+}
+
+--boundary_value
 Content-Disposition: form-data; name="cv"; filename="cv_example.jpg"
 Content-Type: image/jpeg
 

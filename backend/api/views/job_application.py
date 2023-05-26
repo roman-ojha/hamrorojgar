@@ -33,11 +33,14 @@ class ApplyView(APIView):
     permission_classes = [IsAuthenticated]
 
     def post(self, request: Request, format=None):
+        data_str = request.data.get('json')
+        data_dict = json.loads(data_str)
         vacancy_id = request.query_params.get('vacancy_id')
         serializer = JobApplicationSerializer(data={
             'cv': request.FILES.get('cv'),
             'citizen': request.user.id,
-            'vacancy': vacancy_id
+            'vacancy': vacancy_id,
+            'description': data_dict['description']
         })
         if serializer.is_valid():
             serializer.save()

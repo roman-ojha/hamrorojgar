@@ -187,7 +187,7 @@ class JobApplicationAdmin(admin.ModelAdmin):
     list_display = ('id', 'is_approved', 'applied_by', 'of_vacancy')
     ordering = ('id',)
 
-    fields = ('citizen', 'vacancy',)
+    fields = ('citizen', 'vacancy', 'description',)
 
     class VacancyFilter(SingleNumericFilter):
         title = "Vacancy"

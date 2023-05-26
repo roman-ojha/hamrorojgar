@@ -7,4 +7,5 @@ export interface JobApplication {
   is_approved: boolean;
   citizen: Citizen;
   vacancy: Vacancy;
+  description: string | null;
 }

@@ -5,4 +5,4 @@ from api.models import JobApplication
 class JobApplicationSerializer(serializers.ModelSerializer):
     class Meta:
         model = JobApplication
-        fields = ['cv', 'vacancy', 'citizen']
+        fields = ['cv', 'vacancy', 'citizen', 'description']
