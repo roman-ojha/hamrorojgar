@@ -1,0 +1,14 @@
+@use "../utils" as *;
+
+.apply {
+  position: relative;
+  min-height: 100vh;
+  min-width: 100vw;
+  overflow: hidden;
+  background-color: get-color("background");
+  &__main_content {
+    background-color: get-color("background");
+    width: 100vw;
+    position: relative;
+  }
+}

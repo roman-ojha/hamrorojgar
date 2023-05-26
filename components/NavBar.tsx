@@ -7,7 +7,7 @@ import NavBarRightPart from "./NavBar/NavBarRightPart";
 
 const NavBar = (): React.JSX.Element => {
   return (
-    <nav className={styles.navbar}>
+    <nav id="navbar" className={styles.navbar}>
       <div className={styles.icon_nav_container}>
         <Link
           href="/"
