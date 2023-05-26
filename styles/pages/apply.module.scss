@@ -10,118 +10,111 @@
     background-color: get-color("background");
     width: 100vw;
     position: relative;
-    border: 1px solid red;
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    &__job_desc_section {
-      &__card {
-        margin: 3% 8%;
-        padding: 0.8vw 1.5vw;
-        border-radius: 0.8vw;
-        background-color: get-color("background3");
-        border: 2px solid
-          lighten($color: get-color-value("background3"), $amount: 10);
-        display: flex;
-        justify-content: flex-start;
-        align-items: flex-start;
-        flex-direction: column;
-        gap: 8px;
-        transition-duration: 150ms;
-        max-height: 65vh;
-        overflow-y: auto;
-        overflow-x: hidden;
-        &__title_and_button {
-          width: 100%;
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          h1 {
-            font-size: 1rem;
-            margin: 0px;
-          }
-          &__apply_button {
-            padding: 5px 30px;
-            background-color: get-color("primary");
-            border-radius: 0.5vw;
-            cursor: pointer;
-            border-width: 0px;
-            transition-duration: 200ms;
-            font-weight: 700;
-            &:hover {
-              background-color: lighten(
-                $color: get-color-value("primary"),
-                $amount: 5
-              );
-            }
-          }
+    align-items: flex-start;
+    &__card {
+      margin: 2% 4%;
+      padding: 0.8vw 1.5vw;
+      border-radius: 0.8vw;
+      background-color: get-color("background3");
+      border: 2px solid
+        lighten($color: get-color-value("background3"), $amount: 10);
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      flex-direction: column;
+      gap: 8px;
+      transition-duration: 150ms;
+      // max-height: 65vh;
+      max-height: inherit;
+      overflow-y: auto;
+      overflow-x: hidden;
+      width: 43%;
+      h1 {
+        font-size: 1rem;
+        margin: 0px;
+      }
+      &__apply_button {
+        padding: 5px 30px;
+        background-color: get-color("primary");
+        border-radius: 0.5vw;
+        cursor: pointer;
+        border-width: 0px;
+        transition-duration: 200ms;
+        font-weight: 700;
+        &:hover {
+          background-color: lighten(
+            $color: get-color-value("primary"),
+            $amount: 5
+          );
         }
-        h2 {
-          font-size: 0.8rem;
-          font-weight: 300;
+      }
+      h2 {
+        font-size: 0.8rem;
+        font-weight: 300;
+        margin: 0px;
+        color: darken($color: get-color-value("foreground"), $amount: 10);
+      }
+      &__salary,
+      &__time {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: fit-content;
+        border: 1px solid darken($color: #ffffff, $amount: 25);
+        padding: 0.4vw 0.4vw;
+        border-radius: 0.5vw;
+        gap: 8px;
+        p {
+          font-size: 0.65rem;
           margin: 0px;
           color: darken($color: get-color-value("foreground"), $amount: 10);
         }
-        &__salary,
-        &__time {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          width: fit-content;
-          border: 1px solid darken($color: #ffffff, $amount: 25);
-          padding: 0.4vw 0.4vw;
-          border-radius: 0.5vw;
-          gap: 8px;
-          p {
-            font-size: 0.65rem;
-            margin: 0px;
-            color: darken($color: get-color-value("foreground"), $amount: 10);
-          }
-          &__icon {
-            width: 0.9rem;
-            height: 0.9rem;
-          }
+        &__icon {
+          width: 0.9rem;
+          height: 0.9rem;
         }
-        &__separator {
-          width: 100%;
-          border: 1px solid
-            lighten($color: get-color-value("background3"), $amount: 10);
+      }
+      &__separator {
+        width: 100%;
+        border: 1px solid
+          lighten($color: get-color-value("background3"), $amount: 10);
+      }
+      &__description {
+        display: flex;
+        flex-direction: column;
+        h2 {
+          font-size: 0.8rem;
+          font-weight: 700;
+          margin: 0px;
         }
-        &__description {
-          display: flex;
-          flex-direction: column;
+        &__job_desc {
+          font-size: 0.7rem;
+        }
+        &__requirements {
           h2 {
             font-size: 0.8rem;
-            font-weight: 700;
+            font-weight: 500;
+            margin-bottom: 10px;
+          }
+          ul {
             margin: 0px;
-          }
-          &__job_desc {
-            font-size: 0.7rem;
-          }
-          &__requirements {
-            h2 {
-              font-size: 0.8rem;
-              font-weight: 500;
-              margin-bottom: 10px;
-            }
-            ul {
+            list-style-position: outside;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            li {
+              font-size: 0.7rem;
+              font-weight: 300;
               margin: 0px;
-              list-style-position: outside;
-              display: flex;
-              flex-direction: column;
-              gap: 8px;
-              li {
-                font-size: 0.7rem;
-                font-weight: 300;
-                margin: 0px;
-              }
             }
           }
         }
       }
     }
-    &__apply_section {
-      border: 1px solid red;
-    }
+  }
+  &__apply_section {
+    border: 1px solid red;
   }
 }
