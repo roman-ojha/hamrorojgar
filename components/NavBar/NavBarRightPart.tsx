@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styles from "@/styles/components/navbar.module.scss";
 import Link from "next/link";
 import { useAppState } from "@/hooks/useAppState";
@@ -10,10 +10,14 @@ import { useRouter } from "next/router";
 
 const NavBarRightPart = (): React.JSX.Element => {
   const router = useRouter();
-  const [{}, [citizen]] = useAppState<[CitizenState]>([citizenSelector]);
+  const [{ resetCitizen }, [citizen]] = useAppState<[CitizenState]>([
+    citizenSelector,
+  ]);
+
   const logout = async () => {
     const res = await api.citizen.logout();
     if (res && isOkResponse(res.status)) {
+      resetCitizen();
       router.push("/signin");
     }
   };

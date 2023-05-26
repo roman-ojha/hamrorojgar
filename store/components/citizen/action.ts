@@ -45,6 +45,17 @@ export const loginCitizen = (data: CitizenSignInFormType) => {
   };
 };
 
+export const resetCitizen = () => {
+  return (dispatch: Dispatch<CitizenAction>) => {
+    dispatch({
+      type: CitizenActionType.STORE_AUTH_CITIZEN,
+      payload: <CitizenState>{
+        is_authenticated: false,
+      },
+    });
+  };
+};
+
 export const resetLoginStatus = () => {
   return (dispatch: Dispatch<CitizenLoginStatusAction>) => {
     dispatch({

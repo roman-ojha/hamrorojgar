@@ -22,7 +22,7 @@ export enum CitizenActionType {
 
 export interface StoreAuthCitizen {
   type: CitizenActionType.STORE_AUTH_CITIZEN;
-  payload: CitizenState;
+  payload: CitizenState | null;
 }
 
 export interface CitizenLoginStatusState {
