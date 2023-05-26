@@ -5,6 +5,7 @@ import styles from "@/styles/pages/jobs.module.scss";
 import { Icon } from "@iconify/react";
 import JobDesc from "@/components/JobDesc";
 import GetJobCards from "@/components/jobs/GetJobCards";
+import Background from "@/components/Background";
 
 const Jobs = (): React.JSX.Element => {
   return (
@@ -13,10 +14,7 @@ const Jobs = (): React.JSX.Element => {
         <title>Search new jobs</title>
       </Head>
       <div className={styles.jobs}>
-        <div className={styles.jobs__background}>
-          <div className={styles.jobs__background__color}></div>
-          <div className={styles.jobs__background__image}></div>
-        </div>
+        <Background />
         <NavBar />
         <form className={styles.jobs__search}>
           <div className={styles.jobs__search__what}>

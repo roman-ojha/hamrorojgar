@@ -2,6 +2,7 @@ import { useRouter } from "next/router";
 import React from "react";
 import Error from "next/dist/pages/_error";
 import NavBar from "@/components/NavBar";
+import Background from "@/components/Background";
 
 const Apply = (): React.JSX.Element => {
   const router = useRouter();
@@ -16,6 +17,7 @@ const Apply = (): React.JSX.Element => {
         />
       ) : (
         <>
+          <Background />
           <NavBar />
         </>
       )}
