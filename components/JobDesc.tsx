@@ -1,7 +1,6 @@
 import React, { useEffect } from "react";
 import { Icon } from "@iconify/react";
 import styles from "@/styles/components/jobdesc.module.scss";
-import Link from "next/link";
 import { useAppState } from "@/hooks/useAppState";
 import {
   jobSelector,

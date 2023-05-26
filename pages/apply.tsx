@@ -4,16 +4,17 @@ import Error from "next/dist/pages/_error";
 import NavBar from "@/components/NavBar";
 import Background from "@/components/Background";
 import styles from "@/styles/pages/apply.module.scss";
+import JobDesc from "@/components/JobDesc";
+import ApplyPageJobDesc from "@/components/Apply/ApplyJobDesc";
+import ApplySection from "@/components/Apply/ApplySection";
 
 const Apply = (): React.JSX.Element => {
   const router = useRouter();
-  const vacancy_id = router.query.vacancy_id;
   const navBarElementRef: React.MutableRefObject<HTMLElement | null> =
     useRef(null);
   useEffect(() => {
     // logic to dynamically change height of main content with respect with navbar
     function changeMainContentHeight(navbarHeight: number) {
-      console.log(document.getElementById("apply-main-content"));
       const mainContentHeight = window.innerHeight - navbarHeight;
       document
         .getElementById("apply-main-content")
@@ -45,10 +46,10 @@ const Apply = (): React.JSX.Element => {
           <span ref={navBarElementRef}>
             <NavBar />
           </span>
-          <main
-            id="apply-main-content"
-            className={styles.apply__main_content}
-          ></main>
+          <main id="apply-main-content" className={styles.apply__main_content}>
+            <ApplyPageJobDesc />
+            <ApplySection />
+          </main>
         </div>
       </>
       {/* )} */}

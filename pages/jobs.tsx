@@ -4,7 +4,7 @@ import NavBar from "@/components/NavBar";
 import styles from "@/styles/pages/jobs.module.scss";
 import { Icon } from "@iconify/react";
 import JobDesc from "@/components/JobDesc";
-import GetJobCards from "@/components/jobs/GetJobCards";
+import GetJobCards from "@/components/Jobs/GetJobCards";
 import Background from "@/components/Background";
 
 const Jobs = (): React.JSX.Element => {
