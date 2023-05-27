@@ -1,11 +1,15 @@
 import React, { useEffect, useRef } from "react";
 import styles from "@/styles/pages/apply.module.scss";
 import { Icon } from "@iconify/react";
+import { useForm } from "react-hook-form";
+import { JobApplication } from "@/models/job_application";
+import { api } from "@/services/api";
 
 const ApplySection = (): React.JSX.Element => {
   const cvImageElm: React.MutableRefObject<
     null | HTMLDivElement | HTMLImageElement
   > = useRef(null);
+
   useEffect(() => {
     // showing citizen image on change
     document.getElementById("cv-file")?.addEventListener("change", (e) => {
@@ -30,9 +34,21 @@ const ApplySection = (): React.JSX.Element => {
       }
     });
   }, []);
+
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm<JobApplication>();
+
+  const applyForJob = async (data: JobApplication) => {
+    const res = await api.jobs.apply(data);
+    console.log(res?.data);
+  };
+
   return (
     <section className={styles.apply__main_content__apply_section}>
-      <form action="">
+      <form action="" onSubmit={handleSubmit(applyForJob)}>
         <div
           className={styles.apply__main_content__apply_section__cv_container}
           ref={cvImageElm}
@@ -47,14 +63,12 @@ const ApplySection = (): React.JSX.Element => {
           type="file"
           id="cv-file"
           hidden
-          // {...register("photo")}
-          // ref={fileInput}
+          {...register("cv")}
           accept=".jpg, .png, .jpeg, .gif, .bmp, .tif, .tiff|image/*"
         />
         <textarea
-          name=""
-          id=""
           placeholder="Wanted to add something? explain it here..."
+          {...register("description")}
         ></textarea>
         <input type="submit" value="Apply" />
       </form>

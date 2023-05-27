@@ -3,6 +3,7 @@ import { Citizen } from "@/models/citizen";
 import { CitizenForm } from "@/pages/register";
 import { getAPIError } from "@/utils/getApiError";
 import { CitizenSignInFormType } from "@/store/components/citizen/types";
+import { JobApplication } from "@/models/job_application";
 
 const instance = axios.create({
   // baseURL: process.env.API_BASE_URL,
@@ -21,7 +22,7 @@ const api = {
         try {
           return await instance({
             method: "GET",
-            url: "/jobs",
+            url: "/job",
           });
         } catch (error) {
           return getAPIError(error as AxiosError);
@@ -30,19 +31,22 @@ const api = {
       try {
         return await instance({
           method: "GET",
-          url: `/jobs?id=${id}`,
+          url: `/job?id=${id}`,
         });
       } catch (error) {
         return getAPIError(error as AxiosError);
       }
     },
-  },
-  job_application: {
-    post: async () => {
+    apply: async (data: JobApplication) => {
       try {
         return await instance({
           method: "POST",
-          url: "/job-application",
+          url: "/job/apply",
+          headers: {
+            "Content-Type": "multipart/form-data",
+          },
+          data: data,
+          withCredentials: true,
         });
       } catch (error) {
         return getAPIError(error as AxiosError);
