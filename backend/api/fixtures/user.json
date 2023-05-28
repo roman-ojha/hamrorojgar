@@ -1,0 +1,142 @@
+[
+  {
+    "model": "api.User",
+    "pk": 1,
+    "fields": {
+      "email": "razz@gmail.com",
+      "password": "razz#gmail@123",
+      "last_login": null,
+      "is_superuser": false,
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2019-04-30T06:00:00.000Z",
+      "role": "GOV"
+    }
+  },
+  {
+    "model": "api.User",
+    "pk": 2,
+    "fields": {
+      "email": "harry@gmail.com",
+      "password": "harry#gmail@123",
+      "last_login": null,
+      "is_superuser": false,
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2019-04-30T06:00:00.000Z",
+      "role": "GOV"
+    }
+  },
+  {
+    "model": "api.User",
+    "pk": 3,
+    "fields": {
+      "email": "tom@gmail.com",
+      "password": "tom#gmail@123",
+      "last_login": null,
+      "is_superuser": false,
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2019-04-30T06:00:00.000Z",
+      "role": "GOV"
+    }
+  },
+  {
+    "model": "api.User",
+    "pk": 4,
+    "fields": {
+      "email": "jack@gmail.com",
+      "password": "jack#gmail@123",
+      "last_login": null,
+      "is_superuser": false,
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2019-04-30T06:00:00.000Z",
+      "role": "GOV"
+    }
+  },
+  {
+    "model": "api.User",
+    "pk": 5,
+    "fields": {
+      "email": "liam@gmail.com",
+      "password": "liam#gmail@123",
+      "last_login": null,
+      "is_superuser": false,
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2019-04-30T06:00:00.000Z",
+      "role": "CITIZEN"
+    }
+  },
+  {
+    "model": "api.User",
+    "pk": 6,
+    "fields": {
+      "email": "olivia@gmail.com",
+      "password": "olivia#gmail@123",
+      "last_login": null,
+      "is_superuser": false,
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2019-04-30T06:00:00.000Z",
+      "role": "CITIZEN"
+    }
+  },
+  {
+    "model": "api.User",
+    "pk": 7,
+    "fields": {
+      "email": "noah@gmail.com",
+      "password": "noah#gmail@123",
+      "last_login": null,
+      "is_superuser": false,
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2019-04-30T06:00:00.000Z",
+      "role": "CITIZEN"
+    }
+  },
+  {
+    "model": "api.User",
+    "pk": 8,
+    "fields": {
+      "email": "emma@gmail.com",
+      "password": "emma#gmail@123",
+      "last_login": null,
+      "is_superuser": false,
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2019-04-30T06:00:00.000Z",
+      "role": "CITIZEN"
+    }
+  },
+  {
+    "model": "api.User",
+    "pk": 9,
+    "fields": {
+      "email": "william@gmail.com",
+      "password": "william#gmail@123",
+      "last_login": null,
+      "is_superuser": false,
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2019-04-30T06:00:00.000Z",
+      "role": "CITIZEN"
+    }
+  },
+  {
+    "model": "api.User",
+    "pk": 10,
+    "fields": {
+      "email": "ava@gmail.com",
+      "password": "ava#gmail@123",
+      "last_login": null,
+      "is_superuser": false,
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2019-04-30T06:00:00.000Z",
+      "role": "CITIZEN"
+    }
+  }
+]
