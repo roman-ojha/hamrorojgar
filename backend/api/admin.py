@@ -174,6 +174,9 @@ class JobApplicationAdmin(admin.ModelAdmin):
         return format_html(f'<img src="/{obj.cv}" />', obj.cv)
     cv_image.short_description = 'CV Image'
 
+    def detail(self, obj):
+        return mark_safe(f'{get_table_field_button(f"/admin/api/jobapplication/{obj.id}/view")}')
+
     def cv_url(self, obj):
         return obj.cv
 
@@ -184,10 +187,10 @@ class JobApplicationAdmin(admin.ModelAdmin):
         extra_context['cv_image'] = self.cv_image(job_application)
         extra_context['cv_url'] = self.cv_url(job_application)
         return super().change_view(request, object_id, form_url, extra_context=extra_context)
-    list_display = ('id', 'is_approved', 'applied_by', 'of_vacancy')
+    list_display = ('id', 'detail', 'applied_by', 'is_approved', 'of_vacancy')
     ordering = ('id',)
 
-    fields = ('citizen', 'vacancy', 'description',)
+    fields = ('cv', 'citizen', 'vacancy', 'description',)
 
     class VacancyFilter(SingleNumericFilter):
         title = "Vacancy"

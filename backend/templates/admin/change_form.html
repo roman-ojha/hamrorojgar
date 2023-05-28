@@ -85,12 +85,6 @@
         <div class="col-12 mb-4">
             <div class="card mx-3">
                 <div class="card-body">
-                    {% comment %} Only for JobApplication CV Preview {% endcomment %}
-                    <div class="cv-image-container"> 
-                        <a href="/{{cv_url | safe}}" target="_blank">
-                           {{ cv_image | safe }}
-                        </a>
-                    </div>
                     <form {% if has_file_field %}enctype="multipart/form-data" {% endif %}action="{{ form_url }}"
                           method="post" id="{{ opts.model_name }}_form" novalidate>
 

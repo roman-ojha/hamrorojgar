@@ -1,0 +1,54 @@
+{% extends "layouts/base.html" %}
+{% load i18n admin_urls static admin_modify %}
+
+{% block overlay %}
+  <div class="min-height-300 bg-primary position-absolute w-100"></div>
+{% endblock overlay %}
+
+{% block extrahead %}
+    {{ block.super }}
+    <script type="text/javascript" src="{% url 'admin:jsi18n' %}"></script>
+    {{ media }}
+{% endblock %}
+
+{% block extrastyle %}
+    <link rel="stylesheet" type="text/css" href="{% static "css/forms.css" %}">
+    <link rel="stylesheet" type="text/css" href="{% static "css/admin.css" %}">
+{% endblock %}
+
+{% block content %}
+    <div class="py-4">
+        <div class="d-flex justify-content-between w-100 flex-wrap">
+            <div class="mb-3 mb-lg-0">
+                 <h1 class="h4 mx-3">
+                     Jobapplication Detail
+                 </h1>
+            </div>
+            <div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12 mb-4">
+            <div class="card mx-3">
+                <div class="card-body">
+                    <div class="cv-image-container"> 
+                        <a href="/{{job_application.cv}}" target="_blank" rel="CV">
+                            <img src="/{{job_application.cv}}" alt="CV">
+                        </a>
+                    </div>
+                    <div class="application-description">
+                        <h3 class="h5">Description</h3>
+                        <p>{{job_application.description}}</p>
+                    </div>
+                    <div class="approved-button">
+                        {% comment %} <form action="{% url 'admin:job_application_approve' job_application.id %}" method="POST"> {% endcomment %}
+                            {% comment %} {% csrf_token %} {% endcomment %}
+                            <button type="submit" class="btn btn-primary">Approve</button>
+                        {% comment %} </form> {% endcomment %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
