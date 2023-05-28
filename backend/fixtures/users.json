@@ -1,20 +1,6 @@
 [
   {
     "model": "api.User",
-    "pk": 1,
-    "fields": {
-      "email": "razz@gmail.com",
-      "password": "razz#gmail@123",
-      "last_login": null,
-      "is_superuser": false,
-      "is_staff": false,
-      "is_active": true,
-      "date_joined": "2019-04-30T06:00:00.000Z",
-      "role": "GOV"
-    }
-  },
-  {
-    "model": "api.User",
     "pk": 2,
     "fields": {
       "email": "harry@gmail.com",
