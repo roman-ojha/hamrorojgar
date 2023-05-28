@@ -37,15 +37,22 @@ const api = {
         return getAPIError(error as AxiosError);
       }
     },
-    apply: async (data: JobApplication) => {
+    apply: async (data: JobApplication, vacancyId: string) => {
+      // create multi part form data having 'json' & 'cv' as keys
+      const formData = new FormData();
+      formData.append("json", JSON.stringify(data));
+      if (data.cv) {
+        const cv = data.cv[0];
+        formData.append("cv", cv);
+      }
       try {
         return await instance({
           method: "POST",
-          url: "/job/apply",
+          url: "/job/apply?vacancy_id=" + vacancyId,
           headers: {
             "Content-Type": "multipart/form-data",
           },
-          data: data,
+          data: formData,
           withCredentials: true,
         });
       } catch (error) {

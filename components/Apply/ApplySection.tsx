@@ -4,11 +4,16 @@ import { Icon } from "@iconify/react";
 import { useForm } from "react-hook-form";
 import { JobApplication } from "@/models/job_application";
 import { api } from "@/services/api";
+import { useRouter } from "next/router";
+import { isOkResponse } from "@/utils/checkApiStatus";
 
 const ApplySection = (): React.JSX.Element => {
+  const router = useRouter();
   const cvImageElm: React.MutableRefObject<
     null | HTMLDivElement | HTMLImageElement
   > = useRef(null);
+
+  const vacancy_id = router.query.vacancy_id;
 
   useEffect(() => {
     // showing citizen image on change
@@ -42,8 +47,10 @@ const ApplySection = (): React.JSX.Element => {
   } = useForm<JobApplication>();
 
   const applyForJob = async (data: JobApplication) => {
-    const res = await api.jobs.apply(data);
-    console.log(res?.data);
+    const res = await api.jobs.apply(data, vacancy_id as string);
+    if (res && isOkResponse(res.status)) {
+      router.push("/jobs");
+    }
   };
 
   return (
