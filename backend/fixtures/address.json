@@ -1,0 +1,56 @@
+[
+  {
+    "model": "api.Address",
+    "pk": 1,
+    "fields": {
+      "district": "Jhapa",
+      "municipality": "kamal",
+      "ward_no": "03"
+    }
+  },
+  {
+    "model": "api.Address",
+    "pk": 2,
+    "fields": {
+      "district": "Jhapa",
+      "municipality": "kamal",
+      "ward_no": "03"
+    }
+  },
+  {
+    "model": "api.Address",
+    "pk": 3,
+    "fields": {
+      "district": "Jhapa",
+      "municipality": "kamal",
+      "ward_no": "03"
+    }
+  },
+  {
+    "model": "api.Address",
+    "pk": 4,
+    "fields": {
+      "district": "Jhapa",
+      "municipality": "kamal",
+      "ward_no": "03"
+    }
+  },
+  {
+    "model": "api.Address",
+    "pk": 5,
+    "fields": {
+      "district": "Jhapa",
+      "municipality": "kamal",
+      "ward_no": "03"
+    }
+  },
+  {
+    "model": "api.Address",
+    "pk": 6,
+    "fields": {
+      "district": "Jhapa",
+      "municipality": "kamal",
+      "ward_no": "03"
+    }
+  }
+]

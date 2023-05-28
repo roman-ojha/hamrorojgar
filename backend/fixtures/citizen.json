@@ -1,0 +1,110 @@
+[
+  {
+    "model": "api.Citizen",
+    "pk": 1,
+    "fields": {
+      "user_id": 5,
+      "f_name": "Liam",
+      "m_name": "",
+      "l_name": "Neeson",
+      "mobile": 123456789,
+      "date_of_birth": "2023-05-17",
+      "gender": "M",
+      "nationality": "nepali",
+      "citizenship_no": "123456789",
+      "photo": "static/fixtures/citizen/user.jpg",
+      "p_address_id": 1,
+      "t_address_id": null
+    }
+  },
+  {
+    "model": "api.Citizen",
+    "pk": 2,
+    "fields": {
+      "user_id": 6,
+      "f_name": "Olivia",
+      "m_name": "",
+      "l_name": "Wilde",
+      "mobile": 123456789,
+      "date_of_birth": "2023-05-17",
+      "gender": "M",
+      "nationality": "nepali",
+      "citizenship_no": "123456789",
+      "photo": "static/fixtures/citizen/user.jpg",
+      "p_address_id": 2,
+      "t_address_id": null
+    }
+  },
+  {
+    "model": "api.Citizen",
+    "pk": 3,
+    "fields": {
+      "user_id": 7,
+      "f_name": "Noah",
+      "m_name": "",
+      "l_name": "Baumbach",
+      "mobile": 123456789,
+      "date_of_birth": "2023-05-17",
+      "gender": "M",
+      "nationality": "nepali",
+      "citizenship_no": "123456789",
+      "photo": "static/fixtures/citizen/user.jpg",
+      "p_address_id": 3,
+      "t_address_id": null
+    }
+  },
+  {
+    "model": "api.Citizen",
+    "pk": 4,
+    "fields": {
+      "user_id": 8,
+      "f_name": "Emma",
+      "m_name": "",
+      "l_name": "Stone",
+      "mobile": 123456789,
+      "date_of_birth": "2023-05-17",
+      "gender": "M",
+      "nationality": "nepali",
+      "citizenship_no": "123456789",
+      "photo": "static/fixtures/citizen/user.jpg",
+      "p_address_id": 4,
+      "t_address_id": null
+    }
+  },
+  {
+    "model": "api.Citizen",
+    "pk": 5,
+    "fields": {
+      "user_id": 9,
+      "f_name": "William",
+      "m_name": "",
+      "l_name": "Dafoe",
+      "mobile": 123456789,
+      "date_of_birth": "2023-05-17",
+      "gender": "M",
+      "nationality": "nepali",
+      "citizenship_no": "123456789",
+      "photo": "static/fixtures/citizen/user.jpg",
+      "p_address_id": 5,
+      "t_address_id": null
+    }
+  },
+  {
+    "model": "api.Citizen",
+    "pk": 6,
+    "fields": {
+      "user_id": 10,
+      "f_name": "Ava",
+      "m_name": "",
+      "l_name": "DuVernay",
+      "mobile": 123456789,
+      "date_of_birth": "2023-05-17",
+      "gender": "M",
+      "nationality": "nepali",
+      "citizenship_no": "123456789",
+      "photo": "static/fixtures/citizen/user.jpg",
+      "p_address_id": 6,
+      "t_address_id": null
+    }
+  }
+]

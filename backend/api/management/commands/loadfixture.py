@@ -5,3 +5,5 @@ from django.core.management import call_command
 class Command(BaseCommand):
     def handle(self, *args, **options):
         call_command('loaduser')
+        call_command('loaddata', 'fixtures/address.json')
+        call_command('loaddata', 'fixtures/citizen.json')
