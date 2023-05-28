@@ -1,0 +1,29 @@
+[
+  {
+    "model": "api.Government",
+    "pk": 2,
+    "fields": {
+      "user_id": 2,
+      "gov_type": "L",
+      "location_id": 7
+    }
+  },
+  {
+    "model": "api.Government",
+    "pk": 3,
+    "fields": {
+      "user_id": 3,
+      "gov_type": "L",
+      "location_id": 8
+    }
+  },
+  {
+    "model": "api.Government",
+    "pk": 4,
+    "fields": {
+      "user_id": 4,
+      "gov_type": "L",
+      "location_id": 9
+    }
+  }
+]

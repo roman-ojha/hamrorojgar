@@ -52,5 +52,32 @@
       "municipality": "kamal",
       "ward_no": "03"
     }
+  },
+  {
+    "model": "api.Address",
+    "pk": 7,
+    "fields": {
+      "district": "Jhapa",
+      "municipality": "kamal",
+      "ward_no": "03"
+    }
+  },
+  {
+    "model": "api.Address",
+    "pk": 8,
+    "fields": {
+      "district": "Jhapa",
+      "municipality": "kamal",
+      "ward_no": "03"
+    }
+  },
+  {
+    "model": "api.Address",
+    "pk": 9,
+    "fields": {
+      "district": "Jhapa",
+      "municipality": "kamal",
+      "ward_no": "03"
+    }
   }
 ]

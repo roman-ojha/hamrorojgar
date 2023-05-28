@@ -7,3 +7,4 @@ class Command(BaseCommand):
         call_command('loaduser')
         call_command('loaddata', 'fixtures/address.json')
         call_command('loaddata', 'fixtures/citizen.json')
+        call_command('loaddata', 'fixtures/government.json')

@@ -1,7 +1,7 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
-import constants from "@/constants/index";
+import constants from "@/data/constants";
 import NavBar from "@/components/NavBar";
 import styles from "@/styles/pages/index.module.scss";
 import interviewImg from "@/assets/svg/interview.svg";

@@ -1,0 +1,100 @@
+[
+  {
+    "models": "api.Vacancy",
+    "pk": 1,
+    "fields": {
+      "title": "Software Developer, Junior, Part-Time",
+      "description": "The position requires a junior software engineer that can learn various functional domain areas, such as User Interface (UI) development, digital mapping, messaging, and software documentation. This is in support of the company's major software application and its integration with other applications and environments. The position reports to the President and/or Lead Software Engineer. The position requires the candidate to work using guidance from his supervisor.",
+      "is_opened": 1,
+      "salary_from": 75000,
+      "salary_to": 97000,
+      "opened_at": "2021-09-01",
+      "job_type": "PART",
+      "government": 1
+    }
+  },
+  {
+    "models": "api.Vacancy",
+    "pk": 2,
+    "fields": {
+      "title": "Python Backend Developer Sr",
+      "description": "You will be developing new features, supporting more exchanges, more blockchains, and more DeFi protocols. There is also always a lot of troubleshooting of user reported issues, bugs, and feature requests that are coming our way. You can improve our current Python backend implementation and help us get Rotki to the next level! As an open source project, we work collaboratively on our codebase on GitHub in a style that should be familiar to anyone who has participated in an OSS community before. If you haven’t — we’re happy to support you in defining and writing great feature descriptions, and breaking them down into dev tasks, and shipping them to customers around the world. This is an early stage open source company, so there is an opportunity to take on a variety of tasks beyond the app, such as the backend of the website, and our API.",
+      "is_opened": 1,
+      "salary_from": 80000,
+      "salary_to": 80000,
+      "opened_at": "2021-09-01",
+      "job_type": "FULL",
+      "government": 2
+    }
+  },
+  {
+    "models": "api.Vacancy",
+    "pk": 3,
+    "fields": {
+      "title": "Chat Service Representativ",
+      "description": "We are looking for a Chat Service Representative to work within our Customer Care department, providing legendary support for our e-commerce and client service. The ideal candidate will have email, chat, and phone customer service experience and be technology savvy. Qualified candidates will be highly independent but also be able to work in a collaborative team environment.",
+      "is_opened": 1,
+      "salary_from": 51000,
+      "salary_to": 65000,
+      "opened_at": "2021-09-01",
+      "job_type": "PART",
+      "government": 1
+    }
+  },
+  {
+    "models": "api.Vacancy",
+    "pk": 4,
+    "fields": {
+      "title": "Search Engine Evaluator - Part Time Remote",
+      "description": "Join our vibrant team at RaterLabs as a part-time remote Search Engine Evaluator for Project Yukon. This unique opportunity allows you to enjoy the flexibility of working from home while making a significant impact on the quality of one of the world's largest search engines. As a Search Engine Evaluator, you'll be at the forefront of enhancing search engine results through careful analysis, evaluation, and feedback. This role is ideal for people with a keen eye for detail and the ability to adapt to evolving guidelines and tasks.",
+      "is_opened": 0,
+      "salary_from": 30000,
+      "salary_to": 35000,
+      "opened_at": "2021-09-01",
+      "job_type": "PART",
+      "government": 3
+    }
+  },
+  {
+    "models": "api.Vacancy",
+    "pk": 5,
+    "fields": {
+      "title": "Trainee",
+      "description": "We are a digital product engineering company that is scaling in a big way! We build products, services, and experiences that inspire, excite, and delight. We work at scale — across all devices and digital mediums, and our people exist everywhere in the world (18,000+ experts across 33 countries, to be exact). Our work culture is dynamic and non-hierarchical. We're looking for great new colleagues. That's where you come in!",
+      "is_opened": 1,
+      "salary_from": 30000,
+      "salary_to": 35000,
+      "opened_at": "2021-09-01",
+      "job_type": "PART",
+      "government": 3
+    }
+  },
+  {
+    "models": "api.Vacancy",
+    "pk": 6,
+    "fields": {
+      "title": "Chat Service Representativ",
+      "description": "We are looking for a Chat Service Representative to work within our Customer Care department, providing legendary support for our e-commerce and client service. The ideal candidate will have email, chat, and phone customer service experience and be technology savvy. Qualified candidates will be highly independent but also be able to work in a collaborative team environment.",
+      "is_opened": 1,
+      "salary_from": 40000,
+      "salary_to": 50000,
+      "opened_at": "2021-09-01",
+      "job_type": "PART",
+      "government": 3
+    }
+  },
+  {
+    "models": "api.Vacancy",
+    "pk": 7,
+    "fields": {
+      "title": "Software Tester",
+      "description": "ApplicantPro in Eagle Mountain, UT is looking to hire a part-time Entry-Level Manual Software Tester. Are you a critical thinker with analytical tendencies who is attentive to detail? Do you want the flexibility to work both from home and from the office? Would you like to join a stable and growing SaaS tech company where there is great potential for career growth? If so, please read on!",
+      "is_opened": 1,
+      "salary_from": 50000,
+      "salary_to": 55000,
+      "opened_at": "2021-09-01",
+      "job_type": "PART",
+      "government": 4
+    }
+  }
+]
