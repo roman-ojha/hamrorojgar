@@ -1,6 +1,6 @@
 [
   {
-    "models": "api.Vacancy",
+    "model": "api.Vacancy",
     "pk": 1,
     "fields": {
       "title": "Software Developer, Junior, Part-Time",
@@ -10,11 +10,11 @@
       "salary_to": 97000,
       "opened_at": "2021-09-01",
       "job_type": "PART",
-      "government": 1
+      "government_id": 1
     }
   },
   {
-    "models": "api.Vacancy",
+    "model": "api.Vacancy",
     "pk": 2,
     "fields": {
       "title": "Python Backend Developer Sr",
@@ -24,25 +24,25 @@
       "salary_to": 80000,
       "opened_at": "2021-09-01",
       "job_type": "FULL",
-      "government": 2
+      "government_id": 2
     }
   },
   {
-    "models": "api.Vacancy",
+    "model": "api.Vacancy",
     "pk": 3,
     "fields": {
-      "title": "Chat Service Representativ",
+      "title": "Chat Service Representative",
       "description": "We are looking for a Chat Service Representative to work within our Customer Care department, providing legendary support for our e-commerce and client service. The ideal candidate will have email, chat, and phone customer service experience and be technology savvy. Qualified candidates will be highly independent but also be able to work in a collaborative team environment.",
       "is_opened": 1,
       "salary_from": 51000,
       "salary_to": 65000,
       "opened_at": "2021-09-01",
       "job_type": "PART",
-      "government": 1
+      "government_id": 1
     }
   },
   {
-    "models": "api.Vacancy",
+    "model": "api.Vacancy",
     "pk": 4,
     "fields": {
       "title": "Search Engine Evaluator - Part Time Remote",
@@ -52,11 +52,11 @@
       "salary_to": 35000,
       "opened_at": "2021-09-01",
       "job_type": "PART",
-      "government": 3
+      "government_id": 3
     }
   },
   {
-    "models": "api.Vacancy",
+    "model": "api.Vacancy",
     "pk": 5,
     "fields": {
       "title": "Trainee",
@@ -66,11 +66,11 @@
       "salary_to": 35000,
       "opened_at": "2021-09-01",
       "job_type": "PART",
-      "government": 3
+      "government_id": 3
     }
   },
   {
-    "models": "api.Vacancy",
+    "model": "api.Vacancy",
     "pk": 6,
     "fields": {
       "title": "Chat Service Representativ",
@@ -80,11 +80,11 @@
       "salary_to": 50000,
       "opened_at": "2021-09-01",
       "job_type": "PART",
-      "government": 3
+      "government_id": 3
     }
   },
   {
-    "models": "api.Vacancy",
+    "model": "api.Vacancy",
     "pk": 7,
     "fields": {
       "title": "Software Tester",
@@ -94,7 +94,7 @@
       "salary_to": 55000,
       "opened_at": "2021-09-01",
       "job_type": "PART",
-      "government": 4
+      "government_id": 4
     }
   }
 ]

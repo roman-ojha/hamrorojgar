@@ -1,0 +1,266 @@
+[
+  {
+    "model": "api.Qualification",
+    "pk": 1,
+    "fields": {
+      "description": "Software Developer, Junior, Part-Time",
+      "vacancy_id": 1
+    }
+  },
+  {
+    "model": "api.Qualification",
+    "pk": 2,
+    "fields": {
+      "description": "Knowledge of Java programming, to include JavaFX",
+      "vacancy_id": 1
+    }
+  },
+  {
+    "model": "api.Qualification",
+    "pk": 3,
+    "fields": {
+      "description": "Experience with Web development tools and languages, such as Javascript",
+      "vacancy_id": 1
+    }
+  },
+  {
+    "model": "api.Qualification",
+    "pk": 4,
+    "fields": {
+      "description": "Knowledge working in both MS Windows and Linux",
+      "vacancy_id": 1
+    }
+  },
+  {
+    "model": "api.Qualification",
+    "pk": 5,
+    "fields": {
+      "description": "Android development, including work in Android Studio.",
+      "vacancy_id": 1
+    }
+  },
+  {
+    "model": "api.Qualification",
+    "pk": 6,
+    "fields": {
+      "description": "we connect to API endpoints and nodes for various blockchains.",
+      "vacancy_id": 2
+    }
+  },
+  {
+    "model": "api.Qualification",
+    "pk": 7,
+    "fields": {
+      "description": "we connect to API endpoints and nodes for various blockchains.",
+      "vacancy_id": 2
+    }
+  },
+  {
+    "model": "api.Qualification",
+    "pk": 8,
+    "fields": {
+      "description": "Experience with any other blockchain stack — e.g. Cosmos, Substrate, etc.",
+      "vacancy_id": 2
+    }
+  },
+  {
+    "model": "api.Qualification",
+    "pk": 9,
+    "fields": {
+      "description": "Sharing our values on open source, data ownership and privacy",
+      "vacancy_id": 2
+    }
+  },
+  {
+    "model": "api.Qualification",
+    "pk": 10,
+    "fields": {
+      "description": "Strong written and verbal communication skills",
+      "vacancy_id": 3
+    }
+  },
+  {
+    "model": "api.Qualification",
+    "pk": 11,
+    "fields": {
+      "description": " Experience in customer service roles, either in-person or through other communication channels",
+      "vacancy_id": 3
+    }
+  },
+  {
+    "model": "api.Qualification",
+    "pk": 12,
+    "fields": {
+      "description": "Chat service representatives need to have good typing skills to efficiently and accurately respond to customer queries",
+      "vacancy_id": 3
+    }
+  },
+  {
+    "model": "api.Qualification",
+    "pk": 13,
+    "fields": {
+      "description": "Chat service representatives should possess strong problem-solving skills to address customer issues effectively",
+      "vacancy_id": 3
+    }
+  },
+  {
+    "model": "api.Qualification",
+    "pk": 14,
+    "fields": {
+      "description": "hey should be able to multitask effectively, managing different customer inquiries, maintaining response times, and switching between conversations while providing accurate information and support",
+      "vacancy_id": 3
+    }
+  },
+  {
+    "model": "api.Qualification",
+    "pk": 15,
+    "fields": {
+      "description": "Eligibility to work in the United States",
+      "vacancy_id": 4
+    }
+  },
+  {
+    "model": "api.Qualification",
+    "pk": 16,
+    "fields": {
+      "description": "Access to a smartphone and a personal computer",
+      "vacancy_id": 4
+    }
+  },
+  {
+    "model": "api.Qualification",
+    "pk": 17,
+    "fields": {
+      "description": "A commitment to at least 10 hours per week [flexible schedule]",
+      "vacancy_id": 4
+    }
+  },
+  {
+    "model": "api.Qualification",
+    "pk": 18,
+    "fields": {
+      "description": "A Gmail account and a willingness to install an app on your phone",
+      "vacancy_id": 4
+    }
+  },
+  {
+    "model": "api.Qualification",
+    "pk": 19,
+    "fields": {
+      "description": "No prior experience is needed to apply",
+      "vacancy_id": 4
+    }
+  },
+  {
+    "model": "api.Qualification",
+    "pk": 20,
+    "fields": {
+      "description": "requires a relevant educational background, such as a degree or diploma in a related field",
+      "vacancy_id": 5
+    }
+  },
+  {
+    "model": "api.Qualification",
+    "pk": 21,
+    "fields": {
+      "description": "Trainees are expected to be quick learners and have a strong aptitude for acquiring new skills and knowledge",
+      "vacancy_id": 5
+    }
+  },
+  {
+    "model": "api.Qualification",
+    "pk": 22,
+    "fields": {
+      "description": "Good communication skills, both verbal and written, are essential for trainees",
+      "vacancy_id": 5
+    }
+  },
+  {
+    "model": "api.Qualification",
+    "pk": 23,
+    "fields": {
+      "description": "Should possess problem-solving skills to analyze situations, identify challenges, and propose solutions.",
+      "vacancy_id": 5
+    }
+  },
+  {
+    "model": "api.Qualification",
+    "pk": 24,
+    "fields": {
+      "description": "They should be able to contribute to team goals, actively participate in discussions, and support their colleagues.",
+      "vacancy_id": 5
+    }
+  },
+  {
+    "model": "api.Qualification",
+    "pk": 25,
+    "fields": {
+      "description": "They should be able to contribute to team goals, actively participate in discussions, and support their colleagues.",
+      "vacancy_id": 6
+    }
+  },
+  {
+    "model": "api.Qualification",
+    "pk": 26,
+    "fields": {
+      "description": "Crete relationships with new customers to better understand and achieve their needs",
+      "vacancy_id": 6
+    }
+  },
+  {
+    "model": "api.Qualification",
+    "pk": 27,
+    "fields": {
+      "description": "Respond to the customer questions, inquiries, requests and problems accurately, concisely and appropriately",
+      "vacancy_id": 6
+    }
+  },
+  {
+    "model": "api.Qualification",
+    "pk": 28,
+    "fields": {
+      "description": "Respond to the customer questions, inquiries, requests and problems accurately, concisely and appropriately",
+      "vacancy_id": 6
+    }
+  },
+  {
+    "model": "api.Qualification",
+    "pk": 29,
+    "fields": {
+      "description": "Consistently achieves established standards of the position",
+      "vacancy_id": 6
+    }
+  },
+  {
+    "model": "api.Qualification",
+    "pk": 30,
+    "fields": {
+      "description": "Excellent attention to detail",
+      "vacancy_id": 7
+    }
+  },
+  {
+    "model": "api.Qualification",
+    "pk": 31,
+    "fields": {
+      "description": "Ability to work independently",
+      "vacancy_id": 7
+    }
+  },
+  {
+    "model": "api.Qualification",
+    "pk": 32,
+    "fields": {
+      "description": "Ability to quickly learn new systems as well as identify and prioritize the related testing workload",
+      "vacancy_id": 7
+    }
+  },
+  {
+    "model": "api.Qualification",
+    "pk": 33,
+    "fields": {
+      "description": "Ability to think outside the box",
+      "vacancy_id": 7
+    }
+  }
+]

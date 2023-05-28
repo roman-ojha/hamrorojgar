@@ -24,7 +24,19 @@ class UserManager(BaseUserManager):
         if extra_fields.get("is_superuser") is not True:
             raise ValueError("Superuser has to have is_superuser being true")
 
-        return self.create_user(email=email, password=password, **extra_fields)
+        user = self.create_user(email=email, password=password, **extra_fields)
+        # get government data as well
+        print("Government Location:")
+        district = input("District: ")
+        municipality = input("Municipality: ")
+        ward_no = input("Ward No: ")
+        from api.models.address import Address
+        from api.models.government import Government
+        p_location = Address.objects.create(
+            district=district, municipality=municipality, ward_no=ward_no)
+        Government.objects.create(
+            user=user, gov_type=Government.GovernmentType.FEDERAL, location=p_location)
+        return user
 
 
 class User(AbstractUser, PermissionsMixin):
