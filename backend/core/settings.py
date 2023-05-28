@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'admin_numeric_filter',
     'corsheaders',
     'api',
+    'myadmin',
 ]
 
 MIDDLEWARE = [
