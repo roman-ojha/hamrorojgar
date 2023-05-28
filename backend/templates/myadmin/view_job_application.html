@@ -17,38 +17,47 @@
 {% endblock %}
 
 {% block content %}
-    <div class="py-4">
-        <div class="d-flex justify-content-between w-100 flex-wrap">
-            <div class="mb-3 mb-lg-0">
-                 <h1 class="h4 mx-3">
-                     Jobapplication Detail
-                 </h1>
-            </div>
-            <div>
+    {% if job_application %}
+        <div class="py-4">
+            <div class="d-flex justify-content-between w-100 flex-wrap">
+                <div class="mb-3 mb-lg-0">
+                     <h1 class="h4 mx-3">
+                         Jobapplication Detail
+                     </h1>
+                </div>
+                <div>
+                </div>
             </div>
         </div>
-    </div>
-    <div class="row">
-        <div class="col-12 mb-4">
-            <div class="card mx-3">
-                <div class="card-body">
-                    <div class="cv-image-container"> 
-                        <a href="/{{job_application.cv}}" target="_blank" rel="CV">
-                            <img src="/{{job_application.cv}}" alt="CV">
-                        </a>
-                    </div>
-                    <div class="application-description">
-                        <h3 class="h5">Description</h3>
-                        <p>{{job_application.description}}</p>
-                    </div>
-                    <div class="approved-button">
-                        {% comment %} <form action="{% url 'admin:job_application_approve' job_application.id %}" method="POST"> {% endcomment %}
-                            {% comment %} {% csrf_token %} {% endcomment %}
-                            <button type="submit" class="btn btn-primary">Approve</button>
-                        {% comment %} </form> {% endcomment %}
+        <div class="row">
+            <div class="col-12 mb-4">
+                <div class="card mx-3">
+                    <div class="card-body">
+                        <div class="cv-image-container"> 
+                            <a href="/{{job_application.cv}}" target="_blank" rel="CV">
+                                <img src="/{{job_application.cv}}" alt="CV">
+                            </a>
+                        </div>
+                        <div class="application-description">
+                            <h3 class="h5">Description</h3>
+                            <p>{{job_application.description}}</p>
+                        </div>
+                        <form action="{% if not job_application.is_approved %} {% url 'job_application_approve' job_application.id %} {% else %} {% url 'job_application_disapprove' job_application.id %} {% endif %}"  method="POST" class="approved-button-form">
+                            {% csrf_token %}
+                                {% if not job_application.is_approved %}
+                                    <button type="submit" class="btn btn-primary">Approve</button>
+                                {% else %}
+                                    <button type="submit" class="btn btn-danger">Disapprove</button>
+                                {% endif %}
+                        </form>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    {% endif %}
+    {% if error %}
+        <div class="alert alert-danger" role="alert">
+            {{ error }}
+        </div>
+    {% endif %}
 {% endblock %}

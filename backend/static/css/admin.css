@@ -152,3 +152,9 @@ h3 {
   width: 70vw;
   cursor: pointer;
 }
+
+.approved-button-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
