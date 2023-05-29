@@ -1,0 +1,299 @@
+[
+  {
+    "model": "api.JobApplication",
+    "pk": 1,
+    "fields": {
+      "cv": "static/fixtures/cv.jpg",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum pharetra ullamcorper eros vitae auctor. Nullam rutrum semper lectus, vitae pulvinar sapien vulputate in. Nam auctor odio ac finibus pellentesque. Cras eu consectetur libero. Ut eleifend turpis eget lorem feugiat, sed cursus nulla euismod. Suspendisse convallis commodo metus, id lobortis risus tincidunt sit amet. Aliquam erat volutpat. Maecenas aliquet nibh id mi commodo aliquet. Pellentesque vel dapibus felis. Sed a tincidunt metus. Ut hendrerit consequat neque ac fringilla. Vestibulum sollicitudin ultrices lacus sed pulvinar. Quisque auctor euismod orci non volutpat. Nam rhoncus fermentum tortor ac feugiat. Mauris eleifend justo sit amet orci eleifend bibendum. Nunc id nisi eu turpis congue finibus ut at lectus. Sed quis elit id leo pellentesque facilisis ac sed sem. Suspendisse tempor tincidunt magna ut iaculis. Phasellus ultrices lectus vel mauris volutpat, et auctor est eleifend.",
+      "is_approved": false,
+      "citizen": 1,
+      "vacancy": 1
+    }
+  },
+  {
+    "model": "api.JobApplication",
+    "pk": 2,
+    "fields": {
+      "cv": "static/fixtures/cv.jpg",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum pharetra ullamcorper eros vitae auctor. Nullam rutrum semper lectus, vitae pulvinar sapien vulputate in. Nam auctor odio ac finibus pellentesque. Cras eu consectetur libero. Ut eleifend turpis eget lorem feugiat, sed cursus nulla euismod. Suspendisse convallis commodo metus, id lobortis risus tincidunt sit amet. Aliquam erat volutpat. Maecenas aliquet nibh id mi commodo aliquet. Pellentesque vel dapibus felis. Sed a tincidunt metus. Ut hendrerit consequat neque ac fringilla. Vestibulum sollicitudin ultrices lacus sed pulvinar. Quisque auctor euismod orci non volutpat. Nam rhoncus fermentum tortor ac feugiat. Mauris eleifend justo sit amet orci eleifend bibendum. Nunc id nisi eu turpis congue finibus ut at lectus. Sed quis elit id leo pellentesque facilisis ac sed sem. Suspendisse tempor tincidunt magna ut iaculis. Phasellus ultrices lectus vel mauris volutpat, et auctor est eleifend.",
+      "is_approved": false,
+      "citizen": 3,
+      "vacancy": 1
+    }
+  },
+  {
+    "model": "api.JobApplication",
+    "pk": 3,
+    "fields": {
+      "cv": "static/fixtures/cv.jpg",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum pharetra ullamcorper eros vitae auctor. Nullam rutrum semper lectus, vitae pulvinar sapien vulputate in. Nam auctor odio ac finibus pellentesque. Cras eu consectetur libero. Ut eleifend turpis eget lorem feugiat, sed cursus nulla euismod. Suspendisse convallis commodo metus, id lobortis risus tincidunt sit amet. Aliquam erat volutpat. Maecenas aliquet nibh id mi commodo aliquet. Pellentesque vel dapibus felis. Sed a tincidunt metus. Ut hendrerit consequat neque ac fringilla. Vestibulum sollicitudin ultrices lacus sed pulvinar. Quisque auctor euismod orci non volutpat. Nam rhoncus fermentum tortor ac feugiat. Mauris eleifend justo sit amet orci eleifend bibendum. Nunc id nisi eu turpis congue finibus ut at lectus. Sed quis elit id leo pellentesque facilisis ac sed sem. Suspendisse tempor tincidunt magna ut iaculis. Phasellus ultrices lectus vel mauris volutpat, et auctor est eleifend.",
+      "is_approved": false,
+      "citizen": 4,
+      "vacancy": 1
+    }
+  },
+  {
+    "model": "api.JobApplication",
+    "pk": 4,
+    "fields": {
+      "cv": "static/fixtures/cv.jpg",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum pharetra ullamcorper eros vitae auctor. Nullam rutrum semper lectus, vitae pulvinar sapien vulputate in. Nam auctor odio ac finibus pellentesque. Cras eu consectetur libero. Ut eleifend turpis eget lorem feugiat, sed cursus nulla euismod. Suspendisse convallis commodo metus, id lobortis risus tincidunt sit amet. Aliquam erat volutpat. Maecenas aliquet nibh id mi commodo aliquet. Pellentesque vel dapibus felis. Sed a tincidunt metus. Ut hendrerit consequat neque ac fringilla. Vestibulum sollicitudin ultrices lacus sed pulvinar. Quisque auctor euismod orci non volutpat. Nam rhoncus fermentum tortor ac feugiat. Mauris eleifend justo sit amet orci eleifend bibendum. Nunc id nisi eu turpis congue finibus ut at lectus. Sed quis elit id leo pellentesque facilisis ac sed sem. Suspendisse tempor tincidunt magna ut iaculis. Phasellus ultrices lectus vel mauris volutpat, et auctor est eleifend.",
+      "is_approved": false,
+      "citizen": 5,
+      "vacancy": 1
+    }
+  },
+  {
+    "model": "api.JobApplication",
+    "pk": 5,
+    "fields": {
+      "cv": "static/fixtures/cv.jpg",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum pharetra ullamcorper eros vitae auctor. Nullam rutrum semper lectus, vitae pulvinar sapien vulputate in. Nam auctor odio ac finibus pellentesque. Cras eu consectetur libero. Ut eleifend turpis eget lorem feugiat, sed cursus nulla euismod. Suspendisse convallis commodo metus, id lobortis risus tincidunt sit amet. Aliquam erat volutpat. Maecenas aliquet nibh id mi commodo aliquet. Pellentesque vel dapibus felis. Sed a tincidunt metus. Ut hendrerit consequat neque ac fringilla. Vestibulum sollicitudin ultrices lacus sed pulvinar. Quisque auctor euismod orci non volutpat. Nam rhoncus fermentum tortor ac feugiat. Mauris eleifend justo sit amet orci eleifend bibendum. Nunc id nisi eu turpis congue finibus ut at lectus. Sed quis elit id leo pellentesque facilisis ac sed sem. Suspendisse tempor tincidunt magna ut iaculis. Phasellus ultrices lectus vel mauris volutpat, et auctor est eleifend.",
+      "is_approved": false,
+      "citizen": 2,
+      "vacancy": 2
+    }
+  },
+  {
+    "model": "api.JobApplication",
+    "pk": 6,
+    "fields": {
+      "cv": "static/fixtures/cv.jpg",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum pharetra ullamcorper eros vitae auctor. Nullam rutrum semper lectus, vitae pulvinar sapien vulputate in. Nam auctor odio ac finibus pellentesque. Cras eu consectetur libero. Ut eleifend turpis eget lorem feugiat, sed cursus nulla euismod. Suspendisse convallis commodo metus, id lobortis risus tincidunt sit amet. Aliquam erat volutpat. Maecenas aliquet nibh id mi commodo aliquet. Pellentesque vel dapibus felis. Sed a tincidunt metus. Ut hendrerit consequat neque ac fringilla. Vestibulum sollicitudin ultrices lacus sed pulvinar. Quisque auctor euismod orci non volutpat. Nam rhoncus fermentum tortor ac feugiat. Mauris eleifend justo sit amet orci eleifend bibendum. Nunc id nisi eu turpis congue finibus ut at lectus. Sed quis elit id leo pellentesque facilisis ac sed sem. Suspendisse tempor tincidunt magna ut iaculis. Phasellus ultrices lectus vel mauris volutpat, et auctor est eleifend.",
+      "is_approved": false,
+      "citizen": 3,
+      "vacancy": 2
+    }
+  },
+  {
+    "model": "api.JobApplication",
+    "pk": 7,
+    "fields": {
+      "cv": "static/fixtures/cv.jpg",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum pharetra ullamcorper eros vitae auctor. Nullam rutrum semper lectus, vitae pulvinar sapien vulputate in. Nam auctor odio ac finibus pellentesque. Cras eu consectetur libero. Ut eleifend turpis eget lorem feugiat, sed cursus nulla euismod. Suspendisse convallis commodo metus, id lobortis risus tincidunt sit amet. Aliquam erat volutpat. Maecenas aliquet nibh id mi commodo aliquet. Pellentesque vel dapibus felis. Sed a tincidunt metus. Ut hendrerit consequat neque ac fringilla. Vestibulum sollicitudin ultrices lacus sed pulvinar. Quisque auctor euismod orci non volutpat. Nam rhoncus fermentum tortor ac feugiat. Mauris eleifend justo sit amet orci eleifend bibendum. Nunc id nisi eu turpis congue finibus ut at lectus. Sed quis elit id leo pellentesque facilisis ac sed sem. Suspendisse tempor tincidunt magna ut iaculis. Phasellus ultrices lectus vel mauris volutpat, et auctor est eleifend.",
+      "is_approved": false,
+      "citizen": 6,
+      "vacancy": 2
+    }
+  },
+  {
+    "model": "api.JobApplication",
+    "pk": 8,
+    "fields": {
+      "cv": "static/fixtures/cv.jpg",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum pharetra ullamcorper eros vitae auctor. Nullam rutrum semper lectus, vitae pulvinar sapien vulputate in. Nam auctor odio ac finibus pellentesque. Cras eu consectetur libero. Ut eleifend turpis eget lorem feugiat, sed cursus nulla euismod. Suspendisse convallis commodo metus, id lobortis risus tincidunt sit amet. Aliquam erat volutpat. Maecenas aliquet nibh id mi commodo aliquet. Pellentesque vel dapibus felis. Sed a tincidunt metus. Ut hendrerit consequat neque ac fringilla. Vestibulum sollicitudin ultrices lacus sed pulvinar. Quisque auctor euismod orci non volutpat. Nam rhoncus fermentum tortor ac feugiat. Mauris eleifend justo sit amet orci eleifend bibendum. Nunc id nisi eu turpis congue finibus ut at lectus. Sed quis elit id leo pellentesque facilisis ac sed sem. Suspendisse tempor tincidunt magna ut iaculis. Phasellus ultrices lectus vel mauris volutpat, et auctor est eleifend.",
+      "is_approved": false,
+      "citizen": 6,
+      "vacancy": 2
+    }
+  },
+  {
+    "model": "api.JobApplication",
+    "pk": 9,
+    "fields": {
+      "cv": "static/fixtures/cv.jpg",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum pharetra ullamcorper eros vitae auctor. Nullam rutrum semper lectus, vitae pulvinar sapien vulputate in. Nam auctor odio ac finibus pellentesque. Cras eu consectetur libero. Ut eleifend turpis eget lorem feugiat, sed cursus nulla euismod. Suspendisse convallis commodo metus, id lobortis risus tincidunt sit amet. Aliquam erat volutpat. Maecenas aliquet nibh id mi commodo aliquet. Pellentesque vel dapibus felis. Sed a tincidunt metus. Ut hendrerit consequat neque ac fringilla. Vestibulum sollicitudin ultrices lacus sed pulvinar. Quisque auctor euismod orci non volutpat. Nam rhoncus fermentum tortor ac feugiat. Mauris eleifend justo sit amet orci eleifend bibendum. Nunc id nisi eu turpis congue finibus ut at lectus. Sed quis elit id leo pellentesque facilisis ac sed sem. Suspendisse tempor tincidunt magna ut iaculis. Phasellus ultrices lectus vel mauris volutpat, et auctor est eleifend.",
+      "is_approved": false,
+      "citizen": 1,
+      "vacancy": 3
+    }
+  },
+  {
+    "model": "api.JobApplication",
+    "pk": 10,
+    "fields": {
+      "cv": "static/fixtures/cv.jpg",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum pharetra ullamcorper eros vitae auctor. Nullam rutrum semper lectus, vitae pulvinar sapien vulputate in. Nam auctor odio ac finibus pellentesque. Cras eu consectetur libero. Ut eleifend turpis eget lorem feugiat, sed cursus nulla euismod. Suspendisse convallis commodo metus, id lobortis risus tincidunt sit amet. Aliquam erat volutpat. Maecenas aliquet nibh id mi commodo aliquet. Pellentesque vel dapibus felis. Sed a tincidunt metus. Ut hendrerit consequat neque ac fringilla. Vestibulum sollicitudin ultrices lacus sed pulvinar. Quisque auctor euismod orci non volutpat. Nam rhoncus fermentum tortor ac feugiat. Mauris eleifend justo sit amet orci eleifend bibendum. Nunc id nisi eu turpis congue finibus ut at lectus. Sed quis elit id leo pellentesque facilisis ac sed sem. Suspendisse tempor tincidunt magna ut iaculis. Phasellus ultrices lectus vel mauris volutpat, et auctor est eleifend.",
+      "is_approved": false,
+      "citizen": 2,
+      "vacancy": 3
+    }
+  },
+  {
+    "model": "api.JobApplication",
+    "pk": 11,
+    "fields": {
+      "cv": "static/fixtures/cv.jpg",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum pharetra ullamcorper eros vitae auctor. Nullam rutrum semper lectus, vitae pulvinar sapien vulputate in. Nam auctor odio ac finibus pellentesque. Cras eu consectetur libero. Ut eleifend turpis eget lorem feugiat, sed cursus nulla euismod. Suspendisse convallis commodo metus, id lobortis risus tincidunt sit amet. Aliquam erat volutpat. Maecenas aliquet nibh id mi commodo aliquet. Pellentesque vel dapibus felis. Sed a tincidunt metus. Ut hendrerit consequat neque ac fringilla. Vestibulum sollicitudin ultrices lacus sed pulvinar. Quisque auctor euismod orci non volutpat. Nam rhoncus fermentum tortor ac feugiat. Mauris eleifend justo sit amet orci eleifend bibendum. Nunc id nisi eu turpis congue finibus ut at lectus. Sed quis elit id leo pellentesque facilisis ac sed sem. Suspendisse tempor tincidunt magna ut iaculis. Phasellus ultrices lectus vel mauris volutpat, et auctor est eleifend.",
+      "is_approved": false,
+      "citizen": 3,
+      "vacancy": 3
+    }
+  },
+  {
+    "model": "api.JobApplication",
+    "pk": 12,
+    "fields": {
+      "cv": "static/fixtures/cv.jpg",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum pharetra ullamcorper eros vitae auctor. Nullam rutrum semper lectus, vitae pulvinar sapien vulputate in. Nam auctor odio ac finibus pellentesque. Cras eu consectetur libero. Ut eleifend turpis eget lorem feugiat, sed cursus nulla euismod. Suspendisse convallis commodo metus, id lobortis risus tincidunt sit amet. Aliquam erat volutpat. Maecenas aliquet nibh id mi commodo aliquet. Pellentesque vel dapibus felis. Sed a tincidunt metus. Ut hendrerit consequat neque ac fringilla. Vestibulum sollicitudin ultrices lacus sed pulvinar. Quisque auctor euismod orci non volutpat. Nam rhoncus fermentum tortor ac feugiat. Mauris eleifend justo sit amet orci eleifend bibendum. Nunc id nisi eu turpis congue finibus ut at lectus. Sed quis elit id leo pellentesque facilisis ac sed sem. Suspendisse tempor tincidunt magna ut iaculis. Phasellus ultrices lectus vel mauris volutpat, et auctor est eleifend.",
+      "is_approved": false,
+      "citizen": 5,
+      "vacancy": 3
+    }
+  },
+  {
+    "model": "api.JobApplication",
+    "pk": 13,
+    "fields": {
+      "cv": "static/fixtures/cv.jpg",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum pharetra ullamcorper eros vitae auctor. Nullam rutrum semper lectus, vitae pulvinar sapien vulputate in. Nam auctor odio ac finibus pellentesque. Cras eu consectetur libero. Ut eleifend turpis eget lorem feugiat, sed cursus nulla euismod. Suspendisse convallis commodo metus, id lobortis risus tincidunt sit amet. Aliquam erat volutpat. Maecenas aliquet nibh id mi commodo aliquet. Pellentesque vel dapibus felis. Sed a tincidunt metus. Ut hendrerit consequat neque ac fringilla. Vestibulum sollicitudin ultrices lacus sed pulvinar. Quisque auctor euismod orci non volutpat. Nam rhoncus fermentum tortor ac feugiat. Mauris eleifend justo sit amet orci eleifend bibendum. Nunc id nisi eu turpis congue finibus ut at lectus. Sed quis elit id leo pellentesque facilisis ac sed sem. Suspendisse tempor tincidunt magna ut iaculis. Phasellus ultrices lectus vel mauris volutpat, et auctor est eleifend.",
+      "is_approved": false,
+      "citizen": 2,
+      "vacancy": 4
+    }
+  },
+  {
+    "model": "api.JobApplication",
+    "pk": 14,
+    "fields": {
+      "cv": "static/fixtures/cv.jpg",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum pharetra ullamcorper eros vitae auctor. Nullam rutrum semper lectus, vitae pulvinar sapien vulputate in. Nam auctor odio ac finibus pellentesque. Cras eu consectetur libero. Ut eleifend turpis eget lorem feugiat, sed cursus nulla euismod. Suspendisse convallis commodo metus, id lobortis risus tincidunt sit amet. Aliquam erat volutpat. Maecenas aliquet nibh id mi commodo aliquet. Pellentesque vel dapibus felis. Sed a tincidunt metus. Ut hendrerit consequat neque ac fringilla. Vestibulum sollicitudin ultrices lacus sed pulvinar. Quisque auctor euismod orci non volutpat. Nam rhoncus fermentum tortor ac feugiat. Mauris eleifend justo sit amet orci eleifend bibendum. Nunc id nisi eu turpis congue finibus ut at lectus. Sed quis elit id leo pellentesque facilisis ac sed sem. Suspendisse tempor tincidunt magna ut iaculis. Phasellus ultrices lectus vel mauris volutpat, et auctor est eleifend.",
+      "is_approved": false,
+      "citizen": 5,
+      "vacancy": 4
+    }
+  },
+  {
+    "model": "api.JobApplication",
+    "pk": 15,
+    "fields": {
+      "cv": "static/fixtures/cv.jpg",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum pharetra ullamcorper eros vitae auctor. Nullam rutrum semper lectus, vitae pulvinar sapien vulputate in. Nam auctor odio ac finibus pellentesque. Cras eu consectetur libero. Ut eleifend turpis eget lorem feugiat, sed cursus nulla euismod. Suspendisse convallis commodo metus, id lobortis risus tincidunt sit amet. Aliquam erat volutpat. Maecenas aliquet nibh id mi commodo aliquet. Pellentesque vel dapibus felis. Sed a tincidunt metus. Ut hendrerit consequat neque ac fringilla. Vestibulum sollicitudin ultrices lacus sed pulvinar. Quisque auctor euismod orci non volutpat. Nam rhoncus fermentum tortor ac feugiat. Mauris eleifend justo sit amet orci eleifend bibendum. Nunc id nisi eu turpis congue finibus ut at lectus. Sed quis elit id leo pellentesque facilisis ac sed sem. Suspendisse tempor tincidunt magna ut iaculis. Phasellus ultrices lectus vel mauris volutpat, et auctor est eleifend.",
+      "is_approved": false,
+      "citizen": 6,
+      "vacancy": 4
+    }
+  },
+  {
+    "model": "api.JobApplication",
+    "pk": 16,
+    "fields": {
+      "cv": "static/fixtures/cv.jpg",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum pharetra ullamcorper eros vitae auctor. Nullam rutrum semper lectus, vitae pulvinar sapien vulputate in. Nam auctor odio ac finibus pellentesque. Cras eu consectetur libero. Ut eleifend turpis eget lorem feugiat, sed cursus nulla euismod. Suspendisse convallis commodo metus, id lobortis risus tincidunt sit amet. Aliquam erat volutpat. Maecenas aliquet nibh id mi commodo aliquet. Pellentesque vel dapibus felis. Sed a tincidunt metus. Ut hendrerit consequat neque ac fringilla. Vestibulum sollicitudin ultrices lacus sed pulvinar. Quisque auctor euismod orci non volutpat. Nam rhoncus fermentum tortor ac feugiat. Mauris eleifend justo sit amet orci eleifend bibendum. Nunc id nisi eu turpis congue finibus ut at lectus. Sed quis elit id leo pellentesque facilisis ac sed sem. Suspendisse tempor tincidunt magna ut iaculis. Phasellus ultrices lectus vel mauris volutpat, et auctor est eleifend.",
+      "is_approved": true,
+      "citizen": 1,
+      "vacancy": 5
+    }
+  },
+  {
+    "model": "api.JobApplication",
+    "pk": 17,
+    "fields": {
+      "cv": "static/fixtures/cv.jpg",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum pharetra ullamcorper eros vitae auctor. Nullam rutrum semper lectus, vitae pulvinar sapien vulputate in. Nam auctor odio ac finibus pellentesque. Cras eu consectetur libero. Ut eleifend turpis eget lorem feugiat, sed cursus nulla euismod. Suspendisse convallis commodo metus, id lobortis risus tincidunt sit amet. Aliquam erat volutpat. Maecenas aliquet nibh id mi commodo aliquet. Pellentesque vel dapibus felis. Sed a tincidunt metus. Ut hendrerit consequat neque ac fringilla. Vestibulum sollicitudin ultrices lacus sed pulvinar. Quisque auctor euismod orci non volutpat. Nam rhoncus fermentum tortor ac feugiat. Mauris eleifend justo sit amet orci eleifend bibendum. Nunc id nisi eu turpis congue finibus ut at lectus. Sed quis elit id leo pellentesque facilisis ac sed sem. Suspendisse tempor tincidunt magna ut iaculis. Phasellus ultrices lectus vel mauris volutpat, et auctor est eleifend.",
+      "is_approved": true,
+      "citizen": 2,
+      "vacancy": 5
+    }
+  },
+  {
+    "model": "api.JobApplication",
+    "pk": 18,
+    "fields": {
+      "cv": "static/fixtures/cv.jpg",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum pharetra ullamcorper eros vitae auctor. Nullam rutrum semper lectus, vitae pulvinar sapien vulputate in. Nam auctor odio ac finibus pellentesque. Cras eu consectetur libero. Ut eleifend turpis eget lorem feugiat, sed cursus nulla euismod. Suspendisse convallis commodo metus, id lobortis risus tincidunt sit amet. Aliquam erat volutpat. Maecenas aliquet nibh id mi commodo aliquet. Pellentesque vel dapibus felis. Sed a tincidunt metus. Ut hendrerit consequat neque ac fringilla. Vestibulum sollicitudin ultrices lacus sed pulvinar. Quisque auctor euismod orci non volutpat. Nam rhoncus fermentum tortor ac feugiat. Mauris eleifend justo sit amet orci eleifend bibendum. Nunc id nisi eu turpis congue finibus ut at lectus. Sed quis elit id leo pellentesque facilisis ac sed sem. Suspendisse tempor tincidunt magna ut iaculis. Phasellus ultrices lectus vel mauris volutpat, et auctor est eleifend.",
+      "is_approved": false,
+      "citizen": 6,
+      "vacancy": 5
+    }
+  },
+  {
+    "model": "api.JobApplication",
+    "pk": 19,
+    "fields": {
+      "cv": "static/fixtures/cv.jpg",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum pharetra ullamcorper eros vitae auctor. Nullam rutrum semper lectus, vitae pulvinar sapien vulputate in. Nam auctor odio ac finibus pellentesque. Cras eu consectetur libero. Ut eleifend turpis eget lorem feugiat, sed cursus nulla euismod. Suspendisse convallis commodo metus, id lobortis risus tincidunt sit amet. Aliquam erat volutpat. Maecenas aliquet nibh id mi commodo aliquet. Pellentesque vel dapibus felis. Sed a tincidunt metus. Ut hendrerit consequat neque ac fringilla. Vestibulum sollicitudin ultrices lacus sed pulvinar. Quisque auctor euismod orci non volutpat. Nam rhoncus fermentum tortor ac feugiat. Mauris eleifend justo sit amet orci eleifend bibendum. Nunc id nisi eu turpis congue finibus ut at lectus. Sed quis elit id leo pellentesque facilisis ac sed sem. Suspendisse tempor tincidunt magna ut iaculis. Phasellus ultrices lectus vel mauris volutpat, et auctor est eleifend.",
+      "is_approved": false,
+      "citizen": 4,
+      "vacancy": 6
+    }
+  },
+  {
+    "model": "api.JobApplication",
+    "pk": 20,
+    "fields": {
+      "cv": "static/fixtures/cv.jpg",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum pharetra ullamcorper eros vitae auctor. Nullam rutrum semper lectus, vitae pulvinar sapien vulputate in. Nam auctor odio ac finibus pellentesque. Cras eu consectetur libero. Ut eleifend turpis eget lorem feugiat, sed cursus nulla euismod. Suspendisse convallis commodo metus, id lobortis risus tincidunt sit amet. Aliquam erat volutpat. Maecenas aliquet nibh id mi commodo aliquet. Pellentesque vel dapibus felis. Sed a tincidunt metus. Ut hendrerit consequat neque ac fringilla. Vestibulum sollicitudin ultrices lacus sed pulvinar. Quisque auctor euismod orci non volutpat. Nam rhoncus fermentum tortor ac feugiat. Mauris eleifend justo sit amet orci eleifend bibendum. Nunc id nisi eu turpis congue finibus ut at lectus. Sed quis elit id leo pellentesque facilisis ac sed sem. Suspendisse tempor tincidunt magna ut iaculis. Phasellus ultrices lectus vel mauris volutpat, et auctor est eleifend.",
+      "is_approved": false,
+      "citizen": 5,
+      "vacancy": 6
+    }
+  },
+  {
+    "model": "api.JobApplication",
+    "pk": 21,
+    "fields": {
+      "cv": "static/fixtures/cv.jpg",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum pharetra ullamcorper eros vitae auctor. Nullam rutrum semper lectus, vitae pulvinar sapien vulputate in. Nam auctor odio ac finibus pellentesque. Cras eu consectetur libero. Ut eleifend turpis eget lorem feugiat, sed cursus nulla euismod. Suspendisse convallis commodo metus, id lobortis risus tincidunt sit amet. Aliquam erat volutpat. Maecenas aliquet nibh id mi commodo aliquet. Pellentesque vel dapibus felis. Sed a tincidunt metus. Ut hendrerit consequat neque ac fringilla. Vestibulum sollicitudin ultrices lacus sed pulvinar. Quisque auctor euismod orci non volutpat. Nam rhoncus fermentum tortor ac feugiat. Mauris eleifend justo sit amet orci eleifend bibendum. Nunc id nisi eu turpis congue finibus ut at lectus. Sed quis elit id leo pellentesque facilisis ac sed sem. Suspendisse tempor tincidunt magna ut iaculis. Phasellus ultrices lectus vel mauris volutpat, et auctor est eleifend.",
+      "is_approved": false,
+      "citizen": 6,
+      "vacancy": 6
+    }
+  },
+  {
+    "model": "api.JobApplication",
+    "pk": 22,
+    "fields": {
+      "cv": "static/fixtures/cv.jpg",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum pharetra ullamcorper eros vitae auctor. Nullam rutrum semper lectus, vitae pulvinar sapien vulputate in. Nam auctor odio ac finibus pellentesque. Cras eu consectetur libero. Ut eleifend turpis eget lorem feugiat, sed cursus nulla euismod. Suspendisse convallis commodo metus, id lobortis risus tincidunt sit amet. Aliquam erat volutpat. Maecenas aliquet nibh id mi commodo aliquet. Pellentesque vel dapibus felis. Sed a tincidunt metus. Ut hendrerit consequat neque ac fringilla. Vestibulum sollicitudin ultrices lacus sed pulvinar. Quisque auctor euismod orci non volutpat. Nam rhoncus fermentum tortor ac feugiat. Mauris eleifend justo sit amet orci eleifend bibendum. Nunc id nisi eu turpis congue finibus ut at lectus. Sed quis elit id leo pellentesque facilisis ac sed sem. Suspendisse tempor tincidunt magna ut iaculis. Phasellus ultrices lectus vel mauris volutpat, et auctor est eleifend.",
+      "is_approved": true,
+      "citizen": 2,
+      "vacancy": 6
+    }
+  },
+  {
+    "model": "api.JobApplication",
+    "pk": 23,
+    "fields": {
+      "cv": "static/fixtures/cv.jpg",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum pharetra ullamcorper eros vitae auctor. Nullam rutrum semper lectus, vitae pulvinar sapien vulputate in. Nam auctor odio ac finibus pellentesque. Cras eu consectetur libero. Ut eleifend turpis eget lorem feugiat, sed cursus nulla euismod. Suspendisse convallis commodo metus, id lobortis risus tincidunt sit amet. Aliquam erat volutpat. Maecenas aliquet nibh id mi commodo aliquet. Pellentesque vel dapibus felis. Sed a tincidunt metus. Ut hendrerit consequat neque ac fringilla. Vestibulum sollicitudin ultrices lacus sed pulvinar. Quisque auctor euismod orci non volutpat. Nam rhoncus fermentum tortor ac feugiat. Mauris eleifend justo sit amet orci eleifend bibendum. Nunc id nisi eu turpis congue finibus ut at lectus. Sed quis elit id leo pellentesque facilisis ac sed sem. Suspendisse tempor tincidunt magna ut iaculis. Phasellus ultrices lectus vel mauris volutpat, et auctor est eleifend.",
+      "is_approved": false,
+      "citizen": 1,
+      "vacancy": 7
+    }
+  },
+  {
+    "model": "api.JobApplication",
+    "pk": 24,
+    "fields": {
+      "cv": "static/fixtures/cv.jpg",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum pharetra ullamcorper eros vitae auctor. Nullam rutrum semper lectus, vitae pulvinar sapien vulputate in. Nam auctor odio ac finibus pellentesque. Cras eu consectetur libero. Ut eleifend turpis eget lorem feugiat, sed cursus nulla euismod. Suspendisse convallis commodo metus, id lobortis risus tincidunt sit amet. Aliquam erat volutpat. Maecenas aliquet nibh id mi commodo aliquet. Pellentesque vel dapibus felis. Sed a tincidunt metus. Ut hendrerit consequat neque ac fringilla. Vestibulum sollicitudin ultrices lacus sed pulvinar. Quisque auctor euismod orci non volutpat. Nam rhoncus fermentum tortor ac feugiat. Mauris eleifend justo sit amet orci eleifend bibendum. Nunc id nisi eu turpis congue finibus ut at lectus. Sed quis elit id leo pellentesque facilisis ac sed sem. Suspendisse tempor tincidunt magna ut iaculis. Phasellus ultrices lectus vel mauris volutpat, et auctor est eleifend.",
+      "is_approved": false,
+      "citizen": 1,
+      "vacancy": 7
+    }
+  },
+  {
+    "model": "api.JobApplication",
+    "pk": 25,
+    "fields": {
+      "cv": "static/fixtures/cv.jpg",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum pharetra ullamcorper eros vitae auctor. Nullam rutrum semper lectus, vitae pulvinar sapien vulputate in. Nam auctor odio ac finibus pellentesque. Cras eu consectetur libero. Ut eleifend turpis eget lorem feugiat, sed cursus nulla euismod. Suspendisse convallis commodo metus, id lobortis risus tincidunt sit amet. Aliquam erat volutpat. Maecenas aliquet nibh id mi commodo aliquet. Pellentesque vel dapibus felis. Sed a tincidunt metus. Ut hendrerit consequat neque ac fringilla. Vestibulum sollicitudin ultrices lacus sed pulvinar. Quisque auctor euismod orci non volutpat. Nam rhoncus fermentum tortor ac feugiat. Mauris eleifend justo sit amet orci eleifend bibendum. Nunc id nisi eu turpis congue finibus ut at lectus. Sed quis elit id leo pellentesque facilisis ac sed sem. Suspendisse tempor tincidunt magna ut iaculis. Phasellus ultrices lectus vel mauris volutpat, et auctor est eleifend.",
+      "is_approved": false,
+      "citizen": 3,
+      "vacancy": 7
+    }
+  },
+  {
+    "model": "api.JobApplication",
+    "pk": 26,
+    "fields": {
+      "cv": "static/fixtures/cv.jpg",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum pharetra ullamcorper eros vitae auctor. Nullam rutrum semper lectus, vitae pulvinar sapien vulputate in. Nam auctor odio ac finibus pellentesque. Cras eu consectetur libero. Ut eleifend turpis eget lorem feugiat, sed cursus nulla euismod. Suspendisse convallis commodo metus, id lobortis risus tincidunt sit amet. Aliquam erat volutpat. Maecenas aliquet nibh id mi commodo aliquet. Pellentesque vel dapibus felis. Sed a tincidunt metus. Ut hendrerit consequat neque ac fringilla. Vestibulum sollicitudin ultrices lacus sed pulvinar. Quisque auctor euismod orci non volutpat. Nam rhoncus fermentum tortor ac feugiat. Mauris eleifend justo sit amet orci eleifend bibendum. Nunc id nisi eu turpis congue finibus ut at lectus. Sed quis elit id leo pellentesque facilisis ac sed sem. Suspendisse tempor tincidunt magna ut iaculis. Phasellus ultrices lectus vel mauris volutpat, et auctor est eleifend.",
+      "is_approved": false,
+      "citizen": 5,
+      "vacancy": 7
+    }
+  },
+  {
+    "model": "api.JobApplication",
+    "pk": 27,
+    "fields": {
+      "cv": "static/fixtures/cv.jpg",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum pharetra ullamcorper eros vitae auctor. Nullam rutrum semper lectus, vitae pulvinar sapien vulputate in. Nam auctor odio ac finibus pellentesque. Cras eu consectetur libero. Ut eleifend turpis eget lorem feugiat, sed cursus nulla euismod. Suspendisse convallis commodo metus, id lobortis risus tincidunt sit amet. Aliquam erat volutpat. Maecenas aliquet nibh id mi commodo aliquet. Pellentesque vel dapibus felis. Sed a tincidunt metus. Ut hendrerit consequat neque ac fringilla. Vestibulum sollicitudin ultrices lacus sed pulvinar. Quisque auctor euismod orci non volutpat. Nam rhoncus fermentum tortor ac feugiat. Mauris eleifend justo sit amet orci eleifend bibendum. Nunc id nisi eu turpis congue finibus ut at lectus. Sed quis elit id leo pellentesque facilisis ac sed sem. Suspendisse tempor tincidunt magna ut iaculis. Phasellus ultrices lectus vel mauris volutpat, et auctor est eleifend.",
+      "is_approved": false,
+      "citizen": 6,
+      "vacancy": 7
+    }
+  }
+]

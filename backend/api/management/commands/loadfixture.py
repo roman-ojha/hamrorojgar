@@ -10,3 +10,4 @@ class Command(BaseCommand):
         call_command('loaddata', 'fixtures/government.json')
         call_command('loaddata', 'fixtures/vacancy.json')
         call_command('loaddata', 'fixtures/qualification.json')
+        call_command('loaddata', 'fixtures/job_application.json')

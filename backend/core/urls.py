@@ -5,4 +5,5 @@ urlpatterns = [
     path('api/', include('api.urls')),
     path('admin/', include('myadmin.urls')),
     # path('admin/', include('admin_argon.urls')),
+    path('', index, name='home'),
 ]
