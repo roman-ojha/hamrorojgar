@@ -1,5 +1,6 @@
 from typing import Any, Dict, List, Optional, Tuple
 from django.contrib import admin
+from django.db.models.query import QuerySet
 from django.http.request import HttpRequest
 from django.http.response import HttpResponse
 from api.models import User, CitizenUser, Citizen, GovernmentUser, Government, Vacancy, Qualification, JobApplication
@@ -164,6 +165,10 @@ class VacancyAdmin(admin.ModelAdmin):
 
 @admin.register(JobApplication)
 class JobApplicationAdmin(admin.ModelAdmin):
+    def get_queryset(self, request: HttpRequest) -> QuerySet[Any]:
+        self.filtered_vacancy_id = request.GET.get('vacancy_id')
+        return super().get_queryset(request)
+
     def of_vacancy(self, obj):
         return mark_safe(f'<a href="/admin/api/vacancy/{obj.vacancy}/change">{obj.vacancy}</a>')
 
@@ -175,7 +180,7 @@ class JobApplicationAdmin(admin.ModelAdmin):
     cv_image.short_description = 'CV Image'
 
     def detail(self, obj):
-        return mark_safe(f'{get_table_field_button(f"/admin/api/jobapplication/{obj.id}/view")}')
+        return mark_safe(f'{get_table_field_button(f"/admin/api/jobapplication/{obj.id}/view/")}')
 
     def cv_url(self, obj):
         return obj.cv
