@@ -4,7 +4,7 @@ import Error from "next/dist/pages/_error";
 import NavBar from "@/components/NavBar";
 import Background from "@/components/Background";
 import styles from "@/styles/pages/apply.module.scss";
-import JobDesc from "@/components/JobDesc";
+import JobDesc from "@/components/Jobs/JobDesc";
 import ApplyPageJobDesc from "@/components/Apply/ApplyJobDesc";
 import ApplySection from "@/components/Apply/ApplySection";
 

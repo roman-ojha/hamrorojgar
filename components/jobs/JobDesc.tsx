@@ -25,6 +25,28 @@ const JobDesc = (): React.JSX.Element => {
     }
   };
 
+  useEffect(() => {
+    window.onscroll = function () {
+      const mainSectionElm = document.getElementById("jobs-page-main-section");
+      const jobDescCard = document.getElementById("job-page-card-desc-section");
+      if (mainSectionElm) {
+        // console.log(mainSectionElm.getBoundingClientRect().y);
+        if (mainSectionElm.getBoundingClientRect().y <= 0) {
+          if (jobDescCard) {
+            jobDescCard.setAttribute(
+              "style",
+              "position:fixed;top:0px;right:-15px"
+            );
+          }
+        } else {
+          if (jobDescCard) {
+            jobDescCard.removeAttribute("style");
+          }
+        }
+      }
+    };
+  }, []);
+
   return (
     <>
       {job == null ? (

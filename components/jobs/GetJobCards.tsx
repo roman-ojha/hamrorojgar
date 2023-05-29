@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import JobCard from "../JobCard";
+import JobCard from "./JobCard";
 import { useAppState } from "@/hooks/useAppState";
 import { jobsSelector, JobState } from "@/store/selector";
 
