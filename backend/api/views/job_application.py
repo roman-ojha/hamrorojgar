@@ -11,6 +11,7 @@ from rest_framework.settings import settings
 from api.serializers import JobApplicationSerializer
 import json
 from api.models import User
+from data.constants import constants
 
 # class ApplyView(APIView):
 #     parser_classes = [MultiPartParser]
@@ -33,16 +34,19 @@ class ApplyView(APIView):
     permission_classes = [IsAuthenticated]
 
     def post(self, request: Request, format=None):
-        data_str = request.data.get('json')
-        data_dict = json.loads(data_str)
-        vacancy_id = request.query_params.get('vacancy_id')
-        serializer = JobApplicationSerializer(data={
-            'cv': request.FILES.get('cv'),
-            'citizen': request.user.id,
-            'vacancy': vacancy_id,
-            'description': data_dict['description']
-        })
-        if serializer.is_valid():
-            serializer.save()
-            return Response(ResponseObj(msg="Application form submitted successfully").get(), status=status.HTTP_201_CREATED)
-        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+        try:
+            data_str = request.data.get('json')
+            data_dict = json.loads(data_str)
+            vacancy_id = request.query_params.get('vacancy_id')
+            serializer = JobApplicationSerializer(data={
+                'cv': request.FILES.get('cv'),
+                'citizen': request.user.id,
+                'vacancy': vacancy_id,
+                'description': data_dict['description']
+            })
+            if serializer.is_valid():
+                serializer.save()
+                return Response(ResponseObj(msg="Application form submitted successfully").get(), status=status.HTTP_201_CREATED)
+            return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+        except Exception as e:
+            return Response(ResponseObj(msg=constants.HTTP_500_STATUS_MSG).get(), status=status.HTTP_500_INTERNAL_SERVER_ERROR)
