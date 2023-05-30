@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect } from "react";
 import Head from "next/head";
 import styles from "@/styles/pages/register.module.scss";
 import Link from "next/link";
@@ -11,6 +11,7 @@ import { Citizen } from "@/models/citizen";
 import { api } from "@/services/api";
 import { useRouter } from "next/router";
 import { isOkResponse } from "@/utils/checkApiStatus";
+import DatePicker from "@/components/RegisterPage/DatePicker";
 
 interface CitizenFormExtension {
   date_of_birth: {
@@ -360,47 +361,7 @@ const Register: NextPage = () => {
                     </div>
                   </div>
                 </div>
-                <div className={styles.register__form__second_row__column__dob}>
-                  <label htmlFor="date-of-birth" data-field="date-of-birth">
-                    Date of birth
-                  </label>
-                  <div
-                    className={
-                      styles.register__form__second_row__column__dob__fields
-                    }
-                  >
-                    <select
-                      className={
-                        styles.register__form__second_row__column__dob__fields__select
-                      }
-                      id="dob-year"
-                      {...register("date_of_birth.year")}
-                    >
-                      <option value="">Year</option>
-                      <option value="2023">2023</option>
-                    </select>
-                    <select
-                      className={
-                        styles.register__form__second_row__column__dob__fields__select
-                      }
-                      id="dob-month"
-                      {...register("date_of_birth.month")}
-                    >
-                      <option value="">Month</option>
-                      <option value="03">Mars</option>
-                    </select>
-                    <select
-                      className={
-                        styles.register__form__second_row__column__dob__fields__select
-                      }
-                      id="dob-month"
-                      {...register("date_of_birth.day")}
-                    >
-                      <option value="">Day</option>
-                      <option value="17">17</option>
-                    </select>
-                  </div>
-                </div>
+                <DatePicker register={register} />
               </div>
             </div>
           </div>
