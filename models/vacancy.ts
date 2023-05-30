@@ -1,3 +1,18 @@
+export class JobTypeChoices {
+  PART = "Part-Time";
+  FULL = "Full-Time";
+  CONTRACT = "Contract";
+  TEMPO = "Temporary";
+  INTERN = "Internship";
+  get = "";
+
+  [key: string]: string;
+
+  constructor(type: string) {
+    this.get = this[type];
+  }
+}
+
 type JobType =
   | "Full Time"
   | "Part Time"

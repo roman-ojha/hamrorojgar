@@ -10,7 +10,7 @@ from data.constants import constants
 from utils.responseObj import ResponseObj
 
 
-class VacancyView(APIView):
+class JobListView(APIView):
     def get(self, request: Request):
         try:
             id = request.query_params.get('id')

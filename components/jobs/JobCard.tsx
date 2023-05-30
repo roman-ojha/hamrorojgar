@@ -3,6 +3,7 @@ import styles from "@/styles/components/jobcard.module.scss";
 import { Icon } from "@iconify/react";
 import { useAppState } from "@/hooks/useAppState";
 import { jobSelector, JobState } from "@/store/selector";
+import { JobTypeChoices } from "@/models/vacancy";
 
 interface JobCardProps {
   id: JobState["id"];
@@ -50,7 +51,7 @@ const JobCard: React.FC<JobCardProps> = ({
           className={styles.card__time__icon}
           icon="ic:outline-access-time"
         />
-        <p>{job_type}</p>
+        <p>{new JobTypeChoices(job_type).get}</p>
       </div>
       <div className={styles.card__description}>
         <ul>

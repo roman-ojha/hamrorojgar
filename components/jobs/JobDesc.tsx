@@ -9,6 +9,7 @@ import {
   CitizenState,
 } from "@/store/selector";
 import { useRouter } from "next/router";
+import { JobTypeChoices } from "@/models/vacancy";
 
 const JobDesc = (): React.JSX.Element => {
   const router = useRouter();
@@ -74,7 +75,7 @@ const JobDesc = (): React.JSX.Element => {
               className={styles.card__time__icon}
               icon="ic:outline-access-time"
             />
-            <p>{job.job_type}</p>
+            <p>{new JobTypeChoices(job.job_type).get}</p>
           </div>
           <div className={styles.card__separator}></div>
           <div className={styles.card__description}>

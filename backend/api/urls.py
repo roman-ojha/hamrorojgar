@@ -1,5 +1,5 @@
 from django.urls import path
-from api.views import CitizenView, Registration, Login, VacancyView, ApplyView, CitizenLogout
+from api.views import CitizenView, Registration, Login, JobListView, ApplyView, CitizenLogout
 
 
 urlpatterns = [
@@ -7,6 +7,6 @@ urlpatterns = [
     path('citizen/login', Login.as_view(), name='citizen-login'),
     path('citizen', CitizenView.as_view(), name='citizen'),
     path('citizen/logout', CitizenLogout.as_view(), name='citizen-logout'),
-    path('job', VacancyView.as_view(), name='job-vacancies'),
+    path('job', JobListView.as_view(), name='jobs'),
     path('job/apply', ApplyView.as_view(), name='job-apply'),
 ]
