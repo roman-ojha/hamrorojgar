@@ -19,6 +19,11 @@ interface CitizenFormExtension {
     month: string;
     day: string;
   };
+  user: {
+    email: string;
+    password: string;
+    c_password: string;
+  };
 }
 
 export interface CitizenForm extends Override<Citizen, CitizenFormExtension> {}
@@ -295,11 +300,10 @@ const Register: NextPage = () => {
               <div className={styles.register__form__second_row__column__field}>
                 <input
                   type="password"
-                  name="c_password"
                   id="c_password"
                   placeholder="Confirm password"
                   data-field="input"
-                  // {...register("user.password2")} // Todo
+                  {...register("user.c_password")}
                 />
               </div>
             </div>

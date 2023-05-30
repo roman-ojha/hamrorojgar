@@ -11,9 +11,21 @@ from decouple import config
 
 
 class CitizenUserSerializer(serializers.ModelSerializer):
+    c_password = serializers.CharField()
+
     class Meta:
         model = CitizenUser
-        fields = ['id', 'email', 'password']
+        fields = ['id', 'email', 'password', 'c_password']
+
+    def validate(self, attrs):
+        if attrs['password'] != attrs['c_password']:
+            raise serializers.ValidationError({
+                "c_password": [
+                    "password doesn't match"
+                ]
+            }
+            )
+        return super().validate(attrs)
 
 
 class CitizenSerializer(serializers.ModelSerializer):
@@ -28,6 +40,9 @@ class CitizenSerializer(serializers.ModelSerializer):
 
     def create(self, validated_data):
         user_data = validated_data.pop('user')
+        print(user_data)
+        del user_data['c_password']
+        print(user_data)
         user = CitizenUser.objects.create_user(**user_data)
         validated_data['user'] = user
         p_address_data = validated_data.pop('p_address')

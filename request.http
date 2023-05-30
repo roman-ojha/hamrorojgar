@@ -8,8 +8,9 @@ Content-Type: application/json
 
 {
         "user": {
-            "email": "rrr@gmail.com",
-            "password": "rrr@123"
+            "email": "rrrr@gmail.com",
+            "password": "rrrr@123",
+            "c_password": "rrrr@123"
         },
         "f_name": "rise",
         "m_name": "rore",
