@@ -112,13 +112,8 @@ class Login(ObtainAuthToken):
                 return response
             else:
                 return Response(serialized_data.errors, status=status.HTTP_406_NOT_ACCEPTABLE)
-<<<<<<< HEAD
         except user.DoesNotExist:
             return Response(ResponseObj(msg="Unable to login with provided credentials.").get(), status=status.HTTP_406_NOT_ACCEPTABLE)
-=======
-        # except user.DoesNotExist:
-        #     return Response(ResponseObj(msg="Invalid Credentials").get(), status=status.HTTP_406_NOT_ACCEPTABLE)
->>>>>>> 60350a91ad51f08a3e4891d9a3ae35e18d191f00
         except Exception as e:
             return Response(ResponseObj(msg=constants.HTTP_500_STATUS_MSG).get(), status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
