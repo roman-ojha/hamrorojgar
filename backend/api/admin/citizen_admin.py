@@ -5,6 +5,31 @@ from django.utils.safestring import mark_safe
 from django.contrib.auth.admin import UserAdmin
 
 
+# To show the 'Citizen' data & Insert new data for Citizen on the same 'CitizenUser' Model Admin
+class CitizenInline(admin.StackedInline):
+    class CitizenInlineFormSet(BaseInlineFormSet):
+        model = Citizen
+    model = Citizen
+    can_delete = False
+    # formset = CitizenInlineFormSet
+    fieldsets = (
+        ("Name:", {
+            'fields': (('f_name', 'm_name', 'l_name',),),
+        }),
+        ("Other Info:", {
+            'fields': (('nationality', 'citizenship_no', 'gender', 'date_of_birth', 'mobile'),)
+        }),
+        ("Permanent Address:", {
+            'fields': ('p_address',)
+        }),
+        ("Temporary Address:", {
+            'fields': ('t_address',)
+        }),
+    )
+
+# class CitizenUserChangeForm()
+
+
 @admin.register(CitizenUser)
 class CitizenUserAdmin(UserAdmin):
     def mobile(self, obj):
@@ -42,27 +67,6 @@ class CitizenUserAdmin(UserAdmin):
     list_display = ('id', 'photo', 'email', 'full_name', 'mobile',
                     'date_of_birth', 'gender', 'nationality', 'p_address', 'citizenship_no')
 
-    # To show the 'Citizen' data & Insert new data for Citizen on the same 'CitizenUser' Model Admin
-    class CitizenInline(admin.StackedInline):
-        class CitizenInlineFormSet(BaseInlineFormSet):
-            model = Citizen
-        model = Citizen
-        can_delete = False
-        # formset = CitizenInlineFormSet
-        fieldsets = (
-            ("Name:", {
-                'fields': (('f_name', 'm_name', 'l_name',),),
-            }),
-            ("Other Info:", {
-                'fields': (('nationality', 'citizenship_no', 'gender', 'date_of_birth', 'mobile'),)
-            }),
-            ("Permanent Address:", {
-                'fields': ('p_address',)
-            }),
-            ("Temporary Address:", {
-                'fields': ('t_address',)
-            }),
-        )
     inlines = [CitizenInline]
 
     ordering = ('email',)
