@@ -95,7 +95,7 @@ class Login(ObtainAuthToken):
         try:
             serialized_data = self.serializer_class(
                 data=request.data, context={'request': request})
-            if serialized_data.is_valid(raise_exception=True):
+            if serialized_data.is_valid(raise_exception=False):
                 user = serialized_data.validated_data['user']
                 token, created = Token.objects.get_or_create(user=user)
                 user = CitizenUser.objects.get(pk=user.pk)
@@ -113,9 +113,7 @@ class Login(ObtainAuthToken):
             else:
                 return Response(serialized_data.errors, status=status.HTTP_406_NOT_ACCEPTABLE)
         except user.DoesNotExist:
-            return Response(ResponseObj(msg="Invalid Credentials").get(), status=status.HTTP_406_NOT_ACCEPTABLE)
-        except citizen.DoesNotExist:
-            return Response(ResponseObj(msg="Invalid Credentials").get(), status=status.HTTP_406_NOT_ACCEPTABLE)
+            return Response(ResponseObj(msg="Unable to login with provided credentials.").get(), status=status.HTTP_406_NOT_ACCEPTABLE)
         except Exception as e:
             return Response(ResponseObj(msg=constants.HTTP_500_STATUS_MSG).get(), status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
