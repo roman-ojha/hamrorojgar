@@ -1,17 +1,34 @@
+from typing import Any, Dict, Mapping, Optional, Type, Union
 from django.contrib import admin
+from django.core.files.base import File
+from django.db.models.base import Model
+from django.forms.utils import ErrorList
 from api.models import CitizenUser, Citizen
 from django.forms.models import BaseInlineFormSet
 from django.utils.safestring import mark_safe
 from django.contrib.auth.admin import UserAdmin
+from django import forms
 
 
 # To show the 'Citizen' data & Insert new data for Citizen on the same 'CitizenUser' Model Admin
 class CitizenInline(admin.StackedInline):
     class CitizenInlineFormSet(BaseInlineFormSet):
         model = Citizen
+    # formset = CitizenInlineFormSet
+
+    class CitizenInlineForm(forms.ModelForm):
+
+        class Meta:
+            model = Citizen
+            fields = '__all__'
+
+        def __init__(self, *args, **kwargs) -> None:
+            super().__init__(*args, **kwargs)
+            self.fields['m_name'].required = False
+            self.fields['t_address'].required = False
     model = Citizen
     can_delete = False
-    # formset = CitizenInlineFormSet
+    form = CitizenInlineForm
     fieldsets = (
         ("Name:", {
             'fields': (('f_name', 'm_name', 'l_name',),),
@@ -26,8 +43,6 @@ class CitizenInline(admin.StackedInline):
             'fields': ('t_address',)
         }),
     )
-
-# class CitizenUserChangeForm()
 
 
 @admin.register(CitizenUser)
