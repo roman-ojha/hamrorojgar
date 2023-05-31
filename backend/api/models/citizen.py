@@ -50,6 +50,8 @@ class Citizen(models.Model):
     l_name = models.CharField(_("Last name"), max_length=30)
     mobile = models.IntegerField()
     date_of_birth = models.DateField()
+    # is_valid_number = models.BooleanField(default=False)
+    # number_verification_otp = models.IntegerField()
 
     class GenderChoice(models.TextChoices):
         MALE = 'M', 'Male'
