@@ -2,7 +2,7 @@ from typing import Any
 from django.contrib import admin
 from django.db.models.query import QuerySet
 from django.http.request import HttpRequest
-from api.models import JobApplication
+from api.models import JobApplication, Vacancy
 from django.utils.safestring import mark_safe
 from django.utils.html import format_html
 from admin_numeric_filter.admin import SingleNumericFilter
@@ -56,3 +56,10 @@ class JobApplicationAdmin(admin.ModelAdmin):
                 return queryset.filter(vacancy_id=vacancy_id)
 
     list_filter = (('vacancy__id', VacancyFilter),)
+
+    def get_queryset(self, request: HttpRequest) -> QuerySet[Any]:
+        qs = super().get_queryset(request)
+        if request.user.is_superuser:
+            return qs
+        vacancies = Vacancy.objects.filter(pk=request.user.pk).values('pk')
+        return qs.filter(vacancy__in=vacancies)

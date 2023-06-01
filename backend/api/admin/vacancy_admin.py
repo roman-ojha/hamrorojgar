@@ -1,9 +1,20 @@
+from typing import Any
 from django.contrib import admin
+from django.db.models.query import QuerySet
+from django.http.request import HttpRequest
 from api.models import Vacancy, Qualification
 from django.forms.models import BaseInlineFormSet
 from django.utils.safestring import mark_safe
 from itertools import islice
 from utils.get_table_field_button import get_table_field_button
+
+
+class Inline(admin.StackedInline):
+    class InlineFormSet(BaseInlineFormSet):
+        model = Qualification
+    model = Qualification
+    can_delete = False
+    formset = InlineFormSet
 
 
 @admin.register(Vacancy)
@@ -33,10 +44,10 @@ class VacancyAdmin(admin.ModelAdmin):
                     'is_opened', 'opened_at', 'job_type', 'opened_by', 'qualifications')
     ordering = ('id',)
 
-    class Inline(admin.StackedInline):
-        class InlineFormSet(BaseInlineFormSet):
-            model = Qualification
-        model = Qualification
-        can_delete = False
-        formset = InlineFormSet
     inlines = [Inline]
+
+    def get_queryset(self, request: HttpRequest) -> QuerySet[Any]:
+        qs = super().get_queryset(request)
+        if request.user.is_superuser:
+            return qs
+        return qs.filter(government=request.user.government)
