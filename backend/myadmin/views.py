@@ -6,6 +6,14 @@ from django.http import HttpRequest
 
 
 @require_http_methods(["GET"])
+def index(request):
+    print(request.user)
+    if not request.user.is_staff:
+        return HttpResponseRedirect('/admin/login')
+    return render(request, 'pages/dashboard.html')
+
+
+@require_http_methods(["GET"])
 def view_job_application(request, id):
     try:
         job_application = JobApplication.objects.get(id=id)
