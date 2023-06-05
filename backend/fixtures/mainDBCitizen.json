@@ -1,0 +1,80 @@
+[
+  {
+    "model": "maingovdb.Citizen",
+    "pk": 1,
+    "fields": {
+      "f_name": "Liam",
+      "m_name": "",
+      "l_name": "Neeson",
+      "mobile": 123456789,
+      "date_of_birth": "2023-05-17",
+      "gender": "M",
+      "citizenship_no": "123456789"
+    }
+  },
+  {
+    "model": "maingovdb.Citizen",
+    "pk": 2,
+    "fields": {
+      "f_name": "Olivia",
+      "m_name": "",
+      "l_name": "Wilde",
+      "mobile": 123456789,
+      "date_of_birth": "2023-05-17",
+      "gender": "M",
+      "citizenship_no": "123456789"
+    }
+  },
+  {
+    "model": "maingovdb.Citizen",
+    "pk": 3,
+    "fields": {
+      "f_name": "Noah",
+      "m_name": "",
+      "l_name": "Baumbach",
+      "mobile": 123456789,
+      "date_of_birth": "2023-05-17",
+      "gender": "M",
+      "citizenship_no": "123456789"
+    }
+  },
+  {
+    "model": "maingovdb.Citizen",
+    "pk": 4,
+    "fields": {
+      "f_name": "Emma",
+      "m_name": "",
+      "l_name": "Stone",
+      "mobile": 123456789,
+      "date_of_birth": "2023-05-17",
+      "gender": "M",
+      "citizenship_no": "123456789"
+    }
+  },
+  {
+    "model": "maingovdb.Citizen",
+    "pk": 5,
+    "fields": {
+      "f_name": "William",
+      "m_name": "",
+      "l_name": "Dafoe",
+      "mobile": 123456789,
+      "date_of_birth": "2023-05-17",
+      "gender": "M",
+      "citizenship_no": "123456789"
+    }
+  },
+  {
+    "model": "maingovdb.Citizen",
+    "pk": 6,
+    "fields": {
+      "f_name": "Ava",
+      "m_name": "",
+      "l_name": "DuVernay",
+      "mobile": 123456789,
+      "date_of_birth": "2023-05-17",
+      "gender": "M",
+      "citizenship_no": "123456789"
+    }
+  }
+]
