@@ -9,6 +9,7 @@ from rest_framework.parsers import MultiPartParser
 import os
 from rest_framework.settings import settings
 from api.serializers import JobApplicationSerializer
+from api.models import job_application
 import json
 from data.constants import constants
 
@@ -41,7 +42,8 @@ class ApplyView(APIView):
                 'cv': request.FILES.get('cv'),
                 'citizen': request.user.id,
                 'vacancy': vacancy_id,
-                'description': data_dict['description']
+                'description': data_dict['description'],
+                'payment_status': job_application.JobApplication.PaymentStatusChoices.PENDING,
             })
             if serializer.is_valid():
                 serializer.save()

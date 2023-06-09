@@ -66,7 +66,7 @@ GET http://127.0.0.1:8000/api/job?id=1
 ### Apply for opened vacancy
 POST http://127.0.0.1:8000/api/job/apply?vacancy_id=2
 Content-Type: multipart/form-data; boundary=boundary_value
-Authorization: Token 9ae59b9dbcf9834775c4e15f5b8f0a20c0c69026
+Authorization: Token 4e72012e50fe301aa0170fa9c7e741622729a3e2 
 
 --boundary_value
 Content-Disposition: form-data; name="json"
