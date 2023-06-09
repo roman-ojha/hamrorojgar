@@ -3,7 +3,7 @@ from api.views.auth_view import CitizenRegister, CitizenLogin, CitizenLogout
 from api.views.citizen_view import CitizenView
 from api.views.job_application import ApplyView
 from api.views.vacancy_view import JobListView
-from api.views.payment_view import Payment
+from api.views.payment_view import Payment, PaymentSuccess
 
 
 urlpatterns = [
@@ -15,4 +15,5 @@ urlpatterns = [
     path('job/apply', ApplyView.as_view(), name='job-apply'),  # ?vacancy_id=xxx
     path('payment/<str:payment_gateway>',
          Payment.as_view(), name='payment'),  # ?job_application_id=xxx
+    path('payment/success', PaymentSuccess.as_view(), name='payment-success'),
 ]
