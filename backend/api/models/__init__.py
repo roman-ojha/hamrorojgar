@@ -5,3 +5,5 @@ from .vacancy import Vacancy
 from .qualification import Qualification
 from .job_application import JobApplication
 from .address import Address
+from .payment import Payment
+from .payment_gateway import PaymentGateway

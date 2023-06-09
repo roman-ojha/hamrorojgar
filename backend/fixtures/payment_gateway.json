@@ -1,0 +1,11 @@
+[
+  {
+    "model": "api.PaymentGateway",
+    "pk": 1,
+    "fields": {
+      "name": "Khalti",
+      "code": "khalti",
+      "is_active": true
+    }
+  }
+]

@@ -12,3 +12,4 @@ class Command(BaseCommand):
         call_command('loaddata', 'fixtures/qualification.json')
         call_command('loaddata', 'fixtures/job_application.json')
         call_command('loaddata', 'fixtures/mainDBCitizen.json')
+        call_command('loaddata', 'fixtures/payment_gateway')
