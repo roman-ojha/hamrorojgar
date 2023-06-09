@@ -13,7 +13,7 @@ urlpatterns = [
     path('citizen', CitizenView.as_view(), name='citizen'),
     path('job', JobListView.as_view(), name='jobs'),
     path('job/apply', ApplyView.as_view(), name='job-apply'),  # ?vacancy_id=xxx
+    path('payment/success', PaymentSuccess.as_view(), name='payment-success'),
     path('payment/<str:payment_gateway>',
          Payment.as_view(), name='payment'),  # ?job_application_id=xxx
-    path('payment/success', PaymentSuccess.as_view(), name='payment-success'),
 ]

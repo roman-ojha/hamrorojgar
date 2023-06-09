@@ -7,7 +7,7 @@ from api.models import payment, job_application, user, payment_gateway
 
 
 class PaymentSerializer(serializers.ModelSerializer):
-    by = user.User
+    by = user.User()
     payment_using = payment_gateway.PaymentGateway()
     for_application = job_application.JobApplication()
 

@@ -11,8 +11,9 @@ from decouple import config
 from api.models import job_application
 import requests
 from api.serializers.payment_serializer import PaymentSerializer
-from api.models.payment import Payment as PaymentModel
+from api.models import payment
 from api.models.payment_gateway import PaymentGateway
+from django.core.exceptions import ObjectDoesNotExist
 
 
 class Payment(APIView):
@@ -26,14 +27,17 @@ class Payment(APIView):
         # print(request.user)
         amount = 2000
         try:
-            job_application = job_application.JobApplication.objects.get(
+            res_job_application = job_application.JobApplication.objects.get(
                 id=job_application_id)
+            if res_job_application.payment_status == job_application.JobApplication.PaymentStatusChoices.COMPLETED:
+                return Response(ResponseObj(msg="No need to pay twice for same job application"))
             if payment_gateway != "khalti":
                 return Response(ResponseObj(msg="Invalid request").get(), status=status.HTTP_400_BAD_REQUEST)
-            payment_gateway = PaymentGateway.objects.get(code=payment_gateway)
+            res_payment_gateway = PaymentGateway.objects.get(
+                code=payment_gateway)
             requestHeader = {"Authorization": config("KHALTI_LIVE_SECRET_KEY")}
             requestParameters = {
-                "return_url": config("API_BASE_URL") + "/payment/success",
+                "return_url": config("API_BASE_URL") + "/api/payment/success",
                 "website_url": config("API_BASE_URL"),
                 "amount": amount,
                 "purchase_order_id": f"HAMROROJGAR-{payment_gateway}-{job_application_id}-{request.user.id}",
@@ -46,22 +50,45 @@ class Payment(APIView):
             if response.status_code == 200:
                 # save payment into payment table
                 payment_serializer = PaymentSerializer(data={
-                    'amount': amount, 'payment_using': payment_gateway.id, 'from_acc': None, 'status': PaymentModel.StatusChoices.PENDING,
-                    'payment_id': None, 'transaction_id': None, 'by': request.user.pk, 'for_application': job_application.pk
+                    'amount': amount, 'payment_using': res_payment_gateway.id, 'from_acc': None, 'status': payment.Payment.StatusChoices.PENDING,
+                    'payment_id': response.json().get('pidx'), 'transaction_id': None, 'by': request.user.pk, 'for_application': res_job_application.pk
                 })
                 if payment_serializer.is_valid():
-                    print(payment_serializer.validated_data)
-                    # payment_serializer.save()
+                    payment_serializer.save()
                     return Response(ResponseObj({'pidx': response.json().get('pidx'), 'payment_url': response.json().get('payment_url')}, msg="Successful").get(), status=status.HTTP_400_BAD_REQUEST)
                 else:
-                    print(payment_serializer.errors)
+                    # print(payment_serializer.errors)
                     return Response(ResponseObj(msg="Internal server error").get(), status=status.HTTP_500_INTERNAL_SERVER_ERROR)
         except:
-            return Response(ResponseObj(msg="Some error occur trying do payment").get(), status=status.HTTP_400_BAD_REQUEST)
+            return Response(ResponseObj(msg="Some error occur trying do payment, please try again letter").get(), status=status.HTTP_400_BAD_REQUEST)
         return Response(ResponseObj(msg="Internal server error").get(), status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
 
 class PaymentSuccess(APIView):
-    def get(self, request: Request, payment_gateway: str):
-        print(request.query_params)
-        return HttpResponseRedirect(config("CLIENT_BASE_URL") + "/jobs")
+    def get(self, request: Request):
+        # print(request.query_params)
+        pidx = request.query_params.get('pidx')
+        # GET /payment/success?pidx=C9KoQzFVdSozbP5r3BTfeW&txnId=DsNRhN4jAyEobd57APmPj3&amount=2000&mobile=98XXXXX004&purchase_order_id=HAMROROJGAR-khalti-29-11&purchase_order_name=job%20application%20payment&transaction_id=DsNRhN4jAyEobd57APmPj3 HTTP/1.1" 404 2577
+        try:
+            payment_res = payment.Payment.objects.get(payment_id=pidx)
+        except ObjectDoesNotExist:
+            return Response(ResponseObj(msg="Payment id doesn't exist").get(), status=status.HTTP_404_NOT_FOUND)
+        requestHeader = {"Authorization": config("KHALTI_LIVE_SECRET_KEY")}
+        requestParameters = {
+            "pidx": pidx,
+        }
+        # verify payment using payment id from khalti api
+        verify_payment_res = requests.post(
+            config("KHALTI_PAYMENT_BASE_URL") + "/epayment/lookup/", headers=requestHeader, data=requestParameters)
+        if verify_payment_res.status_code != 200:
+            return Response(ResponseObj(msg="unVerified payment id").get(), status=status.HTTP_401_UNAUTHORIZED)
+        # if verify update payments table
+        if verify_payment_res.json().get('status') != "Completed":
+            return Response(ResponseObj(msg="Transaction is still not completed").get(), status=status.HTTP_401_UNAUTHORIZED)
+        payment_res.transaction_id = verify_payment_res.json().get('transaction_id')
+        payment_res.status = payment.Payment.StatusChoices.COMPLETED
+        payment_res.for_application.payment_status = payment.Payment.StatusChoices.COMPLETED
+        payment_res.for_application.save()
+        payment_res.save()
+        return Response(ResponseObj(msg="hello").get())
+        # return HttpResponseRedirect(config("CLIENT_BASE_URL") + "/jobs")
