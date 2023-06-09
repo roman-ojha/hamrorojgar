@@ -41,20 +41,20 @@ POST http://127.0.0.1:8000/api/citizen/login
 Content-Type: application/json
 
 {
-    "email": "rrr@gmail.com",
-    "password": "rrr@123"
+    "email": "rrrr@gmail.com",
+    "password": "rrrr@123"
 }
 
 ### Logout Citizen
 GET http://127.0.0.1:8000/api/citizen/logout
-Authorization: Token 9ae59b9dbcf9834775c4e15f5b8f0a20c0c69026
+Authorization: Token 4e72012e50fe301aa0170fa9c7e741622729a3e2
 
 
 
 ### Get Citizen Data
 GET http://127.0.0.1:8000/api/citizen
 Content-Type: application/json
-Authorization: Token 9ae59b9dbcf9834775c4e15f5b8f0a20c0c69026
+Authorization: Token 4e72012e50fe301aa0170fa9c7e741622729a3e2
 
 
 ### Get Jobs
@@ -83,3 +83,8 @@ Content-Type: image/jpeg
 < ./assets/images/cv_example.jpg
 
 --boundary_value--
+
+### Payment
+GET http://127.0.0.1:8000/api/payment/khalti?job_application_id=10
+Content-Type: application/json
+Authorization: Token 4e72012e50fe301aa0170fa9c7e741622729a3e2

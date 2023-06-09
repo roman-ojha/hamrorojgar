@@ -1,4 +1,6 @@
 asgiref==3.6.0
+certifi==2023.5.7
+charset-normalizer==3.1.0
 Django==4.2.1
 django-admin-argon-dashboard==1.0.16
 django-admin-datta==1.0.7
@@ -6,9 +8,12 @@ django-admin-numeric-filter==0.1.9
 django-cors-headers==4.0.0
 django-nested-inline==0.4.6
 djangorestframework==3.14.0
+idna==3.4
 Pillow==9.5.0
 psycopg2==2.9.6
 python-decouple==3.8
 pytz==2023.3
+requests==2.31.0
 sqlparse==0.4.4
 tzdata==2023.3
+urllib3==2.0.3
