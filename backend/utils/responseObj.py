@@ -7,7 +7,13 @@ class ResponseObj:
 
     def __init__(self, *args: Tuple | None, msg: str) -> None:
         self.msg = msg
-        self.data = args[0]
+        print(len(args))
+        if len(args) > 0:
+            self.data = args[0]
+        else:
+            self.data = None
 
     def get(self) -> Dict[str, str]:
-        return {"msg": self.msg, "data": self.data}
+        if self.data:
+            return {"msg": self.msg, "data": self.data}
+        return {"msg": self.msg}
