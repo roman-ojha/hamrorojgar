@@ -7,7 +7,8 @@
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum pharetra ullamcorper eros vitae auctor. Nullam rutrum semper lectus, vitae pulvinar sapien vulputate in. Nam auctor odio ac finibus pellentesque. Cras eu consectetur libero. Ut eleifend turpis eget lorem feugiat, sed cursus nulla euismod. Suspendisse convallis commodo metus, id lobortis risus tincidunt sit amet. Aliquam erat volutpat. Maecenas aliquet nibh id mi commodo aliquet. Pellentesque vel dapibus felis. Sed a tincidunt metus. Ut hendrerit consequat neque ac fringilla. Vestibulum sollicitudin ultrices lacus sed pulvinar. Quisque auctor euismod orci non volutpat. Nam rhoncus fermentum tortor ac feugiat. Mauris eleifend justo sit amet orci eleifend bibendum. Nunc id nisi eu turpis congue finibus ut at lectus. Sed quis elit id leo pellentesque facilisis ac sed sem. Suspendisse tempor tincidunt magna ut iaculis. Phasellus ultrices lectus vel mauris volutpat, et auctor est eleifend.",
       "is_approved": false,
       "citizen": 1,
-      "vacancy": 1
+      "vacancy": 1,
+      "payment_status": "COMPLETED"
     }
   },
   {
@@ -18,7 +19,8 @@
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum pharetra ullamcorper eros vitae auctor. Nullam rutrum semper lectus, vitae pulvinar sapien vulputate in. Nam auctor odio ac finibus pellentesque. Cras eu consectetur libero. Ut eleifend turpis eget lorem feugiat, sed cursus nulla euismod. Suspendisse convallis commodo metus, id lobortis risus tincidunt sit amet. Aliquam erat volutpat. Maecenas aliquet nibh id mi commodo aliquet. Pellentesque vel dapibus felis. Sed a tincidunt metus. Ut hendrerit consequat neque ac fringilla. Vestibulum sollicitudin ultrices lacus sed pulvinar. Quisque auctor euismod orci non volutpat. Nam rhoncus fermentum tortor ac feugiat. Mauris eleifend justo sit amet orci eleifend bibendum. Nunc id nisi eu turpis congue finibus ut at lectus. Sed quis elit id leo pellentesque facilisis ac sed sem. Suspendisse tempor tincidunt magna ut iaculis. Phasellus ultrices lectus vel mauris volutpat, et auctor est eleifend.",
       "is_approved": false,
       "citizen": 3,
-      "vacancy": 1
+      "vacancy": 1,
+      "payment_status": "COMPLETED"
     }
   },
   {
@@ -29,7 +31,8 @@
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum pharetra ullamcorper eros vitae auctor. Nullam rutrum semper lectus, vitae pulvinar sapien vulputate in. Nam auctor odio ac finibus pellentesque. Cras eu consectetur libero. Ut eleifend turpis eget lorem feugiat, sed cursus nulla euismod. Suspendisse convallis commodo metus, id lobortis risus tincidunt sit amet. Aliquam erat volutpat. Maecenas aliquet nibh id mi commodo aliquet. Pellentesque vel dapibus felis. Sed a tincidunt metus. Ut hendrerit consequat neque ac fringilla. Vestibulum sollicitudin ultrices lacus sed pulvinar. Quisque auctor euismod orci non volutpat. Nam rhoncus fermentum tortor ac feugiat. Mauris eleifend justo sit amet orci eleifend bibendum. Nunc id nisi eu turpis congue finibus ut at lectus. Sed quis elit id leo pellentesque facilisis ac sed sem. Suspendisse tempor tincidunt magna ut iaculis. Phasellus ultrices lectus vel mauris volutpat, et auctor est eleifend.",
       "is_approved": false,
       "citizen": 4,
-      "vacancy": 1
+      "vacancy": 1,
+      "payment_status": "COMPLETED"
     }
   },
   {
@@ -40,7 +43,8 @@
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum pharetra ullamcorper eros vitae auctor. Nullam rutrum semper lectus, vitae pulvinar sapien vulputate in. Nam auctor odio ac finibus pellentesque. Cras eu consectetur libero. Ut eleifend turpis eget lorem feugiat, sed cursus nulla euismod. Suspendisse convallis commodo metus, id lobortis risus tincidunt sit amet. Aliquam erat volutpat. Maecenas aliquet nibh id mi commodo aliquet. Pellentesque vel dapibus felis. Sed a tincidunt metus. Ut hendrerit consequat neque ac fringilla. Vestibulum sollicitudin ultrices lacus sed pulvinar. Quisque auctor euismod orci non volutpat. Nam rhoncus fermentum tortor ac feugiat. Mauris eleifend justo sit amet orci eleifend bibendum. Nunc id nisi eu turpis congue finibus ut at lectus. Sed quis elit id leo pellentesque facilisis ac sed sem. Suspendisse tempor tincidunt magna ut iaculis. Phasellus ultrices lectus vel mauris volutpat, et auctor est eleifend.",
       "is_approved": false,
       "citizen": 5,
-      "vacancy": 1
+      "vacancy": 1,
+      "payment_status": "COMPLETED"
     }
   },
   {
@@ -51,7 +55,8 @@
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum pharetra ullamcorper eros vitae auctor. Nullam rutrum semper lectus, vitae pulvinar sapien vulputate in. Nam auctor odio ac finibus pellentesque. Cras eu consectetur libero. Ut eleifend turpis eget lorem feugiat, sed cursus nulla euismod. Suspendisse convallis commodo metus, id lobortis risus tincidunt sit amet. Aliquam erat volutpat. Maecenas aliquet nibh id mi commodo aliquet. Pellentesque vel dapibus felis. Sed a tincidunt metus. Ut hendrerit consequat neque ac fringilla. Vestibulum sollicitudin ultrices lacus sed pulvinar. Quisque auctor euismod orci non volutpat. Nam rhoncus fermentum tortor ac feugiat. Mauris eleifend justo sit amet orci eleifend bibendum. Nunc id nisi eu turpis congue finibus ut at lectus. Sed quis elit id leo pellentesque facilisis ac sed sem. Suspendisse tempor tincidunt magna ut iaculis. Phasellus ultrices lectus vel mauris volutpat, et auctor est eleifend.",
       "is_approved": false,
       "citizen": 2,
-      "vacancy": 2
+      "vacancy": 2,
+      "payment_status": "COMPLETED"
     }
   },
   {
@@ -62,7 +67,8 @@
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum pharetra ullamcorper eros vitae auctor. Nullam rutrum semper lectus, vitae pulvinar sapien vulputate in. Nam auctor odio ac finibus pellentesque. Cras eu consectetur libero. Ut eleifend turpis eget lorem feugiat, sed cursus nulla euismod. Suspendisse convallis commodo metus, id lobortis risus tincidunt sit amet. Aliquam erat volutpat. Maecenas aliquet nibh id mi commodo aliquet. Pellentesque vel dapibus felis. Sed a tincidunt metus. Ut hendrerit consequat neque ac fringilla. Vestibulum sollicitudin ultrices lacus sed pulvinar. Quisque auctor euismod orci non volutpat. Nam rhoncus fermentum tortor ac feugiat. Mauris eleifend justo sit amet orci eleifend bibendum. Nunc id nisi eu turpis congue finibus ut at lectus. Sed quis elit id leo pellentesque facilisis ac sed sem. Suspendisse tempor tincidunt magna ut iaculis. Phasellus ultrices lectus vel mauris volutpat, et auctor est eleifend.",
       "is_approved": false,
       "citizen": 3,
-      "vacancy": 2
+      "vacancy": 2,
+      "payment_status": "COMPLETED"
     }
   },
   {
@@ -73,7 +79,8 @@
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum pharetra ullamcorper eros vitae auctor. Nullam rutrum semper lectus, vitae pulvinar sapien vulputate in. Nam auctor odio ac finibus pellentesque. Cras eu consectetur libero. Ut eleifend turpis eget lorem feugiat, sed cursus nulla euismod. Suspendisse convallis commodo metus, id lobortis risus tincidunt sit amet. Aliquam erat volutpat. Maecenas aliquet nibh id mi commodo aliquet. Pellentesque vel dapibus felis. Sed a tincidunt metus. Ut hendrerit consequat neque ac fringilla. Vestibulum sollicitudin ultrices lacus sed pulvinar. Quisque auctor euismod orci non volutpat. Nam rhoncus fermentum tortor ac feugiat. Mauris eleifend justo sit amet orci eleifend bibendum. Nunc id nisi eu turpis congue finibus ut at lectus. Sed quis elit id leo pellentesque facilisis ac sed sem. Suspendisse tempor tincidunt magna ut iaculis. Phasellus ultrices lectus vel mauris volutpat, et auctor est eleifend.",
       "is_approved": false,
       "citizen": 6,
-      "vacancy": 2
+      "vacancy": 2,
+      "payment_status": "COMPLETED"
     }
   },
   {
@@ -84,7 +91,8 @@
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum pharetra ullamcorper eros vitae auctor. Nullam rutrum semper lectus, vitae pulvinar sapien vulputate in. Nam auctor odio ac finibus pellentesque. Cras eu consectetur libero. Ut eleifend turpis eget lorem feugiat, sed cursus nulla euismod. Suspendisse convallis commodo metus, id lobortis risus tincidunt sit amet. Aliquam erat volutpat. Maecenas aliquet nibh id mi commodo aliquet. Pellentesque vel dapibus felis. Sed a tincidunt metus. Ut hendrerit consequat neque ac fringilla. Vestibulum sollicitudin ultrices lacus sed pulvinar. Quisque auctor euismod orci non volutpat. Nam rhoncus fermentum tortor ac feugiat. Mauris eleifend justo sit amet orci eleifend bibendum. Nunc id nisi eu turpis congue finibus ut at lectus. Sed quis elit id leo pellentesque facilisis ac sed sem. Suspendisse tempor tincidunt magna ut iaculis. Phasellus ultrices lectus vel mauris volutpat, et auctor est eleifend.",
       "is_approved": false,
       "citizen": 6,
-      "vacancy": 2
+      "vacancy": 2,
+      "payment_status": "COMPLETED"
     }
   },
   {
@@ -95,7 +103,8 @@
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum pharetra ullamcorper eros vitae auctor. Nullam rutrum semper lectus, vitae pulvinar sapien vulputate in. Nam auctor odio ac finibus pellentesque. Cras eu consectetur libero. Ut eleifend turpis eget lorem feugiat, sed cursus nulla euismod. Suspendisse convallis commodo metus, id lobortis risus tincidunt sit amet. Aliquam erat volutpat. Maecenas aliquet nibh id mi commodo aliquet. Pellentesque vel dapibus felis. Sed a tincidunt metus. Ut hendrerit consequat neque ac fringilla. Vestibulum sollicitudin ultrices lacus sed pulvinar. Quisque auctor euismod orci non volutpat. Nam rhoncus fermentum tortor ac feugiat. Mauris eleifend justo sit amet orci eleifend bibendum. Nunc id nisi eu turpis congue finibus ut at lectus. Sed quis elit id leo pellentesque facilisis ac sed sem. Suspendisse tempor tincidunt magna ut iaculis. Phasellus ultrices lectus vel mauris volutpat, et auctor est eleifend.",
       "is_approved": false,
       "citizen": 1,
-      "vacancy": 3
+      "vacancy": 3,
+      "payment_status": "COMPLETED"
     }
   },
   {
@@ -106,7 +115,8 @@
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum pharetra ullamcorper eros vitae auctor. Nullam rutrum semper lectus, vitae pulvinar sapien vulputate in. Nam auctor odio ac finibus pellentesque. Cras eu consectetur libero. Ut eleifend turpis eget lorem feugiat, sed cursus nulla euismod. Suspendisse convallis commodo metus, id lobortis risus tincidunt sit amet. Aliquam erat volutpat. Maecenas aliquet nibh id mi commodo aliquet. Pellentesque vel dapibus felis. Sed a tincidunt metus. Ut hendrerit consequat neque ac fringilla. Vestibulum sollicitudin ultrices lacus sed pulvinar. Quisque auctor euismod orci non volutpat. Nam rhoncus fermentum tortor ac feugiat. Mauris eleifend justo sit amet orci eleifend bibendum. Nunc id nisi eu turpis congue finibus ut at lectus. Sed quis elit id leo pellentesque facilisis ac sed sem. Suspendisse tempor tincidunt magna ut iaculis. Phasellus ultrices lectus vel mauris volutpat, et auctor est eleifend.",
       "is_approved": false,
       "citizen": 2,
-      "vacancy": 3
+      "vacancy": 3,
+      "payment_status": "COMPLETED"
     }
   },
   {
@@ -117,7 +127,8 @@
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum pharetra ullamcorper eros vitae auctor. Nullam rutrum semper lectus, vitae pulvinar sapien vulputate in. Nam auctor odio ac finibus pellentesque. Cras eu consectetur libero. Ut eleifend turpis eget lorem feugiat, sed cursus nulla euismod. Suspendisse convallis commodo metus, id lobortis risus tincidunt sit amet. Aliquam erat volutpat. Maecenas aliquet nibh id mi commodo aliquet. Pellentesque vel dapibus felis. Sed a tincidunt metus. Ut hendrerit consequat neque ac fringilla. Vestibulum sollicitudin ultrices lacus sed pulvinar. Quisque auctor euismod orci non volutpat. Nam rhoncus fermentum tortor ac feugiat. Mauris eleifend justo sit amet orci eleifend bibendum. Nunc id nisi eu turpis congue finibus ut at lectus. Sed quis elit id leo pellentesque facilisis ac sed sem. Suspendisse tempor tincidunt magna ut iaculis. Phasellus ultrices lectus vel mauris volutpat, et auctor est eleifend.",
       "is_approved": false,
       "citizen": 3,
-      "vacancy": 3
+      "vacancy": 3,
+      "payment_status": "COMPLETED"
     }
   },
   {
@@ -128,7 +139,8 @@
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum pharetra ullamcorper eros vitae auctor. Nullam rutrum semper lectus, vitae pulvinar sapien vulputate in. Nam auctor odio ac finibus pellentesque. Cras eu consectetur libero. Ut eleifend turpis eget lorem feugiat, sed cursus nulla euismod. Suspendisse convallis commodo metus, id lobortis risus tincidunt sit amet. Aliquam erat volutpat. Maecenas aliquet nibh id mi commodo aliquet. Pellentesque vel dapibus felis. Sed a tincidunt metus. Ut hendrerit consequat neque ac fringilla. Vestibulum sollicitudin ultrices lacus sed pulvinar. Quisque auctor euismod orci non volutpat. Nam rhoncus fermentum tortor ac feugiat. Mauris eleifend justo sit amet orci eleifend bibendum. Nunc id nisi eu turpis congue finibus ut at lectus. Sed quis elit id leo pellentesque facilisis ac sed sem. Suspendisse tempor tincidunt magna ut iaculis. Phasellus ultrices lectus vel mauris volutpat, et auctor est eleifend.",
       "is_approved": false,
       "citizen": 5,
-      "vacancy": 3
+      "vacancy": 3,
+      "payment_status": "COMPLETED"
     }
   },
   {
@@ -139,7 +151,8 @@
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum pharetra ullamcorper eros vitae auctor. Nullam rutrum semper lectus, vitae pulvinar sapien vulputate in. Nam auctor odio ac finibus pellentesque. Cras eu consectetur libero. Ut eleifend turpis eget lorem feugiat, sed cursus nulla euismod. Suspendisse convallis commodo metus, id lobortis risus tincidunt sit amet. Aliquam erat volutpat. Maecenas aliquet nibh id mi commodo aliquet. Pellentesque vel dapibus felis. Sed a tincidunt metus. Ut hendrerit consequat neque ac fringilla. Vestibulum sollicitudin ultrices lacus sed pulvinar. Quisque auctor euismod orci non volutpat. Nam rhoncus fermentum tortor ac feugiat. Mauris eleifend justo sit amet orci eleifend bibendum. Nunc id nisi eu turpis congue finibus ut at lectus. Sed quis elit id leo pellentesque facilisis ac sed sem. Suspendisse tempor tincidunt magna ut iaculis. Phasellus ultrices lectus vel mauris volutpat, et auctor est eleifend.",
       "is_approved": false,
       "citizen": 2,
-      "vacancy": 4
+      "vacancy": 4,
+      "payment_status": "COMPLETED"
     }
   },
   {
@@ -150,7 +163,8 @@
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum pharetra ullamcorper eros vitae auctor. Nullam rutrum semper lectus, vitae pulvinar sapien vulputate in. Nam auctor odio ac finibus pellentesque. Cras eu consectetur libero. Ut eleifend turpis eget lorem feugiat, sed cursus nulla euismod. Suspendisse convallis commodo metus, id lobortis risus tincidunt sit amet. Aliquam erat volutpat. Maecenas aliquet nibh id mi commodo aliquet. Pellentesque vel dapibus felis. Sed a tincidunt metus. Ut hendrerit consequat neque ac fringilla. Vestibulum sollicitudin ultrices lacus sed pulvinar. Quisque auctor euismod orci non volutpat. Nam rhoncus fermentum tortor ac feugiat. Mauris eleifend justo sit amet orci eleifend bibendum. Nunc id nisi eu turpis congue finibus ut at lectus. Sed quis elit id leo pellentesque facilisis ac sed sem. Suspendisse tempor tincidunt magna ut iaculis. Phasellus ultrices lectus vel mauris volutpat, et auctor est eleifend.",
       "is_approved": false,
       "citizen": 5,
-      "vacancy": 4
+      "vacancy": 4,
+      "payment_status": "COMPLETED"
     }
   },
   {
@@ -161,7 +175,8 @@
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum pharetra ullamcorper eros vitae auctor. Nullam rutrum semper lectus, vitae pulvinar sapien vulputate in. Nam auctor odio ac finibus pellentesque. Cras eu consectetur libero. Ut eleifend turpis eget lorem feugiat, sed cursus nulla euismod. Suspendisse convallis commodo metus, id lobortis risus tincidunt sit amet. Aliquam erat volutpat. Maecenas aliquet nibh id mi commodo aliquet. Pellentesque vel dapibus felis. Sed a tincidunt metus. Ut hendrerit consequat neque ac fringilla. Vestibulum sollicitudin ultrices lacus sed pulvinar. Quisque auctor euismod orci non volutpat. Nam rhoncus fermentum tortor ac feugiat. Mauris eleifend justo sit amet orci eleifend bibendum. Nunc id nisi eu turpis congue finibus ut at lectus. Sed quis elit id leo pellentesque facilisis ac sed sem. Suspendisse tempor tincidunt magna ut iaculis. Phasellus ultrices lectus vel mauris volutpat, et auctor est eleifend.",
       "is_approved": false,
       "citizen": 6,
-      "vacancy": 4
+      "vacancy": 4,
+      "payment_status": "COMPLETED"
     }
   },
   {
@@ -172,7 +187,8 @@
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum pharetra ullamcorper eros vitae auctor. Nullam rutrum semper lectus, vitae pulvinar sapien vulputate in. Nam auctor odio ac finibus pellentesque. Cras eu consectetur libero. Ut eleifend turpis eget lorem feugiat, sed cursus nulla euismod. Suspendisse convallis commodo metus, id lobortis risus tincidunt sit amet. Aliquam erat volutpat. Maecenas aliquet nibh id mi commodo aliquet. Pellentesque vel dapibus felis. Sed a tincidunt metus. Ut hendrerit consequat neque ac fringilla. Vestibulum sollicitudin ultrices lacus sed pulvinar. Quisque auctor euismod orci non volutpat. Nam rhoncus fermentum tortor ac feugiat. Mauris eleifend justo sit amet orci eleifend bibendum. Nunc id nisi eu turpis congue finibus ut at lectus. Sed quis elit id leo pellentesque facilisis ac sed sem. Suspendisse tempor tincidunt magna ut iaculis. Phasellus ultrices lectus vel mauris volutpat, et auctor est eleifend.",
       "is_approved": true,
       "citizen": 1,
-      "vacancy": 5
+      "vacancy": 5,
+      "payment_status": "COMPLETED"
     }
   },
   {
@@ -183,7 +199,8 @@
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum pharetra ullamcorper eros vitae auctor. Nullam rutrum semper lectus, vitae pulvinar sapien vulputate in. Nam auctor odio ac finibus pellentesque. Cras eu consectetur libero. Ut eleifend turpis eget lorem feugiat, sed cursus nulla euismod. Suspendisse convallis commodo metus, id lobortis risus tincidunt sit amet. Aliquam erat volutpat. Maecenas aliquet nibh id mi commodo aliquet. Pellentesque vel dapibus felis. Sed a tincidunt metus. Ut hendrerit consequat neque ac fringilla. Vestibulum sollicitudin ultrices lacus sed pulvinar. Quisque auctor euismod orci non volutpat. Nam rhoncus fermentum tortor ac feugiat. Mauris eleifend justo sit amet orci eleifend bibendum. Nunc id nisi eu turpis congue finibus ut at lectus. Sed quis elit id leo pellentesque facilisis ac sed sem. Suspendisse tempor tincidunt magna ut iaculis. Phasellus ultrices lectus vel mauris volutpat, et auctor est eleifend.",
       "is_approved": true,
       "citizen": 2,
-      "vacancy": 5
+      "vacancy": 5,
+      "payment_status": "COMPLETED"
     }
   },
   {
@@ -194,7 +211,8 @@
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum pharetra ullamcorper eros vitae auctor. Nullam rutrum semper lectus, vitae pulvinar sapien vulputate in. Nam auctor odio ac finibus pellentesque. Cras eu consectetur libero. Ut eleifend turpis eget lorem feugiat, sed cursus nulla euismod. Suspendisse convallis commodo metus, id lobortis risus tincidunt sit amet. Aliquam erat volutpat. Maecenas aliquet nibh id mi commodo aliquet. Pellentesque vel dapibus felis. Sed a tincidunt metus. Ut hendrerit consequat neque ac fringilla. Vestibulum sollicitudin ultrices lacus sed pulvinar. Quisque auctor euismod orci non volutpat. Nam rhoncus fermentum tortor ac feugiat. Mauris eleifend justo sit amet orci eleifend bibendum. Nunc id nisi eu turpis congue finibus ut at lectus. Sed quis elit id leo pellentesque facilisis ac sed sem. Suspendisse tempor tincidunt magna ut iaculis. Phasellus ultrices lectus vel mauris volutpat, et auctor est eleifend.",
       "is_approved": false,
       "citizen": 6,
-      "vacancy": 5
+      "vacancy": 5,
+      "payment_status": "COMPLETED"
     }
   },
   {
@@ -205,7 +223,8 @@
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum pharetra ullamcorper eros vitae auctor. Nullam rutrum semper lectus, vitae pulvinar sapien vulputate in. Nam auctor odio ac finibus pellentesque. Cras eu consectetur libero. Ut eleifend turpis eget lorem feugiat, sed cursus nulla euismod. Suspendisse convallis commodo metus, id lobortis risus tincidunt sit amet. Aliquam erat volutpat. Maecenas aliquet nibh id mi commodo aliquet. Pellentesque vel dapibus felis. Sed a tincidunt metus. Ut hendrerit consequat neque ac fringilla. Vestibulum sollicitudin ultrices lacus sed pulvinar. Quisque auctor euismod orci non volutpat. Nam rhoncus fermentum tortor ac feugiat. Mauris eleifend justo sit amet orci eleifend bibendum. Nunc id nisi eu turpis congue finibus ut at lectus. Sed quis elit id leo pellentesque facilisis ac sed sem. Suspendisse tempor tincidunt magna ut iaculis. Phasellus ultrices lectus vel mauris volutpat, et auctor est eleifend.",
       "is_approved": false,
       "citizen": 4,
-      "vacancy": 6
+      "vacancy": 6,
+      "payment_status": "COMPLETED"
     }
   },
   {
@@ -216,7 +235,8 @@
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum pharetra ullamcorper eros vitae auctor. Nullam rutrum semper lectus, vitae pulvinar sapien vulputate in. Nam auctor odio ac finibus pellentesque. Cras eu consectetur libero. Ut eleifend turpis eget lorem feugiat, sed cursus nulla euismod. Suspendisse convallis commodo metus, id lobortis risus tincidunt sit amet. Aliquam erat volutpat. Maecenas aliquet nibh id mi commodo aliquet. Pellentesque vel dapibus felis. Sed a tincidunt metus. Ut hendrerit consequat neque ac fringilla. Vestibulum sollicitudin ultrices lacus sed pulvinar. Quisque auctor euismod orci non volutpat. Nam rhoncus fermentum tortor ac feugiat. Mauris eleifend justo sit amet orci eleifend bibendum. Nunc id nisi eu turpis congue finibus ut at lectus. Sed quis elit id leo pellentesque facilisis ac sed sem. Suspendisse tempor tincidunt magna ut iaculis. Phasellus ultrices lectus vel mauris volutpat, et auctor est eleifend.",
       "is_approved": false,
       "citizen": 5,
-      "vacancy": 6
+      "vacancy": 6,
+      "payment_status": "COMPLETED"
     }
   },
   {
@@ -227,7 +247,8 @@
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum pharetra ullamcorper eros vitae auctor. Nullam rutrum semper lectus, vitae pulvinar sapien vulputate in. Nam auctor odio ac finibus pellentesque. Cras eu consectetur libero. Ut eleifend turpis eget lorem feugiat, sed cursus nulla euismod. Suspendisse convallis commodo metus, id lobortis risus tincidunt sit amet. Aliquam erat volutpat. Maecenas aliquet nibh id mi commodo aliquet. Pellentesque vel dapibus felis. Sed a tincidunt metus. Ut hendrerit consequat neque ac fringilla. Vestibulum sollicitudin ultrices lacus sed pulvinar. Quisque auctor euismod orci non volutpat. Nam rhoncus fermentum tortor ac feugiat. Mauris eleifend justo sit amet orci eleifend bibendum. Nunc id nisi eu turpis congue finibus ut at lectus. Sed quis elit id leo pellentesque facilisis ac sed sem. Suspendisse tempor tincidunt magna ut iaculis. Phasellus ultrices lectus vel mauris volutpat, et auctor est eleifend.",
       "is_approved": false,
       "citizen": 6,
-      "vacancy": 6
+      "vacancy": 6,
+      "payment_status": "COMPLETED"
     }
   },
   {
@@ -238,7 +259,8 @@
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum pharetra ullamcorper eros vitae auctor. Nullam rutrum semper lectus, vitae pulvinar sapien vulputate in. Nam auctor odio ac finibus pellentesque. Cras eu consectetur libero. Ut eleifend turpis eget lorem feugiat, sed cursus nulla euismod. Suspendisse convallis commodo metus, id lobortis risus tincidunt sit amet. Aliquam erat volutpat. Maecenas aliquet nibh id mi commodo aliquet. Pellentesque vel dapibus felis. Sed a tincidunt metus. Ut hendrerit consequat neque ac fringilla. Vestibulum sollicitudin ultrices lacus sed pulvinar. Quisque auctor euismod orci non volutpat. Nam rhoncus fermentum tortor ac feugiat. Mauris eleifend justo sit amet orci eleifend bibendum. Nunc id nisi eu turpis congue finibus ut at lectus. Sed quis elit id leo pellentesque facilisis ac sed sem. Suspendisse tempor tincidunt magna ut iaculis. Phasellus ultrices lectus vel mauris volutpat, et auctor est eleifend.",
       "is_approved": true,
       "citizen": 2,
-      "vacancy": 6
+      "vacancy": 6,
+      "payment_status": "COMPLETED"
     }
   },
   {
@@ -249,7 +271,8 @@
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum pharetra ullamcorper eros vitae auctor. Nullam rutrum semper lectus, vitae pulvinar sapien vulputate in. Nam auctor odio ac finibus pellentesque. Cras eu consectetur libero. Ut eleifend turpis eget lorem feugiat, sed cursus nulla euismod. Suspendisse convallis commodo metus, id lobortis risus tincidunt sit amet. Aliquam erat volutpat. Maecenas aliquet nibh id mi commodo aliquet. Pellentesque vel dapibus felis. Sed a tincidunt metus. Ut hendrerit consequat neque ac fringilla. Vestibulum sollicitudin ultrices lacus sed pulvinar. Quisque auctor euismod orci non volutpat. Nam rhoncus fermentum tortor ac feugiat. Mauris eleifend justo sit amet orci eleifend bibendum. Nunc id nisi eu turpis congue finibus ut at lectus. Sed quis elit id leo pellentesque facilisis ac sed sem. Suspendisse tempor tincidunt magna ut iaculis. Phasellus ultrices lectus vel mauris volutpat, et auctor est eleifend.",
       "is_approved": false,
       "citizen": 1,
-      "vacancy": 7
+      "vacancy": 7,
+      "payment_status": "COMPLETED"
     }
   },
   {
@@ -260,7 +283,8 @@
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum pharetra ullamcorper eros vitae auctor. Nullam rutrum semper lectus, vitae pulvinar sapien vulputate in. Nam auctor odio ac finibus pellentesque. Cras eu consectetur libero. Ut eleifend turpis eget lorem feugiat, sed cursus nulla euismod. Suspendisse convallis commodo metus, id lobortis risus tincidunt sit amet. Aliquam erat volutpat. Maecenas aliquet nibh id mi commodo aliquet. Pellentesque vel dapibus felis. Sed a tincidunt metus. Ut hendrerit consequat neque ac fringilla. Vestibulum sollicitudin ultrices lacus sed pulvinar. Quisque auctor euismod orci non volutpat. Nam rhoncus fermentum tortor ac feugiat. Mauris eleifend justo sit amet orci eleifend bibendum. Nunc id nisi eu turpis congue finibus ut at lectus. Sed quis elit id leo pellentesque facilisis ac sed sem. Suspendisse tempor tincidunt magna ut iaculis. Phasellus ultrices lectus vel mauris volutpat, et auctor est eleifend.",
       "is_approved": false,
       "citizen": 1,
-      "vacancy": 7
+      "vacancy": 7,
+      "payment_status": "COMPLETED"
     }
   },
   {
@@ -271,7 +295,8 @@
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum pharetra ullamcorper eros vitae auctor. Nullam rutrum semper lectus, vitae pulvinar sapien vulputate in. Nam auctor odio ac finibus pellentesque. Cras eu consectetur libero. Ut eleifend turpis eget lorem feugiat, sed cursus nulla euismod. Suspendisse convallis commodo metus, id lobortis risus tincidunt sit amet. Aliquam erat volutpat. Maecenas aliquet nibh id mi commodo aliquet. Pellentesque vel dapibus felis. Sed a tincidunt metus. Ut hendrerit consequat neque ac fringilla. Vestibulum sollicitudin ultrices lacus sed pulvinar. Quisque auctor euismod orci non volutpat. Nam rhoncus fermentum tortor ac feugiat. Mauris eleifend justo sit amet orci eleifend bibendum. Nunc id nisi eu turpis congue finibus ut at lectus. Sed quis elit id leo pellentesque facilisis ac sed sem. Suspendisse tempor tincidunt magna ut iaculis. Phasellus ultrices lectus vel mauris volutpat, et auctor est eleifend.",
       "is_approved": false,
       "citizen": 3,
-      "vacancy": 7
+      "vacancy": 7,
+      "payment_status": "COMPLETED"
     }
   },
   {
@@ -282,7 +307,8 @@
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum pharetra ullamcorper eros vitae auctor. Nullam rutrum semper lectus, vitae pulvinar sapien vulputate in. Nam auctor odio ac finibus pellentesque. Cras eu consectetur libero. Ut eleifend turpis eget lorem feugiat, sed cursus nulla euismod. Suspendisse convallis commodo metus, id lobortis risus tincidunt sit amet. Aliquam erat volutpat. Maecenas aliquet nibh id mi commodo aliquet. Pellentesque vel dapibus felis. Sed a tincidunt metus. Ut hendrerit consequat neque ac fringilla. Vestibulum sollicitudin ultrices lacus sed pulvinar. Quisque auctor euismod orci non volutpat. Nam rhoncus fermentum tortor ac feugiat. Mauris eleifend justo sit amet orci eleifend bibendum. Nunc id nisi eu turpis congue finibus ut at lectus. Sed quis elit id leo pellentesque facilisis ac sed sem. Suspendisse tempor tincidunt magna ut iaculis. Phasellus ultrices lectus vel mauris volutpat, et auctor est eleifend.",
       "is_approved": false,
       "citizen": 5,
-      "vacancy": 7
+      "vacancy": 7,
+      "payment_status": "COMPLETED"
     }
   },
   {
@@ -293,7 +319,8 @@
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum pharetra ullamcorper eros vitae auctor. Nullam rutrum semper lectus, vitae pulvinar sapien vulputate in. Nam auctor odio ac finibus pellentesque. Cras eu consectetur libero. Ut eleifend turpis eget lorem feugiat, sed cursus nulla euismod. Suspendisse convallis commodo metus, id lobortis risus tincidunt sit amet. Aliquam erat volutpat. Maecenas aliquet nibh id mi commodo aliquet. Pellentesque vel dapibus felis. Sed a tincidunt metus. Ut hendrerit consequat neque ac fringilla. Vestibulum sollicitudin ultrices lacus sed pulvinar. Quisque auctor euismod orci non volutpat. Nam rhoncus fermentum tortor ac feugiat. Mauris eleifend justo sit amet orci eleifend bibendum. Nunc id nisi eu turpis congue finibus ut at lectus. Sed quis elit id leo pellentesque facilisis ac sed sem. Suspendisse tempor tincidunt magna ut iaculis. Phasellus ultrices lectus vel mauris volutpat, et auctor est eleifend.",
       "is_approved": false,
       "citizen": 6,
-      "vacancy": 7
+      "vacancy": 7,
+      "payment_status": "COMPLETED"
     }
   }
 ]

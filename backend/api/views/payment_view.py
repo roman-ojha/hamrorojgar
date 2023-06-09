@@ -66,9 +66,7 @@ class Payment(APIView):
 
 class PaymentSuccess(APIView):
     def get(self, request: Request):
-        # print(request.query_params)
         pidx = request.query_params.get('pidx')
-        # GET /payment/success?pidx=C9KoQzFVdSozbP5r3BTfeW&txnId=DsNRhN4jAyEobd57APmPj3&amount=2000&mobile=98XXXXX004&purchase_order_id=HAMROROJGAR-khalti-29-11&purchase_order_name=job%20application%20payment&transaction_id=DsNRhN4jAyEobd57APmPj3 HTTP/1.1" 404 2577
         try:
             payment_res = payment.Payment.objects.get(payment_id=pidx)
         except ObjectDoesNotExist:
@@ -90,5 +88,4 @@ class PaymentSuccess(APIView):
         payment_res.for_application.payment_status = payment.Payment.StatusChoices.COMPLETED
         payment_res.for_application.save()
         payment_res.save()
-        return Response(ResponseObj(msg="hello").get())
-        # return HttpResponseRedirect(config("CLIENT_BASE_URL") + "/jobs")
+        return HttpResponseRedirect(config("CLIENT_BASE_URL") + "/jobs")
