@@ -1,5 +1,5 @@
 from django.db import models
-from . import CitizenUser, Vacancy
+from api.models import citizen, vacancy
 import os
 from rest_framework.settings import settings
 
@@ -10,6 +10,8 @@ class JobApplication(models.Model):
     description = models.TextField(null=True)
     is_approved = models.BooleanField(default=False)
     citizen = models.ForeignKey(
-        CitizenUser, on_delete=models.CASCADE, related_name='applied_by')
+        citizen.CitizenUser, on_delete=models.CASCADE, related_name='applied_by')
     vacancy = models.ForeignKey(
-        Vacancy, on_delete=models.CASCADE, related_name='applied_vacancy')
+        vacancy.Vacancy, on_delete=models.CASCADE, related_name='applied_vacancy')
+    # payment_status = status = models.CharField(
+    #     max_length=10, choices=payment.Payment.StatusChoices.choices)

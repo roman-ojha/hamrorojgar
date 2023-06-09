@@ -2,7 +2,7 @@ from typing import Any
 from django.contrib import admin
 from django.db.models.query import QuerySet
 from django.http.request import HttpRequest
-from api.models import Vacancy, Qualification
+from api.models import vacancy, qualification
 from django.forms.models import BaseInlineFormSet
 from django.utils.safestring import mark_safe
 from itertools import islice
@@ -11,13 +11,13 @@ from utils.get_table_field_button import get_table_field_button
 
 class Inline(admin.StackedInline):
     class InlineFormSet(BaseInlineFormSet):
-        model = Qualification
-    model = Qualification
+        model = qualification.Qualification
+    model = qualification.Qualification
     can_delete = False
     formset = InlineFormSet
 
 
-@admin.register(Vacancy)
+@admin.register(vacancy.Vacancy)
 class VacancyAdmin(admin.ModelAdmin):
     def salary(self, obj):
         return f"{obj.salary_from}K - {obj.salary_to}K"

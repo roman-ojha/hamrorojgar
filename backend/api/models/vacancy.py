@@ -1,5 +1,5 @@
 from django.db import models
-from . import Government
+from api.models import government
 from django.utils import timezone
 
 
@@ -19,7 +19,7 @@ class Vacancy(models.Model):
     opened_at = models.DateField(default=timezone.now)
     job_type = models.CharField(max_length=15, choices=JobTypeChoices.choices)
     government = models.ForeignKey(
-        Government, on_delete=models.CASCADE, related_name='opened_by')
+        government.Government, on_delete=models.CASCADE, related_name='opened_by')
     # job_location_desc
     # position
 

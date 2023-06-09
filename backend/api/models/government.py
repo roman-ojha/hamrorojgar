@@ -2,14 +2,13 @@ from typing import Any
 from django.db import models
 from django.contrib.auth.base_user import BaseUserManager
 from django.db.models.query import QuerySet
-from api.models.user import User
-from api.models.address import Address
+from api.models import user, address
 
 
 class GovernmentUserManager(BaseUserManager):
     def get_queryset(self, *args, **kwargs) -> QuerySet:
         result = super().get_queryset(*args, **kwargs)
-        return result.filter(role=User.Role.GOVERNMENT)
+        return result.filter(role=user.User.Role.GOVERNMENT)
 
     # overriding the 'create_user' method to so that password will get properly hashed
     def create_user(self, email, password=None, **extra_fields):
@@ -27,8 +26,8 @@ class GovernmentUserManager(BaseUserManager):
         return user
 
 
-class GovernmentUser(User):
-    base_role = User.Role.GOVERNMENT
+class GovernmentUser(user.User):
+    base_role = user.User.Role.GOVERNMENT
 
     class Meta:
         proxy = True
@@ -47,7 +46,7 @@ class Government(models.Model):
         LOCAL = 'L', "Local"
     gov_type = models.CharField(max_length=3, choices=GovernmentType.choices)
     location = models.OneToOneField(
-        Address, on_delete=models.CASCADE, related_name='government')
+        address.Address, on_delete=models.CASCADE, related_name='government')
 
     def __str__(self) -> str:
         return self.user.email

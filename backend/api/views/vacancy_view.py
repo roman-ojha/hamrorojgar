@@ -1,6 +1,6 @@
 from rest_framework.views import APIView
 from rest_framework.request import Request
-from api.models import Vacancy
+from api.models import vacancy
 from api.serializers import VacancySerializer
 from rest_framework.response import Response
 from rest_framework import status
@@ -15,10 +15,10 @@ class JobListView(APIView):
         try:
             id = request.query_params.get('id')
             if (id is None):
-                jobs = Vacancy.objects.all()
+                jobs = vacancy.Vacancy.objects.all()
                 serialized = VacancySerializer(jobs, many=True)
                 return Response(serialized.data, status=status.HTTP_200_OK)
-            jobs = Vacancy.objects.get(id=id)
+            jobs = vacancy.Vacancy.objects.get(id=id)
             serialized = VacancySerializer(jobs)
             return Response(serialized.data, status=status.HTTP_200_OK)
         except:

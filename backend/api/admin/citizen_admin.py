@@ -3,7 +3,7 @@ from django.contrib import admin
 from django.core.files.base import File
 from django.db.models.base import Model
 from django.forms.utils import ErrorList
-from api.models import CitizenUser, Citizen
+from api.models import citizen
 from django.forms.models import BaseInlineFormSet
 from django.utils.safestring import mark_safe
 from django.contrib.auth.admin import UserAdmin
@@ -13,20 +13,20 @@ from django import forms
 # To show the 'Citizen' data & Insert new data for Citizen on the same 'CitizenUser' Model Admin
 class CitizenInline(admin.StackedInline):
     class CitizenInlineFormSet(BaseInlineFormSet):
-        model = Citizen
+        model = citizen.Citizen
     # formset = CitizenInlineFormSet
 
     class CitizenInlineForm(forms.ModelForm):
 
         class Meta:
-            model = Citizen
+            model = citizen.Citizen
             fields = '__all__'
 
         def __init__(self, *args, **kwargs) -> None:
             super().__init__(*args, **kwargs)
             self.fields['m_name'].required = False
             self.fields['t_address'].required = False
-    model = Citizen
+    model = citizen.Citizen
     can_delete = False
     form = CitizenInlineForm
     fieldsets = (
@@ -45,7 +45,7 @@ class CitizenInline(admin.StackedInline):
     )
 
 
-@admin.register(CitizenUser)
+@admin.register(citizen.CitizenUser)
 class CitizenUserAdmin(UserAdmin):
     def mobile(self, obj):
         return obj.citizen.mobile

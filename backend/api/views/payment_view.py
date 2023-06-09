@@ -8,7 +8,7 @@ from rest_framework.response import Response
 from utils.responseObj import ResponseObj
 from rest_framework import status
 from decouple import config
-from api.models.job_application import JobApplication
+from api.models import job_application
 import requests
 from api.serializers.payment_serializer import PaymentSerializer
 from api.models.payment import Payment as PaymentModel
@@ -26,7 +26,8 @@ class Payment(APIView):
         # print(request.user)
         amount = 2000
         try:
-            job_application = JobApplication.objects.get(id=job_application_id)
+            job_application = job_application.JobApplication.objects.get(
+                id=job_application_id)
             if payment_gateway != "khalti":
                 return Response(ResponseObj(msg="Invalid request").get(), status=status.HTTP_400_BAD_REQUEST)
             payment_gateway = PaymentGateway.objects.get(code=payment_gateway)

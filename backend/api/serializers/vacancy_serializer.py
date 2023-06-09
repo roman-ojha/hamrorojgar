@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from api.models import Vacancy
+from api.models import vacancy
 from .government_serializer import GovernmentSerializer
 from .qualification_serializer import QualificationSerializer
 
@@ -9,6 +9,6 @@ class VacancySerializer(serializers.ModelSerializer):
     qualifications = QualificationSerializer(many=True)
 
     class Meta:
-        model = Vacancy
+        model = vacancy.Vacancy
         fields = ['id', 'title', 'description', 'is_opened', 'salary_from',
                   'salary_to', 'opened_at', 'job_type', 'government', 'qualifications']

@@ -1,7 +1,7 @@
 from rest_framework import serializers
 from django.db import models
 from rest_framework.fields import empty
-from api.models import Citizen, CitizenUser
+from api.models import citizen
 from rest_framework.authtoken.serializers import AuthTokenSerializer
 from django.utils.translation import gettext_lazy as _
 from django.contrib.auth import authenticate
@@ -14,7 +14,7 @@ class CitizenUserSerializer(serializers.ModelSerializer):
     c_password = serializers.CharField()
 
     class Meta:
-        model = CitizenUser
+        model = citizen.CitizenUser
         fields = ['id', 'email', 'password', 'c_password']
 
     def validate(self, attrs):
@@ -34,7 +34,7 @@ class CitizenSerializer(serializers.ModelSerializer):
     t_address = AddressSerializer(allow_null=True)
 
     class Meta:
-        model = Citizen
+        model = citizen.Citizen
         fields = ['user', 'f_name', 'm_name', 'l_name', 'mobile', 'date_of_birth',
                   'gender', 'nationality', 'citizenship_no', 'photo', 'p_address', 't_address']
 
@@ -43,7 +43,7 @@ class CitizenSerializer(serializers.ModelSerializer):
         print(user_data)
         del user_data['c_password']
         print(user_data)
-        user = CitizenUser.objects.create_user(**user_data)
+        user = citizen.CitizenUser.objects.create_user(**user_data)
         validated_data['user'] = user
         p_address_data = validated_data.pop('p_address')
         t_address_data = validated_data.pop('t_address')
@@ -52,13 +52,13 @@ class CitizenSerializer(serializers.ModelSerializer):
             t_address = Address.objects.create(**t_address_data)
             validated_data['t_address'] = t_address
         validated_data['p_address'] = p_address
-        return Citizen.objects.create(**validated_data)
+        return citizen.Citizen.objects.create(**validated_data)
 
 
 class GetCitizenSerializer(serializers.ModelSerializer):
     class GetCitizenUserSerializer(serializers.ModelSerializer):
         class Meta:
-            model = CitizenUser
+            model = citizen.CitizenUser
             fields = ['id', 'email']
     user = GetCitizenUserSerializer()
     p_address = AddressSerializer()
@@ -66,7 +66,7 @@ class GetCitizenSerializer(serializers.ModelSerializer):
     photo = serializers.SerializerMethodField()
 
     class Meta:
-        model = Citizen
+        model = citizen.Citizen
         fields = ['user', 'f_name', 'm_name', 'l_name', 'mobile', 'date_of_birth',
                   'gender', 'nationality', 'citizenship_no', 'photo', 'p_address', 't_address']
 

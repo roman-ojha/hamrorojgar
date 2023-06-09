@@ -3,7 +3,7 @@ from django.contrib.auth.base_user import BaseUserManager
 from django.db.models.query import QuerySet
 from django.utils.translation import gettext_lazy as _
 from . import User
-from .address import Address
+from api.models import address
 from rest_framework.settings import settings
 import os
 
@@ -65,6 +65,6 @@ class Citizen(models.Model):
     photo = models.ImageField(upload_to=os.path.join(
         settings.BASE_DIR, "static", "upload", "citizen"))
     p_address = models.OneToOneField(
-        Address, on_delete=models.CASCADE, related_name='p_address')
+        address.Address, on_delete=models.CASCADE, related_name='p_address')
     t_address = models.OneToOneField(
-        Address, on_delete=models.CASCADE, related_name='t_address', null=True)
+        address.Address, on_delete=models.CASCADE, related_name='t_address', null=True)

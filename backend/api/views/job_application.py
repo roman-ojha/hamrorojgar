@@ -10,7 +10,6 @@ import os
 from rest_framework.settings import settings
 from api.serializers import JobApplicationSerializer
 import json
-from api.models import User
 from data.constants import constants
 
 # class ApplyView(APIView):

@@ -1,11 +1,11 @@
 from rest_framework.serializers import ModelSerializer
-from api.models import GovernmentUser, Government
+from api.models import government
 from api.serializers.address_serializer import AddressSerializer
 
 
 class GovernmentUserSerializer(ModelSerializer):
     class Meta:
-        model = GovernmentUser
+        model = government.GovernmentUser
         fields = ['id', 'email',]
 
 
@@ -14,5 +14,5 @@ class GovernmentSerializer(ModelSerializer):
     location = AddressSerializer()
 
     class Meta:
-        model = Government
+        model = government.Government
         fields = ['gov_type', 'user', 'location']

@@ -1,16 +1,17 @@
 from django.contrib import admin
-from api.models import User, GovernmentUser, Government
+# from api.models import User, GovernmentUser, Government
+from api.models import user, government
 from django.forms.models import BaseInlineFormSet
 from django import forms
 from django.contrib.auth.admin import UserAdmin
 
 
-@admin.register(GovernmentUser)
+@admin.register(government.GovernmentUser)
 class GovernmentUserAdmin(UserAdmin):
     class Inline(admin.StackedInline):
         class InlineFormSet(BaseInlineFormSet):
-            model = Government
-        model = Government
+            model = government.Government
+        model = government.Government
         can_delete = False
         # formset = InlineFormSet
         fieldsets = (
