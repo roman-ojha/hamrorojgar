@@ -60,10 +60,37 @@ const api = {
       }
     },
   },
+  payment: {
+    index: async (
+      paymentGateway: string,
+      jobApplicationId: number
+    ): Promise<ApiReturnType | null> => {
+      if (paymentGateway && jobApplicationId) {
+        try {
+          return await instance({
+            method: "GET",
+            url: `/payment/${paymentGateway}?job_application_id=${jobApplicationId}`,
+            headers: {
+              "Content-Type": "multipart/form-data",
+            },
+            withCredentials: true,
+          });
+        } catch (error) {
+          return getAPIError(error as AxiosError);
+        }
+      }
+      return {
+        data: {
+          // msg: "Payment gateway is not provided",
+        },
+        status: 400,
+      };
+    },
+  },
   citizen: {
     register: async (data: CitizenForm) => {
       const isWhiteSpace = (str: string) => /^\s*$/.test(str);
-      const jsonData: Citizen = {
+      const jsonData = {
         ...data,
         date_of_birth: `${data.date_of_birth.year}-${data.date_of_birth.month}-${data.date_of_birth.day}`,
         t_address:

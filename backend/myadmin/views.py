@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.views.decorators.http import require_http_methods
-from api.models import job_application
+from api.models.job_application import JobApplication
 from django.http import HttpResponseRedirect
 from django.http import HttpRequest
 from django.contrib.admin.views.decorators import staff_member_required
@@ -17,7 +17,7 @@ def index(request):
 @staff_member_required
 def view_job_application(request, id):
     try:
-        job_application = job_application.JobApplication.objects.get(id=id)
+        job_application = JobApplication.objects.get(id=id)
         if job_application.vacancy.government.pk == request.user.pk or request.user.is_superuser:
             return render(request, 'myadmin/view_job_application.html', {'job_application': job_application})
         return HttpResponseRedirect('/admin/api/jobapplication/')

@@ -30,7 +30,7 @@ class Payment(APIView):
             res_job_application = job_application.JobApplication.objects.get(
                 id=job_application_id)
             if res_job_application.payment_status == job_application.JobApplication.PaymentStatusChoices.COMPLETED:
-                return Response(ResponseObj(msg="No need to pay twice for same job application"))
+                return Response(ResponseObj(msg="No need to pay twice for same job application").get(), status=status.HTTP_406_NOT_ACCEPTABLE)
             if payment_gateway != "khalti":
                 return Response(ResponseObj(msg="Invalid request").get(), status=status.HTTP_400_BAD_REQUEST)
             res_payment_gateway = PaymentGateway.objects.get(
@@ -55,10 +55,10 @@ class Payment(APIView):
                 })
                 if payment_serializer.is_valid():
                     payment_serializer.save()
-                    return Response(ResponseObj({'pidx': response.json().get('pidx'), 'payment_url': response.json().get('payment_url')}, msg="Successful").get(), status=status.HTTP_400_BAD_REQUEST)
+                    return Response(ResponseObj({'pidx': response.json().get('pidx'), 'payment_url': response.json().get('payment_url')}, msg="Successful").get(), status=status.HTTP_200_OK)
                 else:
                     # print(payment_serializer.errors)
-                    return Response(ResponseObj(msg="Internal server error").get(), status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+                    return Response(ResponseObj(msg=payment_serializer.errors).get(), status=status.HTTP_500_INTERNAL_SERVER_ERROR)
         except:
             return Response(ResponseObj(msg="Some error occur trying do payment, please try again letter").get(), status=status.HTTP_400_BAD_REQUEST)
         return Response(ResponseObj(msg="Internal server error").get(), status=status.HTTP_500_INTERNAL_SERVER_ERROR)

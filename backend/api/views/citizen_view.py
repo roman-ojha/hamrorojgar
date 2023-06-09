@@ -1,4 +1,4 @@
-from api.models import citizen
+from api.models.citizen import Citizen, CitizenUser
 from api.serializers import CitizenSerializer, GetCitizenSerializer
 import io
 from rest_framework.response import Response
@@ -41,8 +41,8 @@ class CitizenView(APIView):
 
     def get(self, request: Request, pk=None, format=None):
         try:
-            user = citizen.CitizenUser.objects.get(pk=request.user.id)
-            citizen = citizen.Citizen.objects.get(user=user)
+            user = CitizenUser.objects.get(pk=request.user.id)
+            citizen = Citizen.objects.get(user=user)
             citizen_serialized = GetCitizenSerializer(citizen)
             return Response(citizen_serialized.data, status=status.HTTP_200_OK)
         except:

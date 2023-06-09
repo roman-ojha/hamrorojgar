@@ -1,3 +1,4 @@
+from django.http import HttpResponseRedirect
 from rest_framework.views import APIView
 from rest_framework.request import Request
 from rest_framework.response import Response
@@ -12,6 +13,8 @@ from api.serializers import JobApplicationSerializer
 from api.models import job_application
 import json
 from data.constants import constants
+import requests
+from decouple import config
 
 # class ApplyView(APIView):
 #     parser_classes = [MultiPartParser]
@@ -47,7 +50,7 @@ class ApplyView(APIView):
             })
             if serializer.is_valid():
                 serializer.save()
-                return Response(ResponseObj(msg="Application form submitted successfully").get(), status=status.HTTP_201_CREATED)
+                return Response(ResponseObj({"job_application_id": serializer.instance.pk}, msg="Application form submitted successfully").get(), status=status.HTTP_201_CREATED)
             return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
         except Exception as e:
             return Response(ResponseObj(msg=constants.HTTP_500_STATUS_MSG).get(), status=status.HTTP_500_INTERNAL_SERVER_ERROR)

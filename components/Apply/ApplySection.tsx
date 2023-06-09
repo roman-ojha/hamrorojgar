@@ -47,9 +47,17 @@ const ApplySection = (): React.JSX.Element => {
   } = useForm<JobApplication>();
 
   const applyForJob = async (data: JobApplication) => {
-    const res = await api.jobs.apply(data, vacancy_id as string);
-    if (res && isOkResponse(res.status)) {
-      router.push("/jobs");
+    const res_applied_job = await api.jobs.apply(data, vacancy_id as string);
+    if (res_applied_job && isOkResponse(res_applied_job.status)) {
+      console.log(res_applied_job.data);
+      const res_payment = await api.payment.index(
+        "khalti",
+        res_applied_job.data.data.job_application_id
+      );
+      if (res_payment && isOkResponse(res_payment.status)) {
+        console.log(res_payment);
+        window.location.href = res_payment.data.data.payment_url;
+      }
     }
   };
 

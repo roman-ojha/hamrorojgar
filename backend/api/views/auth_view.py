@@ -1,7 +1,7 @@
 from django.http import HttpRequest, JsonResponse, HttpResponse
 from rest_framework.renderers import JSONRenderer
 from rest_framework.parsers import JSONParser
-from api.models import citizen
+from api.models.citizen import Citizen, CitizenUser
 from api.serializers import CitizenSerializer, LoginAuthTokenSerializer, GetCitizenSerializer
 from rest_framework.response import Response
 from rest_framework.request import Request
@@ -43,8 +43,8 @@ class CitizenLogin(ObtainAuthToken):
             if serialized_data.is_valid(raise_exception=False):
                 user = serialized_data.validated_data['user']
                 token, created = Token.objects.get_or_create(user=user)
-                user = citizen.CitizenUser.objects.get(pk=user.pk)
-                citizen = citizen.Citizen.objects.get(user=user)
+                user = CitizenUser.objects.get(pk=user.pk)
+                citizen = Citizen.objects.get(user=user)
                 citizen_serialized = GetCitizenSerializer(citizen)
                 cookie_expire_date = 10
                 expiration_date = datetime.utcnow() + timedelta(days=cookie_expire_date)

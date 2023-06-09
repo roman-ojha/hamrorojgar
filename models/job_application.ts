@@ -8,4 +8,5 @@ export interface JobApplication {
   citizen: Citizen;
   vacancy: Vacancy;
   description: string | null;
+  payment_status: string;
 }
