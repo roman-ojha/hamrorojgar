@@ -59,6 +59,23 @@ const api = {
         return getAPIError(error as AxiosError);
       }
     },
+    search: async (
+      q: string | null,
+      district: string | null,
+      municipality: string | null
+    ) => {
+      console.log(
+        `/jobs/search?q=${q}&district=${district}&municipality=${municipality}`
+      );
+      try {
+        // return await instance({
+        //   method: "GET",
+        //   url: `/jobs/search?q=${q}&district=${district}&municipality=${municipality}`,
+        // });
+      } catch (error) {
+        return getAPIError(error as AxiosError);
+      }
+    },
   },
   payment: {
     index: async (

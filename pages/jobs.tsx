@@ -2,10 +2,10 @@ import React from "react";
 import Head from "next/head";
 import NavBar from "@/components/NavBar";
 import styles from "@/styles/pages/jobs.module.scss";
-import { Icon } from "@iconify/react";
 import JobDesc from "@/components/Jobs/JobDesc";
 import GetJobCards from "@/components/Jobs/GetJobCards";
 import Background from "@/components/Background";
+import SearchJobs from "@/components/Jobs/SearchJobs";
 
 const Jobs = (): React.JSX.Element => {
   return (
@@ -16,39 +16,7 @@ const Jobs = (): React.JSX.Element => {
       <div className={styles.jobs}>
         <Background />
         <NavBar />
-        <form className={styles.jobs__search}>
-          <div className={styles.jobs__search__what}>
-            <label htmlFor="search_what">What</label>
-            <div className={styles.jobs__search__what__input_field}>
-              <input
-                type="search"
-                name="search_what"
-                id="search_what"
-                placeholder="Search..."
-              />
-              <Icon
-                className={styles.jobs__search__what__input_field__icon}
-                icon="ic:outline-search"
-              />
-            </div>
-          </div>
-          <div className={styles.jobs__search__where}>
-            <label htmlFor="district">Where</label>
-            <select name="district" id="district">
-              <option value="">District</option>
-              <option value="">jhapa</option>
-            </select>
-            <select name="municipality" id="municipality">
-              <option value="">Municipality</option>
-              <option value="">kamal</option>
-            </select>
-            <Icon
-              className={styles.jobs__search__where__icon}
-              icon="ic:outline-search"
-            />
-          </div>
-          <div className={styles.jobs__search__where}></div>
-        </form>
+        <SearchJobs />
         <main id="jobs-page-main-section" className={styles.jobs__main}>
           <section className={styles.jobs__main__job_card_column}>
             <GetJobCards />
