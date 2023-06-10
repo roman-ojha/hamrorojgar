@@ -1,1 +1,1 @@
-from api.algolia.vacancy_index import VacancyIndex
+from api.algolia.index.vacancy_index import VacancyIndex

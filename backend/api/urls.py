@@ -2,7 +2,7 @@ from django.urls import path
 from api.views.auth_view import CitizenRegister, CitizenLogin, CitizenLogout
 from api.views.citizen_view import CitizenView
 from api.views.job_application import ApplyView
-from api.views.vacancy_view import JobListView
+from api.views.vacancy_view import JobListView, SearchJobs
 from api.views.payment_view import Payment, PaymentSuccess
 
 
@@ -16,4 +16,5 @@ urlpatterns = [
     path('payment/success', PaymentSuccess.as_view(), name='payment-success'),
     path('payment/<str:payment_gateway>',
          Payment.as_view(), name='payment'),  # ?job_application_id=xxx
+    path('jobs/search', SearchJobs.as_view(), name="search-jobs"),
 ]
