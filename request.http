@@ -89,5 +89,7 @@ GET http://127.0.0.1:8000/api/payment/khalti?job_application_id=70
 Content-Type: application/json
 Authorization: Token 4e72012e50fe301aa0170fa9c7e741622729a3e2
 
+# GET http://127.0.0.1:8000/api/jobs/search?q=chat%20service&district=fdsa&municipality=fds
+
 ### Search Jobs
-GET http://127.0.0.1:8000/api/jobs/search?q=chat
+GET http://127.0.0.1:8000/api/jobs/search?q=part&district=Jhapa&municipality=Kamal
