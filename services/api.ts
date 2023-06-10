@@ -60,18 +60,18 @@ const api = {
       }
     },
     search: async (
-      q: string | null,
-      district: string | null,
-      municipality: string | null
-    ) => {
+      q: string,
+      district: string,
+      municipality: string
+    ): Promise<ApiReturnType | null> => {
       console.log(
         `/jobs/search?q=${q}&district=${district}&municipality=${municipality}`
       );
       try {
-        // return await instance({
-        //   method: "GET",
-        //   url: `/jobs/search?q=${q}&district=${district}&municipality=${municipality}`,
-        // });
+        return await instance({
+          method: "GET",
+          url: `/jobs/search?q=${q}&district=${district}&municipality=${municipality}`,
+        });
       } catch (error) {
         return getAPIError(error as AxiosError);
       }

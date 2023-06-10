@@ -8,6 +8,7 @@ export interface JobState extends Vacancy {
 export enum JobActionType {
   FETCH_JOBS = "FETCH_JOBS",
   FETCH_JOB = "FETCH_JOB",
+  STORE_JOBS = "STORE_JOBS",
 }
 
 export interface FetchJobs {
@@ -20,6 +21,11 @@ export interface FetchJob {
   payload: JobState;
 }
 
-export type JobsAction = FetchJobs;
+export interface StoreJobs {
+  type: JobActionType.STORE_JOBS;
+  payload: JobState[];
+}
+
+export type JobsAction = FetchJobs | StoreJobs;
 
 export type JobAction = FetchJob;

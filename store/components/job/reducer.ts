@@ -10,6 +10,8 @@ const jobsReducer = (
   switch (action.type) {
     case JobActionType.FETCH_JOBS:
       return action.payload;
+    case JobActionType.STORE_JOBS:
+      return action.payload;
     default:
       return state;
   }

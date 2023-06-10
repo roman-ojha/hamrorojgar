@@ -2,8 +2,12 @@ import React, { memo, useEffect, useMemo, useState } from "react";
 import styles from "@/styles/pages/jobs.module.scss";
 import { Icon } from "@iconify/react";
 import { useRouter } from "next/router";
+import { api } from "@/services/api";
+import { isOkResponse } from "@/utils/checkApiStatus";
+import { useAppState } from "@/hooks/useAppState";
 
 const SearchJobs = (): React.JSX.Element => {
+  const [{ storeJobs }] = useAppState([]);
   const router = useRouter();
   //   console.log(router.query);
   const [queries, setQueries] = useState<{
@@ -17,44 +21,38 @@ const SearchJobs = (): React.JSX.Element => {
   });
 
   useEffect(() => {
-    if (router.query["q"] && !Array.isArray(router.query["q"])) {
-      if (
-        router.query["district"] &&
-        !Array.isArray(router.query["district"])
-      ) {
-        if (
-          router.query["municipality"] &&
-          !Array.isArray(router.query["municipality"])
-        ) {
-          setQueries({
-            q: router.query["q"],
-            district: router.query["district"],
-            municipality: router.query["municipality"],
-          });
-        } else {
-          setQueries({
-            q: router.query["q"],
-            district: router.query["district"],
-            municipality: null,
-          });
-        }
-      } else {
-        setQueries({
-          q: router.query["q"],
-          district: null,
-          municipality: null,
-        });
-      }
-    }
+    setQueries({
+      q:
+        router.query["q"] && !Array.isArray(router.query["q"])
+          ? router.query["q"]
+          : null,
+      district:
+        router.query["district"] && !Array.isArray(router.query["district"])
+          ? router.query["district"]
+          : null,
+      municipality:
+        router.query["municipality"] &&
+        !Array.isArray(router.query["municipality"])
+          ? router.query["municipality"]
+          : null,
+    });
   }, [router]);
 
   useEffect(() => {
-    console.log(queries);
-    if (queries.q) {
-      if (queries.municipality && queries.district) {
+    const fetchJobs = async () => {
+      if (queries.q || queries.district || queries.municipality) {
+        const resJobs = await api.jobs.search(
+          queries.q ? queries.q : "",
+          queries.district ? queries.district : "",
+          queries.municipality ? queries.municipality : ""
+        );
+        if (resJobs && isOkResponse(resJobs?.status)) {
+          storeJobs(resJobs.data);
+        }
       }
-    }
-  }, [queries]);
+    };
+    fetchJobs();
+  }, [queries, storeJobs]);
 
   return (
     <>
