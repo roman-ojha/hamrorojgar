@@ -29,38 +29,45 @@ class Payment(APIView):
         try:
             res_job_application = job_application.JobApplication.objects.get(
                 id=job_application_id)
-            if res_job_application.payment_status == job_application.JobApplication.PaymentStatusChoices.COMPLETED:
-                return Response(ResponseObj(msg="No need to pay twice for same job application").get(), status=status.HTTP_406_NOT_ACCEPTABLE)
-            if payment_gateway != "khalti":
-                return Response(ResponseObj(msg="Invalid request").get(), status=status.HTTP_400_BAD_REQUEST)
-            res_payment_gateway = PaymentGateway.objects.get(
-                code=payment_gateway)
-            requestHeader = {"Authorization": config("KHALTI_LIVE_SECRET_KEY")}
-            requestParameters = {
-                "return_url": config("API_BASE_URL") + "/api/payment/success",
-                "website_url": config("API_BASE_URL"),
-                "amount": amount,
-                "purchase_order_id": f"HAMROROJGAR-{payment_gateway}-{job_application_id}-{request.user.id}",
-                "purchase_order_name": f"job application payment",
-            }
-            # print(requestHeader, requestParameters)
-            # request to khalti to initiate the payment
-            response = requests.post(
-                config("KHALTI_PAYMENT_BASE_URL") + "/epayment/initiate/", headers=requestHeader, data=requestParameters)
-            if response.status_code == 200:
-                # save payment into payment table
-                payment_serializer = PaymentSerializer(data={
-                    'amount': amount, 'payment_using': res_payment_gateway.id, 'from_acc': None, 'status': payment.Payment.StatusChoices.PENDING,
-                    'payment_id': response.json().get('pidx'), 'transaction_id': None, 'by': request.user.pk, 'for_application': res_job_application.pk
-                })
-                if payment_serializer.is_valid():
-                    payment_serializer.save()
-                    return Response(ResponseObj({'pidx': response.json().get('pidx'), 'payment_url': response.json().get('payment_url')}, msg="Successful").get(), status=status.HTTP_200_OK)
-                else:
-                    # print(payment_serializer.errors)
-                    return Response(ResponseObj(msg=payment_serializer.errors).get(), status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+        except ObjectDoesNotExist:
+            return Response(ResponseObj(msg="given job application doesn't exist").get(
+            ), status=status.HTTP_404_NOT_FOUND)
         except:
             return Response(ResponseObj(msg="Some error occur trying do payment, please try again letter").get(), status=status.HTTP_400_BAD_REQUEST)
+        if res_job_application.citizen.id != request.user.pk:  # only authorized same user can do payment
+            return Response(ResponseObj(msg="You aren't authorize to access other job application").get(), status=status.HTTP_401_UNAUTHORIZED)
+        if res_job_application.payment_status == job_application.JobApplication.PaymentStatusChoices.COMPLETED:
+            # only pay if not previously paid for this job application
+            return Response(ResponseObj(msg="No need to pay twice for same job application").get(), status=status.HTTP_406_NOT_ACCEPTABLE)
+        if payment_gateway != "khalti":
+            return Response(ResponseObj(msg="Given payment gateway doesn't exist").get(), status=status.HTTP_400_BAD_REQUEST)
+        res_payment_gateway = PaymentGateway.objects.get(
+            code=payment_gateway)
+
+        # Khalti api request header & parameters
+        requestHeader = {"Authorization": config("KHALTI_LIVE_SECRET_KEY")}
+        requestParameters = {
+            "return_url": config("API_BASE_URL") + "/api/payment/success",
+            "website_url": config("API_BASE_URL"),
+            "amount": amount,
+            "purchase_order_id": f"HAMROROJGAR-{payment_gateway}-{job_application_id}-{request.user.id}",
+            "purchase_order_name": f"job application payment",
+        }
+        # request to khalti to initiate the payment
+        response = requests.post(
+            config("KHALTI_PAYMENT_BASE_URL") + "/epayment/initiate/", headers=requestHeader, data=requestParameters)
+        if response.status_code == 200:
+            # save payment into payment table
+            payment_serializer = PaymentSerializer(data={
+                'amount': amount, 'payment_using': res_payment_gateway.id, 'from_acc': None, 'status': payment.Payment.StatusChoices.PENDING,
+                'payment_id': response.json().get('pidx'), 'transaction_id': None, 'by': request.user.pk, 'for_application': res_job_application.pk
+            })
+            if payment_serializer.is_valid():
+                payment_serializer.save()
+                return Response(ResponseObj({'pidx': response.json().get('pidx'), 'payment_url': response.json().get('payment_url')}, msg="Successful").get(), status=status.HTTP_200_OK)
+            else:
+                # print(payment_serializer.errors)
+                return Response(ResponseObj(msg=payment_serializer.errors).get(), status=status.HTTP_500_INTERNAL_SERVER_ERROR)
         return Response(ResponseObj(msg="Internal server error").get(), status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
 

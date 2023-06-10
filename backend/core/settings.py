@@ -34,7 +34,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'admin_argon.apps.AdminArgonConfig',
+    'admin_argon.apps.AdminArgonConfig',  # argon admin panel
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     'api',
     'myadmin',
     'maingovdb',
+    'algoliasearch_django',  # algolia serach engine
 ]
 
 MIDDLEWARE = [
@@ -200,3 +201,9 @@ AUTH_COOKIE_NAME = 'auth'
 #         },
 #     },
 # }
+
+ALGOLIA = {
+    'APPLICATION_ID': config("ALGOLIA_APPLICATION_ID"),
+    'API_KEY': config("ALGOLIA_ADMIN_API_KEY"),
+    # 'INDEX_PREFIX':''
+}
