@@ -7,3 +7,4 @@ from api.models import vacancy
 class VacancyIndex(AlgoliaIndex):
     fields = ('title', 'description', 'job_type')
     should_index = 'is_closed'
+    tags = "get_tag_list"

@@ -29,5 +29,6 @@ class Vacancy(models.Model):
     def is_closed(self):  # for algolia 'should_index' field
         return self.is_opened
 
-    def location_tag(self):
+    def get_tag_list(self):  # for algolia 'tags'
+        return [f"{self.government.location.district} {self.government.location.municipality}"]
         pass

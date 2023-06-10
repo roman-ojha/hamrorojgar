@@ -4,7 +4,7 @@
     "pk": 1,
     "fields": {
       "district": "Jhapa",
-      "municipality": "kamal",
+      "municipality": "Kamal",
       "ward_no": "03"
     }
   },
@@ -12,71 +12,71 @@
     "model": "api.Address",
     "pk": 2,
     "fields": {
-      "district": "Jhapa",
-      "municipality": "kamal",
-      "ward_no": "03"
+      "district": "Kathmandu",
+      "municipality": "Kathmandu",
+      "ward_no": "10"
     }
   },
   {
     "model": "api.Address",
     "pk": 3,
     "fields": {
-      "district": "Jhapa",
-      "municipality": "kamal",
-      "ward_no": "03"
+      "district": "Makwanpur",
+      "municipality": "Hetauda",
+      "ward_no": "05"
     }
   },
   {
     "model": "api.Address",
     "pk": 4,
     "fields": {
-      "district": "Jhapa",
-      "municipality": "kamal",
-      "ward_no": "03"
+      "district": "Illam",
+      "municipality": "Illam",
+      "ward_no": "08"
     }
   },
   {
     "model": "api.Address",
     "pk": 5,
     "fields": {
-      "district": "Jhapa",
-      "municipality": "kamal",
-      "ward_no": "03"
+      "district": "Dhanusha",
+      "municipality": "Janakpur",
+      "ward_no": "10"
     }
   },
   {
     "model": "api.Address",
     "pk": 6,
     "fields": {
-      "district": "Jhapa",
-      "municipality": "kamal",
-      "ward_no": "03"
+      "district": "Bara",
+      "municipality": "Kalaiya",
+      "ward_no": "13"
     }
   },
   {
     "model": "api.Address",
     "pk": 7,
     "fields": {
-      "district": "Jhapa",
-      "municipality": "kamal",
-      "ward_no": "03"
+      "district": "Banke",
+      "municipality": "Nepalganj",
+      "ward_no": "02"
     }
   },
   {
     "model": "api.Address",
     "pk": 8,
     "fields": {
-      "district": "Jhapa",
-      "municipality": "kamal",
-      "ward_no": "03"
+      "district": "Surkhet",
+      "municipality": "Birendranagar",
+      "ward_no": "04"
     }
   },
   {
     "model": "api.Address",
     "pk": 9,
     "fields": {
-      "district": "Jhapa",
-      "municipality": "kamal",
+      "district": "Morong",
+      "municipality": "Biratnagar",
       "ward_no": "03"
     }
   }
