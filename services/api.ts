@@ -64,9 +64,6 @@ const api = {
       district: string,
       municipality: string
     ): Promise<ApiReturnType | null> => {
-      console.log(
-        `/jobs/search?q=${q}&district=${district}&municipality=${municipality}`
-      );
       try {
         return await instance({
           method: "GET",
