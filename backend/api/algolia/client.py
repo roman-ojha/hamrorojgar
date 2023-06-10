@@ -19,6 +19,5 @@ def perform_search(query, index_name="Vacancy", **kwargs):
         tags = kwargs.pop("tags") or []
         if len(tags) != 0:
             params['tagFilters'] = tags
-    print(params)
     results = index.search(query, params)
     return results

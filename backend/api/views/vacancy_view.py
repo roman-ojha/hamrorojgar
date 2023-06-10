@@ -28,15 +28,18 @@ class JobListView(APIView):
 
 class SearchJobs(APIView):
     def get(self, request: Request, *args, **kwargs):
-        query = request.query_params.get('q')
+        query = request.query_params.get('q') or ""
         district_tag = request.query_params.get('district') or None
         municipality_tag = request.query_params.get('municipality') or None
         tags = []
-        if not query:
-            return Response(ResponseObj(msg="Could not find query parameter").get(), status=status.HTTP_400_BAD_REQUEST)
         if district_tag and municipality_tag:
             location_tag = f"{district_tag} {municipality_tag}"
             tags.append(location_tag)
         results = client.perform_search(
             query=query, tags=tags, index_name="Vacancy")
-        return Response(results)
+        hit_ids = []
+        for hit in results.get('hits'):
+            hit_ids.append(int(hit.get("objectID")))
+        hit_jobs = vacancy.Vacancy.objects.filter(id__in=hit_ids)
+        serialized_hit_jobs = VacancySerializer(hit_jobs, many=True)
+        return Response(serialized_hit_jobs.data)
