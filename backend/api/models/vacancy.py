@@ -25,3 +25,9 @@ class Vacancy(models.Model):
 
     def __str__(self) -> str:
         return f"{self.pk}"
+
+    def is_closed(self):  # for algolia 'should_index' field
+        return self.is_opened
+
+    def location_tag(self):
+        pass
