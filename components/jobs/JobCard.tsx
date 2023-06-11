@@ -12,6 +12,7 @@ interface JobCardProps {
   salary_to: JobState["salary_to"];
   job_type: JobState["job_type"];
   qualifications: JobState["qualifications"];
+  job_location_desc: JobState["job_location_desc"];
 }
 
 const JobCard: React.FC<JobCardProps> = ({
@@ -21,6 +22,7 @@ const JobCard: React.FC<JobCardProps> = ({
   salary_to,
   job_type,
   qualifications,
+  job_location_desc,
 }): React.JSX.Element => {
   const [{ fetchJob }, [job]] = useAppState<[JobState]>([jobSelector]);
   return (
@@ -39,7 +41,7 @@ const JobCard: React.FC<JobCardProps> = ({
       }
     >
       <h1>{title}</h1>
-      <h2>Kathmandu Mahanagar office</h2>
+      <h2>{job_location_desc}</h2>
       <div className={styles.card__salary}>
         <Icon className={styles.card__salary__icon} icon="mdi:dollar" />
         <p>

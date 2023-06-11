@@ -63,7 +63,7 @@ const JobDesc = (): React.JSX.Element => {
               Apply
             </button>
           </div>
-          <h2>Kathmandu Mahanagar office</h2>
+          <h2>{job.job_location_desc}</h2>
           <div className={styles.card__salary}>
             <Icon className={styles.card__salary__icon} icon="mdi:dollar" />
             <p>

@@ -29,4 +29,5 @@ export interface Vacancy {
   salary_to: number;
   opened_at: string;
   job_type: JobType;
+  job_location_desc: string;
 }

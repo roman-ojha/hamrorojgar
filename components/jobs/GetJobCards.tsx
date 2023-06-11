@@ -28,6 +28,7 @@ const GetJobCards = (): React.JSX.Element => {
           salary_to={job.salary_to}
           job_type={job.job_type}
           qualifications={job.qualifications}
+          job_location_desc={job.job_location_desc}
         />
       ))}
     </>

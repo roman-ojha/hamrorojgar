@@ -25,7 +25,7 @@ const ApplyPageJobDesc = (): React.JSX.Element => {
       ) : (
         <div className={styles.apply__main_content__card}>
           <h1>{job.title}</h1>
-          <h2>Kathmandu Mahanagar office</h2>
+          <h2>{job.job_location_desc}</h2>
           <div className={styles.apply__main_content__card__salary}>
             <Icon
               className={styles.apply__main_content__card__salary__icon}

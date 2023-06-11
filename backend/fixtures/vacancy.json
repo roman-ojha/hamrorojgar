@@ -10,7 +10,8 @@
       "salary_to": 97,
       "opened_at": "2021-09-01",
       "job_type": "PART",
-      "government_id": 1
+      "government_id": 1,
+      "job_location_desc": "Jhapa, Kamal Gaupalika"
     }
   },
   {
@@ -24,7 +25,8 @@
       "salary_to": 80,
       "opened_at": "2021-09-01",
       "job_type": "FULL",
-      "government_id": 2
+      "government_id": 2,
+      "job_location_desc": "Banke, Nepalganj Upamahanagar"
     }
   },
   {
@@ -38,7 +40,8 @@
       "salary_to": 65,
       "opened_at": "2021-09-01",
       "job_type": "PART",
-      "government_id": 1
+      "government_id": 1,
+      "job_location_desc": "Jhapa, Kamal Gaupalika"
     }
   },
   {
@@ -52,7 +55,8 @@
       "salary_to": 35,
       "opened_at": "2021-09-01",
       "job_type": "PART",
-      "government_id": 3
+      "government_id": 3,
+      "job_location_desc": "Surkhet, Birendranagar Nagarpalika"
     }
   },
   {
@@ -66,7 +70,8 @@
       "salary_to": 35,
       "opened_at": "2021-09-01",
       "job_type": "PART",
-      "government_id": 3
+      "government_id": 3,
+      "job_location_desc": "Surkhet, Birendranagar Nagarpalika"
     }
   },
   {
@@ -80,7 +85,8 @@
       "salary_to": 50,
       "opened_at": "2021-09-01",
       "job_type": "PART",
-      "government_id": 3
+      "government_id": 3,
+      "job_location_desc": "Surkhet, Birendranagar Nagarpalika"
     }
   },
   {
@@ -94,7 +100,8 @@
       "salary_to": 55,
       "opened_at": "2021-09-01",
       "job_type": "PART",
-      "government_id": 4
+      "government_id": 4,
+      "job_location_desc": "Morong, Biratnagar Mahangar"
     }
   }
 ]

@@ -7,6 +7,7 @@ export const fetchJobs = () => {
   return async (dispatch: Dispatch<JobsAction>) => {
     const res = await api.jobs.get();
     if (res && isOkResponse(res.status)) {
+      console.log(res.data);
       dispatch({
         type: JobActionType.FETCH_JOBS,
         payload: res.data as JobState[],
