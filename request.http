@@ -96,3 +96,6 @@ GET http://127.0.0.1:8000/api/jobs/search?q=&district=Jhapa&municipality=Kamal
 
 ### Get Districts
 GET http://127.0.0.1:8000/api/district
+
+### Get Municipalities
+GET http://127.0.0.1:8000/api/municipality/5
