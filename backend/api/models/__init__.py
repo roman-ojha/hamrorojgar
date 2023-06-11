@@ -9,3 +9,5 @@ from .address import Address
 # from .payment import Payment
 from api.models import payment
 from .payment_gateway import PaymentGateway
+from .district import District
+from .municipality import Municipality
