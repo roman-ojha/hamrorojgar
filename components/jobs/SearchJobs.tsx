@@ -1,4 +1,4 @@
-import React, { memo, useEffect, useMemo, useState } from "react";
+import React, { memo, useEffect, useState } from "react";
 import styles from "@/styles/pages/jobs.module.scss";
 import { Icon } from "@iconify/react";
 import { useRouter } from "next/router";
@@ -8,6 +8,12 @@ import { useAppState } from "@/hooks/useAppState";
 
 const SearchJobs = (): React.JSX.Element => {
   const [{ storeJobs, fetchJobs }] = useAppState([]);
+  const [districts, setDistricts] = useState<{ id: number; name: string }[]>(
+    []
+  );
+  const [municipalities, setMunicipalities] = useState<
+    { id: number; name: string; get_type_label: string }[]
+  >([]);
   const router = useRouter();
   //   console.log(router.query);
   const [queries, setQueries] = useState<{
@@ -78,7 +84,7 @@ const SearchJobs = (): React.JSX.Element => {
       );
       url.searchParams.set(
         "municipality",
-        queries.district ? queries.district : ""
+        queries.municipality ? queries.municipality : ""
       );
       window.history.replaceState({}, "", url.toString());
     };
@@ -95,10 +101,11 @@ const SearchJobs = (): React.JSX.Element => {
     url.searchParams.set("district", e.target.value);
     url.searchParams.set(
       "municipality",
-      queries.district ? queries.district : ""
+      queries.municipality ? queries.municipality : ""
     );
     window.history.replaceState({}, "", url.toString());
   };
+
   const handleMunicipalitySearch = (
     e: React.ChangeEvent<HTMLSelectElement>
   ) => {
@@ -112,6 +119,28 @@ const SearchJobs = (): React.JSX.Element => {
     url.searchParams.set("municipality", e.target.value);
     window.history.replaceState({}, "", url.toString());
   };
+
+  const getDistricts = async () => {
+    const res = await api.district.get();
+    if (res && isOkResponse(res.status)) {
+      setDistricts(res.data);
+    }
+  };
+
+  const fetchMunicipalities = async (
+    e: React.ChangeEvent<HTMLSelectElement>
+  ) => {
+    const district_id = e.target.selectedOptions[0].getAttribute("data-key");
+    const res = await api.municipality.get(district_id as string);
+    if (res && isOkResponse(res.status)) {
+      // console.log(res.data);
+      setMunicipalities(res.data);
+    }
+  };
+
+  useEffect(() => {
+    getDistricts();
+  }, []);
 
   return (
     <>
@@ -139,9 +168,24 @@ const SearchJobs = (): React.JSX.Element => {
         </div>
         <div className={styles.jobs__search__where}>
           <label htmlFor="district">Where</label>
-          <select name="district" id="district" onChange={handleDistrictSearch}>
+          <select
+            name="district"
+            id="district"
+            onChange={(e) => {
+              handleDistrictSearch(e);
+              fetchMunicipalities(e);
+            }}
+          >
             <option value="">District</option>
-            <option value="Jhapa">jhapa</option>
+            {districts.map((district) => (
+              <option
+                key={district.id}
+                value={district.name}
+                data-key={district.id}
+              >
+                {district.name}
+              </option>
+            ))}
           </select>
           <select
             name="municipality"
@@ -149,7 +193,11 @@ const SearchJobs = (): React.JSX.Element => {
             onChange={handleMunicipalitySearch}
           >
             <option value="">Municipality</option>
-            <option value="Kamal">kamal</option>
+            {municipalities.map((municipality) => (
+              <option key={municipality.id} value={municipality.name}>
+                {municipality.name}
+              </option>
+            ))}
           </select>
           <Icon
             className={styles.jobs__search__where__icon}

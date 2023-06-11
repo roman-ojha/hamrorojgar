@@ -175,6 +175,30 @@ const api = {
       }
     },
   },
+  district: {
+    get: async (): Promise<ApiReturnType | null> => {
+      try {
+        return await instance({
+          method: "GET",
+          url: "district",
+        });
+      } catch (error) {
+        return getAPIError(error as AxiosError);
+      }
+    },
+  },
+  municipality: {
+    get: async (district_id: string): Promise<ApiReturnType | null> => {
+      try {
+        return await instance({
+          method: "GET",
+          url: `municipality/${district_id}`,
+        });
+      } catch (error) {
+        return getAPIError(error as AxiosError);
+      }
+    },
+  },
 };
 
 export { api };

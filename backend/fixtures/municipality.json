@@ -120,6 +120,15 @@
         "model": "api.Municipality",
         "pk": 14,
         "fields": {
+            "name": "Kamal",
+            "type": "GHAUPALIKA",
+            "district": 4
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 15,
+        "fields": {
             "name": "Biratnagar",
             "type": "MAHAHAGAR",
             "district": 5
@@ -127,7 +136,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 15,
+        "pk": 16,
         "fields": {
             "name": "SundarHaraincha",
             "type": "NAGARPALIKA",
@@ -136,7 +145,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 16,
+        "pk": 17,
         "fields": {
             "name": "Belbari",
             "type": "NAGARPALIKA",
@@ -145,7 +154,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 17,
+        "pk": 18,
         "fields": {
             "name": "Pathari-Shanischare",
             "type": "NAGARPALIKA",
@@ -154,7 +163,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 18,
+        "pk": 19,
         "fields": {
             "name": "Ratuwamai",
             "type": "NAGARPALIKA",
@@ -163,7 +172,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 19,
+        "pk": 20,
         "fields": {
             "name": "Urlabari",
             "type": "NAGARPALIKA",
@@ -172,7 +181,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 20,
+        "pk": 21,
         "fields": {
             "name": "Rangeli",
             "type": "NAGARPALIKA",
@@ -181,7 +190,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 21,
+        "pk": 22,
         "fields": {
             "name": "Sunawarshi",
             "type": "NAGARPALIKA",
@@ -190,7 +199,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 22,
+        "pk": 23,
         "fields": {
             "name": "LetangBhogateni",
             "type": "NAGARPALIKA",
@@ -199,7 +208,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 23,
+        "pk": 24,
         "fields": {
             "name": "Itahari",
             "type": "UPAMAHANAGAR",
@@ -208,7 +217,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 24,
+        "pk": 25,
         "fields": {
             "name": "Dharan",
             "type": "UPAMAHANAGAR",
@@ -217,7 +226,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 25,
+        "pk": 26,
         "fields": {
             "name": "Barahachhetra",
             "type": "NAGARPALIKA",
@@ -226,7 +235,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 26,
+        "pk": 27,
         "fields": {
             "name": "Inaruwa",
             "type": "NAGARPALIKA",
@@ -235,7 +244,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 27,
+        "pk": 28,
         "fields": {
             "name": "Duhabi",
             "type": "NAGARPALIKA",
@@ -244,7 +253,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 28,
+        "pk": 29,
         "fields": {
             "name": "Ramdhuni",
             "type": "NAGARPALIKA",
@@ -253,7 +262,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 29,
+        "pk": 30,
         "fields": {
             "name": "Dhankuta",
             "type": "NAGARPALIKA",
@@ -262,18 +271,9 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 30,
-        "fields": {
-            "name": "Mahalaxmi",
-            "type": "NAGARPALIKA",
-            "district": 7
-        }
-    },
-    {
-        "model": "api.Municipality",
         "pk": 31,
         "fields": {
-            "name": "Pakhribas",
+            "name": "Mahalaxmi",
             "type": "NAGARPALIKA",
             "district": 7
         }
@@ -282,16 +282,16 @@
         "model": "api.Municipality",
         "pk": 32,
         "fields": {
-            "name": "Khandbari",
+            "name": "Pakhribas",
             "type": "NAGARPALIKA",
-            "district": 9
+            "district": 7
         }
     },
     {
         "model": "api.Municipality",
         "pk": 33,
         "fields": {
-            "name": "Chainpur",
+            "name": "Khandbari",
             "type": "NAGARPALIKA",
             "district": 9
         }
@@ -300,7 +300,7 @@
         "model": "api.Municipality",
         "pk": 34,
         "fields": {
-            "name": "Dharmadevi",
+            "name": "Chainpur",
             "type": "NAGARPALIKA",
             "district": 9
         }
@@ -309,7 +309,7 @@
         "model": "api.Municipality",
         "pk": 35,
         "fields": {
-            "name": "Panchkhapan",
+            "name": "Dharmadevi",
             "type": "NAGARPALIKA",
             "district": 9
         }
@@ -318,7 +318,7 @@
         "model": "api.Municipality",
         "pk": 36,
         "fields": {
-            "name": "Madi",
+            "name": "Panchkhapan",
             "type": "NAGARPALIKA",
             "district": 9
         }
@@ -327,16 +327,16 @@
         "model": "api.Municipality",
         "pk": 37,
         "fields": {
-            "name": "Shadanand",
+            "name": "Madi",
             "type": "NAGARPALIKA",
-            "district": 10
+            "district": 9
         }
     },
     {
         "model": "api.Municipality",
         "pk": 38,
         "fields": {
-            "name": "Bhojpur",
+            "name": "Shadanand",
             "type": "NAGARPALIKA",
             "district": 10
         }
@@ -345,6 +345,15 @@
         "model": "api.Municipality",
         "pk": 39,
         "fields": {
+            "name": "Bhojpur",
+            "type": "NAGARPALIKA",
+            "district": 10
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 40,
+        "fields": {
             "name": "SoluDudhkunda",
             "type": "NAGARPALIKA",
             "district": 11
@@ -352,7 +361,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 40,
+        "pk": 41,
         "fields": {
             "name": "Siddhicharan",
             "type": "NAGARPALIKA",
@@ -361,7 +370,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 41,
+        "pk": 42,
         "fields": {
             "name": "RupakotMajhuwagadhi",
             "type": "NAGARPALIKA",
@@ -370,7 +379,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 42,
+        "pk": 43,
         "fields": {
             "name": "HalesiTuwachung",
             "type": "NAGARPALIKA",
@@ -379,7 +388,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 43,
+        "pk": 44,
         "fields": {
             "name": "Triyuga",
             "type": "NAGARPALIKA",
@@ -388,7 +397,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 44,
+        "pk": 45,
         "fields": {
             "name": "Katari",
             "type": "NAGARPALIKA",
@@ -397,7 +406,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 45,
+        "pk": 46,
         "fields": {
             "name": "Chaudandigadhi",
             "type": "NAGARPALIKA",
@@ -406,7 +415,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 46,
+        "pk": 47,
         "fields": {
             "name": "Belaka",
             "type": "NAGARPALIKA",
@@ -415,7 +424,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 47,
+        "pk": 48,
         "fields": {
             "name": "Rajbiraj",
             "type": "NAGARPALIKA",
@@ -424,7 +433,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 48,
+        "pk": 49,
         "fields": {
             "name": "HanumannagarKankalini",
             "type": "NAGARPALIKA",
@@ -433,7 +442,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 49,
+        "pk": 50,
         "fields": {
             "name": "Khadak",
             "type": "NAGARPALIKA",
@@ -442,7 +451,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 50,
+        "pk": 51,
         "fields": {
             "name": "Dakneshwari",
             "type": "NAGARPALIKA",
@@ -451,7 +460,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 51,
+        "pk": 52,
         "fields": {
             "name": "Surunga",
             "type": "NAGARPALIKA",
@@ -460,7 +469,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 52,
+        "pk": 53,
         "fields": {
             "name": "Bodebarsain",
             "type": "NAGARPALIKA",
@@ -469,7 +478,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 53,
+        "pk": 54,
         "fields": {
             "name": "Shambhunath",
             "type": "NAGARPALIKA",
@@ -478,7 +487,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 54,
+        "pk": 55,
         "fields": {
             "name": "Kanchanrup",
             "type": "NAGARPALIKA",
@@ -487,7 +496,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 55,
+        "pk": 56,
         "fields": {
             "name": "Saptakoshi",
             "type": "NAGARPALIKA",
@@ -496,7 +505,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 56,
+        "pk": 57,
         "fields": {
             "name": "Lahan",
             "type": "NAGARPALIKA",
@@ -505,7 +514,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 57,
+        "pk": 58,
         "fields": {
             "name": "Siraha",
             "type": "NAGARPALIKA",
@@ -514,7 +523,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 58,
+        "pk": 59,
         "fields": {
             "name": "Golbazar",
             "type": "NAGARPALIKA",
@@ -523,7 +532,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 59,
+        "pk": 60,
         "fields": {
             "name": "Mirchaiya",
             "type": "NAGARPALIKA",
@@ -532,7 +541,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 60,
+        "pk": 61,
         "fields": {
             "name": "Kalyanpur",
             "type": "NAGARPALIKA",
@@ -541,7 +550,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 61,
+        "pk": 62,
         "fields": {
             "name": "Dhangadimai",
             "type": "NAGARPALIKA",
@@ -550,7 +559,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 62,
+        "pk": 63,
         "fields": {
             "name": "Sukhipur",
             "type": "NAGARPALIKA",
@@ -559,7 +568,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 63,
+        "pk": 64,
         "fields": {
             "name": "Karjanha",
             "type": "NAGARPALIKA",
@@ -568,7 +577,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 64,
+        "pk": 65,
         "fields": {
             "name": "MithilaBihari",
             "type": "NAGARPALIKA",
@@ -577,7 +586,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 65,
+        "pk": 66,
         "fields": {
             "name": "Gaushala",
             "type": "NAGARPALIKA",
@@ -586,7 +595,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 66,
+        "pk": 67,
         "fields": {
             "name": "Bardibas",
             "type": "NAGARPALIKA",
@@ -595,7 +604,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 67,
+        "pk": 68,
         "fields": {
             "name": "Jaleshwar",
             "type": "NAGARPALIKA",
@@ -604,7 +613,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 68,
+        "pk": 69,
         "fields": {
             "name": "ManaraShiswa",
             "type": "NAGARPALIKA",
@@ -613,7 +622,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 69,
+        "pk": 70,
         "fields": {
             "name": "Bhangaha",
             "type": "NAGARPALIKA",
@@ -622,7 +631,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 70,
+        "pk": 71,
         "fields": {
             "name": "Balawa",
             "type": "NAGARPALIKA",
@@ -631,7 +640,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 71,
+        "pk": 72,
         "fields": {
             "name": "Loharpatti",
             "type": "NAGARPALIKA",
@@ -640,7 +649,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 72,
+        "pk": 73,
         "fields": {
             "name": "Aurahi",
             "type": "NAGARPALIKA",
@@ -649,7 +658,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 73,
+        "pk": 74,
         "fields": {
             "name": "Matihani",
             "type": "NAGARPALIKA",
@@ -658,7 +667,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 74,
+        "pk": 75,
         "fields": {
             "name": "Ramgopalpur",
             "type": "NAGARPALIKA",
@@ -667,7 +676,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 75,
+        "pk": 76,
         "fields": {
             "name": "Barahathwa",
             "type": "NAGARPALIKA",
@@ -676,7 +685,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 76,
+        "pk": 77,
         "fields": {
             "name": "Ishwarpur",
             "type": "NAGARPALIKA",
@@ -685,7 +694,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 77,
+        "pk": 78,
         "fields": {
             "name": "Lalbandi",
             "type": "NAGARPALIKA",
@@ -694,7 +703,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 78,
+        "pk": 79,
         "fields": {
             "name": "Godaita",
             "type": "NAGARPALIKA",
@@ -703,7 +712,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 79,
+        "pk": 80,
         "fields": {
             "name": "Malangwa",
             "type": "NAGARPALIKA",
@@ -712,7 +721,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 80,
+        "pk": 81,
         "fields": {
             "name": "Balara",
             "type": "NAGARPALIKA",
@@ -721,7 +730,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 81,
+        "pk": 82,
         "fields": {
             "name": "Hariwan",
             "type": "NAGARPALIKA",
@@ -730,7 +739,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 82,
+        "pk": 83,
         "fields": {
             "name": "Kabilasi",
             "type": "NAGARPALIKA",
@@ -739,7 +748,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 83,
+        "pk": 84,
         "fields": {
             "name": "Bagmati",
             "type": "NAGARPALIKA",
@@ -748,7 +757,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 84,
+        "pk": 85,
         "fields": {
             "name": "Haripur",
             "type": "NAGARPALIKA",
@@ -757,7 +766,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 85,
+        "pk": 86,
         "fields": {
             "name": "Haripurwa",
             "type": "NAGARPALIKA",
@@ -766,7 +775,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 86,
+        "pk": 87,
         "fields": {
             "name": "Kalaiya",
             "type": "UPAMAHANAGAR",
@@ -775,7 +784,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 87,
+        "pk": 88,
         "fields": {
             "name": "Jitpursimara",
             "type": "UPAMAHANAGAR",
@@ -784,7 +793,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 88,
+        "pk": 89,
         "fields": {
             "name": "Mahagadhimai",
             "type": "NAGARPALIKA",
@@ -793,7 +802,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 89,
+        "pk": 90,
         "fields": {
             "name": "Simraungadh",
             "type": "NAGARPALIKA",
@@ -802,7 +811,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 90,
+        "pk": 91,
         "fields": {
             "name": "Kolhabi",
             "type": "NAGARPALIKA",
@@ -811,7 +820,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 91,
+        "pk": 92,
         "fields": {
             "name": "Nijgadh",
             "type": "NAGARPALIKA",
@@ -820,7 +829,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 92,
+        "pk": 93,
         "fields": {
             "name": "Pacharauta",
             "type": "NAGARPALIKA",
@@ -829,7 +838,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 93,
+        "pk": 94,
         "fields": {
             "name": "Birgunj",
             "type": "MAHAHAGAR",
@@ -838,7 +847,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 94,
+        "pk": 95,
         "fields": {
             "name": "Bahudarmai",
             "type": "NAGARPALIKA",
@@ -847,7 +856,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 95,
+        "pk": 96,
         "fields": {
             "name": "Parsagadhi",
             "type": "NAGARPALIKA",
@@ -856,7 +865,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 96,
+        "pk": 97,
         "fields": {
             "name": "Pokhariya",
             "type": "NAGARPALIKA",
@@ -865,7 +874,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 97,
+        "pk": 98,
         "fields": {
             "name": "Chandrapur",
             "type": "NAGARPALIKA",
@@ -874,7 +883,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 98,
+        "pk": 99,
         "fields": {
             "name": "Garuda",
             "type": "NAGARPALIKA",
@@ -883,7 +892,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 99,
+        "pk": 100,
         "fields": {
             "name": "Gujara",
             "type": "NAGARPALIKA",
@@ -892,7 +901,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 100,
+        "pk": 101,
         "fields": {
             "name": "Brindaban",
             "type": "NAGARPALIKA",
@@ -901,7 +910,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 101,
+        "pk": 102,
         "fields": {
             "name": "Ishnath",
             "type": "NAGARPALIKA",
@@ -910,7 +919,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 102,
+        "pk": 103,
         "fields": {
             "name": "Rajpur",
             "type": "NAGARPALIKA",
@@ -919,7 +928,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 103,
+        "pk": 104,
         "fields": {
             "name": "Gadhimai",
             "type": "NAGARPALIKA",
@@ -928,7 +937,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 104,
+        "pk": 105,
         "fields": {
             "name": "Katahariya",
             "type": "NAGARPALIKA",
@@ -937,7 +946,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 105,
+        "pk": 106,
         "fields": {
             "name": "Paroha",
             "type": "NAGARPALIKA",
@@ -946,7 +955,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 106,
+        "pk": 107,
         "fields": {
             "name": "PhatuwaBijayapur",
             "type": "NAGARPALIKA",
@@ -955,7 +964,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 107,
+        "pk": 108,
         "fields": {
             "name": "Baudhimai",
             "type": "NAGARPALIKA",
@@ -964,7 +973,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 108,
+        "pk": 109,
         "fields": {
             "name": "MadhavNarayan",
             "type": "NAGARPALIKA",
@@ -973,7 +982,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 109,
+        "pk": 110,
         "fields": {
             "name": "Gaur",
             "type": "NAGARPALIKA",
@@ -982,7 +991,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 110,
+        "pk": 111,
         "fields": {
             "name": "DewahiGonahi",
             "type": "NAGARPALIKA",
@@ -991,7 +1000,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 111,
+        "pk": 112,
         "fields": {
             "name": "Rajdevi",
             "type": "NAGARPALIKA",
@@ -1000,7 +1009,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 112,
+        "pk": 113,
         "fields": {
             "name": "Maulapur",
             "type": "NAGARPALIKA",
@@ -1009,7 +1018,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 113,
+        "pk": 114,
         "fields": {
             "name": "Dudhauli",
             "type": "NAGARPALIKA",
@@ -1018,7 +1027,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 114,
+        "pk": 115,
         "fields": {
             "name": "Kamalamai",
             "type": "NAGARPALIKA",
@@ -1027,7 +1036,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 115,
+        "pk": 116,
         "fields": {
             "name": "Manthali",
             "type": "NAGARPALIKA",
@@ -1036,7 +1045,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 116,
+        "pk": 117,
         "fields": {
             "name": "Ramechhap",
             "type": "NAGARPALIKA",
@@ -1045,7 +1054,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 117,
+        "pk": 118,
         "fields": {
             "name": "Bhimeshwar",
             "type": "NAGARPALIKA",
@@ -1054,7 +1063,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 118,
+        "pk": 119,
         "fields": {
             "name": "Jiri",
             "type": "NAGARPALIKA",
@@ -1063,7 +1072,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 119,
+        "pk": 120,
         "fields": {
             "name": "ChautaraSangachokgadhi",
             "type": "NAGARPALIKA",
@@ -1072,7 +1081,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 120,
+        "pk": 121,
         "fields": {
             "name": "Melamchi",
             "type": "NAGARPALIKA",
@@ -1081,7 +1090,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 121,
+        "pk": 122,
         "fields": {
             "name": "Barhabise",
             "type": "NAGARPALIKA",
@@ -1090,7 +1099,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 122,
+        "pk": 123,
         "fields": {
             "name": "Banepa",
             "type": "NAGARPALIKA",
@@ -1099,7 +1108,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 123,
+        "pk": 124,
         "fields": {
             "name": "Paunauti",
             "type": "NAGARPALIKA",
@@ -1108,7 +1117,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 124,
+        "pk": 125,
         "fields": {
             "name": "Panchkhal",
             "type": "NAGARPALIKA",
@@ -1117,7 +1126,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 125,
+        "pk": 126,
         "fields": {
             "name": "Mandandeupur",
             "type": "NAGARPALIKA",
@@ -1126,7 +1135,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 126,
+        "pk": 127,
         "fields": {
             "name": "Dhulikhel",
             "type": "NAGARPALIKA",
@@ -1135,7 +1144,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 127,
+        "pk": 128,
         "fields": {
             "name": "Namobuddha",
             "type": "NAGARPALIKA",
@@ -1144,7 +1153,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 128,
+        "pk": 129,
         "fields": {
             "name": "Lalitpur",
             "type": "MAHAHAGAR",
@@ -1153,7 +1162,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 129,
+        "pk": 130,
         "fields": {
             "name": "Mahalaxmi",
             "type": "NAGARPALIKA",
@@ -1162,7 +1171,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 130,
+        "pk": 131,
         "fields": {
             "name": "Godawari",
             "type": "NAGARPALIKA",
@@ -1171,7 +1180,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 131,
+        "pk": 132,
         "fields": {
             "name": "Suryabinayak",
             "type": "NAGARPALIKA",
@@ -1180,7 +1189,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 132,
+        "pk": 133,
         "fields": {
             "name": "MadhyapurThimi",
             "type": "NAGARPALIKA",
@@ -1189,7 +1198,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 133,
+        "pk": 134,
         "fields": {
             "name": "Bhaktapur",
             "type": "NAGARPALIKA",
@@ -1198,7 +1207,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 134,
+        "pk": 135,
         "fields": {
             "name": "Changunarayan",
             "type": "NAGARPALIKA",
@@ -1207,7 +1216,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 135,
+        "pk": 136,
         "fields": {
             "name": "Kathmandu",
             "type": "MAHAHAGAR",
@@ -1216,7 +1225,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 136,
+        "pk": 137,
         "fields": {
             "name": "Budhanilkantha",
             "type": "NAGARPALIKA",
@@ -1225,7 +1234,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 137,
+        "pk": 138,
         "fields": {
             "name": "Tarakeshwar",
             "type": "NAGARPALIKA",
@@ -1234,7 +1243,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 138,
+        "pk": 139,
         "fields": {
             "name": "Gokarneshwar",
             "type": "NAGARPALIKA",
@@ -1243,7 +1252,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 139,
+        "pk": 140,
         "fields": {
             "name": "Chandragiri",
             "type": "NAGARPALIKA",
@@ -1252,7 +1261,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 140,
+        "pk": 141,
         "fields": {
             "name": "Tokha",
             "type": "NAGARPALIKA",
@@ -1261,7 +1270,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 141,
+        "pk": 142,
         "fields": {
             "name": "Kageshwari-Manohara",
             "type": "NAGARPALIKA",
@@ -1270,7 +1279,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 142,
+        "pk": 143,
         "fields": {
             "name": "Nagarjun",
             "type": "NAGARPALIKA",
@@ -1279,7 +1288,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 143,
+        "pk": 144,
         "fields": {
             "name": "Kirtipur",
             "type": "NAGARPALIKA",
@@ -1288,7 +1297,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 144,
+        "pk": 145,
         "fields": {
             "name": "Shankharapur",
             "type": "NAGARPALIKA",
@@ -1297,7 +1306,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 145,
+        "pk": 146,
         "fields": {
             "name": "Dakshinkali",
             "type": "NAGARPALIKA",
@@ -1306,7 +1315,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 146,
+        "pk": 147,
         "fields": {
             "name": "Bidur",
             "type": "NAGARPALIKA",
@@ -1315,7 +1324,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 147,
+        "pk": 148,
         "fields": {
             "name": "Belkotgadhi",
             "type": "NAGARPALIKA",
@@ -1324,7 +1333,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 148,
+        "pk": 149,
         "fields": {
             "name": "Nilkantha",
             "type": "NAGARPALIKA",
@@ -1333,7 +1342,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 149,
+        "pk": 150,
         "fields": {
             "name": "Dhunibeshi",
             "type": "NAGARPALIKA",
@@ -1342,7 +1351,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 150,
+        "pk": 151,
         "fields": {
             "name": "Bharatpur",
             "type": "MAHAHAGAR",
@@ -1351,7 +1360,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 151,
+        "pk": 152,
         "fields": {
             "name": "Ratnanagar",
             "type": "NAGARPALIKA",
@@ -1360,7 +1369,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 152,
+        "pk": 153,
         "fields": {
             "name": "Rapti",
             "type": "NAGARPALIKA",
@@ -1369,7 +1378,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 153,
+        "pk": 154,
         "fields": {
             "name": "Khairhani",
             "type": "NAGARPALIKA",
@@ -1378,7 +1387,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 154,
+        "pk": 155,
         "fields": {
             "name": "Kalika",
             "type": "NAGARPALIKA",
@@ -1387,7 +1396,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 155,
+        "pk": 156,
         "fields": {
             "name": "Madi",
             "type": "NAGARPALIKA",
@@ -1396,7 +1405,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 156,
+        "pk": 157,
         "fields": {
             "name": "Gorkha",
             "type": "NAGARPALIKA",
@@ -1405,7 +1414,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 157,
+        "pk": 158,
         "fields": {
             "name": "Palungtar",
             "type": "NAGARPALIKA",
@@ -1414,7 +1423,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 158,
+        "pk": 159,
         "fields": {
             "name": "Besisahar",
             "type": "NAGARPALIKA",
@@ -1423,7 +1432,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 159,
+        "pk": 160,
         "fields": {
             "name": "Sundarbazar",
             "type": "NAGARPALIKA",
@@ -1432,7 +1441,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 160,
+        "pk": 161,
         "fields": {
             "name": "MadhyaNepal",
             "type": "NAGARPALIKA",
@@ -1441,7 +1450,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 161,
+        "pk": 162,
         "fields": {
             "name": "Rainas",
             "type": "NAGARPALIKA",
@@ -1450,7 +1459,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 162,
+        "pk": 163,
         "fields": {
             "name": "Vyas",
             "type": "NAGARPALIKA",
@@ -1459,7 +1468,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 163,
+        "pk": 164,
         "fields": {
             "name": "Shuklagandaki",
             "type": "NAGARPALIKA",
@@ -1468,7 +1477,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 164,
+        "pk": 165,
         "fields": {
             "name": "Bhanu",
             "type": "NAGARPALIKA",
@@ -1477,7 +1486,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 165,
+        "pk": 166,
         "fields": {
             "name": "Bhimad",
             "type": "NAGARPALIKA",
@@ -1486,7 +1495,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 166,
+        "pk": 167,
         "fields": {
             "name": "Waling",
             "type": "NAGARPALIKA",
@@ -1495,7 +1504,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 167,
+        "pk": 168,
         "fields": {
             "name": "Putalibazar",
             "type": "NAGARPALIKA",
@@ -1504,7 +1513,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 168,
+        "pk": 169,
         "fields": {
             "name": "Galyang",
             "type": "NAGARPALIKA",
@@ -1513,7 +1522,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 169,
+        "pk": 170,
         "fields": {
             "name": "Chapakot",
             "type": "NAGARPALIKA",
@@ -1522,7 +1531,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 170,
+        "pk": 171,
         "fields": {
             "name": "Bhirkot",
             "type": "NAGARPALIKA",
@@ -1531,7 +1540,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 171,
+        "pk": 172,
         "fields": {
             "name": "Pokhara",
             "type": "MAHAHAGAR",
@@ -1540,7 +1549,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 172,
+        "pk": 173,
         "fields": {
             "name": "Beni",
             "type": "NAGARPALIKA",
@@ -1549,7 +1558,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 173,
+        "pk": 174,
         "fields": {
             "name": "Kawasoti",
             "type": "NAGARPALIKA",
@@ -1558,7 +1567,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 174,
+        "pk": 175,
         "fields": {
             "name": "Gaindakot",
             "type": "NAGARPALIKA",
@@ -1567,7 +1576,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 175,
+        "pk": 176,
         "fields": {
             "name": "Madhyabindu",
             "type": "NAGARPALIKA",
@@ -1576,7 +1585,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 176,
+        "pk": 177,
         "fields": {
             "name": "Devchuli",
             "type": "NAGARPALIKA",
@@ -1585,7 +1594,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 177,
+        "pk": 178,
         "fields": {
             "name": "Kushma",
             "type": "NAGARPALIKA",
@@ -1594,7 +1603,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 178,
+        "pk": 179,
         "fields": {
             "name": "Phalewas",
             "type": "NAGARPALIKA",
@@ -1603,7 +1612,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 179,
+        "pk": 180,
         "fields": {
             "name": "Baglung",
             "type": "NAGARPALIKA",
@@ -1612,7 +1621,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 180,
+        "pk": 181,
         "fields": {
             "name": "Galkot",
             "type": "NAGARPALIKA",
@@ -1621,7 +1630,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 181,
+        "pk": 182,
         "fields": {
             "name": "Jaimini",
             "type": "NAGARPALIKA",
@@ -1630,7 +1639,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 182,
+        "pk": 183,
         "fields": {
             "name": "Dhorpatan",
             "type": "NAGARPALIKA",
@@ -1639,7 +1648,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 183,
+        "pk": 184,
         "fields": {
             "name": "Musikot",
             "type": "NAGARPALIKA",
@@ -1648,7 +1657,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 184,
+        "pk": 185,
         "fields": {
             "name": "Resunga",
             "type": "NAGARPALIKA",
@@ -1657,7 +1666,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 185,
+        "pk": 186,
         "fields": {
             "name": "Tansen",
             "type": "NAGARPALIKA",
@@ -1666,7 +1675,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 186,
+        "pk": 187,
         "fields": {
             "name": "Rampur",
             "type": "NAGARPALIKA",
@@ -1675,7 +1684,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 187,
+        "pk": 188,
         "fields": {
             "name": "Ramgram",
             "type": "NAGARPALIKA",
@@ -1684,7 +1693,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 188,
+        "pk": 189,
         "fields": {
             "name": "Sunwal",
             "type": "NAGARPALIKA",
@@ -1693,7 +1702,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 189,
+        "pk": 190,
         "fields": {
             "name": "Bardghat",
             "type": "NAGARPALIKA",
@@ -1702,7 +1711,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 190,
+        "pk": 191,
         "fields": {
             "name": "Butwal",
             "type": "UPAMAHANAGAR",
@@ -1711,7 +1720,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 191,
+        "pk": 192,
         "fields": {
             "name": "Tilottama",
             "type": "NAGARPALIKA",
@@ -1720,7 +1729,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 192,
+        "pk": 193,
         "fields": {
             "name": "LumbiniSanskritik",
             "type": "NAGARPALIKA",
@@ -1729,7 +1738,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 193,
+        "pk": 194,
         "fields": {
             "name": "Siddharthanagar",
             "type": "NAGARPALIKA",
@@ -1738,7 +1747,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 194,
+        "pk": 195,
         "fields": {
             "name": "Sainamaina",
             "type": "NAGARPALIKA",
@@ -1747,7 +1756,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 195,
+        "pk": 196,
         "fields": {
             "name": "Devdaha",
             "type": "NAGARPALIKA",
@@ -1756,7 +1765,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 196,
+        "pk": 197,
         "fields": {
             "name": "Kapilvastu",
             "type": "NAGARPALIKA",
@@ -1765,7 +1774,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 197,
+        "pk": 198,
         "fields": {
             "name": "Banganga",
             "type": "NAGARPALIKA",
@@ -1774,7 +1783,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 198,
+        "pk": 199,
         "fields": {
             "name": "Shivaraj",
             "type": "NAGARPALIKA",
@@ -1783,7 +1792,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 199,
+        "pk": 200,
         "fields": {
             "name": "Buddhabhumi",
             "type": "NAGARPALIKA",
@@ -1792,7 +1801,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 200,
+        "pk": 201,
         "fields": {
             "name": "Krishnanagar",
             "type": "NAGARPALIKA",
@@ -1801,7 +1810,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 201,
+        "pk": 202,
         "fields": {
             "name": "Maharajganj",
             "type": "NAGARPALIKA",
@@ -1810,7 +1819,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 202,
+        "pk": 203,
         "fields": {
             "name": "Sitganga",
             "type": "NAGARPALIKA",
@@ -1819,7 +1828,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 203,
+        "pk": 204,
         "fields": {
             "name": "Sandhikharka",
             "type": "NAGARPALIKA",
@@ -1828,7 +1837,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 204,
+        "pk": 205,
         "fields": {
             "name": "Bhumikasthan",
             "type": "NAGARPALIKA",
@@ -1837,7 +1846,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 205,
+        "pk": 206,
         "fields": {
             "name": "Pyuthan",
             "type": "NAGARPALIKA",
@@ -1846,7 +1855,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 206,
+        "pk": 207,
         "fields": {
             "name": "Swargadwari",
             "type": "NAGARPALIKA",
@@ -1855,7 +1864,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 207,
+        "pk": 208,
         "fields": {
             "name": "Rolpa",
             "type": "NAGARPALIKA",
@@ -1864,7 +1873,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 208,
+        "pk": 209,
         "fields": {
             "name": "Nepalgunj",
             "type": "UPAMAHANAGAR",
@@ -1873,7 +1882,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 209,
+        "pk": 210,
         "fields": {
             "name": "Kohalpur",
             "type": "NAGARPALIKA",
@@ -1882,7 +1891,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 210,
+        "pk": 211,
         "fields": {
             "name": "Barbardiya",
             "type": "NAGARPALIKA",
@@ -1891,7 +1900,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 211,
+        "pk": 212,
         "fields": {
             "name": "Gulariya",
             "type": "NAGARPALIKA",
@@ -1900,7 +1909,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 212,
+        "pk": 213,
         "fields": {
             "name": "Rajapur",
             "type": "NAGARPALIKA",
@@ -1909,7 +1918,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 213,
+        "pk": 214,
         "fields": {
             "name": "Bansgadhi",
             "type": "NAGARPALIKA",
@@ -1918,7 +1927,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 214,
+        "pk": 215,
         "fields": {
             "name": "Madhuwan",
             "type": "NAGARPALIKA",
@@ -1927,7 +1936,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 215,
+        "pk": 216,
         "fields": {
             "name": "Thakurbaba",
             "type": "NAGARPALIKA",
@@ -1936,7 +1945,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 216,
+        "pk": 217,
         "fields": {
             "name": "Ghorahi",
             "type": "UPAMAHANAGAR",
@@ -1945,7 +1954,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 217,
+        "pk": 218,
         "fields": {
             "name": "Tulsipur",
             "type": "UPAMAHANAGAR",
@@ -1954,7 +1963,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 218,
+        "pk": 219,
         "fields": {
             "name": "Lamahi",
             "type": "NAGARPALIKA",
@@ -1963,7 +1972,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 219,
+        "pk": 220,
         "fields": {
             "name": "BangadKupinde",
             "type": "NAGARPALIKA",
@@ -1972,7 +1981,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 220,
+        "pk": 221,
         "fields": {
             "name": "Bagchaur",
             "type": "NAGARPALIKA",
@@ -1981,7 +1990,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 221,
+        "pk": 222,
         "fields": {
             "name": "Shaarda",
             "type": "NAGARPALIKA",
@@ -1990,7 +1999,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 222,
+        "pk": 223,
         "fields": {
             "name": "Birendranagar",
             "type": "NAGARPALIKA",
@@ -1999,7 +2008,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 223,
+        "pk": 224,
         "fields": {
             "name": "Gurbhakot",
             "type": "NAGARPALIKA",
@@ -2008,7 +2017,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 224,
+        "pk": 225,
         "fields": {
             "name": "Bheriganga",
             "type": "NAGARPALIKA",
@@ -2017,7 +2026,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 225,
+        "pk": 226,
         "fields": {
             "name": "Panchapuri",
             "type": "NAGARPALIKA",
@@ -2026,7 +2035,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 226,
+        "pk": 227,
         "fields": {
             "name": "Lekbeshi",
             "type": "NAGARPALIKA",
@@ -2035,7 +2044,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 227,
+        "pk": 228,
         "fields": {
             "name": "Dullu",
             "type": "NAGARPALIKA",
@@ -2044,7 +2053,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 228,
+        "pk": 229,
         "fields": {
             "name": "Aathabis",
             "type": "NAGARPALIKA",
@@ -2053,7 +2062,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 229,
+        "pk": 230,
         "fields": {
             "name": "Narayan",
             "type": "NAGARPALIKA",
@@ -2062,7 +2071,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 230,
+        "pk": 231,
         "fields": {
             "name": "ChamundaBindrasaini",
             "type": "NAGARPALIKA",
@@ -2071,7 +2080,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 231,
+        "pk": 232,
         "fields": {
             "name": "Chhedagad",
             "type": "NAGARPALIKA",
@@ -2080,7 +2089,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 232,
+        "pk": 233,
         "fields": {
             "name": "Bheri",
             "type": "NAGARPALIKA",
@@ -2089,7 +2098,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 233,
+        "pk": 234,
         "fields": {
             "name": "Nalgad",
             "type": "NAGARPALIKA",
@@ -2098,7 +2107,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 234,
+        "pk": 235,
         "fields": {
             "name": "TripuraSundari",
             "type": "NAGARPALIKA",
@@ -2107,7 +2116,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 235,
+        "pk": 236,
         "fields": {
             "name": "ThuliBheri",
             "type": "NAGARPALIKA",
@@ -2116,7 +2125,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 236,
+        "pk": 237,
         "fields": {
             "name": "Chandannath",
             "type": "NAGARPALIKA",
@@ -2125,7 +2134,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 237,
+        "pk": 238,
         "fields": {
             "name": "Khandachakra",
             "type": "NAGARPALIKA",
@@ -2134,7 +2143,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 238,
+        "pk": 239,
         "fields": {
             "name": "Raskot",
             "type": "NAGARPALIKA",
@@ -2143,7 +2152,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 239,
+        "pk": 240,
         "fields": {
             "name": "Tilagupha",
             "type": "NAGARPALIKA",
@@ -2152,7 +2161,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 240,
+        "pk": 241,
         "fields": {
             "name": "ChhayanathRara",
             "type": "NAGARPALIKA",
@@ -2161,7 +2170,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 241,
+        "pk": 242,
         "fields": {
             "name": "Budhiganga",
             "type": "NAGARPALIKA",
@@ -2170,7 +2179,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 242,
+        "pk": 243,
         "fields": {
             "name": "Budhinanda",
             "type": "NAGARPALIKA",
@@ -2179,7 +2188,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 243,
+        "pk": 244,
         "fields": {
             "name": "Tribeni",
             "type": "NAGARPALIKA",
@@ -2188,7 +2197,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 244,
+        "pk": 245,
         "fields": {
             "name": "Badimalika",
             "type": "NAGARPALIKA",
@@ -2197,7 +2206,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 245,
+        "pk": 246,
         "fields": {
             "name": "Bungal",
             "type": "NAGARPALIKA",
@@ -2206,7 +2215,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 246,
+        "pk": 247,
         "fields": {
             "name": "JayaPrithvi",
             "type": "NAGARPALIKA",
@@ -2215,7 +2224,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 247,
+        "pk": 248,
         "fields": {
             "name": "Sanphebagar",
             "type": "NAGARPALIKA",
@@ -2224,7 +2233,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 248,
+        "pk": 249,
         "fields": {
             "name": "Mangalsen",
             "type": "NAGARPALIKA",
@@ -2233,7 +2242,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 249,
+        "pk": 250,
         "fields": {
             "name": "PanchadewalBinayak",
             "type": "NAGARPALIKA",
@@ -2242,7 +2251,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 250,
+        "pk": 251,
         "fields": {
             "name": "Kamalbazar",
             "type": "NAGARPALIKA",
@@ -2251,7 +2260,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 251,
+        "pk": 252,
         "fields": {
             "name": "DipayalSilgadhi",
             "type": "NAGARPALIKA",
@@ -2260,7 +2269,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 252,
+        "pk": 253,
         "fields": {
             "name": "Shikhar",
             "type": "NAGARPALIKA",
@@ -2269,7 +2278,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 253,
+        "pk": 254,
         "fields": {
             "name": "Dhangadhi",
             "type": "UPAMAHANAGAR",
@@ -2278,7 +2287,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 254,
+        "pk": 255,
         "fields": {
             "name": "Tikapur",
             "type": "NAGARPALIKA",
@@ -2287,7 +2296,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 255,
+        "pk": 256,
         "fields": {
             "name": "Godawari",
             "type": "NAGARPALIKA",
@@ -2296,7 +2305,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 256,
+        "pk": 257,
         "fields": {
             "name": "LamkiChuha",
             "type": "NAGARPALIKA",
@@ -2305,7 +2314,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 257,
+        "pk": 258,
         "fields": {
             "name": "Ghodaghodi",
             "type": "NAGARPALIKA",
@@ -2314,7 +2323,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 258,
+        "pk": 259,
         "fields": {
             "name": "Gauriganga",
             "type": "NAGARPALIKA",
@@ -2323,7 +2332,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 259,
+        "pk": 260,
         "fields": {
             "name": "Bhajani",
             "type": "NAGARPALIKA",
@@ -2332,7 +2341,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 260,
+        "pk": 261,
         "fields": {
             "name": "Bhimdatta",
             "type": "NAGARPALIKA",
@@ -2341,7 +2350,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 261,
+        "pk": 262,
         "fields": {
             "name": "Krishnapur",
             "type": "NAGARPALIKA",
@@ -2350,7 +2359,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 262,
+        "pk": 263,
         "fields": {
             "name": "Punarbas",
             "type": "NAGARPALIKA",
@@ -2359,7 +2368,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 263,
+        "pk": 264,
         "fields": {
             "name": "Belauri",
             "type": "NAGARPALIKA",
@@ -2368,7 +2377,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 264,
+        "pk": 265,
         "fields": {
             "name": "Bedkot",
             "type": "NAGARPALIKA",
@@ -2377,7 +2386,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 265,
+        "pk": 266,
         "fields": {
             "name": "Shuklaphanta",
             "type": "NAGARPALIKA",
@@ -2386,7 +2395,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 266,
+        "pk": 267,
         "fields": {
             "name": "Mahakali",
             "type": "NAGARPALIKA",
@@ -2395,7 +2404,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 267,
+        "pk": 268,
         "fields": {
             "name": "Parshuram",
             "type": "NAGARPALIKA",
@@ -2404,7 +2413,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 268,
+        "pk": 269,
         "fields": {
             "name": "Amargadhi",
             "type": "NAGARPALIKA",
@@ -2413,7 +2422,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 269,
+        "pk": 270,
         "fields": {
             "name": "Purchaudi",
             "type": "NAGARPALIKA",
@@ -2422,7 +2431,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 270,
+        "pk": 271,
         "fields": {
             "name": "Dasharathchand",
             "type": "NAGARPALIKA",
@@ -2431,7 +2440,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 271,
+        "pk": 272,
         "fields": {
             "name": "Patan",
             "type": "NAGARPALIKA",
@@ -2440,7 +2449,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 272,
+        "pk": 273,
         "fields": {
             "name": "Melauli",
             "type": "NAGARPALIKA",
@@ -2449,7 +2458,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 273,
+        "pk": 274,
         "fields": {
             "name": "Shailyashikhar",
             "type": "NAGARPALIKA",
@@ -2458,7 +2467,7 @@
     },
     {
         "model": "api.Municipality",
-        "pk": 274,
+        "pk": 275,
         "fields": {
             "name": "Mahakali",
             "type": "NAGARPALIKA",

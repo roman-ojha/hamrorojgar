@@ -5,4 +5,4 @@ from api.models import municipality
 class MunicipalitySerializer(serializers.ModelSerializer):
     class Meta:
         model = municipality.Municipality
-        fields = ['id', 'name', 'type']
+        fields = ['id', 'name', 'get_type_label']
