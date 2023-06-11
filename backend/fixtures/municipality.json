@@ -1,0 +1,2468 @@
+[
+    {
+        "model": "api.Municipality",
+        "pk": 1,
+        "fields": {
+            "name": "Taplejung(Phungling)",
+            "type": "NAGARPALIKA",
+            "district": 1
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 2,
+        "fields": {
+            "name": "Suryodaya",
+            "type": "NAGARPALIKA",
+            "district": 3
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 3,
+        "fields": {
+            "name": "Ilam",
+            "type": "NAGARPALIKA",
+            "district": 3
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 4,
+        "fields": {
+            "name": "Deumai",
+            "type": "NAGARPALIKA",
+            "district": 3
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 5,
+        "fields": {
+            "name": "Mai",
+            "type": "NAGARPALIKA",
+            "district": 3
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 6,
+        "fields": {
+            "name": "Mechinagar",
+            "type": "NAGARPALIKA",
+            "district": 4
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 7,
+        "fields": {
+            "name": "Birtamod",
+            "type": "NAGARPALIKA",
+            "district": 4
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 8,
+        "fields": {
+            "name": "Damak",
+            "type": "NAGARPALIKA",
+            "district": 4
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 9,
+        "fields": {
+            "name": "Bhadrapur",
+            "type": "NAGARPALIKA",
+            "district": 4
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 10,
+        "fields": {
+            "name": "Shivasatakshi",
+            "type": "NAGARPALIKA",
+            "district": 4
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 11,
+        "fields": {
+            "name": "Arjundhara",
+            "type": "NAGARPALIKA",
+            "district": 4
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 12,
+        "fields": {
+            "name": "Gauradaha",
+            "type": "NAGARPALIKA",
+            "district": 4
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 13,
+        "fields": {
+            "name": "Kankai",
+            "type": "NAGARPALIKA",
+            "district": 4
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 14,
+        "fields": {
+            "name": "Biratnagar",
+            "type": "MAHAHAGAR",
+            "district": 5
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 15,
+        "fields": {
+            "name": "SundarHaraincha",
+            "type": "NAGARPALIKA",
+            "district": 5
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 16,
+        "fields": {
+            "name": "Belbari",
+            "type": "NAGARPALIKA",
+            "district": 5
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 17,
+        "fields": {
+            "name": "Pathari-Shanischare",
+            "type": "NAGARPALIKA",
+            "district": 5
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 18,
+        "fields": {
+            "name": "Ratuwamai",
+            "type": "NAGARPALIKA",
+            "district": 5
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 19,
+        "fields": {
+            "name": "Urlabari",
+            "type": "NAGARPALIKA",
+            "district": 5
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 20,
+        "fields": {
+            "name": "Rangeli",
+            "type": "NAGARPALIKA",
+            "district": 5
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 21,
+        "fields": {
+            "name": "Sunawarshi",
+            "type": "NAGARPALIKA",
+            "district": 5
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 22,
+        "fields": {
+            "name": "LetangBhogateni",
+            "type": "NAGARPALIKA",
+            "district": 5
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 23,
+        "fields": {
+            "name": "Itahari",
+            "type": "UPAMAHANAGAR",
+            "district": 6
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 24,
+        "fields": {
+            "name": "Dharan",
+            "type": "UPAMAHANAGAR",
+            "district": 6
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 25,
+        "fields": {
+            "name": "Barahachhetra",
+            "type": "NAGARPALIKA",
+            "district": 6
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 26,
+        "fields": {
+            "name": "Inaruwa",
+            "type": "NAGARPALIKA",
+            "district": 6
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 27,
+        "fields": {
+            "name": "Duhabi",
+            "type": "NAGARPALIKA",
+            "district": 6
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 28,
+        "fields": {
+            "name": "Ramdhuni",
+            "type": "NAGARPALIKA",
+            "district": 6
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 29,
+        "fields": {
+            "name": "Dhankuta",
+            "type": "NAGARPALIKA",
+            "district": 7
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 30,
+        "fields": {
+            "name": "Mahalaxmi",
+            "type": "NAGARPALIKA",
+            "district": 7
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 31,
+        "fields": {
+            "name": "Pakhribas",
+            "type": "NAGARPALIKA",
+            "district": 7
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 32,
+        "fields": {
+            "name": "Khandbari",
+            "type": "NAGARPALIKA",
+            "district": 9
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 33,
+        "fields": {
+            "name": "Chainpur",
+            "type": "NAGARPALIKA",
+            "district": 9
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 34,
+        "fields": {
+            "name": "Dharmadevi",
+            "type": "NAGARPALIKA",
+            "district": 9
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 35,
+        "fields": {
+            "name": "Panchkhapan",
+            "type": "NAGARPALIKA",
+            "district": 9
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 36,
+        "fields": {
+            "name": "Madi",
+            "type": "NAGARPALIKA",
+            "district": 9
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 37,
+        "fields": {
+            "name": "Shadanand",
+            "type": "NAGARPALIKA",
+            "district": 10
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 38,
+        "fields": {
+            "name": "Bhojpur",
+            "type": "NAGARPALIKA",
+            "district": 10
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 39,
+        "fields": {
+            "name": "SoluDudhkunda",
+            "type": "NAGARPALIKA",
+            "district": 11
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 40,
+        "fields": {
+            "name": "Siddhicharan",
+            "type": "NAGARPALIKA",
+            "district": 12
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 41,
+        "fields": {
+            "name": "RupakotMajhuwagadhi",
+            "type": "NAGARPALIKA",
+            "district": 13
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 42,
+        "fields": {
+            "name": "HalesiTuwachung",
+            "type": "NAGARPALIKA",
+            "district": 13
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 43,
+        "fields": {
+            "name": "Triyuga",
+            "type": "NAGARPALIKA",
+            "district": 14
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 44,
+        "fields": {
+            "name": "Katari",
+            "type": "NAGARPALIKA",
+            "district": 14
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 45,
+        "fields": {
+            "name": "Chaudandigadhi",
+            "type": "NAGARPALIKA",
+            "district": 14
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 46,
+        "fields": {
+            "name": "Belaka",
+            "type": "NAGARPALIKA",
+            "district": 14
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 47,
+        "fields": {
+            "name": "Rajbiraj",
+            "type": "NAGARPALIKA",
+            "district": 15
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 48,
+        "fields": {
+            "name": "HanumannagarKankalini",
+            "type": "NAGARPALIKA",
+            "district": 15
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 49,
+        "fields": {
+            "name": "Khadak",
+            "type": "NAGARPALIKA",
+            "district": 15
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 50,
+        "fields": {
+            "name": "Dakneshwari",
+            "type": "NAGARPALIKA",
+            "district": 15
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 51,
+        "fields": {
+            "name": "Surunga",
+            "type": "NAGARPALIKA",
+            "district": 15
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 52,
+        "fields": {
+            "name": "Bodebarsain",
+            "type": "NAGARPALIKA",
+            "district": 15
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 53,
+        "fields": {
+            "name": "Shambhunath",
+            "type": "NAGARPALIKA",
+            "district": 15
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 54,
+        "fields": {
+            "name": "Kanchanrup",
+            "type": "NAGARPALIKA",
+            "district": 15
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 55,
+        "fields": {
+            "name": "Saptakoshi",
+            "type": "NAGARPALIKA",
+            "district": 15
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 56,
+        "fields": {
+            "name": "Lahan",
+            "type": "NAGARPALIKA",
+            "district": 16
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 57,
+        "fields": {
+            "name": "Siraha",
+            "type": "NAGARPALIKA",
+            "district": 16
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 58,
+        "fields": {
+            "name": "Golbazar",
+            "type": "NAGARPALIKA",
+            "district": 16
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 59,
+        "fields": {
+            "name": "Mirchaiya",
+            "type": "NAGARPALIKA",
+            "district": 16
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 60,
+        "fields": {
+            "name": "Kalyanpur",
+            "type": "NAGARPALIKA",
+            "district": 16
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 61,
+        "fields": {
+            "name": "Dhangadimai",
+            "type": "NAGARPALIKA",
+            "district": 16
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 62,
+        "fields": {
+            "name": "Sukhipur",
+            "type": "NAGARPALIKA",
+            "district": 16
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 63,
+        "fields": {
+            "name": "Karjanha",
+            "type": "NAGARPALIKA",
+            "district": 16
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 64,
+        "fields": {
+            "name": "MithilaBihari",
+            "type": "NAGARPALIKA",
+            "district": 17
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 65,
+        "fields": {
+            "name": "Gaushala",
+            "type": "NAGARPALIKA",
+            "district": 18
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 66,
+        "fields": {
+            "name": "Bardibas",
+            "type": "NAGARPALIKA",
+            "district": 18
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 67,
+        "fields": {
+            "name": "Jaleshwar",
+            "type": "NAGARPALIKA",
+            "district": 18
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 68,
+        "fields": {
+            "name": "ManaraShiswa",
+            "type": "NAGARPALIKA",
+            "district": 18
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 69,
+        "fields": {
+            "name": "Bhangaha",
+            "type": "NAGARPALIKA",
+            "district": 18
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 70,
+        "fields": {
+            "name": "Balawa",
+            "type": "NAGARPALIKA",
+            "district": 18
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 71,
+        "fields": {
+            "name": "Loharpatti",
+            "type": "NAGARPALIKA",
+            "district": 18
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 72,
+        "fields": {
+            "name": "Aurahi",
+            "type": "NAGARPALIKA",
+            "district": 18
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 73,
+        "fields": {
+            "name": "Matihani",
+            "type": "NAGARPALIKA",
+            "district": 18
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 74,
+        "fields": {
+            "name": "Ramgopalpur",
+            "type": "NAGARPALIKA",
+            "district": 18
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 75,
+        "fields": {
+            "name": "Barahathwa",
+            "type": "NAGARPALIKA",
+            "district": 19
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 76,
+        "fields": {
+            "name": "Ishwarpur",
+            "type": "NAGARPALIKA",
+            "district": 19
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 77,
+        "fields": {
+            "name": "Lalbandi",
+            "type": "NAGARPALIKA",
+            "district": 19
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 78,
+        "fields": {
+            "name": "Godaita",
+            "type": "NAGARPALIKA",
+            "district": 19
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 79,
+        "fields": {
+            "name": "Malangwa",
+            "type": "NAGARPALIKA",
+            "district": 19
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 80,
+        "fields": {
+            "name": "Balara",
+            "type": "NAGARPALIKA",
+            "district": 19
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 81,
+        "fields": {
+            "name": "Hariwan",
+            "type": "NAGARPALIKA",
+            "district": 19
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 82,
+        "fields": {
+            "name": "Kabilasi",
+            "type": "NAGARPALIKA",
+            "district": 19
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 83,
+        "fields": {
+            "name": "Bagmati",
+            "type": "NAGARPALIKA",
+            "district": 19
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 84,
+        "fields": {
+            "name": "Haripur",
+            "type": "NAGARPALIKA",
+            "district": 19
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 85,
+        "fields": {
+            "name": "Haripurwa",
+            "type": "NAGARPALIKA",
+            "district": 19
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 86,
+        "fields": {
+            "name": "Kalaiya",
+            "type": "UPAMAHANAGAR",
+            "district": 20
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 87,
+        "fields": {
+            "name": "Jitpursimara",
+            "type": "UPAMAHANAGAR",
+            "district": 20
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 88,
+        "fields": {
+            "name": "Mahagadhimai",
+            "type": "NAGARPALIKA",
+            "district": 20
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 89,
+        "fields": {
+            "name": "Simraungadh",
+            "type": "NAGARPALIKA",
+            "district": 20
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 90,
+        "fields": {
+            "name": "Kolhabi",
+            "type": "NAGARPALIKA",
+            "district": 20
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 91,
+        "fields": {
+            "name": "Nijgadh",
+            "type": "NAGARPALIKA",
+            "district": 20
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 92,
+        "fields": {
+            "name": "Pacharauta",
+            "type": "NAGARPALIKA",
+            "district": 20
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 93,
+        "fields": {
+            "name": "Birgunj",
+            "type": "MAHAHAGAR",
+            "district": 21
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 94,
+        "fields": {
+            "name": "Bahudarmai",
+            "type": "NAGARPALIKA",
+            "district": 21
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 95,
+        "fields": {
+            "name": "Parsagadhi",
+            "type": "NAGARPALIKA",
+            "district": 21
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 96,
+        "fields": {
+            "name": "Pokhariya",
+            "type": "NAGARPALIKA",
+            "district": 21
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 97,
+        "fields": {
+            "name": "Chandrapur",
+            "type": "NAGARPALIKA",
+            "district": 22
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 98,
+        "fields": {
+            "name": "Garuda",
+            "type": "NAGARPALIKA",
+            "district": 22
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 99,
+        "fields": {
+            "name": "Gujara",
+            "type": "NAGARPALIKA",
+            "district": 22
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 100,
+        "fields": {
+            "name": "Brindaban",
+            "type": "NAGARPALIKA",
+            "district": 22
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 101,
+        "fields": {
+            "name": "Ishnath",
+            "type": "NAGARPALIKA",
+            "district": 22
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 102,
+        "fields": {
+            "name": "Rajpur",
+            "type": "NAGARPALIKA",
+            "district": 22
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 103,
+        "fields": {
+            "name": "Gadhimai",
+            "type": "NAGARPALIKA",
+            "district": 22
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 104,
+        "fields": {
+            "name": "Katahariya",
+            "type": "NAGARPALIKA",
+            "district": 22
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 105,
+        "fields": {
+            "name": "Paroha",
+            "type": "NAGARPALIKA",
+            "district": 22
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 106,
+        "fields": {
+            "name": "PhatuwaBijayapur",
+            "type": "NAGARPALIKA",
+            "district": 22
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 107,
+        "fields": {
+            "name": "Baudhimai",
+            "type": "NAGARPALIKA",
+            "district": 22
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 108,
+        "fields": {
+            "name": "MadhavNarayan",
+            "type": "NAGARPALIKA",
+            "district": 22
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 109,
+        "fields": {
+            "name": "Gaur",
+            "type": "NAGARPALIKA",
+            "district": 22
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 110,
+        "fields": {
+            "name": "DewahiGonahi",
+            "type": "NAGARPALIKA",
+            "district": 22
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 111,
+        "fields": {
+            "name": "Rajdevi",
+            "type": "NAGARPALIKA",
+            "district": 22
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 112,
+        "fields": {
+            "name": "Maulapur",
+            "type": "NAGARPALIKA",
+            "district": 22
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 113,
+        "fields": {
+            "name": "Dudhauli",
+            "type": "NAGARPALIKA",
+            "district": 23
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 114,
+        "fields": {
+            "name": "Kamalamai",
+            "type": "NAGARPALIKA",
+            "district": 23
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 115,
+        "fields": {
+            "name": "Manthali",
+            "type": "NAGARPALIKA",
+            "district": 24
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 116,
+        "fields": {
+            "name": "Ramechhap",
+            "type": "NAGARPALIKA",
+            "district": 24
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 117,
+        "fields": {
+            "name": "Bhimeshwar",
+            "type": "NAGARPALIKA",
+            "district": 25
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 118,
+        "fields": {
+            "name": "Jiri",
+            "type": "NAGARPALIKA",
+            "district": 25
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 119,
+        "fields": {
+            "name": "ChautaraSangachokgadhi",
+            "type": "NAGARPALIKA",
+            "district": 26
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 120,
+        "fields": {
+            "name": "Melamchi",
+            "type": "NAGARPALIKA",
+            "district": 26
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 121,
+        "fields": {
+            "name": "Barhabise",
+            "type": "NAGARPALIKA",
+            "district": 26
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 122,
+        "fields": {
+            "name": "Banepa",
+            "type": "NAGARPALIKA",
+            "district": 27
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 123,
+        "fields": {
+            "name": "Paunauti",
+            "type": "NAGARPALIKA",
+            "district": 27
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 124,
+        "fields": {
+            "name": "Panchkhal",
+            "type": "NAGARPALIKA",
+            "district": 27
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 125,
+        "fields": {
+            "name": "Mandandeupur",
+            "type": "NAGARPALIKA",
+            "district": 27
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 126,
+        "fields": {
+            "name": "Dhulikhel",
+            "type": "NAGARPALIKA",
+            "district": 27
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 127,
+        "fields": {
+            "name": "Namobuddha",
+            "type": "NAGARPALIKA",
+            "district": 27
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 128,
+        "fields": {
+            "name": "Lalitpur",
+            "type": "MAHAHAGAR",
+            "district": 28
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 129,
+        "fields": {
+            "name": "Mahalaxmi",
+            "type": "NAGARPALIKA",
+            "district": 28
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 130,
+        "fields": {
+            "name": "Godawari",
+            "type": "NAGARPALIKA",
+            "district": 28
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 131,
+        "fields": {
+            "name": "Suryabinayak",
+            "type": "NAGARPALIKA",
+            "district": 29
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 132,
+        "fields": {
+            "name": "MadhyapurThimi",
+            "type": "NAGARPALIKA",
+            "district": 29
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 133,
+        "fields": {
+            "name": "Bhaktapur",
+            "type": "NAGARPALIKA",
+            "district": 29
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 134,
+        "fields": {
+            "name": "Changunarayan",
+            "type": "NAGARPALIKA",
+            "district": 29
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 135,
+        "fields": {
+            "name": "Kathmandu",
+            "type": "MAHAHAGAR",
+            "district": 30
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 136,
+        "fields": {
+            "name": "Budhanilkantha",
+            "type": "NAGARPALIKA",
+            "district": 30
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 137,
+        "fields": {
+            "name": "Tarakeshwar",
+            "type": "NAGARPALIKA",
+            "district": 30
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 138,
+        "fields": {
+            "name": "Gokarneshwar",
+            "type": "NAGARPALIKA",
+            "district": 30
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 139,
+        "fields": {
+            "name": "Chandragiri",
+            "type": "NAGARPALIKA",
+            "district": 30
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 140,
+        "fields": {
+            "name": "Tokha",
+            "type": "NAGARPALIKA",
+            "district": 30
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 141,
+        "fields": {
+            "name": "Kageshwari-Manohara",
+            "type": "NAGARPALIKA",
+            "district": 30
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 142,
+        "fields": {
+            "name": "Nagarjun",
+            "type": "NAGARPALIKA",
+            "district": 30
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 143,
+        "fields": {
+            "name": "Kirtipur",
+            "type": "NAGARPALIKA",
+            "district": 30
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 144,
+        "fields": {
+            "name": "Shankharapur",
+            "type": "NAGARPALIKA",
+            "district": 30
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 145,
+        "fields": {
+            "name": "Dakshinkali",
+            "type": "NAGARPALIKA",
+            "district": 30
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 146,
+        "fields": {
+            "name": "Bidur",
+            "type": "NAGARPALIKA",
+            "district": 31
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 147,
+        "fields": {
+            "name": "Belkotgadhi",
+            "type": "NAGARPALIKA",
+            "district": 31
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 148,
+        "fields": {
+            "name": "Nilkantha",
+            "type": "NAGARPALIKA",
+            "district": 33
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 149,
+        "fields": {
+            "name": "Dhunibeshi",
+            "type": "NAGARPALIKA",
+            "district": 33
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 150,
+        "fields": {
+            "name": "Bharatpur",
+            "type": "MAHAHAGAR",
+            "district": 35
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 151,
+        "fields": {
+            "name": "Ratnanagar",
+            "type": "NAGARPALIKA",
+            "district": 35
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 152,
+        "fields": {
+            "name": "Rapti",
+            "type": "NAGARPALIKA",
+            "district": 35
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 153,
+        "fields": {
+            "name": "Khairhani",
+            "type": "NAGARPALIKA",
+            "district": 35
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 154,
+        "fields": {
+            "name": "Kalika",
+            "type": "NAGARPALIKA",
+            "district": 35
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 155,
+        "fields": {
+            "name": "Madi",
+            "type": "NAGARPALIKA",
+            "district": 35
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 156,
+        "fields": {
+            "name": "Gorkha",
+            "type": "NAGARPALIKA",
+            "district": 36
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 157,
+        "fields": {
+            "name": "Palungtar",
+            "type": "NAGARPALIKA",
+            "district": 36
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 158,
+        "fields": {
+            "name": "Besisahar",
+            "type": "NAGARPALIKA",
+            "district": 37
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 159,
+        "fields": {
+            "name": "Sundarbazar",
+            "type": "NAGARPALIKA",
+            "district": 37
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 160,
+        "fields": {
+            "name": "MadhyaNepal",
+            "type": "NAGARPALIKA",
+            "district": 37
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 161,
+        "fields": {
+            "name": "Rainas",
+            "type": "NAGARPALIKA",
+            "district": 37
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 162,
+        "fields": {
+            "name": "Vyas",
+            "type": "NAGARPALIKA",
+            "district": 38
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 163,
+        "fields": {
+            "name": "Shuklagandaki",
+            "type": "NAGARPALIKA",
+            "district": 38
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 164,
+        "fields": {
+            "name": "Bhanu",
+            "type": "NAGARPALIKA",
+            "district": 38
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 165,
+        "fields": {
+            "name": "Bhimad",
+            "type": "NAGARPALIKA",
+            "district": 38
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 166,
+        "fields": {
+            "name": "Waling",
+            "type": "NAGARPALIKA",
+            "district": 39
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 167,
+        "fields": {
+            "name": "Putalibazar",
+            "type": "NAGARPALIKA",
+            "district": 39
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 168,
+        "fields": {
+            "name": "Galyang",
+            "type": "NAGARPALIKA",
+            "district": 39
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 169,
+        "fields": {
+            "name": "Chapakot",
+            "type": "NAGARPALIKA",
+            "district": 39
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 170,
+        "fields": {
+            "name": "Bhirkot",
+            "type": "NAGARPALIKA",
+            "district": 39
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 171,
+        "fields": {
+            "name": "Pokhara",
+            "type": "MAHAHAGAR",
+            "district": 40
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 172,
+        "fields": {
+            "name": "Beni",
+            "type": "NAGARPALIKA",
+            "district": 43
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 173,
+        "fields": {
+            "name": "Kawasoti",
+            "type": "NAGARPALIKA",
+            "district": 44
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 174,
+        "fields": {
+            "name": "Gaindakot",
+            "type": "NAGARPALIKA",
+            "district": 44
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 175,
+        "fields": {
+            "name": "Madhyabindu",
+            "type": "NAGARPALIKA",
+            "district": 44
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 176,
+        "fields": {
+            "name": "Devchuli",
+            "type": "NAGARPALIKA",
+            "district": 44
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 177,
+        "fields": {
+            "name": "Kushma",
+            "type": "NAGARPALIKA",
+            "district": 45
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 178,
+        "fields": {
+            "name": "Phalewas",
+            "type": "NAGARPALIKA",
+            "district": 45
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 179,
+        "fields": {
+            "name": "Baglung",
+            "type": "NAGARPALIKA",
+            "district": 46
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 180,
+        "fields": {
+            "name": "Galkot",
+            "type": "NAGARPALIKA",
+            "district": 46
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 181,
+        "fields": {
+            "name": "Jaimini",
+            "type": "NAGARPALIKA",
+            "district": 46
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 182,
+        "fields": {
+            "name": "Dhorpatan",
+            "type": "NAGARPALIKA",
+            "district": 46
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 183,
+        "fields": {
+            "name": "Musikot",
+            "type": "NAGARPALIKA",
+            "district": 47
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 184,
+        "fields": {
+            "name": "Resunga",
+            "type": "NAGARPALIKA",
+            "district": 47
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 185,
+        "fields": {
+            "name": "Tansen",
+            "type": "NAGARPALIKA",
+            "district": 48
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 186,
+        "fields": {
+            "name": "Rampur",
+            "type": "NAGARPALIKA",
+            "district": 48
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 187,
+        "fields": {
+            "name": "Ramgram",
+            "type": "NAGARPALIKA",
+            "district": 49
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 188,
+        "fields": {
+            "name": "Sunwal",
+            "type": "NAGARPALIKA",
+            "district": 49
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 189,
+        "fields": {
+            "name": "Bardghat",
+            "type": "NAGARPALIKA",
+            "district": 49
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 190,
+        "fields": {
+            "name": "Butwal",
+            "type": "UPAMAHANAGAR",
+            "district": 50
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 191,
+        "fields": {
+            "name": "Tilottama",
+            "type": "NAGARPALIKA",
+            "district": 50
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 192,
+        "fields": {
+            "name": "LumbiniSanskritik",
+            "type": "NAGARPALIKA",
+            "district": 50
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 193,
+        "fields": {
+            "name": "Siddharthanagar",
+            "type": "NAGARPALIKA",
+            "district": 50
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 194,
+        "fields": {
+            "name": "Sainamaina",
+            "type": "NAGARPALIKA",
+            "district": 50
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 195,
+        "fields": {
+            "name": "Devdaha",
+            "type": "NAGARPALIKA",
+            "district": 50
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 196,
+        "fields": {
+            "name": "Kapilvastu",
+            "type": "NAGARPALIKA",
+            "district": 51
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 197,
+        "fields": {
+            "name": "Banganga",
+            "type": "NAGARPALIKA",
+            "district": 51
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 198,
+        "fields": {
+            "name": "Shivaraj",
+            "type": "NAGARPALIKA",
+            "district": 51
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 199,
+        "fields": {
+            "name": "Buddhabhumi",
+            "type": "NAGARPALIKA",
+            "district": 51
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 200,
+        "fields": {
+            "name": "Krishnanagar",
+            "type": "NAGARPALIKA",
+            "district": 51
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 201,
+        "fields": {
+            "name": "Maharajganj",
+            "type": "NAGARPALIKA",
+            "district": 51
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 202,
+        "fields": {
+            "name": "Sitganga",
+            "type": "NAGARPALIKA",
+            "district": 52
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 203,
+        "fields": {
+            "name": "Sandhikharka",
+            "type": "NAGARPALIKA",
+            "district": 52
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 204,
+        "fields": {
+            "name": "Bhumikasthan",
+            "type": "NAGARPALIKA",
+            "district": 52
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 205,
+        "fields": {
+            "name": "Pyuthan",
+            "type": "NAGARPALIKA",
+            "district": 53
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 206,
+        "fields": {
+            "name": "Swargadwari",
+            "type": "NAGARPALIKA",
+            "district": 53
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 207,
+        "fields": {
+            "name": "Rolpa",
+            "type": "NAGARPALIKA",
+            "district": 54
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 208,
+        "fields": {
+            "name": "Nepalgunj",
+            "type": "UPAMAHANAGAR",
+            "district": 56
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 209,
+        "fields": {
+            "name": "Kohalpur",
+            "type": "NAGARPALIKA",
+            "district": 56
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 210,
+        "fields": {
+            "name": "Barbardiya",
+            "type": "NAGARPALIKA",
+            "district": 57
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 211,
+        "fields": {
+            "name": "Gulariya",
+            "type": "NAGARPALIKA",
+            "district": 57
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 212,
+        "fields": {
+            "name": "Rajapur",
+            "type": "NAGARPALIKA",
+            "district": 57
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 213,
+        "fields": {
+            "name": "Bansgadhi",
+            "type": "NAGARPALIKA",
+            "district": 57
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 214,
+        "fields": {
+            "name": "Madhuwan",
+            "type": "NAGARPALIKA",
+            "district": 57
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 215,
+        "fields": {
+            "name": "Thakurbaba",
+            "type": "NAGARPALIKA",
+            "district": 57
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 216,
+        "fields": {
+            "name": "Ghorahi",
+            "type": "UPAMAHANAGAR",
+            "district": 58
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 217,
+        "fields": {
+            "name": "Tulsipur",
+            "type": "UPAMAHANAGAR",
+            "district": 58
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 218,
+        "fields": {
+            "name": "Lamahi",
+            "type": "NAGARPALIKA",
+            "district": 58
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 219,
+        "fields": {
+            "name": "BangadKupinde",
+            "type": "NAGARPALIKA",
+            "district": 60
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 220,
+        "fields": {
+            "name": "Bagchaur",
+            "type": "NAGARPALIKA",
+            "district": 60
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 221,
+        "fields": {
+            "name": "Shaarda",
+            "type": "NAGARPALIKA",
+            "district": 60
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 222,
+        "fields": {
+            "name": "Birendranagar",
+            "type": "NAGARPALIKA",
+            "district": 61
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 223,
+        "fields": {
+            "name": "Gurbhakot",
+            "type": "NAGARPALIKA",
+            "district": 61
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 224,
+        "fields": {
+            "name": "Bheriganga",
+            "type": "NAGARPALIKA",
+            "district": 61
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 225,
+        "fields": {
+            "name": "Panchapuri",
+            "type": "NAGARPALIKA",
+            "district": 61
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 226,
+        "fields": {
+            "name": "Lekbeshi",
+            "type": "NAGARPALIKA",
+            "district": 61
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 227,
+        "fields": {
+            "name": "Dullu",
+            "type": "NAGARPALIKA",
+            "district": 62
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 228,
+        "fields": {
+            "name": "Aathabis",
+            "type": "NAGARPALIKA",
+            "district": 62
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 229,
+        "fields": {
+            "name": "Narayan",
+            "type": "NAGARPALIKA",
+            "district": 62
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 230,
+        "fields": {
+            "name": "ChamundaBindrasaini",
+            "type": "NAGARPALIKA",
+            "district": 62
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 231,
+        "fields": {
+            "name": "Chhedagad",
+            "type": "NAGARPALIKA",
+            "district": 63
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 232,
+        "fields": {
+            "name": "Bheri",
+            "type": "NAGARPALIKA",
+            "district": 63
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 233,
+        "fields": {
+            "name": "Nalgad",
+            "type": "NAGARPALIKA",
+            "district": 63
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 234,
+        "fields": {
+            "name": "TripuraSundari",
+            "type": "NAGARPALIKA",
+            "district": 64
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 235,
+        "fields": {
+            "name": "ThuliBheri",
+            "type": "NAGARPALIKA",
+            "district": 64
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 236,
+        "fields": {
+            "name": "Chandannath",
+            "type": "NAGARPALIKA",
+            "district": 65
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 237,
+        "fields": {
+            "name": "Khandachakra",
+            "type": "NAGARPALIKA",
+            "district": 66
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 238,
+        "fields": {
+            "name": "Raskot",
+            "type": "NAGARPALIKA",
+            "district": 66
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 239,
+        "fields": {
+            "name": "Tilagupha",
+            "type": "NAGARPALIKA",
+            "district": 66
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 240,
+        "fields": {
+            "name": "ChhayanathRara",
+            "type": "NAGARPALIKA",
+            "district": 67
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 241,
+        "fields": {
+            "name": "Budhiganga",
+            "type": "NAGARPALIKA",
+            "district": 69
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 242,
+        "fields": {
+            "name": "Budhinanda",
+            "type": "NAGARPALIKA",
+            "district": 69
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 243,
+        "fields": {
+            "name": "Tribeni",
+            "type": "NAGARPALIKA",
+            "district": 69
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 244,
+        "fields": {
+            "name": "Badimalika",
+            "type": "NAGARPALIKA",
+            "district": 69
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 245,
+        "fields": {
+            "name": "Bungal",
+            "type": "NAGARPALIKA",
+            "district": 70
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 246,
+        "fields": {
+            "name": "JayaPrithvi",
+            "type": "NAGARPALIKA",
+            "district": 70
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 247,
+        "fields": {
+            "name": "Sanphebagar",
+            "type": "NAGARPALIKA",
+            "district": 71
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 248,
+        "fields": {
+            "name": "Mangalsen",
+            "type": "NAGARPALIKA",
+            "district": 71
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 249,
+        "fields": {
+            "name": "PanchadewalBinayak",
+            "type": "NAGARPALIKA",
+            "district": 71
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 250,
+        "fields": {
+            "name": "Kamalbazar",
+            "type": "NAGARPALIKA",
+            "district": 71
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 251,
+        "fields": {
+            "name": "DipayalSilgadhi",
+            "type": "NAGARPALIKA",
+            "district": 72
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 252,
+        "fields": {
+            "name": "Shikhar",
+            "type": "NAGARPALIKA",
+            "district": 72
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 253,
+        "fields": {
+            "name": "Dhangadhi",
+            "type": "UPAMAHANAGAR",
+            "district": 73
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 254,
+        "fields": {
+            "name": "Tikapur",
+            "type": "NAGARPALIKA",
+            "district": 73
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 255,
+        "fields": {
+            "name": "Godawari",
+            "type": "NAGARPALIKA",
+            "district": 73
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 256,
+        "fields": {
+            "name": "LamkiChuha",
+            "type": "NAGARPALIKA",
+            "district": 73
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 257,
+        "fields": {
+            "name": "Ghodaghodi",
+            "type": "NAGARPALIKA",
+            "district": 73
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 258,
+        "fields": {
+            "name": "Gauriganga",
+            "type": "NAGARPALIKA",
+            "district": 73
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 259,
+        "fields": {
+            "name": "Bhajani",
+            "type": "NAGARPALIKA",
+            "district": 73
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 260,
+        "fields": {
+            "name": "Bhimdatta",
+            "type": "NAGARPALIKA",
+            "district": 74
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 261,
+        "fields": {
+            "name": "Krishnapur",
+            "type": "NAGARPALIKA",
+            "district": 74
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 262,
+        "fields": {
+            "name": "Punarbas",
+            "type": "NAGARPALIKA",
+            "district": 74
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 263,
+        "fields": {
+            "name": "Belauri",
+            "type": "NAGARPALIKA",
+            "district": 74
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 264,
+        "fields": {
+            "name": "Bedkot",
+            "type": "NAGARPALIKA",
+            "district": 74
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 265,
+        "fields": {
+            "name": "Shuklaphanta",
+            "type": "NAGARPALIKA",
+            "district": 74
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 266,
+        "fields": {
+            "name": "Mahakali",
+            "type": "NAGARPALIKA",
+            "district": 74
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 267,
+        "fields": {
+            "name": "Parshuram",
+            "type": "NAGARPALIKA",
+            "district": 75
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 268,
+        "fields": {
+            "name": "Amargadhi",
+            "type": "NAGARPALIKA",
+            "district": 75
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 269,
+        "fields": {
+            "name": "Purchaudi",
+            "type": "NAGARPALIKA",
+            "district": 76
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 270,
+        "fields": {
+            "name": "Dasharathchand",
+            "type": "NAGARPALIKA",
+            "district": 76
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 271,
+        "fields": {
+            "name": "Patan",
+            "type": "NAGARPALIKA",
+            "district": 76
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 272,
+        "fields": {
+            "name": "Melauli",
+            "type": "NAGARPALIKA",
+            "district": 76
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 273,
+        "fields": {
+            "name": "Shailyashikhar",
+            "type": "NAGARPALIKA",
+            "district": 77
+        }
+    },
+    {
+        "model": "api.Municipality",
+        "pk": 274,
+        "fields": {
+            "name": "Mahakali",
+            "type": "NAGARPALIKA",
+            "district": 77
+        }
+    }
+]
