@@ -93,3 +93,6 @@ Authorization: Token 4e72012e50fe301aa0170fa9c7e741622729a3e2
 
 ### Search Jobs
 GET http://127.0.0.1:8000/api/jobs/search?q=&district=Jhapa&municipality=Kamal
+
+### Get Districts
+GET http://127.0.0.1:8000/api/district

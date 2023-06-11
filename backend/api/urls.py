@@ -4,6 +4,7 @@ from api.views.citizen_view import CitizenView
 from api.views.job_application import ApplyView
 from api.views.vacancy_view import JobListView, SearchJobs
 from api.views.payment_view import Payment, PaymentSuccess
+from api.views.district_municipality_view import District
 
 
 urlpatterns = [
@@ -17,4 +18,5 @@ urlpatterns = [
     path('payment/<str:payment_gateway>',
          Payment.as_view(), name='payment'),  # ?job_application_id=xxx
     path('jobs/search', SearchJobs.as_view(), name="search-jobs"),
+    path('district/', District.as_view(), name='district'),
 ]
