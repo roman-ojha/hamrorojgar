@@ -38,7 +38,8 @@ class JobApplicationAdmin(admin.ModelAdmin):
         extra_context['cv_image'] = self.cv_image(job_application)
         extra_context['cv_url'] = self.cv_url(job_application)
         return super().change_view(request, object_id, form_url, extra_context=extra_context)
-    list_display = ('id', 'detail', 'applied_by', 'is_approved', 'of_vacancy')
+    list_display = ('id', 'detail', 'applied_by',
+                    'is_approved', 'of_vacancy', 'payment_status')
     ordering = ('id',)
 
     fields = ('cv', 'citizen', 'vacancy', 'description',)

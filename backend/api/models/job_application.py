@@ -26,3 +26,4 @@ class JobApplication(models.Model):
         EXPIRED = "EXPIRED", "Expired"
     payment_status = models.CharField(
         max_length=10, choices=PaymentStatusChoices.choices)
+    # apply_on
