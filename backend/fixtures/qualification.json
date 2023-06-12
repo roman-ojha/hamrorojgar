@@ -262,5 +262,141 @@
       "description": "Ability to think outside the box",
       "vacancy_id": 7
     }
+  },
+  {
+    "model": "api.Qualification",
+    "pk": 34,
+    "fields": {
+      "description": "Associate’s or Bachelor’s degree",
+      "vacancy_id": 8
+    }
+  },
+  {
+    "model": "api.Qualification",
+    "pk": 35,
+    "fields": {
+      "description": "",
+      "vacancy_id": 8
+    }
+  },
+  {
+    "model": "api.Qualification",
+    "pk": 36,
+    "fields": {
+      "description": "Minimum 2 years experience providing general front-end application development and support (customer-facing and code-level support)",
+      "vacancy_id": 8
+    }
+  },
+  {
+    "model": "api.Qualification",
+    "pk": 37,
+    "fields": {
+      "description": "Functional testing experience",
+      "vacancy_id": 8
+    }
+  },
+  {
+    "model": "api.Qualification",
+    "pk": 38,
+    "fields": {
+      "description": "Familiarity with digital application architecture",
+      "vacancy_id": 8
+    }
+  },
+  {
+    "model": "api.Qualification",
+    "pk": 39,
+    "fields": {
+      "description": "Basic understanding of code versioning (Git), and best practices for code development, testing, and maintenance",
+      "vacancy_id": 8
+    }
+  },
+  {
+    "model": "api.Qualification",
+    "pk": 40,
+    "fields": {
+      "description": "Familiarity with SASS, Google Optimize, mobile SDK development, RESTful APIs",
+      "vacancy_id": 8
+    }
+  },
+  {
+    "model": "api.Qualification",
+    "pk": 41,
+    "fields": {
+      "description": "Three years of full-time satisfactory experience as a mechanic, journeyperson or helper in the electrical trades, the mechanical trades, or the construction or maintenance of buildings",
+      "vacancy_id": 9
+    }
+  },
+  {
+    "model": "api.Qualification",
+    "pk": 42,
+    "fields": {
+      "description": "At least two years of full-time satisfactory experience as described in '1' above plus sufficient full-time training or education in the electrical, mechanical or construction trades in a trade school, technical school or vocational high school to make up the equivalent of three years of acceptable experience. Six months of experience will be credited for each year of full-time acceptable training or education.",
+      "vacancy_id": 9
+    }
+  },
+  {
+    "model": "api.Qualification",
+    "pk": 43,
+    "fields": {
+      "description": "Experience with Building repairs and maintenance work.",
+      "vacancy_id": 9
+    }
+  },
+  {
+    "model": "api.Qualification",
+    "pk": 44,
+    "fields": {
+      "description": "Comfort using handheld technology (mobile) device to fulfill orders",
+      "vacancy_id": 10
+    }
+  },
+  {
+    "model": "api.Qualification",
+    "pk": 45,
+    "fields": {
+      "description": "Fulfills online orders efficiently, accurately and with a sense of urgency",
+      "vacancy_id": 10
+    }
+  },
+  {
+    "model": "api.Qualification",
+    "pk": 46,
+    "fields": {
+      "description": "Detail oriented, paying attention to product and order accuracy",
+      "vacancy_id": 10
+    }
+  },
+  {
+    "model": "api.Qualification",
+    "pk": 47,
+    "fields": {
+      "description": "Eagerness to learn product knowledge, customer service standards, and store operations",
+      "vacancy_id": 10
+    }
+  },
+  {
+    "model": "api.Qualification",
+    "pk": 48,
+    "fields": {
+      "description": "Ability to keep staging area organized and free of clutter",
+      "vacancy_id": 10
+    }
+  },
+  {
+    "model": "api.Qualification",
+    "pk": 49,
+    "fields": {
+      "description": "Willingness to work in other departments of the store as required, e.g., customer service, cashier, grocery, etc.",
+      "vacancy_id": 10
+    }
+  },
+  {
+    "model": "api.Qualification",
+    "pk": 50,
+    "fields": {
+      "description": "Ability to lift up to 40 pounds, stand/walk for at least 6 hours, and be able to frequently push, pull, squat, bend, and reach with or without reasonable accommodation",
+      "vacancy_id": 10
+    }
   }
 ]

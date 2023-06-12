@@ -9,6 +9,7 @@ from rest_framework.permissions import IsAuthenticated
 from data.constants import constants
 from utils.responseObj import ResponseObj
 from api.algolia import client
+import random
 
 
 class JobListView(APIView):
@@ -17,7 +18,9 @@ class JobListView(APIView):
             id = request.query_params.get('id')
             if (id is None):
                 jobs = vacancy.Vacancy.objects.all()
-                serialized = VacancySerializer(jobs, many=True)
+                shuffled_jobs = list(jobs)
+                random.shuffle(shuffled_jobs)
+                serialized = VacancySerializer(shuffled_jobs, many=True)
                 return Response(serialized.data, status=status.HTTP_200_OK)
             jobs = vacancy.Vacancy.objects.get(id=id)
             serialized = VacancySerializer(jobs)

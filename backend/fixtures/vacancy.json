@@ -103,5 +103,50 @@
       "government_id": 4,
       "job_location_desc": "Morong, Biratnagar Mahangar"
     }
+  },
+  {
+    "model": "api.Vacancy",
+    "pk": 8,
+    "fields": {
+      "title": "Digital Front-End Developer",
+      "description": "The American Museum of Natural History seeks a Digital Front-End Developer to provide the Communications department with organizational support for digital properties in the areas of front-end application development, including CMS technical support, mobile applications, email, and other product deliverables as needed. In addition, the Digital Front-End Developer will support the Communications departments and third-party vendors on technical tasks, provides QA support and test design for digital products, advise on software and platform strategies, and assist in other technical activities on an as-needed basis.",
+      "is_opened": 1,
+      "salary_from": 57,
+      "salary_to": 72,
+      "opened_at": "2021-09-01",
+      "job_type": "FULL",
+      "government_id": 1,
+      "job_location_desc": "Jhapa, Kamal Gaupalika"
+    }
+  },
+  {
+    "model": "api.Vacancy",
+    "pk": 9,
+    "fields": {
+      "title": "Maintenance Worker ",
+      "description": "The mission of the New York City Police Department is to enhance the quality of life in New York City by working in partnership with the community to enforce the law, preserve peace, protect the people, reduce fear, and maintain order. The NYPD strives to foster a safe and fair city by incorporating Neighborhood Policing into all facets of Department operations and solve the problems that create crime and disorder through an interdependent relationship between the people and its police, and by pioneering strategic innovation.",
+      "is_opened": 1,
+      "salary_from": 35,
+      "salary_to": 45,
+      "opened_at": "2021-09-01",
+      "job_type": "FULL",
+      "government_id": 2,
+      "job_location_desc": "Banke, Nepalganj Upamahanagar"
+    }
+  },
+  {
+    "model": "api.Vacancy",
+    "pk": 10,
+    "fields": {
+      "title": "In-Store Shopper (Online Orders) - Part Time",
+      "description": "At Whole Foods Market, we’re committed to providing record-setting grocery delivery services to our Prime Now customers. This is a fast-growing program and candidates who are passionate about our quality products and great customer service will be a great fit. We think you’ll agree that it’s a great time to join #TeamWFM.As an In-Store Shopper, you’ll work on the Store Support team supporting Prime Now customer orders, preparing them for delivery and/or pickup. While our offerings will continue to evolve, you’ll shop throughout our store for everyday goods including food, household items, and so much more.",
+      "is_opened": 1,
+      "salary_from": 33,
+      "salary_to": 47,
+      "opened_at": "2021-09-01",
+      "job_type": "PART",
+      "government_id": 3,
+      "job_location_desc": "Banke, Nepalganj Upamahanagar"
+    }
   }
 ]
