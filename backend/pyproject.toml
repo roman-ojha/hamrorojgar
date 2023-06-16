@@ -1,0 +1,5 @@
+[tool.mypy]
+# plugins = ["django-stubs"]
+
+[tool.django-stubs]
+django_settings_module = "core.settings"
