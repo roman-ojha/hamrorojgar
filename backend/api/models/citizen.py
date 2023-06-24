@@ -26,7 +26,6 @@ class CitizenUserManager(BaseUserManager):
         email = self.normalize_email(email=email)
         user = self.model(email=email, **extra_fields)
         user.set_password(password)
-        print(user.password)
         user.save()
         return user
 
@@ -50,7 +49,8 @@ class Citizen(models.Model):
     l_name = models.CharField(_("Last name"), max_length=30)
     mobile = models.IntegerField()
     date_of_birth = models.DateField()
-    # is_valid_number = models.BooleanField(default=False)
+    is_valid_number = models.BooleanField(default=False)
+    verification_code = models.TextField(unique=True)
     # number_verification_otp = models.IntegerField()
 
     class GenderChoice(models.TextChoices):

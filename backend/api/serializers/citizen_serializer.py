@@ -36,13 +36,11 @@ class CitizenSerializer(serializers.ModelSerializer):
     class Meta:
         model = citizen.Citizen
         fields = ['user', 'f_name', 'm_name', 'l_name', 'mobile', 'date_of_birth',
-                  'gender', 'nationality', 'citizenship_no', 'photo', 'p_address', 't_address']
+                  'gender', 'nationality', 'citizenship_no', 'photo', 'p_address', 't_address', 'is_valid_number', 'verification_code']
 
     def create(self, validated_data):
         user_data = validated_data.pop('user')
-        print(user_data)
         del user_data['c_password']
-        print(user_data)
         user = citizen.CitizenUser.objects.create_user(**user_data)
         validated_data['user'] = user
         p_address_data = validated_data.pop('p_address')

@@ -16,6 +16,7 @@ from datetime import datetime, timedelta
 from api.authentication import CustomTokenAuthentication
 from rest_framework.settings import settings
 from data.constants import constants
+from utils.generate_unique_hash import generate_unique_hash
 
 
 class CitizenRegister(APIView):
@@ -24,11 +25,12 @@ class CitizenRegister(APIView):
         data_dict = json.loads(data_str)
         serialized_data = CitizenSerializer(data={
             **data_dict,
-            'photo': request.FILES.get('photo')
+            'photo': request.FILES.get('photo'),
+            'verification_code': generate_unique_hash()
         })
         if serialized_data.is_valid():
             serialized_data.save()
-            return Response(ResponseObj(msg="Registered Citizen User").get(), status=status.HTTP_201_CREATED)
+            return Response(ResponseObj(data={'verification_code': serialized_data.validated_data['verification_code']}, msg="Registered Citizen User").get(), status=status.HTTP_201_CREATED)
         else:
             return Response(serialized_data.errors, status=status.HTTP_406_NOT_ACCEPTABLE)
 
