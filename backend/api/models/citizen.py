@@ -6,6 +6,7 @@ from . import User
 from api.models import address
 from rest_framework.settings import settings
 import os
+from utils.generate_unique_hash import generate_unique_hash
 
 
 class CitizenUserManager(BaseUserManager):

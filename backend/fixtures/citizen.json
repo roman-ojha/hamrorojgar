@@ -14,9 +14,7 @@
       "citizenship_no": "123456789",
       "photo": "static/fixtures/user.jpg",
       "p_address_id": 1,
-      "t_address_id": null,
-      "is_valid_number": true,
-      "verification_code": "xyz"
+      "t_address_id": null
     }
   },
   {
@@ -34,9 +32,7 @@
       "citizenship_no": "123456789",
       "photo": "static/fixtures/user.jpg",
       "p_address_id": 2,
-      "t_address_id": null,
-      "is_valid_number": true,
-      "verification_code": "xyz"
+      "t_address_id": null
     }
   },
   {
@@ -54,9 +50,7 @@
       "citizenship_no": "123456789",
       "photo": "static/fixtures/user.jpg",
       "p_address_id": 3,
-      "t_address_id": null,
-      "is_valid_number": true,
-      "verification_code": "xyz"
+      "t_address_id": null
     }
   },
   {
@@ -74,9 +68,7 @@
       "citizenship_no": "123456789",
       "photo": "static/fixtures/user.jpg",
       "p_address_id": 4,
-      "t_address_id": null,
-      "is_valid_number": true,
-      "verification_code": "xyz"
+      "t_address_id": null
     }
   },
   {
@@ -94,9 +86,7 @@
       "citizenship_no": "123456789",
       "photo": "static/fixtures/user.jpg",
       "p_address_id": 5,
-      "t_address_id": null,
-      "is_valid_number": true,
-      "verification_code": "xyz"
+      "t_address_id": null
     }
   },
   {
@@ -114,9 +104,7 @@
       "citizenship_no": "123456789",
       "photo": "static/fixtures/user.jpg",
       "p_address_id": 6,
-      "t_address_id": null,
-      "is_valid_number": true,
-      "verification_code": "xyz"
+      "t_address_id": null
     }
   }
 ]
