@@ -8,9 +8,9 @@ Content-Type: application/json
 
 {
         "user": {
-            "email": "rrrr@gmail.com",
-            "password": "rrrr@123",
-            "c_password": "rrrr@123"
+            "email": "rrr@gmail.com",
+            "password": "rrr@123",
+            "c_password": "rrr@123"
         },
         "f_name": "rise",
         "m_name": "rore",
@@ -35,6 +35,10 @@ Content-Type: image/png
 < ./assets/images/appIcon.png
 
 --boundary_value--
+
+
+### Send Verification otp
+GET http://127.0.0.1:8000/api/citizen/verify/send-otp/7ab99bc1a312937e04adf94a657d5cbec10ab362d8a9d309d94fccebd7638e78
 
 ### Login Citizen
 POST http://127.0.0.1:8000/api/citizen/login

@@ -30,7 +30,7 @@ class CitizenRegister(APIView):
         })
         if serialized_data.is_valid():
             serialized_data.save()
-            return Response(ResponseObj(data={'verification_code': serialized_data.validated_data['verification_code']}, msg="Registered Citizen User").get(), status=status.HTTP_201_CREATED)
+            return Response(ResponseObj({'verification_code': serialized_data.validated_data['verification_code']}, msg="Registered Citizen User").get(), status=status.HTTP_201_CREATED)
         else:
             return Response(serialized_data.errors, status=status.HTTP_406_NOT_ACCEPTABLE)
 
