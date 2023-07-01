@@ -53,7 +53,7 @@ class Citizen(models.Model):
     is_valid_number = models.BooleanField(default=False)
     verification_code = models.TextField(unique=True)
     number_verification_otp = models.IntegerField(default=0)
-    verification_otp_expire_date = models.DateField(null=True)
+    d7_otp_id = models.TextField(null=True)
 
     class GenderChoice(models.TextChoices):
         MALE = 'M', 'Male'

@@ -40,6 +40,9 @@ Content-Type: image/png
 ### Send Verification otp
 GET http://127.0.0.1:8000/api/citizen/verify/send-otp/7ab99bc1a312937e04adf94a657d5cbec10ab362d8a9d309d94fccebd7638e78
 
+### Resend Verification otp
+GET http://127.0.0.1:8000/api/citizen/verify/resend-otp/7ab99bc1a312937e04adf94a657d5cbec10ab362d8a9d309d94fccebd7638e78
+
 ### Login Citizen
 POST http://127.0.0.1:8000/api/citizen/login
 Content-Type: application/json
