@@ -8,6 +8,7 @@ from django.contrib.auth import authenticate
 from .address_serializer import AddressSerializer
 from api.models.address import Address
 from decouple import config
+from django.contrib.auth.tokens import default_token_generator
 
 
 class CitizenUserSerializer(serializers.ModelSerializer):
@@ -15,7 +16,8 @@ class CitizenUserSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = citizen.CitizenUser
-        fields = ['id', 'email', 'password', 'c_password']
+        fields = ['id', 'email', 'password', 'c_password',
+                  'is_verified', 'verification_token']
 
     def validate(self, attrs):
         if attrs['password'] != attrs['c_password']:
@@ -36,12 +38,15 @@ class CitizenSerializer(serializers.ModelSerializer):
     class Meta:
         model = citizen.Citizen
         fields = ['user', 'f_name', 'm_name', 'l_name', 'mobile', 'date_of_birth',
-                  'gender', 'nationality', 'citizenship_no', 'photo', 'p_address', 't_address', 'is_valid_number', 'verification_code']
+                  'gender', 'nationality', 'citizenship_no', 'photo', 'p_address', 't_address']
 
     def create(self, validated_data):
         user_data = validated_data.pop('user')
         del user_data['c_password']
-        user = citizen.CitizenUser.objects.create_user(**user_data)
+        user = citizen.CitizenUser.objects.create_user(
+            **user_data)
+        user.verification_token = default_token_generator.make_token(user)
+        user.save()
         validated_data['user'] = user
         p_address_data = validated_data.pop('p_address')
         t_address_data = validated_data.pop('t_address')

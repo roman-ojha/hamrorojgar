@@ -1,6 +1,7 @@
 from django.db import models
 from django.contrib.auth.base_user import BaseUserManager
 from django.contrib.auth.models import AbstractUser, PermissionsMixin
+from django.contrib.auth.tokens import default_token_generator
 
 
 class UserManager(BaseUserManager):
@@ -18,6 +19,7 @@ class UserManager(BaseUserManager):
         extra_fields.setdefault("is_staff", True)
         extra_fields.setdefault("is_superuser", True)
         extra_fields.setdefault("is_active", True)
+        extra_fields.setdefault("is_verified", True)
 
         if extra_fields.get("is_staff") is not True:
             raise ValueError("Superuser has to have is_staff being true")
@@ -63,6 +65,7 @@ class User(AbstractUser, PermissionsMixin):
     def save(self, *args, **kwargs):
         if not self.pk:
             self.role = self.base_role
+            self.verification_token = default_token_generator.make_token(self)
             return super().save(*args, **kwargs)
         return super().save(*args, **kwargs)
 

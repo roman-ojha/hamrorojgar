@@ -10,7 +10,9 @@
       "is_staff": true,
       "is_active": true,
       "date_joined": "2019-04-30T06:00:00.000Z",
-      "role": "GOV"
+      "role": "GOV",
+      "is_verified": true,
+      "verification_token": "a"
     }
   },
   {
@@ -24,7 +26,9 @@
       "is_staff": true,
       "is_active": true,
       "date_joined": "2019-04-30T06:00:00.000Z",
-      "role": "GOV"
+      "role": "GOV",
+      "is_verified": true,
+      "verification_token": "ab"
     }
   },
   {
@@ -38,7 +42,9 @@
       "is_staff": true,
       "is_active": true,
       "date_joined": "2019-04-30T06:00:00.000Z",
-      "role": "GOV"
+      "role": "GOV",
+      "is_verified": true,
+      "verification_token": "abc"
     }
   },
   {
@@ -52,7 +58,9 @@
       "is_staff": false,
       "is_active": true,
       "date_joined": "2019-04-30T06:00:00.000Z",
-      "role": "CITIZEN"
+      "role": "CITIZEN",
+      "is_verified": true,
+      "verification_token": "abcd"
     }
   },
   {
@@ -66,7 +74,9 @@
       "is_staff": false,
       "is_active": true,
       "date_joined": "2019-04-30T06:00:00.000Z",
-      "role": "CITIZEN"
+      "role": "CITIZEN",
+      "is_verified": true,
+      "verification_token": "abcde"
     }
   },
   {
@@ -80,7 +90,9 @@
       "is_staff": false,
       "is_active": true,
       "date_joined": "2019-04-30T06:00:00.000Z",
-      "role": "CITIZEN"
+      "role": "CITIZEN",
+      "is_verified": true,
+      "verification_token": "abcdef"
     }
   },
   {
@@ -94,7 +106,9 @@
       "is_staff": false,
       "is_active": true,
       "date_joined": "2019-04-30T06:00:00.000Z",
-      "role": "CITIZEN"
+      "role": "CITIZEN",
+      "is_verified": true,
+      "verification_token": "abcdefg"
     }
   },
   {
@@ -108,7 +122,9 @@
       "is_staff": false,
       "is_active": true,
       "date_joined": "2019-04-30T06:00:00.000Z",
-      "role": "CITIZEN"
+      "role": "CITIZEN",
+      "is_verified": true,
+      "verification_token": "abcdefgh"
     }
   },
   {
@@ -122,7 +138,9 @@
       "is_staff": false,
       "is_active": true,
       "date_joined": "2019-04-30T06:00:00.000Z",
-      "role": "CITIZEN"
+      "role": "CITIZEN",
+      "is_verified": true,
+      "verification_token": "abcdefghi"
     }
   }
 ]
