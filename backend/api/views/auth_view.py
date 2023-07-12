@@ -17,6 +17,8 @@ from api.authentication import CustomTokenAuthentication
 from rest_framework.settings import settings
 from data.constants import constants
 from utils.email import send_html_email
+from data.constants import constants
+from decouple import config
 
 
 class CitizenRegister(APIView):
@@ -28,15 +30,14 @@ class CitizenRegister(APIView):
             'photo': request.FILES.get('photo'),
         })
         if serialized_data.is_valid():
-            # serialized_data.save()
+            serialized_data.save()
 
             # Send mail after registration:
-            subject = "Hamro Rojgar - Verify you email address"
-            # message = f"url: http://127.0.0.1:8000/citizen/verify/{serialized_data.instance.user.verification_token}"
+            subject = f"{constants.APPLICATION_NAME} - Verify you email address"
             recipient_list = [
                 serialized_data.validated_data.get('user').get('email')]
-            send_html_email(subject, "api/verification_email.html",
-                            ["razzroman98@gmail.com"])
+            send_html_email(subject, "api/verification_email.html", {'application_name': constants.APPLICATION_NAME, 'citizen_name': serialized_data.validated_data.get(
+                'f_name'), 'verification_url': f"{config('API_BASE_URL')}/citizen/verify/{serialized_data.instance.user.verification_token}"}, recipient_list)
             return Response(ResponseObj(msg="Registered Citizen User").get(), status=status.HTTP_201_CREATED)
         else:
             return Response(serialized_data.errors, status=status.HTTP_406_NOT_ACCEPTABLE)
