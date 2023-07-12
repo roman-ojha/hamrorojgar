@@ -5,7 +5,6 @@ from api.views.job_application import ApplyView
 from api.views.vacancy_view import JobListView, SearchJobs
 from api.views.payment_view import Payment, PaymentSuccess
 from api.views.district_municipality_view import District, Municipality
-from api.views.verification_view import CitizenVerificationSend, CitizenVerificationReSend
 
 urlpatterns = [
     path('citizen', CitizenView.as_view(), name='citizen'),

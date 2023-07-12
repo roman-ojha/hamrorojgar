@@ -50,7 +50,7 @@ class User(AbstractUser, PermissionsMixin):
         max_length=15, choices=Role.choices)
     is_verified = models.BooleanField(default=False)
     # true after email get verified
-    auth_token = models.CharField(max_length=100)
+    verification_token = models.CharField(max_length=150, default="")
     # token needed to verify the user
     username = None
     first_name = None
