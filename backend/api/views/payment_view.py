@@ -1,7 +1,7 @@
 from rest_framework.views import APIView
 from django.http import HttpResponseRedirect
 from rest_framework.response import Response
-from api.authentication import CustomTokenAuthentication
+from api.authentication import CustomTokenAuthentication, CustomTokenAuthenticationWithEmailVerified
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.request import Request
 from rest_framework.response import Response
@@ -17,7 +17,7 @@ from django.core.exceptions import ObjectDoesNotExist
 
 
 class Payment(APIView):
-    authentication_classes = [CustomTokenAuthentication]
+    authentication_classes = [CustomTokenAuthenticationWithEmailVerified]
     permission_classes = [IsAuthenticated]
 
     def get(self, request: Request, payment_gateway: str):

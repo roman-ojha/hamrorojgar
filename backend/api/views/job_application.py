@@ -3,7 +3,7 @@ from rest_framework.views import APIView
 from rest_framework.request import Request
 from rest_framework.response import Response
 from rest_framework import status
-from api.authentication import CustomTokenAuthentication
+from api.authentication import CustomTokenAuthentication, CustomTokenAuthenticationWithEmailVerified
 from rest_framework.permissions import IsAuthenticated
 from utils.responseObj import ResponseObj
 from rest_framework.parsers import MultiPartParser
@@ -33,7 +33,7 @@ from decouple import config
 
 class ApplyView(APIView):
     parser_classes = [MultiPartParser]
-    authentication_classes = [CustomTokenAuthentication]
+    authentication_classes = [CustomTokenAuthenticationWithEmailVerified]
     permission_classes = [IsAuthenticated]
 
     def post(self, request: Request, format=None):
