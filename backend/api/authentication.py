@@ -106,5 +106,5 @@ class CustomTokenAuthenticationWithEmailVerified(TokenAuthentication):
             send_html_email(subject, "api/verification_email.html", {'application_name': constants.APPLICATION_NAME, 'citizen_name': res_citizen.f_name,
                             'verification_url': f"{config('API_BASE_URL')}/api/citizen/verify/{token.user.verification_token}"}, recipient_list)
             raise exceptions.AuthenticationFailed(
-                _('You have not verified you email please verify you email from to you email address'))
+                _('You have not verified you email please verify you email from your email address'))
         return super().authenticate_credentials(key)

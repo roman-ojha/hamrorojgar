@@ -1,0 +1,39 @@
+@use "../utils" as *;
+
+.verify {
+  width: 100vw;
+  height: 100vh;
+  background-color: get-color("background");
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 5rem;
+  box-sizing: border-box;
+  &__notice_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 60vw;
+    padding: 1rem;
+    background-color: get-color("background2");
+    border: 2px solid
+      lighten($color: get-color-value("background3"), $amount: 10);
+    border-radius: 1rem;
+    &__email_icon {
+      height: 8rem;
+      width: 8rem;
+      border-radius: 20px;
+    }
+    h1 {
+      font-size: 1.4rem;
+    }
+    h2 {
+      font-size: 1.2rem;
+    }
+    p {
+      font-size: 0.9rem;
+      text-align: center;
+    }
+  }
+}

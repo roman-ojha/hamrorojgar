@@ -41,7 +41,7 @@ const Register: NextPage = () => {
     if (res && isOkResponse(res.status)) {
       console.log(res.data);
       console.log(res.status);
-      router.push("/signin"); // for testing purposes
+      router.push("/verify");
     }
   };
 
