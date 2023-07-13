@@ -7,6 +7,8 @@ import requests
 import json
 from decouple import config
 from rest_framework import status
+from api.models import user
+from django.http import request, response
 
 
 # Bellow two view contain verification using SMS OTP
@@ -64,3 +66,16 @@ from rest_framework import status
 #         #     "D7_VERIFICATION_OTP_BASE_URL") + "/resend-otp", headers=headers, data=payload)
 #         # print(response)
 #         return Response(ResponseObj(msg="Successfully send otp to your mobile number").get())
+
+
+class CitizenRegistrationVerification(APIView):
+    def get(self, request: Request, verification_token: str):
+        res_user = user.User.objects.filter(
+            verification_token=verification_token).first()
+        if res_user is None:
+            # return Response(ResponseObj(msg="You are not authorized user, please register first").get(), status=status.HTTP_401_UNAUTHORIZED)
+            return response.HttpResponse("You are not authorized user, please register first")
+        res_user.is_verified = True
+        res_user.save()
+        # return Response(ResponseObj(msg="You are verified now").get())
+        return response.HttpResponseRedirect(f"{config('CLIENT_BASE_URL')}/signin")

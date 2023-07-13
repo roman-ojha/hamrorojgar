@@ -4,6 +4,10 @@ from rest_framework.authtoken.models import Token
 from rest_framework.request import Request
 from rest_framework import exceptions
 from rest_framework.settings import settings
+from data.constants import constants
+from utils.email import send_html_email
+from api.models import citizen
+from decouple import config
 
 
 class CustomTokenAuthentication(TokenAuthentication):
@@ -46,3 +50,19 @@ class CustomTokenAuthentication(TokenAuthentication):
             raise exceptions.AuthenticationFailed(msg)
 
         return self.authenticate_credentials(token)
+
+    def authenticate_credentials(self, key):
+        model = self.get_model()
+        token = model.objects.select_related('user').get(key=key)
+        if not token.user:
+            raise exceptions.AuthenticationFailed(_('Unauthorized user'))
+        if not token.user.is_verified:
+            subject = f"{constants.APPLICATION_NAME} - Verify you email address"
+            recipient_list = [token.user.email]
+            res_citizen = citizen.Citizen.objects.filter(
+                user=token.user).first()
+            send_html_email(subject, "api/verification_email.html", {'application_name': constants.APPLICATION_NAME, 'citizen_name': res_citizen.f_name,
+                            'verification_url': f"{config('API_BASE_URL')}/api/citizen/verify/{token.user.verification_token}"}, recipient_list)
+            raise exceptions.AuthenticationFailed(
+                _('You have not verified you email please verify you email from to you email address'))
+        return super().authenticate_credentials(key)

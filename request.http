@@ -37,32 +37,35 @@ Content-Type: image/png
 --boundary_value--
 
 
-### Send Verification otp
-GET http://127.0.0.1:8000/api/citizen/verify/send-otp/7ab99bc1a312937e04adf94a657d5cbec10ab362d8a9d309d94fccebd7638e78
+# ### Send Verification otp
+# GET http://127.0.0.1:8000/api/citizen/verify/send-otp/7ab99bc1a312937e04adf94a657d5cbec10ab362d8a9d309d94fccebd7638e78
 
-### Resend Verification otp
-GET http://127.0.0.1:8000/api/citizen/verify/resend-otp/7ab99bc1a312937e04adf94a657d5cbec10ab362d8a9d309d94fccebd7638e78
+# ### Resend Verification otp
+# GET http://127.0.0.1:8000/api/citizen/verify/resend-otp/7ab99bc1a312937e04adf94a657d5cbec10ab362d8a9d309d94fccebd7638e78
+
+
+### Verify citizen
+GET http://127.0.0.1:8000/api/citizen/verify/br8h5d-678b12173277dd756a2aa1ad56089ea4
 
 ### Login Citizen
 POST http://127.0.0.1:8000/api/citizen/login
 Content-Type: application/json
 
 {
-    "email": "rrrr@gmail.com",
+    "email": "rrrrr@gmail.com",
     "password": "rrrr@123"
 }
 
 ### Logout Citizen
 GET http://127.0.0.1:8000/api/citizen/logout
-Authorization: Token 4e72012e50fe301aa0170fa9c7e741622729a3e2
+Authorization: Token bd369f8537bfc03378fdc309fd9aa49a9405720c
 
 
 
 ### Get Citizen Data
 GET http://127.0.0.1:8000/api/citizen
 Content-Type: application/json
-Authorization: Token 4e72012e50fe301aa0170fa9c7e741622729a3e2
-
+Authorization: Token bd369f8537bfc03378fdc309fd9aa49a9405720c 
 
 ### Get Jobs
 GET http://127.0.0.1:8000/api/job
@@ -106,3 +109,4 @@ GET http://127.0.0.1:8000/api/district
 
 ### Get Municipalities
 GET http://127.0.0.1:8000/api/municipality/5
+

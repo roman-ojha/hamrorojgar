@@ -5,6 +5,7 @@ from api.views.job_application import ApplyView
 from api.views.vacancy_view import JobListView, SearchJobs
 from api.views.payment_view import Payment, PaymentSuccess
 from api.views.district_municipality_view import District, Municipality
+from api.views.verification_view import CitizenRegistrationVerification
 
 urlpatterns = [
     path('citizen', CitizenView.as_view(), name='citizen'),
@@ -15,6 +16,8 @@ urlpatterns = [
     #     CitizenVerificationSend.as_view(), name='citizen-verify-send-otp'),
     #     path('citizen/verify/resend-otp/<str:verification_code>',
     #     CitizenVerificationReSend.as_view(), name='citizen-verify-resend-otp'),
+    path('citizen/verify/<str:verification_token>',
+         CitizenRegistrationVerification.as_view(), name='citizen-verify'),
     path('job', JobListView.as_view(), name='jobs'),
     path('job/apply', ApplyView.as_view(), name='job-apply'),  # ?vacancy_id=xxx
     path('payment/success', PaymentSuccess.as_view(), name='payment-success'),
