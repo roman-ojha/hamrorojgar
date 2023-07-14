@@ -8,18 +8,18 @@ Content-Type: application/json
 
 {
         "user": {
-            "email": "rrrrrrrrrrrrr@gmail.com",
+            "email": "rrrrrrrrrrrrrr@gmail.com",
             "password": "rrrr@123",
             "c_password": "rrrr@123"
         },
         "f_name": "rise",
         "m_name": "rore",
         "l_name": "revolte",
-        "mobile": 12343212,
+        "mobile": 123456789,
         "date_of_birth": "2023-05-17",
         "gender": "M",
         "nationality": "nepali",
-        "citizenship_no": "453211234432",
+        "citizenship_no": "123456789",
         "p_address":{
             "district":"jhapa",
             "municipality":"kamal",

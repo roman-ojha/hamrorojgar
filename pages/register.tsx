@@ -273,6 +273,7 @@ const Register: NextPage = () => {
                   id="nationality"
                   placeholder="Nationality"
                   data-field="input"
+                  defaultValue="nepali"
                   value={undefined}
                   {...register("nationality")}
                 />

@@ -19,6 +19,7 @@ from data.constants import constants
 from utils.email import send_html_email
 from data.constants import constants
 from decouple import config
+from maingovdb.models import Citizen as MainDBCitizen
 
 
 class CitizenRegister(APIView):
@@ -30,6 +31,15 @@ class CitizenRegister(APIView):
             'photo': request.FILES.get('photo'),
         })
         if serialized_data.is_valid():
+            # check whether provided data is a valid nepali citizen or not // for now we will only check for nepali citizen
+            if serialized_data.validated_data.get("nationality") != "nepali":
+                return Response(ResponseObj(msg="To get register in this platform you have to be a nepali citizen.").get(), status=status.HTTP_401_UNAUTHORIZED)
+            is_valid_citizen = MainDBCitizen.objects.filter(
+                citizenship_no=serialized_data.validated_data.get("citizenship_no")).first()
+            if not is_valid_citizen:
+                return Response(ResponseObj(msg="You don't have authorized citizenship no. that is registered on government database, please contact your nearest municipality office.").get(), status=status.HTTP_401_UNAUTHORIZED)
+            if is_valid_citizen.mobile != serialized_data.validated_data.get("mobile"):
+                return Response(ResponseObj(msg="Provided mobile number is not registered on you same citizenship no. that you used here, please check and try it again...").get(), status=status.HTTP_401_UNAUTHORIZED)
             serialized_data.save()
 
             # Send mail after registration:
@@ -38,7 +48,7 @@ class CitizenRegister(APIView):
                 serialized_data.validated_data.get('user').get('email')]
             send_html_email(subject, "api/verification_email.html", {'application_name': constants.APPLICATION_NAME, 'citizen_name': serialized_data.validated_data.get(
                 'f_name'), 'verification_url': f"{config('API_BASE_URL')}/citizen/verify/{serialized_data.instance.user.verification_token}"}, recipient_list)
-            return Response(ResponseObj(msg="Registered Citizen User").get(), status=status.HTTP_201_CREATED)
+            return Response(ResponseObj(msg="Citizen registered successfully").get(), status=status.HTTP_201_CREATED)
         else:
             return Response(serialized_data.errors, status=status.HTTP_406_NOT_ACCEPTABLE)
 
