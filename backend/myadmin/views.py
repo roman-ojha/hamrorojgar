@@ -35,8 +35,8 @@ def view_job_application(request, id):
 def approve_job_application(request: HttpRequest, id):
     job_application = JobApplication.objects.get(id=id)
     if job_application.vacancy.government.pk == request.user.pk or request.user.is_superuser:
-        # job_application.is_approved = True
-        # job_application.save()
+        job_application.is_approved = True
+        job_application.save()
         # send main after approval
         subject = f"{constants.APPLICATION_NAME} - Job application Notice"
         recipient_list = [

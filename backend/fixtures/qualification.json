@@ -478,5 +478,45 @@
       "description": "Accuracy and Attention to Detail: A keen eye for detail and the ability to type accurately without errors.",
       "vacancy_id": 12
     }
+  },
+  {
+    "model": "api.Qualification",
+    "pk": 61,
+    "fields": {
+      "description": "Educational Background: A minimum of a Master's degree in Computer Engineering, Electronics, or a related field with specialization in Microprocessors or Computer Architecture.",
+      "vacancy_id": 13
+    }
+  },
+  {
+    "model": "api.Qualification",
+    "pk": 62,
+    "fields": {
+      "description": "Teaching Experience: Prior experience as a Microprocessor Teacher or related teaching experience at the higher education level is preferred.",
+      "vacancy_id": 13
+    }
+  },
+  {
+    "model": "api.Qualification",
+    "pk": 63,
+    "fields": {
+      "description": "Subject Matter Expertise: In-depth knowledge of microprocessors, computer architecture, assembly language programming, and interfacing.",
+      "vacancy_id": 13
+    }
+  },
+  {
+    "model": "api.Qualification",
+    "pk": 64,
+    "fields": {
+      "description": "Communication Skills: Excellent verbal and written communication skills in both Nepali and English to effectively convey complex concepts to students.",
+      "vacancy_id": 13
+    }
+  },
+  {
+    "model": "api.Qualification",
+    "pk": 65,
+    "fields": {
+      "description": "Teaching Methodology: Familiarity with modern teaching methodologies and a commitment to innovative and effective teaching practices.",
+      "vacancy_id": 13
+    }
   }
 ]

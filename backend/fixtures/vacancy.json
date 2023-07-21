@@ -168,8 +168,8 @@
     "model": "api.Vacancy",
     "pk": 12,
     "fields": {
-      "title": "As a Nepali Keyboard Typer, your primary responsibility will be to efficiently and accurately type documents, letters, reports, and other official materials in the Nepali language. You will play a crucial role in maintaining the organization's records and ensuring that all written materials are prepared in the correct Nepali script. Your attention to detail and proficiency in typing will contribute to the smooth functioning of the government office.",
-      "description": "",
+      "title": "Nepali keyboard typer",
+      "description": "As a Nepali Keyboard Typer, your primary responsibility will be to efficiently and accurately type documents, letters, reports, and other official materials in the Nepali language. You will play a crucial role in maintaining the organization's records and ensuring that all written materials are prepared in the correct Nepali script. Your attention to detail and proficiency in typing will contribute to the smooth functioning of the government office.",
       "is_opened": 1,
       "salary_from": 30,
       "salary_to": 40,
@@ -177,6 +177,21 @@
       "job_type": "FULL",
       "government_id": 5,
       "job_location_desc": "Antarik rajaswa bivagh"
+    }
+  },
+  {
+    "model": "api.Vacancy",
+    "pk": 13,
+    "fields": {
+      "title": "Teacher for Microprocessor",
+      "description": "Patan Multiple Campus is seeking a qualified and dedicated individual to join our team as a Teacher for Microprocessor. As a Microprocessor Teacher, you will be responsible for delivering high-quality instruction and facilitating learning experiences related to microprocessors and computer architecture. Your passion for teaching, expertise in the subject matter, and commitment to student success will be essential in providing a supportive and enriching educational environment.",
+      "is_opened": 1,
+      "salary_from": 50,
+      "salary_to": 65,
+      "opened_at": "2021-09-01",
+      "job_type": "FULL",
+      "government_id": 6,
+      "job_location_desc": "Patan multiple campus"
     }
   }
 ]

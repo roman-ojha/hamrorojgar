@@ -47,7 +47,7 @@ class CitizenRegister(APIView):
             recipient_list = [
                 serialized_data.validated_data.get('user').get('email')]
             send_html_email(subject, "api/verification_email.html", {'application_name': constants.APPLICATION_NAME, 'citizen_name': serialized_data.validated_data.get(
-                'f_name'), 'verification_url': f"{config('API_BASE_URL')}/citizen/verify/{serialized_data.instance.user.verification_token}"}, recipient_list)
+                'f_name'), 'verification_url': f"{config('API_BASE_URL')}/api/citizen/verify/{serialized_data.instance.user.verification_token}"}, recipient_list)
             return Response(ResponseObj(msg="Citizen registered successfully").get(), status=status.HTTP_201_CREATED)
         else:
             return Response(serialized_data.errors, status=status.HTTP_406_NOT_ACCEPTABLE)

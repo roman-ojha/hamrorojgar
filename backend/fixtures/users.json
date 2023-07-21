@@ -158,5 +158,21 @@
       "is_verified": true,
       "verification_token": "abcdefghij"
     }
+  },
+  {
+    "model": "api.User",
+    "pk": 12,
+    "fields": {
+      "email": "patancampus@gmail.com",
+      "password": "patancampus#gmail@123",
+      "last_login": null,
+      "is_superuser": false,
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2019-04-30T06:00:00.000Z",
+      "role": "GOV",
+      "is_verified": true,
+      "verification_token": "abcdefghijk"
+    }
   }
 ]

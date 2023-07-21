@@ -88,5 +88,14 @@
       "municipality": "Kathmandu",
       "ward_no": "21"
     }
+  },
+  {
+    "model": "api.Address",
+    "pk": 11,
+    "fields": {
+      "district": "Lalitpur",
+      "municipality": "Lalitpur",
+      "ward_no": "10"
+    }
   }
 ]
