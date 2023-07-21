@@ -79,5 +79,14 @@
       "municipality": "Biratnagar",
       "ward_no": "03"
     }
+  },
+  {
+    "model": "api.Address",
+    "pk": 10,
+    "fields": {
+      "district": "Kathmandu",
+      "municipality": "Kathmandu",
+      "ward_no": "21"
+    }
   }
 ]

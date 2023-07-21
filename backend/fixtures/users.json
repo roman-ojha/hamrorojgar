@@ -142,5 +142,21 @@
       "is_verified": true,
       "verification_token": "abcdefghi"
     }
+  },
+  {
+    "model": "api.User",
+    "pk": 11,
+    "fields": {
+      "email": "ird@gmail.com",
+      "password": "ird#gmail@123",
+      "last_login": null,
+      "is_superuser": false,
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2019-04-30T06:00:00.000Z",
+      "role": "GOV",
+      "is_verified": true,
+      "verification_token": "abcdefghij"
+    }
   }
 ]

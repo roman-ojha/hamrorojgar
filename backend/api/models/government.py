@@ -44,6 +44,7 @@ class Government(models.Model):
         FEDERAL = 'F', "Federal"
         PROVINCE = 'P', "Province"
         LOCAL = 'L', "Local"
+        ORGANIZATION = 'O', "Organization"
     gov_type = models.CharField(max_length=3, choices=GovernmentType.choices)
     location = models.OneToOneField(
         address.Address, on_delete=models.CASCADE, related_name='government')

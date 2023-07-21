@@ -148,5 +148,35 @@
       "government_id": 3,
       "job_location_desc": "Banke, Nepalganj Upamahanagar"
     }
+  },
+  {
+    "model": "api.Vacancy",
+    "pk": 11,
+    "fields": {
+      "title": "Assistant Worker",
+      "description": "As a Bank Assistant, you will play a crucial role in supporting the daily operations of the bank and providing exceptional customer service to clients. Your responsibilities will include a combination of administrative tasks and client-facing interactions. You will work closely with the bank's team to ensure smooth operations and contribute to the overall success of the institution.",
+      "is_opened": 1,
+      "salary_from": 33,
+      "salary_to": 47,
+      "opened_at": "2021-09-01",
+      "job_type": "FULL",
+      "government_id": 1,
+      "job_location_desc": "Nepal rastriya bank"
+    }
+  },
+  {
+    "model": "api.Vacancy",
+    "pk": 12,
+    "fields": {
+      "title": "As a Nepali Keyboard Typer, your primary responsibility will be to efficiently and accurately type documents, letters, reports, and other official materials in the Nepali language. You will play a crucial role in maintaining the organization's records and ensuring that all written materials are prepared in the correct Nepali script. Your attention to detail and proficiency in typing will contribute to the smooth functioning of the government office.",
+      "description": "",
+      "is_opened": 1,
+      "salary_from": 30,
+      "salary_to": 40,
+      "opened_at": "2021-09-01",
+      "job_type": "FULL",
+      "government_id": 5,
+      "job_location_desc": "Antarik rajaswa bivagh"
+    }
   }
 ]

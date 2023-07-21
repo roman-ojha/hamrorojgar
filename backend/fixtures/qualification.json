@@ -398,5 +398,85 @@
       "description": "Ability to lift up to 40 pounds, stand/walk for at least 6 hours, and be able to frequently push, pull, squat, bend, and reach with or without reasonable accommodation",
       "vacancy_id": 10
     }
+  },
+  {
+    "model": "api.Qualification",
+    "pk": 51,
+    "fields": {
+      "description": "Educational Background: A high school diploma or equivalent qualification is typically required. Some banks may prefer candidates with an associate's degree in finance, banking, or a related field.",
+      "vacancy_id": 11
+    }
+  },
+  {
+    "model": "api.Qualification",
+    "pk": 52,
+    "fields": {
+      "description": "Communication Skills: Excellent verbal and written communication skills are essential to interact professionally with clients and colleagues.",
+      "vacancy_id": 11
+    }
+  },
+  {
+    "model": "api.Qualification",
+    "pk": 53,
+    "fields": {
+      "description": "Customer Service Skills: Strong customer service orientation and the ability to handle clients' inquiries and concerns effectively.",
+      "vacancy_id": 11
+    }
+  },
+  {
+    "model": "api.Qualification",
+    "pk": 54,
+    "fields": {
+      "description": "Numerical Proficiency: Basic math skills are necessary for handling cash transactions and performing financial calculations accurately.",
+      "vacancy_id": 11
+    }
+  },
+  {
+    "model": "api.Qualification",
+    "pk": 55,
+    "fields": {
+      "description": "Attention to Detail: Precision and accuracy in handling data, documents, and financial transactions are crucial to avoid errors.",
+      "vacancy_id": 11
+    }
+  },
+  {
+    "model": "api.Qualification",
+    "pk": 56,
+    "fields": {
+      "description": "Typing Skills: Proficiency in typing in the Nepali language with a high words-per-minute (WPM) rate is essential for this position.",
+      "vacancy_id": 12
+    }
+  },
+  {
+    "model": "api.Qualification",
+    "pk": 57,
+    "fields": {
+      "description": "Educational Background: A minimum of a high school diploma or equivalent qualification is typically required for this role.",
+      "vacancy_id": 12
+    }
+  },
+  {
+    "model": "api.Qualification",
+    "pk": 58,
+    "fields": {
+      "description": "Language Proficiency: Excellent knowledge and understanding of the Nepali language, including grammar, punctuation, and vocabulary.",
+      "vacancy_id": 12
+    }
+  },
+  {
+    "model": "api.Qualification",
+    "pk": 59,
+    "fields": {
+      "description": "Computer Literacy: Basic computer skills, including familiarity with word processing software and the ability to use Nepali Unicode typing tools.",
+      "vacancy_id": 12
+    }
+  },
+  {
+    "model": "api.Qualification",
+    "pk": 60,
+    "fields": {
+      "description": "Accuracy and Attention to Detail: A keen eye for detail and the ability to type accurately without errors.",
+      "vacancy_id": 12
+    }
   }
 ]

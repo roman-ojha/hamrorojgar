@@ -25,5 +25,14 @@
       "gov_type": "L",
       "location_id": 9
     }
+  },
+  {
+    "model": "api.Government",
+    "pk": 5,
+    "fields": {
+      "user_id": 11,
+      "gov_type": "O",
+      "location_id": 10
+    }
   }
 ]
