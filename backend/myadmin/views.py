@@ -7,7 +7,7 @@ from django.contrib.admin.views.decorators import staff_member_required
 from data.constants import constants
 from utils.email import send_html_email
 from decouple import config
-from api.models import citizen
+from api.models import government
 from api.models import user
 
 
@@ -23,7 +23,9 @@ def index(request):
 def view_job_application(request, id):
     try:
         job_application = JobApplication.objects.get(id=id)
-        if job_application.vacancy.government.pk == request.user.pk or request.user.is_superuser:
+        gov = government.Government.objects.filter(
+            user=request.user.pk).first()
+        if job_application.vacancy.government.pk == gov.pk or request.user.is_superuser:
             return render(request, 'myadmin/view_job_application.html', {'job_application': job_application})
         return HttpResponseRedirect('/admin/api/jobapplication/')
     except JobApplication.DoesNotExist:
@@ -34,7 +36,9 @@ def view_job_application(request, id):
 @staff_member_required
 def approve_job_application(request: HttpRequest, id):
     job_application = JobApplication.objects.get(id=id)
-    if job_application.vacancy.government.pk == request.user.pk or request.user.is_superuser:
+    gov = government.Government.objects.filter(
+        user=request.user.pk).first()
+    if job_application.vacancy.government.pk == gov.pk or request.user.is_superuser:
         job_application.is_approved = True
         job_application.save()
         # send main after approval
@@ -50,7 +54,9 @@ def approve_job_application(request: HttpRequest, id):
 @staff_member_required
 def disapprove_job_application(request, id):
     job_application = JobApplication.objects.get(id=id)
-    if job_application.vacancy.government.pk == request.user.pk or request.user.is_superuser:
+    gov = government.Government.objects.filter(
+        user=request.user.pk).first()
+    if job_application.vacancy.government.pk == gov.pk or request.user.is_superuser:
         job_application.is_approved = False
         job_application.save()
     return HttpResponseRedirect(f"/admin/api/jobapplication/?vacancy_id={job_application.vacancy}")

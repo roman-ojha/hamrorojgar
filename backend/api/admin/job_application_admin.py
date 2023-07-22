@@ -7,6 +7,7 @@ from django.utils.safestring import mark_safe
 from django.utils.html import format_html
 from admin_numeric_filter.admin import SingleNumericFilter
 from utils.get_table_field_button import get_table_field_button
+from api.models import government
 
 
 @admin.register(job_application.JobApplication)
@@ -62,6 +63,8 @@ class JobApplicationAdmin(admin.ModelAdmin):
         qs = super().get_queryset(request)
         if request.user.is_superuser:
             return qs
+        g = government.Government.objects.filter(
+            user=request.user.pk).first()
         vacancies = vacancy.Vacancy.objects.filter(
-            pk=request.user.pk).values('pk')
+            government=g.pk).values('pk')
         return qs.filter(vacancy__in=vacancies)
